@@ -7,7 +7,7 @@ ALL INFORMATION AND OFFERED RESOURCES ARE HIGHLY EXPERIMENTAL AND NOT TESTED.
 
 Build your own android based `Dexcom G7.apk` without compatibility checks to run it on any device.
 
-## Download
+## ⏬ Download
 
 Just download the modified `.apk` and install it on your phone.
 
