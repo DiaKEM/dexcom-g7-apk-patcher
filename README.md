@@ -13,18 +13,19 @@ It solves exactly this:
 
 ![Your device is incompatible](images/problem.png)
 
+## Download
+
+Just download the modified `.apk` and install it on your phone.
+
+You can find the most recent pre-build `.apk` [here](https://github.com/DiaKEM/dexcom-g7-apk-patcher/releases/latest)!
+
+
 ## Introduction
 
 `Dexcom G7 APK-Patcher` is a simple tool which allows you to modify the official `.apk`-file. The patched `.apk` will disable compatibility checks 
 to allow you the usage of any current android smartphone.
 
 There were also similar approaches for the G6 `.apk` which offered the same capability. If you are interested you can just check it [here](https://www.reddit.com/r/dexcom/comments/fqvpsf/oc_build_your_own_dexcom_app_update_base_version/).
-
-## Download
-
-Just download the modified `.apk` and install it on your phone.
-
-You can find the most recent pre-build `.apk` [here]()!
 
 ## Usage
 
