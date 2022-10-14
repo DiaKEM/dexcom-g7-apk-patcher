@@ -19,6 +19,13 @@ It solves exactly this:
 
 ![Your device is incompatible](images/problem.png)
 
+## Data sharing/forwarding à la BYODA for AAPS
+
+The patch will not add any data sharing capabilities to the `apk` like BYODA does. It will only remove the compatibility checks.
+If you want to directly transfer Dexcom's glucose readings to your AAPS you can use a workaround by putting xDrip inbetween.
+
+It would be wrong to describe this procedure here because there are other experts out there who also know all the details. Just google for `xdrip dexcom g7 companion mode`.
+
 ## Introduction
 
 `Dexcom G7 APK-Patcher` is a simple tool which allows you to modify the official `.apk`-file. The patched `.apk` will disable compatibility checks 
