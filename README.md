@@ -51,6 +51,16 @@ After installing all requirements you can proceed as following:
 * Run `bin/build.sh`
 * Congratulations - you just have an patched `Dexcom G7.apk` without compatibility checks under `dexcom-mod.apk`
 
+### Development
+
+The following section describes the toolset and development flow i am using. It should serve only as inspiration. I am sure that better tools and flows exists.
+
+* You can use `jadx-gui` for investigating the code - because it is much easier to read decompiled then disassembled code.
+* For editing `.smali` files i am just using `lvim` but any other basic IDE or text editor is just fine
+* Android Studio (includes much more then required tools) or Genymotion to create an emulator instance
+
+After modifications you can just run `bin/dev-build.sh`. This will rebuild the source, package it and also add the signature. Finaly the Dexcom app will be reinstalled to reflect the changes.
+
 ## Patches / Changes / Modifications
 
 The official `.apk` receives only small changes to disable the compatibility check. For this purpose only one single file will be modified.
