@@ -1,83 +1,39 @@
-
-# ☢️☢️☢️ USE AT YOUR OWN RISK | HIGHLY EXPERIMENTAL 🧪🧪🧪
-
-ALL INFORMATION AND OFFERED RESOURCES ARE HIGHLY EXPERIMENTAL AND NOT TESTED.
-
-# Dexcom G7 APK-Patcher
+# ☢️ Dexcom G7 APK-Patcher 🧪
 
 Build your own android based `Dexcom G7.apk` without compatibility checks to run it on any device.
 
+# USE AT YOUR OWN RISK | HIGHLY EXPERIMENTAL
+
+ALL INFORMATION AND OFFERED RESOURCES ARE HIGHLY EXPERIMENTAL AND NOT TESTED.
+
 ## ⏬ Download
 
-Just download the modified `.apk` and install it on your phone.
-
-You can find the most recent pre-build `.apk` [here](https://github.com/DiaKEM/dexcom-g7-apk-patcher/releases/latest)!
-
-## What it solves?
-
-It solves exactly this:
-
-![Your device is incompatible](images/problem.png)
-
-## Data sharing/forwarding à la BYODA for AAPS
-
-The patch will not add any data sharing capabilities to the `apk` like BYODA does. It will only remove the compatibility checks.
-If you want to directly transfer Dexcom's glucose readings to your AAPS you can use a workaround by putting xDrip inbetween.
-
-It would be wrong to describe this procedure here because there are other experts out there who also know all the details. Just google for `xdrip dexcom g7 companion mode`.
+Sorry 😕 - It is not legal to offer pre-built APKs but offer software which patches software 🤯. Just follow the instructions to patch a stock `.apk`.
 
 ## Introduction
 
-`Dexcom G7 APK-Patcher` is a simple tool which allows you to modify the official `.apk`-file. The patched `.apk` will disable compatibility checks 
-to allow you the usage of any current android smartphone.
+`Dexcom G7 APK-Patcher` is a simple tool which allows you to modify the official `.apk`-file. The patched `.apk` will disable compatibility checks (and maybe more in the future) to allow you the usage of any current android smartphone.
 
 There were also similar approaches for the G6 `.apk` which offered the same capability. If you are interested you can just check it [here](https://www.reddit.com/r/dexcom/comments/fqvpsf/oc_build_your_own_dexcom_app_update_base_version/).
 
-## Usage
+## Modifications
 
-### Requirements
+### Disable compatibility check
 
-* apktool
-* apksigner
-* git
-* eventually more stuff :)
+This `mod` bypasses the compatibility check by hiding the own device information and setting it to static values. A working combination was `Google Pixel 4`.
 
-### Build
+<img src="images/problem.png" width="200" />
 
-After installing all requirements you can proceed as following:
+The corresponding diff looks like this:
 
-* Download official `Dexcom G7.apk`
-* Place it in the root and name it `dexcom.apk`
-* Run `bin/build.sh`
-* Congratulations - you just have an patched `Dexcom G7.apk` without compatibility checks under `dexcom-mod.apk`
+<img src="images/patch-diff.png" width="100%" />
 
-### Development
-
-The following section describes the toolset and development flow i am using. It should serve only as inspiration. I am sure that better tools and flows exists.
-
-* You can use `jadx-gui` for investigating the code - because it is much easier to read decompiled then disassembled code.
-* For editing `.smali` files i am just using `lvim` but any other basic IDE or text editor is just fine
-* Android Studio (includes much more then required tools) or Genymotion to create an emulator instance
-
-After modifications you can just run `bin/dev-build.sh`. This will rebuild the source, package it and also add the signature. Finaly the Dexcom app will be reinstalled to reflect the changes.
-
-## Patches / Changes / Modifications
-
-The official `.apk` receives only small changes to disable the compatibility check. For this purpose only one single file will be modified.
-This file seems to be responsible for holding device specific data beside of app information. The applied patch only sets static values for `DeviceManufacturer`
-and `DeviceModel` to overcome the compatibility check:
-
-
-![Patch diff](images/patch-diff.png)
-
-As you can see these values will be statically set to `Google` and `Pixel 4`.
-
-## Technical background
+### Technical background
 
 The compatibility of dexcom will be done by some specific service. Therefore the app will collect device and app information and send it to this web-service.
 The service then will check the information and respond to it.
 
-### The HTTP Request
+#### The HTTP Request
 
 ```http_request
 POST https://watch.share-eu.dexcom.com/AppCompatibilityWebServices/Services/CheckValidity?applicationId=822b7625-68bd-4759-b1e7-24d7d1b44d28
@@ -116,11 +72,39 @@ Otherwise it will just say:
 
 ```
 
-## The solution
+## Data sharing/forwarding à la BYODA for AAPS
 
-What if it is possible to just set these values statically? Can we simply lie so that the compatibility service does not complain anymore?
-This was the simple approach here. After disassembling the official `.apk` and checked the code i identified `dexcom/smali/ym/Iew.smali` as
-main information unit for this purpose. And finally the problem was solved by adding two lines of code and changing another two.
+The patch will not add any data sharing capabilities to the `apk` like BYODA does. It will only remove the compatibility checks.
+If you want to directly transfer Dexcom's glucose readings to your AAPS you can use a workaround by putting xDrip inbetween.
+
+It would be wrong to describe this procedure here because there are other experts out there who also know all the details. Just google for `xdrip dexcom g7 companion mode`.
+
+## How to patch?
+
+### Requirements
+
+* apktool
+* apksigner
+* git
+
+### Build
+
+After installing all requirements you can proceed as following:
+
+* Download official `Dexcom G7.apk`
+* Place it in the root and name it `dexcom.apk`
+* Run `bin/build.sh`
+* Congratulations - you just have an patched `Dexcom G7.apk` without compatibility checks under `dexcom-mod.apk`
+
+### Development
+
+The following section describes the toolset and development flow i am using. It should serve only as inspiration. I am sure that better tools and flows exists.
+
+* You can use `jadx-gui` for investigating the code - because it is much easier to read decompiled then disassembled code.
+* For editing `.smali` files i am just using `lvim` but any other basic IDE or text editor is just fine
+* Android Studio (includes much more then required tools) or Genymotion to create an emulator instance
+
+After modifications you can just run `bin/dev-build.sh`. This will rebuild the source, package it and also add the signature. Finaly the Dexcom app will be reinstalled to reflect the changes.
 
 ## Contributing
 
