@@ -1,0 +1,18 @@
+diff --git a/dexcom-src/AndroidManifest.xml b/dexcom-src/AndroidManifest.xml
+index 066c8056..bf59add2 100644
+--- a/dexcom-src/AndroidManifest.xml
++++ b/dexcom-src/AndroidManifest.xml
+@@ -1,4 +1,6 @@
+ <?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="30" android:compileSdkVersionCodename="11" package="com.dexcom.g7" platformBuildVersionCode="30" platformBuildVersionName="11">
++    <uses-sdk android:minSdkVersion="26" />
++    <uses-sdk android:targetSdkVersion="29" />
+     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+     <uses-permission android:name="android.permission.VIBRATE"/>
+     <uses-permission android:name="android.permission.CAMERA"/>
+@@ -112,4 +114,4 @@
+         <meta-data android:name="com.android.vending.derived.apk.id" android:value="1"/>
+     </application>
+     <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
+-</manifest>
+\ No newline at end of file
++</manifest>

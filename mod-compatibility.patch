@@ -1,0 +1,18 @@
+diff --git a/dexcom-src/smali/ym/Iew.smali b/dexcom-src/smali/ym/Iew.smali
+index 7ec3ef6d..4859e1f6 100644
+--- a/dexcom-src/smali/ym/Iew.smali
++++ b/dexcom-src/smali/ym/Iew.smali
+@@ -761,9 +761,11 @@
+ 
+     iput-object p3, p0, Lym/Iew;->appVersion:Ljava/lang/String;
+ 
+-    iput-object p4, p0, Lym/Iew;->deviceManufacturer:Ljava/lang/String;
++    const-string v5, "Google"
++    iput-object v5, p0, Lym/Iew;->deviceManufacturer:Ljava/lang/String;
+ 
+-    iput-object p5, p0, Lym/Iew;->deviceModel:Ljava/lang/String;
++    const-string v5, "Pixel 4"
++    iput-object v5, p0, Lym/Iew;->deviceModel:Ljava/lang/String;
+ 
+     iput-object p6, p0, Lym/Iew;->deviceOsName:Ljava/lang/String;
+ 
