@@ -8,7 +8,7 @@ ALL INFORMATION AND OFFERED RESOURCES ARE HIGHLY EXPERIMENTAL AND NOT TESTED.
 
 ## ⏬ Download
 
-Sorry 😕 - It is not legal to offer pre-built APKs but offer software which patches software 🤯. Just follow the instructions to patch a stock `.apk`.
+Sorry 😕 - unfortunately it is not legal to offer pre-built APKs but offer software which patches software 🤯. Just follow the instructions to patch a stock `.apk`.
 
 ## Introduction
 
@@ -17,6 +17,12 @@ Sorry 😕 - It is not legal to offer pre-built APKs but offer software which pa
 There were also similar approaches for the G6 `.apk` which offered the same capability. If you are interested you can just check it [here](https://www.reddit.com/r/dexcom/comments/fqvpsf/oc_build_your_own_dexcom_app_update_base_version/).
 
 ## Modifications
+
+### Decrease needed sdk version 
+
+This modification just lowers the minimum and targeted android sdk version. 
+Unfortunately this does mean that the app will run on older devices 
+without any troubles but you can give it a try and check it on your own. 
 
 ### Disable compatibility check
 
@@ -30,8 +36,8 @@ The corresponding diff looks like this:
 
 ### Technical background
 
-The compatibility of dexcom will be done by some specific service. Therefore the app will collect device and app information and send it to this web-service.
-The service then will check the information and respond to it.
+The compatibility check will be done by some specific service. Therefore the app will collect device and app information and send it to a web-service.
+The service will check the information and respond to it.
 
 #### The HTTP Request
 
@@ -51,7 +57,7 @@ Content-Type: application/json
 
 ```
 
-If the information are okay the service will answer with:
+If the information are okay the service will respond with:
 
 ```
 {
@@ -91,12 +97,11 @@ It would be wrong to describe this procedure here because there are other expert
 
 After installing all requirements you can proceed as following:
 
-* Download official `Dexcom G7.apk`
-* Place it in the root and name it `dexcom.apk`
-* Run `bin/build.sh`
-* Congratulations - you just have an patched `Dexcom G7.apk` without compatibility checks under `dexcom-mod.apk`
+* Download official `Dexcom G7.apk` from apkure or other portal
+* Run `bin/build.sh path_to_apk`
+* Congratulations - you just created a patched `Dexcom G7.apk` without compatibility checks. 
 
-### Development
+### Reverse Engineering
 
 The following section describes the toolset and development flow i am using. It should serve only as inspiration. I am sure that better tools and flows exists.
 
@@ -104,7 +109,7 @@ The following section describes the toolset and development flow i am using. It 
 * For editing `.smali` files i am just using `lvim` but any other basic IDE or text editor is just fine
 * Android Studio (includes much more then required tools) or Genymotion to create an emulator instance
 
-After modifications you can just run `bin/dev-build.sh`. This will rebuild the source, package it and also add the signature. Finaly the Dexcom app will be reinstalled to reflect the changes.
+After modifications you can just run `bin/dev-build.sh`. This will rebuild the source, package it and also add the signature. Finaly the Dexcom app will be reinstalled on your emulator/device to reflect the changes.
 
 ## Contributing
 
