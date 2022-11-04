@@ -38,10 +38,10 @@ echo "----------------------";
 echo "  Apply sdk patch";
 git apply $SDK_PATCH_FILE
 checkStatus $?
-#echo "----------------------";
-#echo "  Apply broadcast patch";
-#git apply $BROADCAST_PATCH_FILE
-#checkStatus $?
+echo "----------------------";
+echo "  Apply broadcast patch";
+git apply $BROADCAST_PATCH_FILE
+checkStatus $?
 echo "----------------------";
 echo "  Building patched dexcom apk";
 apktool b $DEXCOM_SRC_DIR -o $DEXCOM_MOD_APK --use-aapt2
@@ -51,4 +51,4 @@ echo "  Signing new apk";
 apksigner sign --ks-key-alias cert --ks $KEYSTORE_PATH --ks-pass "pass:$KEYSTORE_PASS" $DEXCOM_MOD_APK
 checkStatus $?
 echo "----------------------";
-echo "APK successfully patched 🎉🎉🎉 - instal $DEXCOM_MOD_APK on your 📲 now";
+echo "APK successfully patched 🎉🎉🎉 - install $DEXCOM_MOD_APK on your 📲 now";

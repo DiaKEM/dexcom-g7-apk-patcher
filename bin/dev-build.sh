@@ -1,26 +1,29 @@
 #!/bin/bash
-
-DEXCOM_APK="dexcom.apk";
-DEXCOM_MOD_APK="dexcom-mod.apk";
-APK_SIGNER_PATH="/Users/selcuk/Library/Android/sdk/build-tools/30.0.3/apksigner";
+DEXCOM_SRC_DIR="dexcom-src"
+DEXCOM_MOD_APK="dexcom.development.apk";
 KEYSTORE_PATH="signing.keystore";
 KEYSTORE_PASS="6dYlrOon6U1430fwj492dBjnYm8CN5zYcWdbVJ53GQIf7PExEV";
 
-echo "Dexcom G7 Hacking Unit";
+checkStatus () {
+   [ $1 -eq 0 ] && { echo "   DONE ✅"; } || { echo "   FAILED ❌"; exit 1;}
+}
+
+echo "Dexcom G7 Hacking Unit - DEVELOPMENT";
 echo "----------------------";
-echo "  Removing old apk";
+echo "  Removing old apk...";
 rm $DEXCOM_MOD_APK || true
+checkStatus 0
 echo "----------------------";
-echo "  Building hacked dexcom apk";
-apktool b dexcom -o $DEXCOM_MOD_APK --use-aapt2
+echo "  Building hacked dexcom apk...";
+apktool b $DEXCOM_SRC_DIR -o $DEXCOM_MOD_APK --use-aapt2
+checkStatus $?
 echo "----------------------";
-echo "  Signing new apk";
-$APK_SIGNER_PATH sign --ks-key-alias cert --ks $KEYSTORE_PATH --ks-pass "pass:$KEYSTORE_PASS" $DEXCOM_MOD_APK
-echo "----------------------";
-echo "  Uninstalling on device...";
-adb uninstall com.dexcom.g7
+echo "  Signing new apk...";
+apksigner sign --ks-key-alias cert --ks $KEYSTORE_PATH --ks-pass "pass:$KEYSTORE_PASS" $DEXCOM_MOD_APK
+checkStatus $?
 echo "----------------------";
 echo "  Installing apk on device...";
 adb install $DEXCOM_MOD_APK;
+checkStatus $?
 echo "----------------------";
-echo "FINISHED - Just copy $DEXCOM_MOD_APK to your incompatible android device and enjoy...";
+echo "APK $DEXCOM_MOD_APK successfully patched 🎉🎉🎉 and installed on your 📲";
