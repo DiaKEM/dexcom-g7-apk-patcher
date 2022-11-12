@@ -9,6 +9,8 @@ COMPATIBILITY_PATCH_FILE="patches/compatibility.patch";
 SDK_PATCH_FILE="patches/sdk-version.patch";
 BROADCAST_PATCH_FILE="patches/broadcast.patch";
 VERSION_INDICATOR_PATCH_FILE="patches/version-indicator.patch";
+EXECUTED_FROM=$( pwd; );
+SCRIPT_DIR=$(dirname -- "$( readlink -f -- "$0"; )");
 
 if [[ ! -f $DEXCOM_APK ]]
 then
@@ -16,8 +18,10 @@ then
     exit;
 fi
 
+cd $SCRIPT_DIR/..;
+
 checkStatus () {
-   [ $1 -eq 0 ] && { echo "   DONE ✅"; } || { echo "   FAILED ❌"; exit 1;}
+   [ $1 -eq 0 ] && { echo "   DONE ✅"; } || { echo "   FAILED ❌"; cd $EXECUTED_FROM; exit 1;}
 }
 
 echo "----------------------";
@@ -57,3 +61,6 @@ apksigner sign --ks-key-alias cert --ks $KEYSTORE_PATH --ks-pass "pass:$KEYSTORE
 checkStatus $?
 echo "----------------------";
 echo "APK successfully patched 🎉🎉🎉 - install $DEXCOM_MOD_APK on your 📲 now";
+
+mv $DEXCOM_MOD_APK $EXECUTED_FROM
+cd $EXECUTED_FROM;
