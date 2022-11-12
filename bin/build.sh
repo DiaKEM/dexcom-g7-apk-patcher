@@ -57,10 +57,16 @@ apktool b $DEXCOM_SRC_DIR -o $DEXCOM_MOD_APK --use-aapt2
 checkStatus $?
 echo "----------------------";
 echo "  Signing new apk";
-apksigner sign --ks-key-alias cert --ks $KEYSTORE_PATH --ks-pass "pass:$KEYSTORE_PASS" $DEXCOM_MOD_APK
+java -jar bin/uber-apk-signer-1.2.1.jar -a $DEXCOM_MOD_APK \
+--ks $KEYSTORE_PATH \
+--ksAlias cert \
+--ksPass $KEYSTORE_PASS \
+--ksKeyPass $KEYSTORE_PASS \
+--skipZipAlign \
+--overwrite
 checkStatus $?
 echo "----------------------";
 echo "APK successfully patched 🎉🎉🎉 - install $DEXCOM_MOD_APK on your 📲 now";
 
-mv $DEXCOM_MOD_APK $EXECUTED_FROM
+mv "$DEXCOM_MOD_APK" "$EXECUTED_FROM" 2> /dev/null
 cd $EXECUTED_FROM;
