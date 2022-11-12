@@ -8,6 +8,7 @@ KEYSTORE_PASS="6dYlrOon6U1430fwj492dBjnYm8CN5zYcWdbVJ53GQIf7PExEV";
 COMPATIBILITY_PATCH_FILE="patches/compatibility.patch";
 SDK_PATCH_FILE="patches/sdk-version.patch";
 BROADCAST_PATCH_FILE="patches/broadcast.patch";
+VERSION_INDICATOR_PATCH_FILE="patches/version-indicator.patch";
 
 if [[ ! -f $DEXCOM_APK ]]
 then
@@ -41,6 +42,10 @@ checkStatus $?
 echo "----------------------";
 echo "  Apply broadcast patch";
 git apply --directory="$DEXCOM_SRC_DIR" $BROADCAST_PATCH_FILE
+checkStatus $?
+echo "----------------------";
+echo "  Apply version indicator patch";
+git apply --directory="$DEXCOM_SRC_DIR" $VERSION_INDICATOR_PATCH_FILE
 checkStatus $?
 echo "----------------------";
 echo "  Building patched dexcom apk";

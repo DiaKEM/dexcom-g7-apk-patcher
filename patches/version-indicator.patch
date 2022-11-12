@@ -1,0 +1,20 @@
+diff --git a/smali_classes4/ym/xLa.2.smali b/smali_classes4/ym/xLa.2.smali
+index c96400c1..34f36326 100644
+--- a/smali_classes4/ym/xLa.2.smali
++++ b/smali_classes4/ym/xLa.2.smali
+@@ -1671,6 +1671,15 @@
+ 
+     invoke-interface {v2}, Lym/Yhw;->cgH()Ljava/lang/String;
+ 
++    move-result-object v2
++    new-instance v11, Ljava/lang/StringBuilder;
++    invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
++    invoke-virtual {v11, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
++    move-result-object v11
++    const-string v2, "+DiaKEM.MOD"
++    invoke-virtual {v11, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
++    move-result-object v11
++    invoke-virtual {v11}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+     move-result-object v2
+ 
+     move-object v8, v9
