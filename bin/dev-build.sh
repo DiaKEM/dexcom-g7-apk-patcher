@@ -1,5 +1,5 @@
 #!/bin/bash
-DEXCOM_SRC_DIR="dexcom-src"
+DEXCOM_SRC_DIR="dexcom-dev"
 DEXCOM_MOD_APK="dexcom.development.apk";
 KEYSTORE_PATH="signing.keystore";
 KEYSTORE_PASS="6dYlrOon6U1430fwj492dBjnYm8CN5zYcWdbVJ53GQIf7PExEV";

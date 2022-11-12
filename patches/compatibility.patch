@@ -1,0 +1,15 @@
+diff --git a/smali/ym/Iew.smali b/smali/ym/Iew.smali
+index 57547d68..398dc0db 100644
+--- a/smali/ym/Iew.smali
++++ b/smali/ym/Iew.smali
+@@ -673,8 +673,10 @@
+ 
+     iput-object p3, p0, Lym/Iew;->appVersion:Ljava/lang/String;
+ 
++    const-string v5, "Google"
+     iput-object p4, p0, Lym/Iew;->deviceManufacturer:Ljava/lang/String;
+ 
++    const-string v5, "Pixel 4"
+     iput-object p5, p0, Lym/Iew;->deviceModel:Ljava/lang/String;
+ 
+     iput-object p6, p0, Lym/Iew;->deviceOsName:Ljava/lang/String;

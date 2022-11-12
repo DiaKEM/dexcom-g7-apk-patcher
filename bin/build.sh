@@ -5,9 +5,9 @@ DEXCOM_SRC_DIR="dexcom-src";
 DEXCOM_MOD_APK="dexcom.patched.apk";
 KEYSTORE_PATH="signing.keystore";
 KEYSTORE_PASS="6dYlrOon6U1430fwj492dBjnYm8CN5zYcWdbVJ53GQIf7PExEV";
-COMPATIBILITY_PATCH_FILE="mod-compatibility.patch";
-SDK_PATCH_FILE="mod-sdk-version.patch";
-BROADCAST_PATCH_FILE="mod-broadcast.patch";
+COMPATIBILITY_PATCH_FILE="patches/compatibility.patch";
+SDK_PATCH_FILE="patches/sdk-version.patch";
+BROADCAST_PATCH_FILE="patches/broadcast.patch";
 
 if [[ ! -f $DEXCOM_APK ]]
 then
@@ -32,15 +32,15 @@ apktool d "$DEXCOM_APK" -o "$DEXCOM_SRC_DIR";
 checkStatus $?
 echo "----------------------";
 echo "  Apply compatibility patch";
-git apply $COMPATIBILITY_PATCH_FILE
+git apply --directory="$DEXCOM_SRC_DIR" $COMPATIBILITY_PATCH_FILE
 checkStatus $?
 echo "----------------------";
 echo "  Apply sdk patch";
-git apply $SDK_PATCH_FILE
+git apply --directory="$DEXCOM_SRC_DIR" $SDK_PATCH_FILE
 checkStatus $?
 echo "----------------------";
 echo "  Apply broadcast patch";
-git apply $BROADCAST_PATCH_FILE
+git apply --directory="$DEXCOM_SRC_DIR" $BROADCAST_PATCH_FILE
 checkStatus $?
 echo "----------------------";
 echo "  Building patched dexcom apk";
