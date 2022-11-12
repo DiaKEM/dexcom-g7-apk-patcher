@@ -18,27 +18,26 @@ Sorry 😕 - unfortunately it is not legal to offer pre-built APKs but offer sof
 
 ## Introduction
 
-`Dexcom G7 APK-Patcher` is a simple tool which allows you to modify the official `.apk`-file. The patched `.apk` will modify the original `.apk` to your
-needs.
+`Dexcom G7 APK-Patcher` is a simple tool which allows you to modify the official `.apk`-file.
 
 There were also similar approaches for the G6 `.apk` which offered the same capability. If you are interested you can just check it [here](https://www.reddit.com/r/dexcom/comments/fqvpsf/oc_build_your_own_dexcom_app_update_base_version/).
 
 ## Modifications
 
-### AAPS Broadcasting
+### AndroidAPS Broadcasting
 
-This `mod` allows you to transfer your Dexcom G7 data to AAPS and also supports backfilling.
+This `mod` allows you to transfer your Dexcom G7 data to AndroidAPS and also supports backfilling.
 
 #### Requirements
 
-You will have to install a specific AAPS version which supports G7 integration: https://github.com/DiaKEM/dexcom-g7-aaps/pull/1
+You will have to install a specific AndroidAPS version which supports G7 integration: https://github.com/DiaKEM/dexcom-g7-aaps
 
 #### Known issue: Data Smoothing
 
 As you might know as Looper and G7 user there is no data smoothing included in G7 at all. Dexcom has no statement about the G7 specifically but
 regarding G6 which might be still valid from their side: https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app
 
-To overcome this issue @blaqone adviced to use smoothing directly in AAPS and here we go: https://github.com/nightscout/AndroidAPS/pull/2141.
+To overcome this issue @blaqone adviced to use smoothing directly in AndroidAPS and here we go: https://github.com/nightscout/AndroidAPS/pull/2141.
 This nice PR implements not only smoothing but also backward smoothing and guarantees nice interpretable data. 
 
 Please note that there is also an alternative approach with XDrip+ as middleware between Dexcom G7 and AAPS to just achieve the same. 
