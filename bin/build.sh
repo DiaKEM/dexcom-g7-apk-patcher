@@ -26,23 +26,24 @@ fi
 cd $SCRIPT_DIR/..;
 
 checkStatus () {
-   [ $1 -eq 0 ] && { echo "   DONE ✅"; } || { echo "   FAILED ❌"; cd $EXECUTED_FROM; exit 1;}
+   [ $1 -eq 0 ] && { echo "   ✅ DONE"; } || { echo "   ❌ FAILED"; cd $EXECUTED_FROM; exit 1;}
 }
 
 echo "----------------------";
-echo "Dexcom G7 Hacking Unit";
-echo "Latest supported Dexcom G7 version: 1.3.3.3527"
+echo "🐌 Dexcom G7 APK-Patcher"
+echo "ℹ️  Latest supported Dexcom G7 version: 1.3.3.3527"
+echo "☢️  ALL INFORMATION AND OFFERED RESOURCES ARE HIGHLY EXPERIMENTAL AND NOT TESTED. USE AT YOUR OWN RISK! 🧪"
 echo "----------------------";
-echo "  Removing old resources";
+echo "  ⏳ Removing old resources";
 rm $DEXCOM_MOD_APK &> /dev/null || true
 rm -rf $DEXCOM_SRC_DIR &> /dev/null || true
 checkStatus 0
 echo "----------------------";
-echo "  Disassamble apk";
+echo "  ⏳ Disassamble apk";
 java -jar bin/apktool_2.6.1.jar d "$DEXCOM_APK" -o "$DEXCOM_SRC_DIR";
 checkStatus $?
 echo "----------------------";
-echo "  Apply compatibility patch";
+echo "  ⏳ Apply compatibility patch";
 git apply --directory="$DEXCOM_SRC_DIR" $COMPATIBILITY_PATCH_FILE
 checkStatus $?
 #echo "----------------------";
@@ -50,19 +51,19 @@ checkStatus $?
 #git apply --directory="$DEXCOM_SRC_DIR" $SDK_PATCH_FILE
 #checkStatus $?
 echo "----------------------";
-echo "  Apply broadcast patch";
+echo "  ⏳ Apply broadcast patch";
 git apply --directory="$DEXCOM_SRC_DIR" $BROADCAST_PATCH_FILE
 checkStatus $?
 echo "----------------------";
-echo "  Apply version indicator patch";
+echo "  ⏳ Apply version indicator patch";
 git apply --directory="$DEXCOM_SRC_DIR" $VERSION_INDICATOR_PATCH_FILE
 checkStatus $?
 echo "----------------------";
-echo "  Building patched dexcom apk";
+echo "  ⏳ Building patched dexcom apk";
 java -jar bin/apktool_2.6.1.jar b $DEXCOM_SRC_DIR -o $DEXCOM_MOD_APK --use-aapt2
 checkStatus $?
 echo "----------------------";
-echo "  Signing new apk";
+echo "  ⏳ Signing new apk";
 java -jar bin/uber-apk-signer-1.2.1.jar -a $DEXCOM_MOD_APK \
 --ks $KEYSTORE_PATH \
 --ksAlias cert \
@@ -72,7 +73,7 @@ java -jar bin/uber-apk-signer-1.2.1.jar -a $DEXCOM_MOD_APK \
 --overwrite
 checkStatus $?
 echo "----------------------";
-echo "APK successfully patched 🎉🎉🎉 - install $DEXCOM_MOD_APK on your 📲 now";
+echo "🎉🎉🎉 APK successfully patched 🎉🎉🎉 - install $DEXCOM_MOD_APK on your 📲 now";
 
 mv "$DEXCOM_MOD_APK" "$EXECUTED_FROM" 2> /dev/null
 cd $EXECUTED_FROM;
