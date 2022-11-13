@@ -39,10 +39,10 @@ echo "----------------------";
 echo "  Apply compatibility patch";
 git apply --directory="$DEXCOM_SRC_DIR" $COMPATIBILITY_PATCH_FILE
 checkStatus $?
-echo "----------------------";
-echo "  Apply sdk patch";
-git apply --directory="$DEXCOM_SRC_DIR" $SDK_PATCH_FILE
-checkStatus $?
+#echo "----------------------";
+#echo "  Apply sdk patch";
+#git apply --directory="$DEXCOM_SRC_DIR" $SDK_PATCH_FILE
+#checkStatus $?
 echo "----------------------";
 echo "  Apply broadcast patch";
 git apply --directory="$DEXCOM_SRC_DIR" $BROADCAST_PATCH_FILE
