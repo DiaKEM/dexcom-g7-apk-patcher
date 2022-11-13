@@ -14,7 +14,12 @@ SCRIPT_DIR=$(dirname -- "$( readlink -f -- "$0"; )");
 
 if [[ ! -f $DEXCOM_APK ]]
 then
-    echo "Please provide a valid .apk as first argument and try again - exiting."
+    echo "Please provide a valid .apk as first argument and try again!"
+    echo "----------------------";
+    echo "You can download the latest available .apk from here:"
+    echo "https://m.apkpure.com/de/dexcom-g7/com.dexcom.g7/download?from=details"
+    echo "----------------------";
+    echo "Execute script like bin/build.sh ./PATH_TO_DEXCOM_APK"
     exit;
 fi
 
@@ -26,6 +31,7 @@ checkStatus () {
 
 echo "----------------------";
 echo "Dexcom G7 Hacking Unit";
+echo "Latest supported Dexcom G7 version: 1.3.3.3527"
 echo "----------------------";
 echo "  Removing old resources";
 rm $DEXCOM_MOD_APK &> /dev/null || true
@@ -33,7 +39,7 @@ rm -rf $DEXCOM_SRC_DIR &> /dev/null || true
 checkStatus 0
 echo "----------------------";
 echo "  Disassamble apk";
-apktool d "$DEXCOM_APK" -o "$DEXCOM_SRC_DIR";
+java -jar bin/apktool_2.6.1.jar d "$DEXCOM_APK" -o "$DEXCOM_SRC_DIR";
 checkStatus $?
 echo "----------------------";
 echo "  Apply compatibility patch";
@@ -53,7 +59,7 @@ git apply --directory="$DEXCOM_SRC_DIR" $VERSION_INDICATOR_PATCH_FILE
 checkStatus $?
 echo "----------------------";
 echo "  Building patched dexcom apk";
-apktool b $DEXCOM_SRC_DIR -o $DEXCOM_MOD_APK --use-aapt2
+java -jar bin/apktool_2.6.1.jar b $DEXCOM_SRC_DIR -o $DEXCOM_MOD_APK --use-aapt2
 checkStatus $?
 echo "----------------------";
 echo "  Signing new apk";

@@ -15,11 +15,17 @@ rm $DEXCOM_MOD_APK || true
 checkStatus 0
 echo "----------------------";
 echo "  Building hacked dexcom apk...";
-apktool b $DEXCOM_SRC_DIR -o $DEXCOM_MOD_APK --use-aapt2
+java -jar bin/apktool_2.6.1.jar b $DEXCOM_SRC_DIR -o $DEXCOM_MOD_APK --use-aapt2
 checkStatus $?
 echo "----------------------";
 echo "  Signing new apk...";
-apksigner sign --ks-key-alias cert --ks $KEYSTORE_PATH --ks-pass "pass:$KEYSTORE_PASS" $DEXCOM_MOD_APK
+java -jar bin/uber-apk-signer-1.2.1.jar -a $DEXCOM_MOD_APK \
+--ks $KEYSTORE_PATH \
+--ksAlias cert \
+--ksPass $KEYSTORE_PASS \
+--ksKeyPass $KEYSTORE_PASS \
+--skipZipAlign \
+--overwrite
 checkStatus $?
 echo "----------------------";
 echo "  Installing apk on device...";

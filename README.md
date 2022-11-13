@@ -63,9 +63,10 @@ The corresponding diff looks like this:
 
 ### Requirements
 
-* apktool
-* apksigner
-* git
+The patcher will come with its own tools and does not require any high level dependencies actually. But we need:
+
+* Java
+* GIT
 
 ### Build
 
