@@ -1,17 +1,16 @@
 diff --git a/smali/com/dexcom/coresdk/g7appcore/persistence/repositories/TxServiceRoomRepository.smali b/smali/com/dexcom/coresdk/g7appcore/persistence/repositories/TxServiceRoomRepository.smali
-index a0c36bd5..74c1ba4c 100644
+index a0c36bd5..3640bc05 100644
 --- a/smali/com/dexcom/coresdk/g7appcore/persistence/repositories/TxServiceRoomRepository.smali
 +++ b/smali/com/dexcom/coresdk/g7appcore/persistence/repositories/TxServiceRoomRepository.smali
-@@ -3765,6 +3765,8 @@
+@@ -3764,6 +3764,7 @@
+     aput-object p2, v1, v0
  
      const v0, 0x1bcd6
- 
 +    invoke-virtual {p0, p1}, Lcom/dexcom/coresdk/g7appcore/persistence/repositories/TxServiceRoomRepository;->broadcastToAAPS(Lcom/dexcom/coresdk/g7appcore/txservice/models/TxServiceRecord;)V
-+
+ 
      invoke-direct {p0, v0, v1}, Lcom/dexcom/coresdk/g7appcore/persistence/repositories/TxServiceRoomRepository;->Zwb(I[Ljava/lang/Object;)Ljava/lang/Object;
  
-     move-result-object v0
-@@ -3804,3 +3806,158 @@
+@@ -3804,3 +3805,158 @@
  
      return v0
  .end method
@@ -23,14 +22,14 @@ index a0c36bd5..74c1ba4c 100644
 +# @author Selcuk Kekec <khskekec@gmail.com>
 +# @org DiaKEM
 +# @url https://github.com/DiaKEM/dexcom-g7-apk-patcher
-+# @date 2022-11-12T01:48:36.203Z
-+.method public broadcastToAAPS(Lcom/diakem/dexcomg7broadcastboilerplate/TxServiceRecord;)V
++# @date 2022-11-13T00:35:56.017Z
++.method public broadcastToAAPS(Lcom/dexcom/coresdk/g7appcore/txservice/models/TxServiceRecord;)V
 +    .locals 10
 +
 +    :try_start_0
-+    iget-object v0, p1, Lcom/diakem/dexcomg7broadcastboilerplate/TxServiceRecord;->txCommState:Lcom/diakem/dexcomg7broadcastboilerplate/TxCommState;
++    iget-object v0, p1, Lcom/dexcom/coresdk/g7appcore/txservice/models/TxServiceRecord;->txCommState:Lcom/dexcom/coresdk/g7appcore/txservice/models/TxCommState;
 +
-+    invoke-virtual {v0}, Lcom/diakem/dexcomg7broadcastboilerplate/TxCommState;->name()Ljava/lang/String;
++    invoke-virtual {v0}, Lcom/dexcom/coresdk/g7appcore/txservice/models/TxCommState;->name()Ljava/lang/String;
 +
 +    move-result-object v0
 +
@@ -61,7 +60,7 @@ index a0c36bd5..74c1ba4c 100644
 +
 +    invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 +
-+    invoke-virtual {p1}, Lcom/diakem/dexcomg7broadcastboilerplate/TxServiceRecord;->getSensorReadings()Ljava/util/List;
++    invoke-virtual {p1}, Lcom/dexcom/coresdk/g7appcore/txservice/models/TxServiceRecord;->getSensorReadings()Ljava/util/List;
 +
 +    move-result-object p1
 +
@@ -82,11 +81,11 @@ index a0c36bd5..74c1ba4c 100644
 +
 +    move-result-object v4
 +
-+    check-cast v4, Lcom/diakem/dexcomg7broadcastboilerplate/SensorReading;
++    check-cast v4, Lcom/dexcom/coresdk/g7appcore/txservice/models/SensorReading;
 +
-+    iget-object v5, v4, Lcom/diakem/dexcomg7broadcastboilerplate/SensorReading;->egvValue:Lcom/diakem/dexcomg7broadcastboilerplate/GIU;
++    iget-object v5, v4, Lcom/dexcom/coresdk/g7appcore/txservice/models/SensorReading;->egvValue:Lym/qj;
 +
-+    iget v5, v5, Lcom/diakem/dexcomg7broadcastboilerplate/GIU;->Iw:I
++    iget v5, v5, Lym/qj;->Iw:I
 +
 +    const/16 v6, 0xfff
 +
@@ -97,17 +96,17 @@ index a0c36bd5..74c1ba4c 100644
 +    :cond_1
 +    const-string v5, "glucoseValue"
 +
-+    iget-object v6, v4, Lcom/diakem/dexcomg7broadcastboilerplate/SensorReading;->egvValue:Lcom/diakem/dexcomg7broadcastboilerplate/GIU;
++    iget-object v6, v4, Lcom/dexcom/coresdk/g7appcore/txservice/models/SensorReading;->egvValue:Lym/qj;
 +
-+    iget v6, v6, Lcom/diakem/dexcomg7broadcastboilerplate/GIU;->Iw:I
++    iget v6, v6, Lym/qj;->Iw:I
 +
 +    invoke-virtual {v3, v5, v6}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 +
 +    const-string v5, "timestamp"
 +
-+    iget-object v6, v4, Lcom/diakem/dexcomg7broadcastboilerplate/SensorReading;->sensorReadingTimestamp:Lcom/diakem/dexcomg7broadcastboilerplate/TUI;
++    iget-object v6, v4, Lcom/dexcom/coresdk/g7appcore/txservice/models/SensorReading;->sensorReadingTimestamp:Lym/kFw;
 +
-+    iget-wide v6, v6, Lcom/diakem/dexcomg7broadcastboilerplate/TUI;->Iw:J
++    iget-wide v6, v6, Lym/kFw;->Iw:J
 +
 +    const-wide/16 v8, 0x3e8
 +
@@ -117,9 +116,9 @@ index a0c36bd5..74c1ba4c 100644
 +
 +    const-string v5, "trendArrow"
 +
-+    iget-object v4, v4, Lcom/diakem/dexcomg7broadcastboilerplate/SensorReading;->trendArrow:Lcom/diakem/dexcomg7broadcastboilerplate/TrendArrow;
++    iget-object v4, v4, Lcom/dexcom/coresdk/g7appcore/txservice/models/SensorReading;->trendArrow:Lcom/dexcom/coresdk/g7appcore/txservice/models/TrendArrow;
 +
-+    invoke-virtual {v4}, Lcom/diakem/dexcomg7broadcastboilerplate/TrendArrow;->name()Ljava/lang/String;
++    invoke-virtual {v4}, Lcom/dexcom/coresdk/g7appcore/txservice/models/TrendArrow;->name()Ljava/lang/String;
 +
 +    move-result-object v4
 +
