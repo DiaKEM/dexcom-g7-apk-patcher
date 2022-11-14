@@ -9,6 +9,7 @@ COMPATIBILITY_PATCH_FILE="patches/compatibility.patch";
 SDK_PATCH_FILE="patches/sdk-version.patch";
 BROADCAST_PATCH_FILE="patches/broadcast.patch";
 VERSION_INDICATOR_PATCH_FILE="patches/version-indicator.patch";
+SCREENSHOT_PATCH_FILE="patches/screenshot.patch";
 EXECUTED_FROM=$( pwd; );
 SCRIPT_DIR=$(dirname -- "$( readlink -f -- "$0"; )");
 
@@ -57,6 +58,10 @@ checkStatus $?
 echo "----------------------";
 echo "  ⏳ Apply version indicator patch";
 git apply --directory="$DEXCOM_SRC_DIR" $VERSION_INDICATOR_PATCH_FILE
+checkStatus $?
+echo "----------------------";
+echo "  ⏳ Apply screenshot patch";
+git apply --directory="$DEXCOM_SRC_DIR" $SCREENSHOT_PATCH_FILE
 checkStatus $?
 echo "----------------------";
 echo "  ⏳ Building patched dexcom apk";

@@ -12,6 +12,8 @@ ALL INFORMATION AND OFFERED RESOURCES ARE HIGHLY EXPERIMENTAL AND NOT TESTED. US
 
 ✅ Decrease required android version
 
+✅ Enable Screenshots
+
 ## ⏬ Download
 
 Sorry 😕 - unfortunately it is not legal to offer pre-built APKs but offer software which patches software 🤯. Just follow the instructions to patch a stock `.apk`.
@@ -59,12 +61,21 @@ The corresponding diff looks like this:
 
 <img src="images/patch-diff.png" width="100%" />
 
+### Enable Screenshots
+
+This small `mod` disables `WindowManager.LayoutParams.FLAG_SECURE` to enable screenshots in the application.
+
 ## How to patch?
 
 ### Requirements
 
+> :warning: The patcher is actually only *fully compatible with Linux / Unix operating systems*.
+> Unfortunately `apktool` can generate different filenames on Windows OS which makes the application of the modifications impossible.
+> Please use the patcher only on Linux / Unix operating systems to ensure correct results.
+
 The patcher will come with its own tools and does not require any high level dependencies actually. But we need:
 
+* Linux / Unix OS
 * Java
 * GIT
 
@@ -85,7 +96,7 @@ The following section describes the toolset and development flow i am using. It 
 * For editing `.smali` files i am just using `lvim` but any other basic IDE or text editor is just fine
 * Android Studio (includes much more then required tools) or Genymotion to create an emulator instance
 
-After modifications you can just run `bin/dev-build.sh`. This will rebuild the source, package it and also add the signature. Finaly the Dexcom app will be reinstalled on your emulator/device to reflect the changes.
+After modifications you can just run `bin/dev-build.sh`. This will rebuild the source, package it and also add the signature. Finally the Dexcom app will be reinstalled on your emulator/device to reflect the changes.
 
 ## Contributing
 

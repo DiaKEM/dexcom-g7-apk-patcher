@@ -8,6 +8,7 @@ checkStatus () {
    [ $1 -eq 0 ] && { echo "   DONE ✅"; } || { echo "   FAILED ❌"; exit 1;}
 }
 
+echo "----------------------";
 echo "Dexcom G7 Hacking Unit - DEVELOPMENT";
 echo "----------------------";
 echo "  Removing old apk...";

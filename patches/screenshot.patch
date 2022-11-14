@@ -1,0 +1,15 @@
+diff --git a/smali_classes2/ym/GBw.smali b/smali_classes2/ym/GBw.smali
+index 9096c069..e58da19e 100644
+--- a/smali_classes2/ym/GBw.smali
++++ b/smali_classes2/ym/GBw.smali
+@@ -206,10 +206,6 @@
+ 
+     move-result-object v1
+ 
+-    const/16 v0, 0x2000
+-
+-    invoke-virtual {v1, v0, v0}, Landroid/view/Window;->setFlags(II)V
+-
+     return-object v13
+ 
+     :pswitch_data_0
