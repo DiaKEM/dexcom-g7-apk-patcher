@@ -69,7 +69,7 @@ This small `mod` disables `WindowManager.LayoutParams.FLAG_SECURE` to enable scr
 
 ### Requirements
 
-> :warning: The patcher is actually only *fully compatible with Linux / Unix operating systems*.
+> :warning: The patcher is actually only **fully compatible with Linux / Unix operating systems**.
 > Unfortunately `apktool` can generate different filenames on Windows OS which makes the application of the modifications impossible.
 > Please use the patcher only on Linux / Unix operating systems to ensure correct results.
 
