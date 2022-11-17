@@ -1,5 +1,5 @@
 diff --git a/smali/com/dexcom/coresdk/g7appcore/persistence/repositories/TxServiceRoomRepository.smali b/smali/com/dexcom/coresdk/g7appcore/persistence/repositories/TxServiceRoomRepository.smali
-index a0c36bd5..f14c79c0 100644
+index a0c36bd5..3640bc05 100644
 --- a/smali/com/dexcom/coresdk/g7appcore/persistence/repositories/TxServiceRoomRepository.smali
 +++ b/smali/com/dexcom/coresdk/g7appcore/persistence/repositories/TxServiceRoomRepository.smali
 @@ -3764,6 +3764,7 @@
@@ -22,7 +22,7 @@ index a0c36bd5..f14c79c0 100644
 +# @author Selcuk Kekec <khskekec@gmail.com>
 +# @org DiaKEM
 +# @url https://github.com/DiaKEM/dexcom-g7-apk-patcher
-+# @date 2022-11-17T22:47:14.220Z
++# @date 2022-11-13T00:35:56.017Z
 +.method public broadcastToAAPS(Lcom/dexcom/coresdk/g7appcore/txservice/models/TxServiceRecord;)V
 +    .locals 10
 +
@@ -87,9 +87,9 @@ index a0c36bd5..f14c79c0 100644
 +
 +    iget v5, v5, Lym/qj;->Iw:I
 +
-+    const/16 v6, 0x190
++    const/16 v6, 0xfff
 +
-+    if-le v5, v6, :cond_1
++    if-ne v5, v6, :cond_1
 +
 +    goto :goto_1
 +
