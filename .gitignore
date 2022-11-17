@@ -1,5 +1,7 @@
 .DS_Store
+.idea
 dexcom-src
+dexcom-dev
 *.idsig
 *.apk
 *.apk.cache
