@@ -57,6 +57,9 @@ git apply --directory="$DEXCOM_SRC_DIR" $BROADCAST_PATCH_FILE
 checkStatus $?
 echo "----------------------";
 echo "  ⏳ Apply version indicator patch";
+if [ ! -f "$DEXCOM_SRC_DIR/smali_classes4/ym/xLa.2.smali" ]; then
+    mv $DEXCOM_SRC_DIR/smali_classes4/ym/xLa.smali $DEXCOM_SRC_DIR/smali_classes4/ym/xLa.2.smali 2> /dev/null
+fi
 git apply --directory="$DEXCOM_SRC_DIR" $VERSION_INDICATOR_PATCH_FILE
 checkStatus $?
 echo "----------------------";
