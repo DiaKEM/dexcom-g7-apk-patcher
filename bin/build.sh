@@ -9,6 +9,7 @@ COMPATIBILITY_PATCH_FILE="patches/compatibility.patch";
 SDK_PATCH_FILE="patches/sdk-version.patch";
 BROADCAST_PATCH_FILE="patches/broadcast.patch";
 VERSION_INDICATOR_PATCH_FILE="patches/version-indicator.patch";
+VERSION_INDICATOR_PATCH_TEMPLATE="patches/version-indicator.patch.template";
 SCREENSHOT_PATCH_FILE="patches/screenshot.patch";
 EXECUTED_FROM=$( pwd; );
 SCRIPT_DIR=$(dirname -- "$( readlink -f -- "$0"; )");
@@ -60,6 +61,8 @@ echo "  ⏳ Apply version indicator patch";
 if [ ! -f "$DEXCOM_SRC_DIR/smali_classes4/ym/xLa.2.smali" ]; then
     mv $DEXCOM_SRC_DIR/smali_classes4/ym/xLa.smali $DEXCOM_SRC_DIR/smali_classes4/ym/xLa.2.smali 2> /dev/null
 fi
+rm -f "$VERSION_INDICATOR_PATCH_FILE";
+sed "s/%%COMMIT_HASH%%/$(git rev-parse --short HEAD)/g" $VERSION_INDICATOR_PATCH_TEMPLATE > $VERSION_INDICATOR_PATCH_FILE
 git apply --directory="$DEXCOM_SRC_DIR" $VERSION_INDICATOR_PATCH_FILE
 checkStatus $?
 echo "----------------------";

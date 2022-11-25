@@ -5,3 +5,4 @@ dexcom-dev
 *.idsig
 *.apk
 *.apk.cache
+patches/version-indicator.patch  

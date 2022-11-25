@@ -11,7 +11,7 @@ index c96400c1..34f36326 100644
 +    invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
 +    invoke-virtual {v11, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 +    move-result-object v11
-+    const-string v2, "+DiaKEM.MOD"
++    const-string v2, "+DiaKEM.MOD+%%COMMIT_HASH%%"
 +    invoke-virtual {v11, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 +    move-result-object v11
 +    invoke-virtual {v11}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
