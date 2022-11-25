@@ -4,6 +4,14 @@ Build your own android based `Dexcom G7.apk` with some sugar on it.
 
 ALL INFORMATION AND OFFERED RESOURCES ARE HIGHLY EXPERIMENTAL AND NOT TESTED. USE AT YOUR OWN RISK!
 
+## Get help or share your experience
+
+[Join us on Discord](https://discord.gg/QFSpqU3A)
+
+This is a very young project and therefore you might have questions or are facing problems during the setup. If you need help at some point you can ask for on [Discord](https://discord.gg/QFSpqU3A) or just open a new ticket here in GitHub.
+
+It would be also nice if you can share your positive experiences with others and provide some insights which setup you are running and how stable it is.
+
 ## Available patches
 
 ✅ AAPS Broadcasting
