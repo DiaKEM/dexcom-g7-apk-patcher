@@ -96,6 +96,13 @@ After installing all requirements you can proceed as following:
 * Run `bin/build.sh path_to_apk`
 * Congratulations - you just created your patched `Dexcom G7.apk`
 
+### Docker for Linux x64
+* copy dockerfile in an empty directory under linux x64
+* run >>  docker build -t g7patcher .
+* start container >> docker run -it -v /tmp:/g7 g7patcher
+* look in /tmp for Dexcom_G7_patched.apk
+* install this file on your phone
+
 ### Reverse Engineering
 
 The following section describes the toolset and development flow i am using. It should serve only as inspiration. I am sure that better tools and flows exists.
