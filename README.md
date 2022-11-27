@@ -87,7 +87,7 @@ The patcher will come with its own tools and does not require any high level dep
 * Java 11
 * GIT
 
-### ![Build](https://cdn1.iconfinder.com/data/icons/bootstrap/16/boxes-512.png) Build
+### <img src="https://cdn1.iconfinder.com/data/icons/bootstrap/16/boxes-512.png" alt="drawing" width="16"/> Build
 
 > :warning: **If you are using Windows** the patcher will not work. As an alternative you can use Docker.
 
