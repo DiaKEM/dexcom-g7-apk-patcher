@@ -77,17 +77,19 @@ This small `mod` disables `WindowManager.LayoutParams.FLAG_SECURE` to enable scr
 
 ### Requirements
 
-> :warning: The patcher is actually only **fully compatible with Linux / Unix operating systems**.
+> :warning: The patcher is actually only **fully compatible with Linux / Unix operating systems** or by using Docker on Windows systems.
 > Unfortunately `apktool` can generate different filenames on Windows OS which makes the application of the modifications impossible.
 > Please use the patcher only on Linux / Unix operating systems to ensure correct results.
 
 The patcher will come with its own tools and does not require any high level dependencies actually. But we need:
 
 * Linux / Unix OS
-* Java
+* Java 11
 * GIT
 
-### Build
+### ![Build](https://cdn1.iconfinder.com/data/icons/bootstrap/16/boxes-512.png) Build
+
+> :warning: **If you are using Windows** the patcher will not work. As an alternative you can use Docker.
 
 After installing all requirements you can proceed as following:
 
@@ -95,6 +97,14 @@ After installing all requirements you can proceed as following:
 * **OPTIONAL** Open `bin/build.sh` and comment out `mods` you do not need you do not need!
 * Run `bin/build.sh path_to_apk`
 * Congratulations - you just created your patched `Dexcom G7.apk`
+
+### Docker
+
+To simplify the patching process @rICTx-T1D introduced a basic docker setup. You can use it on any OS which can host Docker.
+
+To build on Linux/Unix you can just execute `./docker-build.sh` which will create `docker.patched.apk` in your `cwd`.
+
+Windows script will come soon!
 
 ### Reverse Engineering
 
