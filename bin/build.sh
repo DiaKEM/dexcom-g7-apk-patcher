@@ -80,7 +80,6 @@ java -jar bin/uber-apk-signer-1.2.1.jar -a $DEXCOM_MOD_APK \
 --ksAlias cert \
 --ksPass $KEYSTORE_PASS \
 --ksKeyPass $KEYSTORE_PASS \
---skipZipAlign \
 --overwrite
 checkStatus $?
 echo "----------------------";
