@@ -100,11 +100,11 @@ After installing all requirements you can proceed as following:
 
 ### Docker
 
-To simplify the patching process @rICTx-T1D introduced a basic docker setup. You can use it on any OS which can host Docker.
+To simplify the patching process @rICTx-T1D introduced a basic docker setup. You can use it on any OS which can host Docker or equal compatible container engine. The CPU-architecture must x86/64 because some libraries need them.
 
 To build on Linux/Unix you can just execute `./docker-build.sh` which will create `docker.patched.apk` in your `cwd`.
 
-Windows script will come soon!
+Maybe a Windows script will come soon!
 
 ### Reverse Engineering
 
