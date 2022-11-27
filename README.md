@@ -8,7 +8,7 @@ ALL INFORMATION AND OFFERED RESOURCES ARE HIGHLY EXPERIMENTAL AND NOT TESTED. US
 
 [Join us on Discord](https://discord.gg/MCCa2Xtaed)
 
-This is a very young project and therefore you might have questions or are facing problems during the setup. If you need help at some point you can ask for on [Discord](https://discord.gg/QFSpqU3A) or just open a new ticket here in GitHub.
+This is a very young project and therefore you might have questions or are facing problems during the setup. If you need help at some point you can ask for on [Discord](https://discord.gg/MCCa2Xtaed) or just open a new ticket here in GitHub.
 
 It would be also nice if you can share your positive experiences with others and provide some insights which setup you are running and how stable it is.
 
