@@ -99,7 +99,7 @@ After installing all requirements you can proceed as following:
 ### Docker for Linux x64
 * copy dockerfile in an empty directory under linux x64
 * run >>  docker build -t g7patcher .
-* start container >> docker run -it -v /tmp:/g7 g7patcher
+* start container >> docker run -it -v $(pwd)/g7:/g7 g7patcher
 * look in /tmp for Dexcom_G7_patched.apk
 * install this file on your phone
 
