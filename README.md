@@ -53,6 +53,14 @@ This nice PR implements not only smoothing but also backward smoothing and guara
 Please note that there is also an alternative approach with XDrip+ as middleware between Dexcom G7 and AAPS to just achieve the same. 
 **AS I UNDERSTOOD** the only disadvantage with XDrip+ is its disability of backfilling data and missing SMBs in AAPS
 
+#### Known issue: Server Error on disclaimer page
+
+Some users are facing a prominent `Server error` popup in the disclaimer step which prevents them to pass:
+
+<img src="images/disclaimer-error.png" width="300" />
+
+If you have the same problem it could be that you have an Ad Blocker installed. Please define an exception for the Dexcom app or totally uninstall the Ad Blocker.
+
 ### Decrease required android version 
 
 This `mod` just lowers the minimum and targeted android sdk version. 
