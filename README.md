@@ -85,7 +85,7 @@ This small `mod` disables `WindowManager.LayoutParams.FLAG_SECURE` to enable scr
 
 ### Requirements
 
-> :warning: The patcher is actually only **fully compatible with Linux / Unix operating systems** or by using Docker on Windows systems.
+> :warning: The patcher is actually only **fully compatible with Linux / Unix operating systems** or by using Docker or [WSL](https://ubuntu.com/wsl) on Windows.
 > Unfortunately `apktool` can generate different filenames on Windows OS which makes the application of the modifications impossible.
 > Please use the patcher only on Linux / Unix operating systems to ensure correct results.
 
@@ -97,12 +97,12 @@ The patcher will come with its own tools and does not require any high level dep
 
 ### <img src="https://cdn1.iconfinder.com/data/icons/bootstrap/16/boxes-512.png" alt="drawing" width="16"/> Build
 
-> :warning: **If you are using Windows** the patcher will not work. As an alternative you can use Docker.
+> :warning: **If you are using Windows** the patcher will not work. As an alternative, you can use Docker or [WSL](https://ubuntu.com/wsl).
 
 After installing all requirements you can proceed as following:
 
 * Download official `Dexcom G7.apk` from apkure or other portal
-* **OPTIONAL** Open `bin/build.sh` and comment out `mods` you do not need you do not need!
+* **OPTIONAL** Open `bin/build.sh` and comment out `mods` you do not need!
 * Run `bin/build.sh path_to_apk`
 * Congratulations - you just created your patched `Dexcom G7.apk`
 
