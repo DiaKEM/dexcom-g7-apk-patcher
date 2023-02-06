@@ -42,25 +42,6 @@ This `mod` allows you to transfer your Dexcom G7 data to AndroidAPS and also sup
 
 You will have to install a specific AndroidAPS version which supports G7 integration: https://github.com/DiaKEM/dexcom-g7-aaps
 
-#### Known issue: Data Smoothing
-
-As you might know as Looper and G7 user there is no data smoothing included in G7 at all. Dexcom has no statement about the G7 specifically but
-regarding G6 which might be still valid from their side: https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app
-
-To overcome this issue @blaqone adviced to use smoothing directly in AndroidAPS and here we go: https://github.com/nightscout/AndroidAPS/pull/2141.
-This nice PR implements not only smoothing but also backward smoothing and guarantees nice interpretable data. 
-
-Please note that there is also an alternative approach with XDrip+ as middleware between Dexcom G7 and AAPS to just achieve the same. 
-**AS I UNDERSTOOD** the only disadvantage with XDrip+ is its disability of backfilling data and missing SMBs in AAPS
-
-#### Known issue: Server Error on disclaimer page
-
-Some users are facing a prominent `Server error` popup in the disclaimer step which prevents them to pass:
-
-<img src="images/disclaimer-error.png" width="300" />
-
-If you have the same problem it could be that you have an Ad Blocker installed. Please define an exception for the Dexcom app or totally uninstall the Ad Blocker.
-
 ### Decrease required android version 
 
 This `mod` just lowers the minimum and targeted android sdk version. 
@@ -81,6 +62,36 @@ The corresponding diff looks like this:
 
 This small `mod` disables `WindowManager.LayoutParams.FLAG_SECURE` to enable screenshots in the application.
 
+## Known issues
+
+### Sensor readings during sensor errors and warm up time
+
+Actually the patched app is not able to fully determine if the sensor is fully applicable.
+Because of this bug it will send values during:
+
+* warm up time
+* sensor errors
+* extreme lows (<40)
+
+### Data Smoothing
+
+As you might know as Looper and G7 user there is no data smoothing included in G7 at all. Dexcom has no statement about the G7 specifically but
+regarding G6 which might be still valid from their side: https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app
+
+To overcome this issue @blaqone adviced to use smoothing directly in AndroidAPS and here we go: https://github.com/nightscout/AndroidAPS/pull/2141.
+This nice PR implements not only smoothing but also backward smoothing and guarantees nice interpretable data.
+
+Please note that there is also an alternative approach with XDrip+ as middleware between Dexcom G7 and AAPS to just achieve the same.
+**AS I UNDERSTOOD** the only disadvantage with XDrip+ is its disability of backfilling data and missing SMBs in AAPS
+
+### Server Error on disclaimer page
+
+Some users are facing a prominent `Server error` popup in the disclaimer step which prevents them to pass:
+
+<img src="images/disclaimer-error.png" width="300" />
+
+If you have the same problem it could be that you have an Ad Blocker installed. Please define an exception for the Dexcom app or totally uninstall the Ad Blocker.
+
 ## How to patch?
 
 ### Requirements
@@ -89,15 +100,15 @@ This small `mod` disables `WindowManager.LayoutParams.FLAG_SECURE` to enable scr
 > Unfortunately `apktool` can generate different filenames on Windows OS which makes the application of the modifications impossible.
 > Please use the patcher only on Linux / Unix operating systems to ensure correct results.
 
-The patcher will come with its own tools and does not require any high level dependencies actually. But we need:
+The patcher will come with its own tools and does not require any high level dependencies actualy. But we need:
 
-* Linux / Unix OS
+* Linux / Unix OS / Windows + Docker
 * Java 11
 * GIT
 
 ### <img src="https://cdn1.iconfinder.com/data/icons/bootstrap/16/boxes-512.png" alt="drawing" width="16"/> Build
 
-> :warning: **If you are using Windows** the patcher will not work. As an alternative you can use Docker.
+> :warning: **If you are using Windows** the patcher will not work. As an alternative you can use Docker in combination with WSL.
 
 After installing all requirements you can proceed as following:
 
@@ -108,13 +119,16 @@ After installing all requirements you can proceed as following:
 
 ### Docker
 
-To simplify the patching process @rICTx-T1D introduced a basic docker setup. You can use it on any OS which can host Docker or equal compatible container engine. The CPU-architecture must x86/64 because some libraries need them.
+To simplify the patching process `@rICTx-T1D introduced a basic docker setup. You can use it on any OS which can host Docker or equal compatible container engine. The CPU-architecture must x86/64 because some libraries need them.
 
 To build on Linux/Unix you can just execute `./docker-build.sh` which will create `docker.patched.apk` in your `cwd`.
 
-Maybe a Windows script will come soon!
+### Windows
 
-### Reverse Engineering
+If you want to patch under Windows you have to download and install [Ubuntu WSL](https://apps.microsoft.com/store/detail/ubuntu/9PDXGNCFSCZV?hl=de-de&gl=de&rtc=1).
+Afterwards you should be able to execute `bin/docker-build.sh` inside your `WSL`.
+
+## Reverse Engineering
 
 The following section describes the toolset and development flow i am using. It should serve only as inspiration. I am sure that better tools and flows exists.
 
