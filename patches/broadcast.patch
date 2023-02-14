@@ -1,5 +1,5 @@
 diff --git a/smali/com/dexcom/coresdk/g7appcore/persistence/repositories/TxServiceRoomRepository.smali b/smali/com/dexcom/coresdk/g7appcore/persistence/repositories/TxServiceRoomRepository.smali
-index a0c36bd5..f14c79c0 100644
+index a0c36bd5..1e900f10 100644
 --- a/smali/com/dexcom/coresdk/g7appcore/persistence/repositories/TxServiceRoomRepository.smali
 +++ b/smali/com/dexcom/coresdk/g7appcore/persistence/repositories/TxServiceRoomRepository.smali
 @@ -3764,6 +3764,7 @@
@@ -10,10 +10,11 @@ index a0c36bd5..f14c79c0 100644
  
      invoke-direct {p0, v0, v1}, Lcom/dexcom/coresdk/g7appcore/persistence/repositories/TxServiceRoomRepository;->Zwb(I[Ljava/lang/Object;)Ljava/lang/Object;
  
-@@ -3804,3 +3805,158 @@
+@@ -3804,3 +3805,355 @@
  
      return v0
  .end method
++
 +
 +# broadcastToAAPS()
 +#
@@ -22,123 +23,321 @@ index a0c36bd5..f14c79c0 100644
 +# @author Selcuk Kekec <khskekec@gmail.com>
 +# @org DiaKEM
 +# @url https://github.com/DiaKEM/dexcom-g7-apk-patcher
-+# @date 2022-11-17T22:47:14.220Z
++# @date 2023-02-14T17:01:01.620Z
 +.method public broadcastToAAPS(Lcom/dexcom/coresdk/g7appcore/txservice/models/TxServiceRecord;)V
-+    .locals 10
++    .locals 11
++
++    const-string v0, "DIAKEM"
 +
 +    :try_start_0
-+    iget-object v0, p1, Lcom/dexcom/coresdk/g7appcore/txservice/models/TxServiceRecord;->txCommState:Lcom/dexcom/coresdk/g7appcore/txservice/models/TxCommState;
++    iget-object v1, p1, Lcom/dexcom/coresdk/g7appcore/txservice/models/TxServiceRecord;->txCommState:Lcom/dexcom/coresdk/g7appcore/txservice/models/TxCommState;
 +
-+    invoke-virtual {v0}, Lcom/dexcom/coresdk/g7appcore/txservice/models/TxCommState;->name()Ljava/lang/String;
++    invoke-virtual {v1}, Lcom/dexcom/coresdk/g7appcore/txservice/models/TxCommState;->name()Ljava/lang/String;
 +
-+    move-result-object v0
++    move-result-object v1
 +
-+    const-string v1, "Nominal"
++    const-string v2, "Nominal"
 +
-+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
++    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 +
-+    move-result v0
++    move-result v1
 +
-+    if-nez v0, :cond_0
++    if-nez v1, :cond_0
++
++    new-instance v1, Ljava/lang/StringBuilder;
++
++    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
++
++    const-string v2, "Communication state is "
++
++    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
++
++    move-result-object v1
++
++    iget-object p1, p1, Lcom/dexcom/coresdk/g7appcore/txservice/models/TxServiceRecord;->txCommState:Lcom/dexcom/coresdk/g7appcore/txservice/models/TxCommState;
++
++    invoke-virtual {p1}, Lcom/dexcom/coresdk/g7appcore/txservice/models/TxCommState;->name()Ljava/lang/String;
++
++    move-result-object p1
++
++    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
++
++    move-result-object p1
++
++    const-string v1, " instead of nominal - EXIT"
++
++    invoke-virtual {p1, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
++
++    move-result-object p1
++
++    invoke-virtual {p1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
++
++    move-result-object p1
++
++    invoke-static {v0, p1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 +
 +    return-void
 +
 +    :cond_0
-+    new-instance v0, Landroid/content/Intent;
++    new-instance v1, Landroid/content/Intent;
 +
-+    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
++    invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 +
-+    const-string v1, "info.nightscout.androidaps"
++    const-string v2, "info.nightscout.androidaps"
 +
-+    invoke-virtual {v0, v1}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
++    invoke-virtual {v1, v2}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 +
-+    const-string v1, "com.dexcom.g7.EXTERNAL_BROADCAST"
++    const-string v2, "com.dexcom.g7.EXTERNAL_BROADCAST"
 +
-+    invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
++    invoke-virtual {v1, v2}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 +
-+    new-instance v1, Landroid/os/Bundle;
++    new-instance v2, Landroid/os/Bundle;
 +
-+    invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
++    invoke-direct {v2}, Landroid/os/Bundle;-><init>()V
 +
 +    invoke-virtual {p1}, Lcom/dexcom/coresdk/g7appcore/txservice/models/TxServiceRecord;->getSensorReadings()Ljava/util/List;
 +
 +    move-result-object p1
 +
-+    const/4 v2, 0x0
++    const/4 v3, 0x0
 +
 +    :goto_0
 +    invoke-interface {p1}, Ljava/util/List;->size()I
 +
-+    move-result v3
++    move-result v4
 +
-+    if-ge v2, v3, :cond_2
++    if-ge v3, v4, :cond_2
 +
-+    new-instance v3, Landroid/os/Bundle;
++    new-instance v4, Landroid/os/Bundle;
 +
-+    invoke-direct {v3}, Landroid/os/Bundle;-><init>()V
++    invoke-direct {v4}, Landroid/os/Bundle;-><init>()V
 +
-+    invoke-interface {p1, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
++    invoke-interface {p1, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 +
-+    move-result-object v4
++    move-result-object v5
 +
-+    check-cast v4, Lcom/dexcom/coresdk/g7appcore/txservice/models/SensorReading;
++    check-cast v5, Lcom/dexcom/coresdk/g7appcore/txservice/models/SensorReading;
 +
-+    iget-object v5, v4, Lcom/dexcom/coresdk/g7appcore/txservice/models/SensorReading;->egvValue:Lym/qj;
++    new-instance v6, Ljava/lang/StringBuilder;
 +
-+    iget v5, v5, Lym/qj;->Iw:I
++    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 +
-+    const/16 v6, 0x190
++    const-string v7, "Timestamp: "
 +
-+    if-le v5, v6, :cond_1
++    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
++
++    move-result-object v6
++
++    iget-object v7, v5, Lcom/dexcom/coresdk/g7appcore/txservice/models/SensorReading;->sensorReadingTimestamp:Lym/kFw;
++
++    iget-wide v7, v7, Lym/kFw;->Iw:J
++
++    invoke-virtual {v6, v7, v8}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
++
++    move-result-object v6
++
++    const-string v7, " | Glucose value: "
++
++    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
++
++    move-result-object v6
++
++    iget-object v7, v5, Lcom/dexcom/coresdk/g7appcore/txservice/models/SensorReading;->egvValue:Lym/qj;
++
++    iget v7, v7, Lym/qj;->Iw:I
++
++    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
++
++    move-result-object v6
++
++    const-string v7, " | Predictive value: "
++
++    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
++
++    move-result-object v6
++
++    iget-object v7, v5, Lcom/dexcom/coresdk/g7appcore/txservice/models/SensorReading;->predictiveEgv:Lym/qj;
++
++    iget v7, v7, Lym/qj;->Iw:I
++
++    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
++
++    move-result-object v6
++
++    const-string v7, " | Adjusted predictive value: "
++
++    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
++
++    move-result-object v6
++
++    iget v7, v5, Lcom/dexcom/coresdk/g7appcore/txservice/models/SensorReading;->adjustedPredictiveEgvValue:I
++
++    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
++
++    move-result-object v6
++
++    const-string v7, " | TrendArrow: "
++
++    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
++
++    move-result-object v6
++
++    iget-object v7, v5, Lcom/dexcom/coresdk/g7appcore/txservice/models/SensorReading;->trendArrow:Lcom/dexcom/coresdk/g7appcore/txservice/models/TrendArrow;
++
++    invoke-virtual {v7}, Lcom/dexcom/coresdk/g7appcore/txservice/models/TrendArrow;->name()Ljava/lang/String;
++
++    move-result-object v7
++
++    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
++
++    move-result-object v6
++
++    const-string v7, " | Is backfilled?: "
++
++    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
++
++    move-result-object v6
++
++    iget-boolean v7, v5, Lcom/dexcom/coresdk/g7appcore/txservice/models/SensorReading;->isBackfilled:Z
++
++    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
++
++    move-result-object v6
++
++    const-string v7, " | Rate: "
++
++    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
++
++    move-result-object v6
++
++    iget v7, v5, Lcom/dexcom/coresdk/g7appcore/txservice/models/SensorReading;->rate:I
++
++    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
++
++    move-result-object v6
++
++    const-string v7, " | Sensor state: "
++
++    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
++
++    move-result-object v6
++
++    invoke-virtual {v5}, Lcom/dexcom/coresdk/g7appcore/txservice/models/SensorReading;->getSensorState()Lcom/dexcom/coresdk/g7appcore/txservice/models/SensorState;
++
++    move-result-object v7
++
++    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
++
++    move-result-object v6
++
++    const-string v7, " | Session start time: "
++
++    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
++
++    move-result-object v6
++
++    invoke-virtual {v5}, Lcom/dexcom/coresdk/g7appcore/txservice/models/SensorReading;->getSessionStartTime()J
++
++    move-result-wide v7
++
++    invoke-virtual {v6, v7, v8}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
++
++    move-result-object v6
++
++    const-string v7, " | SensorId: "
++
++    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
++
++    move-result-object v6
++
++    invoke-virtual {v5}, Lcom/dexcom/coresdk/g7appcore/txservice/models/SensorReading;->getTxSw()Ljava/lang/String;
++
++    move-result-object v7
++
++    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
++
++    move-result-object v6
++
++    const-string v7, " | Algorithm state: "
++
++    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
++
++    move-result-object v6
++
++    invoke-virtual {v5}, Lcom/dexcom/coresdk/g7appcore/txservice/models/SensorReading;->getAlgorithmState()Lcom/dexcom/coresdk/transmitterG7/G7AlgorithmState;
++
++    move-result-object v7
++
++    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
++
++    move-result-object v6
++
++    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
++
++    move-result-object v6
++
++    invoke-static {v0, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
++
++    iget-object v6, v5, Lcom/dexcom/coresdk/g7appcore/txservice/models/SensorReading;->egvValue:Lym/qj;
++
++    iget v6, v6, Lym/qj;->Iw:I
++
++    const/16 v7, 0x190
++
++    if-le v6, v7, :cond_1
++
++    const-string v4, "Glucose value exceeds 400 - SKIP"
++
++    invoke-static {v0, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 +
 +    goto :goto_1
 +
 +    :cond_1
-+    const-string v5, "glucoseValue"
++    const-string v6, "glucoseValue"
 +
-+    iget-object v6, v4, Lcom/dexcom/coresdk/g7appcore/txservice/models/SensorReading;->egvValue:Lym/qj;
++    iget-object v7, v5, Lcom/dexcom/coresdk/g7appcore/txservice/models/SensorReading;->egvValue:Lym/qj;
 +
-+    iget v6, v6, Lym/qj;->Iw:I
++    iget v7, v7, Lym/qj;->Iw:I
 +
-+    invoke-virtual {v3, v5, v6}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
++    invoke-virtual {v4, v6, v7}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 +
-+    const-string v5, "timestamp"
++    const-string v6, "timestamp"
 +
-+    iget-object v6, v4, Lcom/dexcom/coresdk/g7appcore/txservice/models/SensorReading;->sensorReadingTimestamp:Lym/kFw;
++    iget-object v7, v5, Lcom/dexcom/coresdk/g7appcore/txservice/models/SensorReading;->sensorReadingTimestamp:Lym/kFw;
 +
-+    iget-wide v6, v6, Lym/kFw;->Iw:J
++    iget-wide v7, v7, Lym/kFw;->Iw:J
 +
-+    const-wide/16 v8, 0x3e8
++    const-wide/16 v9, 0x3e8
 +
-+    div-long/2addr v6, v8
++    div-long/2addr v7, v9
 +
-+    invoke-virtual {v3, v5, v6, v7}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
++    invoke-virtual {v4, v6, v7, v8}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 +
-+    const-string v5, "trendArrow"
++    const-string v6, "trendArrow"
 +
-+    iget-object v4, v4, Lcom/dexcom/coresdk/g7appcore/txservice/models/SensorReading;->trendArrow:Lcom/dexcom/coresdk/g7appcore/txservice/models/TrendArrow;
++    iget-object v5, v5, Lcom/dexcom/coresdk/g7appcore/txservice/models/SensorReading;->trendArrow:Lcom/dexcom/coresdk/g7appcore/txservice/models/TrendArrow;
 +
-+    invoke-virtual {v4}, Lcom/dexcom/coresdk/g7appcore/txservice/models/TrendArrow;->name()Ljava/lang/String;
++    invoke-virtual {v5}, Lcom/dexcom/coresdk/g7appcore/txservice/models/TrendArrow;->name()Ljava/lang/String;
 +
-+    move-result-object v4
++    move-result-object v5
 +
-+    invoke-virtual {v3, v5, v4}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
++    invoke-virtual {v4, v6, v5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 +
-+    invoke-static {v2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
++    invoke-static {v3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 +
-+    move-result-object v4
++    move-result-object v5
 +
-+    invoke-virtual {v1, v4, v3}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
++    invoke-virtual {v2, v5, v4}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
 +
 +    :goto_1
-+    add-int/lit8 v2, v2, 0x1
++    add-int/lit8 v3, v3, 0x1
 +
-+    goto :goto_0
++    goto/16 :goto_0
 +
 +    :cond_2
 +    const-string p1, "glucoseValues"
 +
-+    invoke-virtual {v0, p1, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/Intent;
++    invoke-virtual {v1, p1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/Intent;
 +
 +    # Get G7CgmApplication from service store
 +    iget-object v7, p0, Lcom/dexcom/coresdk/g7appcore/persistence/repositories/TxServiceRoomRepository;->listener:Lcom/dexcom/coresdk/dexappkit/persistence/eventmonitor/PersistenceEventListener;
@@ -148,7 +347,7 @@ index a0c36bd5..f14c79c0 100644
 +    iget-object v7, v7, Lym/GmR;->Iw:Lym/cLw;
 +    iget-object v8, v7, Lym/cLw;->vw:Lkotlinx/coroutines/CoroutineScope;
 +    check-cast v8, Lcom/dexcom/phoenix/G7CgmApplication;
-+    invoke-virtual {v8, v0}, Lcom/dexcom/phoenix/G7CgmApplication;->sendBroadcast(Landroid/content/Intent;)V
++    invoke-virtual {v8, v1}, Lcom/dexcom/phoenix/G7CgmApplication;->sendBroadcast(Landroid/content/Intent;)V
 +    :try_end_0
 +
 +    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -161,8 +360,6 @@ index a0c36bd5..f14c79c0 100644
 +    invoke-virtual {p1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 +
 +    move-result-object p1
-+
-+    const-string v0, "DIAKEM_BROADCAST_LOG"
 +
 +    invoke-static {v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 +
