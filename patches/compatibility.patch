@@ -1,20 +1,20 @@
-diff --git a/smali/ym/Iew.smali b/smali/ym/Iew.smali
-index 57547d68..5f66b412 100644
---- a/smali/ym/Iew.smali
-+++ b/smali/ym/Iew.smali
-@@ -673,12 +673,15 @@
+diff --git a/smali/com/dexcom/coresdk/cloudcommonservicecore/models/RuntimeInformation.smali b/smali/com/dexcom/coresdk/cloudcommonservicecore/models/RuntimeInformation.smali
+index 0665a68d..cf11e958 100644
+--- a/smali/com/dexcom/coresdk/cloudcommonservicecore/models/RuntimeInformation.smali
++++ b/smali/com/dexcom/coresdk/cloudcommonservicecore/models/RuntimeInformation.smali
+@@ -624,12 +624,15 @@
  
-     iput-object p3, p0, Lym/Iew;->appVersion:Ljava/lang/String;
+     iput-object p3, p0, Lcom/dexcom/coresdk/cloudcommonservicecore/models/RuntimeInformation;->appVersion:Ljava/lang/String;
  
 +    const-string p4, "Google"
-     iput-object p4, p0, Lym/Iew;->deviceManufacturer:Ljava/lang/String;
+     iput-object p4, p0, Lcom/dexcom/coresdk/cloudcommonservicecore/models/RuntimeInformation;->deviceManufacturer:Ljava/lang/String;
  
 +    const-string p5, "Pixel 4"
-     iput-object p5, p0, Lym/Iew;->deviceModel:Ljava/lang/String;
+     iput-object p5, p0, Lcom/dexcom/coresdk/cloudcommonservicecore/models/RuntimeInformation;->deviceModel:Ljava/lang/String;
  
-     iput-object p6, p0, Lym/Iew;->deviceOsName:Ljava/lang/String;
+     iput-object v5, p0, Lcom/dexcom/coresdk/cloudcommonservicecore/models/RuntimeInformation;->deviceOsName:Ljava/lang/String;
  
-+    const-string v0, "11"
-     iput-object v0, p0, Lym/Iew;->deviceOsVersion:Ljava/lang/String;
++    const-string v1, "11"
+     iput-object v1, p0, Lcom/dexcom/coresdk/cloudcommonservicecore/models/RuntimeInformation;->deviceOsVersion:Ljava/lang/String;
  
      return-void

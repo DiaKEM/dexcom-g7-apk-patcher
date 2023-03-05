@@ -11,8 +11,12 @@ BROADCAST_PATCH_FILE="patches/broadcast.patch";
 VERSION_INDICATOR_PATCH_FILE="patches/version-indicator.patch";
 VERSION_INDICATOR_PATCH_TEMPLATE="patches/version-indicator.patch.template";
 SCREENSHOT_PATCH_FILE="patches/screenshot.patch";
+SUPPRESS_EXCEPTION_PATCH_FILE="patches/suppress-exception.patch";
+ANDROID_MANIFEST_SERVICE_PATCH_FILE="patches/android-manifest-service.patch";
 EXECUTED_FROM=$( pwd; );
 SCRIPT_DIR=$(dirname -- "$( readlink -f -- "$0"; )");
+APKTOOL="bin/apktool_2.7.0.jar"
+UBER_SIGNER="bin/uber-apk-signer-1.3.0.jar"
 
 if [[ ! -f $DEXCOM_APK ]]
 then
@@ -33,7 +37,7 @@ checkStatus () {
 
 echo "----------------------";
 echo "🐌 Dexcom G7 APK-Patcher"
-echo "ℹ️  Latest supported Dexcom G7 version: 1.3.3.3527"
+echo "ℹ️  Latest supported Dexcom G7 version: 1.4.0.3906"
 echo "☢️  ALL INFORMATION AND OFFERED RESOURCES ARE HIGHLY EXPERIMENTAL AND NOT TESTED. USE AT YOUR OWN RISK! 🧪"
 echo "----------------------";
 echo "  ⏳ Removing old resources";
@@ -42,27 +46,28 @@ rm -rf $DEXCOM_SRC_DIR &> /dev/null || true
 checkStatus 0
 echo "----------------------";
 echo "  ⏳ Disassamble apk";
-java -jar bin/apktool_2.6.1.jar d "$DEXCOM_APK" -o "$DEXCOM_SRC_DIR";
+java -jar $APKTOOL d "$DEXCOM_APK" -o "$DEXCOM_SRC_DIR" -f
+checkStatus $?
+echo "----------------------";
+echo "  ⏳ Apply android manifest service patch";
+git apply --directory="$DEXCOM_SRC_DIR" $ANDROID_MANIFEST_SERVICE_PATCH_FILE
+checkStatus $?
+echo "----------------------";
+echo "  ⏳ Apply exception suppression patch";
+git apply --directory="$DEXCOM_SRC_DIR" $SUPPRESS_EXCEPTION_PATCH_FILE
 checkStatus $?
 echo "----------------------";
 echo "  ⏳ Apply compatibility patch";
 git apply --directory="$DEXCOM_SRC_DIR" $COMPATIBILITY_PATCH_FILE
 checkStatus $?
-#echo "----------------------";
-#echo "  Apply sdk patch";
-#git apply --directory="$DEXCOM_SRC_DIR" $SDK_PATCH_FILE
-#checkStatus $?
 echo "----------------------";
 echo "  ⏳ Apply broadcast patch";
 git apply --directory="$DEXCOM_SRC_DIR" $BROADCAST_PATCH_FILE
 checkStatus $?
 echo "----------------------";
 echo "  ⏳ Apply version indicator patch";
-if [ ! -f "$DEXCOM_SRC_DIR/smali_classes4/ym/xLa.2.smali" ]; then
-    mv $DEXCOM_SRC_DIR/smali_classes4/ym/xLa.smali $DEXCOM_SRC_DIR/smali_classes4/ym/xLa.2.smali 2> /dev/null
-fi
 rm -f "$VERSION_INDICATOR_PATCH_FILE";
-sed "s/%%COMMIT_HASH%%/$(git rev-parse --short HEAD)/g" $VERSION_INDICATOR_PATCH_TEMPLATE > $VERSION_INDICATOR_PATCH_FILE
+sed "s/%%DIAKEM_VERSION%%/$(git rev-parse --abbrev-ref HEAD)-$(git rev-parse --short HEAD)/g" $VERSION_INDICATOR_PATCH_TEMPLATE | sed "s/%%DIAKEM_BUILD_TIME%%/$(date +"%Y-%m-%d %H:%M:%S")/g" > $VERSION_INDICATOR_PATCH_FILE
 git apply --directory="$DEXCOM_SRC_DIR" $VERSION_INDICATOR_PATCH_FILE
 checkStatus $?
 echo "----------------------";
@@ -71,11 +76,11 @@ git apply --directory="$DEXCOM_SRC_DIR" $SCREENSHOT_PATCH_FILE
 checkStatus $?
 echo "----------------------";
 echo "  ⏳ Building patched dexcom apk";
-java -jar bin/apktool_2.6.1.jar b $DEXCOM_SRC_DIR -o $DEXCOM_MOD_APK --use-aapt2
+java -jar $APKTOOL b $DEXCOM_SRC_DIR -o $DEXCOM_MOD_APK --use-aapt2
 checkStatus $?
 echo "----------------------";
 echo "  ⏳ Signing new apk";
-java -jar bin/uber-apk-signer-1.2.1.jar -a $DEXCOM_MOD_APK \
+java -jar $UBER_SIGNER -a $DEXCOM_MOD_APK \
 --ks $KEYSTORE_PATH \
 --ksAlias cert \
 --ksPass $KEYSTORE_PASS \

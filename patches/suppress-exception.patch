@@ -1,0 +1,13 @@
+diff --git "a/smali/kz/\340\241\260\341\253\230.smali" "b/smali/kz/\340\241\260\341\253\230.smali"
+index bf88a186..d98c440c 100644
+--- "a/smali/kz/\340\241\260\341\253\230.smali"
++++ "b/smali/kz/\340\241\260\341\253\230.smali"
+@@ -1414,7 +1414,7 @@
+ 
+     move-result-object v0
+ 
+-    throw v0
++    return-void
+ .end method
+ 
+ .method public varargs ࡡ([Ljava/lang/Void;)Ljava/util/List;

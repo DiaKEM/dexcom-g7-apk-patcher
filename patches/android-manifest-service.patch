@@ -1,0 +1,79 @@
+diff --git a/AndroidManifest.xml b/AndroidManifest.xml
+index c86be213..ced4c092 100644
+--- a/AndroidManifest.xml
++++ b/AndroidManifest.xml
+@@ -115,7 +115,7 @@
+         <provider android:authorities="com.dexcom.g7.lifecycle-process" android:exported="false" android:multiprocess="true" android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"/>
+         <service android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+         <receiver android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"/>
+-        <service android:exported="false" android:isolatedProcess="true" android:name="kz.\u0871᫛" android:process=":zzwzdzmztzpzqzlzizszjzvzbzgzuzxzfzyzrzzwdwewtwpwqwowlwhwiwjwvwgwxwywkdzdwd"/>
++        <service android:exported="false" android:isolatedProcess="true" android:name="kz.patchedservice" android:process=":zzwzdzmztzpzqzlzizszjzvzbzgzuzxzfzyzrzzwdwewtwpwqwowlwhwiwjwvwgwxwywkdzdwd"/>
+         <meta-data android:name="com.android.dynamic.apk.fused.modules" android:value="base"/>
+         <meta-data android:name="com.android.stamp.source" android:value="https://play.google.com/store"/>
+         <meta-data android:name="com.android.stamp.type" android:value="STAMP_TYPE_STANDALONE_APK"/>
+diff --git "a/smali/kz/\341\253\221\341\253\215.smali" "b/smali/kz/\341\253\221\341\253\215.smali"
+index 2c8e7335..7462769f 100644
+--- "a/smali/kz/\341\253\221\341\253\215.smali"
++++ "b/smali/kz/\341\253\221\341\253\215.smali"
+@@ -2746,7 +2746,7 @@
+ 
+     check-cast v1, Landroid/content/Context;
+ 
+-    const-class v0, Lkz/ࡱ᫛;
++    const-class v0, Lkz/patchedservice;
+ 
+     invoke-direct {v4, v1, v0}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+ 
+diff --git "a/smali/kz/\341\253\233\341\253\217.smali" "b/smali/kz/\341\253\233\341\253\217.smali"
+index 270ec810..58b574b9 100644
+--- "a/smali/kz/\341\253\233\341\253\217.smali"
++++ "b/smali/kz/\341\253\233\341\253\217.smali"
+@@ -3,14 +3,14 @@
+ 
+ 
+ # instance fields
+-.field public final synthetic ࡠ:Lkz/ࡱ᫛;
++.field public final synthetic ࡠ:Lkz/patchedservice;
+ 
+ 
+ # direct methods
+-.method public constructor <init>(Lkz/ࡱ᫛;)V
++.method public constructor <init>(Lkz/patchedservice;)V
+     .locals 0
+ 
+-    iput-object p1, p0, Lkz/᫛᫏;->ࡠ:Lkz/ࡱ᫛;
++    iput-object p1, p0, Lkz/᫛᫏;->ࡠ:Lkz/patchedservice;
+ 
+     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
+ 
+@@ -156,7 +156,7 @@
+ 
+     iput-object v0, v3, Landroid/os/Message;->obj:Ljava/lang/Object;
+ 
+-    iget-object v5, p0, Lkz/᫛᫏;->ࡠ:Lkz/ࡱ᫛;
++    iget-object v5, p0, Lkz/᫛᫏;->ࡠ:Lkz/patchedservice;
+     :try_end_1
+     .catchall {:try_start_1 .. :try_end_1} :catchall_1
+ 
+diff --git "a/smali_classes4/kz/\340\241\261\341\253\233.smali" b/smali_classes4/kz/patchedservice.smali
+similarity index 96%
+rename from "smali_classes4/kz/\340\241\261\341\253\233.smali"
+rename to smali_classes4/kz/patchedservice.smali
+index 9393296f..76fdf130 100644
+--- "a/smali_classes4/kz/\340\241\261\341\253\233.smali"
++++ b/smali_classes4/kz/patchedservice.smali
+@@ -1,4 +1,4 @@
+-.class public Lkz/ࡱ᫛;
++.class public Lkz/patchedservice;
+ .super Landroid/app/Service;
+ 
+ 
+@@ -24,7 +24,7 @@
+ 
+     new-instance v0, Lkz/᫛᫏;
+ 
+-    invoke-direct {v0, p0}, Lkz/᫛᫏;-><init>(Lkz/ࡱ᫛;)V
++    invoke-direct {v0, p0}, Lkz/᫛᫏;-><init>(Lkz/patchedservice;)V
+ 
+     invoke-direct {v5, v0}, Landroid/os/Messenger;-><init>(Landroid/os/Handler;)V
+ 

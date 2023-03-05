@@ -1,8 +1,23 @@
-diff --git a/smali_classes2/ym/GBw.smali b/smali_classes2/ym/GBw.smali
-index 9096c069..e58da19e 100644
---- a/smali_classes2/ym/GBw.smali
-+++ b/smali_classes2/ym/GBw.smali
-@@ -206,10 +206,6 @@
+diff --git a/smali/androidx/appcompat/app/AlertController.smali b/smali/androidx/appcompat/app/AlertController.smali
+index 00914356..98076c6d 100644
+--- a/smali/androidx/appcompat/app/AlertController.smali
++++ b/smali/androidx/appcompat/app/AlertController.smali
+@@ -1175,10 +1175,6 @@
+     :cond_15
+     iget-object v1, p0, Landroidx/appcompat/app/AlertController;->mWindow:Landroid/view/Window;
+ 
+-    const/high16 v0, 0x20000
+-
+-    invoke-virtual {v1, v0, v0}, Landroid/view/Window;->setFlags(II)V
+-
+     :cond_16
+     if-eqz v2, :cond_1a
+ 
+diff --git "a/smali/kz/\340\241\244\340\241\243.smali" "b/smali/kz/\340\241\244\340\241\243.smali"
+index 65cd1f8c..051e1fe5 100644
+--- "a/smali/kz/\340\241\244\340\241\243.smali"
++++ "b/smali/kz/\340\241\244\340\241\243.smali"
+@@ -2006,10 +2006,6 @@
  
      move-result-object v1
  
@@ -10,6 +25,6 @@ index 9096c069..e58da19e 100644
 -
 -    invoke-virtual {v1, v0, v0}, Landroid/view/Window;->setFlags(II)V
 -
-     return-object v13
+     goto/16 :goto_13
  
-     :pswitch_data_0
+     :pswitch_5
