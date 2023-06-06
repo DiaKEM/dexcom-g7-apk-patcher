@@ -69,9 +69,9 @@ This small `mod` disables `WindowManager.LayoutParams.FLAG_SECURE` to enable scr
 Actually the patched app is not able to fully determine if the sensor is fully applicable.
 Because of this bug it will send values during:
 
-* warm up time
-* sensor errors
-* extreme lows (<40)
+* Warm up time
+* Sensor errors
+* Extreme lows (<40)
 
 ### Data Smoothing
 
@@ -112,7 +112,7 @@ The patcher will come with its own tools and does not require any high level dep
 
 After installing all requirements you can proceed as following:
 
-* Download official `Dexcom G7.apk` from apkure or other portal
+* Download official `Dexcom G7.apk` from APKPure or other portal
 * **OPTIONAL** Open `bin/build.sh` and comment out `mods` you do not need!
 * Run `bin/build.sh path_to_apk`
 * Congratulations - you just created your patched `Dexcom G7.apk`
@@ -125,8 +125,13 @@ To build on Linux/Unix you can just execute `./docker-build.sh` which will creat
 
 ### Windows
 
-If you want to patch under Windows you have to download and install [Ubuntu WSL](https://apps.microsoft.com/store/detail/ubuntu/9PDXGNCFSCZV?hl=de-de&gl=de&rtc=1).
+If you want to patch under Windows, you have to download and install [Ubuntu WSL](https://apps.microsoft.com/store/detail/ubuntu/9PDXGNCFSCZV?hl=de-de&gl=de&rtc=1).
 Afterwards you should be able to execute `bin/docker-build.sh` inside your `WSL`.
+
+Make sure you disable automatic conversion of line endings in Git before cloning this repository from Windows:
+```
+git config --global core.autocrlf false
+```
 
 ## Reverse Engineering
 
