@@ -1,5 +1,5 @@
 diff --git a/res/layout/fragment_settings_about.xml b/res/layout/fragment_settings_about.xml
-index d8eadec0..be437b93 100644
+index 211c3db3..90349d40 100644
 --- a/res/layout/fragment_settings_about.xml
 +++ b/res/layout/fragment_settings_about.xml
 @@ -4,7 +4,9 @@
@@ -9,20 +9,19 @@ index d8eadec0..be437b93 100644
 -        <com.dexcom.phoenixuikit.uikit.widget.cells.CellSingleView android:id="@id/software_number_cell" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" app:layout_constraintTop_toBottomOf="@id/divider" app:title="@string/software_number" />
 +        <com.dexcom.phoenixuikit.uikit.widget.cells.CellSingleView android:id="@id/diakem_version_cell" app:detail="🧪 %%DIAKEM_VERSION%% 🧪" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" app:layout_constraintTop_toBottomOf="@id/divider" app:title="🐌 DiaKEM Version" />
 +        <com.dexcom.phoenixuikit.uikit.widget.cells.CellSingleView android:id="@id/diakem_build_cell" app:detail="⏰ %%DIAKEM_BUILD_TIME%%" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintTop_toBottomOf="@id/diakem_version_cell" app:title="🐌 DiaKEM Build time" />
-+        <com.dexcom.phoenixuikit.uikit.widget.cells.CellSingleView android:id="@id/software_number_cell" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintTop_toBottomOf="@id/diakem_build_cell" app:title="@string/software_number" />
++        <com.dexcom.phoenixuikit.uikit.widget.cells.CellSingleView android:id="@id/software_number_cell" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" app:layout_constraintTop_toBottomOf="@id/diakem_build_cell" app:title="@string/software_number" />
          <com.dexcom.phoenixuikit.uikit.widget.cells.CellSingleView android:id="@id/software_version_cell" android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintTop_toBottomOf="@id/software_number_cell" app:title="@string/software_version" />
          <com.dexcom.phoenixuikit.uikit.widget.cells.CellSingleView android:id="@id/date_of_manufacture_cell" android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintTop_toBottomOf="@id/software_version_cell" app:title="@string/date_of_manufacture" />
          <com.dexcom.phoenixuikit.uikit.widget.cells.CellSingleView android:id="@id/gtin_cell" android:tag="binding_4" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintTop_toBottomOf="@id/date_of_manufacture_cell" app:title="@string/about_gtin_title" />
 diff --git a/res/values/ids.xml b/res/values/ids.xml
-index f6e64086..16faf1f6 100644
+index 38d27ae4..ca3f9223 100644
 --- a/res/values/ids.xml
 +++ b/res/values/ids.xml
-@@ -2922,6 +2922,8 @@
-     <item type="id" name="snackbar_action" />
-     <item type="id" name="snackbar_text" />
-     <item type="id" name="snoozeDivider" />
+@@ -1,5 +1,7 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <resources>
 +    <item type="id" name="diakem_version_cell" />
 +    <item type="id" name="diakem_build_cell" />
-     <item type="id" name="software_number_cell" />
-     <item type="id" name="software_version_cell" />
-     <item type="id" name="somewhat_helpful" />
+     <item type="id" name="accessibility_action_clickable_span" />
+     <item type="id" name="accessibility_custom_action_0" />
+     <item type="id" name="accessibility_custom_action_1" />

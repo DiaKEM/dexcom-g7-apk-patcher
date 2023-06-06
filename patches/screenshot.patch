@@ -1,8 +1,8 @@
 diff --git a/smali/androidx/appcompat/app/AlertController.smali b/smali/androidx/appcompat/app/AlertController.smali
-index 00914356..98076c6d 100644
+index 6778b7c5..6ebe84ca 100644
 --- a/smali/androidx/appcompat/app/AlertController.smali
 +++ b/smali/androidx/appcompat/app/AlertController.smali
-@@ -1175,10 +1175,6 @@
+@@ -978,10 +978,6 @@
      :cond_15
      iget-object v1, p0, Landroidx/appcompat/app/AlertController;->mWindow:Landroid/view/Window;
  
@@ -13,11 +13,11 @@ index 00914356..98076c6d 100644
      :cond_16
      if-eqz v2, :cond_1a
  
-diff --git "a/smali/kz/\340\241\244\340\241\243.smali" "b/smali/kz/\340\241\244\340\241\243.smali"
-index 65cd1f8c..051e1fe5 100644
---- "a/smali/kz/\340\241\244\340\241\243.smali"
-+++ "b/smali/kz/\340\241\244\340\241\243.smali"
-@@ -2006,10 +2006,6 @@
+diff --git "a/smali/kz/\341\253\226\341\253\214.smali" "b/smali/kz/\341\253\226\341\253\214.smali"
+index d09ac2ef..e351511b 100644
+--- "a/smali/kz/\341\253\226\341\253\214.smali"
++++ "b/smali/kz/\341\253\226\341\253\214.smali"
+@@ -672,10 +672,6 @@
  
      move-result-object v1
  
@@ -25,6 +25,6 @@ index 65cd1f8c..051e1fe5 100644
 -
 -    invoke-virtual {v1, v0, v0}, Landroid/view/Window;->setFlags(II)V
 -
-     goto/16 :goto_13
+     goto/16 :goto_16
  
      :pswitch_5

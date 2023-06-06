@@ -1,8 +1,8 @@
-diff --git "a/smali/kz/\340\241\260\341\253\230.smali" "b/smali/kz/\340\241\260\341\253\230.smali"
-index bf88a186..d98c440c 100644
---- "a/smali/kz/\340\241\260\341\253\230.smali"
-+++ "b/smali/kz/\340\241\260\341\253\230.smali"
-@@ -1414,7 +1414,7 @@
+diff --git "a/smali/kz/\340\241\251\340\241\261.smali" "b/smali/kz/\340\241\251\340\241\261.smali"
+index cf550358..0a377735 100644
+--- "a/smali/kz/\340\241\251\340\241\261.smali"
++++ "b/smali/kz/\340\241\251\340\241\261.smali"
+@@ -1536,7 +1536,7 @@
  
      move-result-object v0
  
