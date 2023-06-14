@@ -4,6 +4,18 @@ Build your own android based `Dexcom G7.apk` with some sugar on it.
 
 ALL INFORMATION AND OFFERED RESOURCES ARE HIGHLY EXPERIMENTAL AND NOT TESTED. USE AT YOUR OWN RISK!
 
+## Dexcom G7 Experience DB
+
+During exchange in our Discord we realized that Dexcom G7 has still significant problems in terms of reliability and stability. 
+Many people are complaining about bad accuracy or permanent signal losses.
+
+To collect these important information at a central place the community decided to create a dedicated database based on a simple Google Form
+and evaluate this data to identify patterns which lead to these problems.
+
+Everybody is welcome to contribute. As soon as we have enough data we will publish the results to make it accessible for everyone.
+
+[Share your experience](https://forms.gle/SESyxHHsm1akf5ay9)
+
 ## Get help or share your experience
 
 [Join us on Discord](https://discord.gg/MCCa2Xtaed)
