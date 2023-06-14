@@ -138,6 +138,25 @@ The following section describes the toolset and development flow i am using. It 
 
 After modifications you can just run `bin/dev-build.sh`. This will rebuild the source, package it and also add the signature. Finally the Dexcom app will be reinstalled on your emulator/device to reflect the changes.
 
+## Troubleshoot
+
+If you face any problems with the patched .apk especially in the broadcasting procedure it would be great if you can also provide `logcat` logs. 
+This logs will simplify the analysis of such procedure drastically and also speed up the creation of solutions.
+
+### How to retrieve `logcat` logs?
+
+Logcat can be accessed on any android phone without any modifications like ´rooting´ or something else. 
+For this purpose i prefere [Logcat Reader](https://play.google.com/store/apps/details?id=com.dp.logcatapp&hl=de&gl=US&pli=1), a lightweight and simple `logcat` reader.
+
+I can strongly advise you to increase parameter "Max recent logs to keep in memory" in settings to maximum ´250.000.000´. 
+This will guarantee that older entries are not overwritten and you are able to retrieve also historical data.
+
+To only filter for dexcom related log messages you can click on the magnifier and search for ´com.dexcom.g7´:
+
+<img src="images/logcat.jpeg" width="300" />
+
+Finally you can save the logs and attach it to your GitHub issue by clicking the three dots in the upper right corner and click ´Save´.
+
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. 
