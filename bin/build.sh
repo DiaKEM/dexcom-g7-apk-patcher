@@ -37,7 +37,7 @@ checkStatus () {
 
 echo "----------------------";
 echo "🐌 Dexcom G7 APK-Patcher"
-echo "ℹ️  Latest supported Dexcom G7 version: 1.4.0.3906"
+echo "ℹ️  Latest supported Dexcom G7 version: 1.6.1.4537"
 echo "☢️  ALL INFORMATION AND OFFERED RESOURCES ARE HIGHLY EXPERIMENTAL AND NOT TESTED. USE AT YOUR OWN RISK! 🧪"
 echo "----------------------";
 echo "  ⏳ Removing old resources";
