@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/select_uom" app:startDestination="@id/id_uom_home"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <fragment android:name="com.dexcom.phoenix.ui.screens.onboarding.home.appsetup.uom.SelectUomFragment" android:id="@id/id_select_uom">
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <action android:id="@id/action_id_select_uom_to_id_confirm_uom" app:destination="@id/id_confirm_uom" />
+        <action android:id="@id/action_id_select_uom_to_id_contact_select_uom" app:destination="@id/id_contact_select_uom" />
+    </fragment>
+    <fragment android:name="com.dexcom.phoenix.ui.screens.onboarding.home.appsetup.uom.ConfirmUomFragment" android:id="@id/id_confirm_uom">
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+    </fragment>
+    <fragment android:name="com.dexcom.phoenix.ui.screens.onboarding.home.appsetup.uom.UomHomeFragment" android:id="@id/id_uom_home">
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <action android:id="@id/action_id_uom_home_to_id_select_uom" app:destination="@id/id_select_uom" />
+        <action android:id="@id/action_id_uom_home_to_id_confirm_forced_uom" app:destination="@id/id_confirm_forced_uom" />
+    </fragment>
+    <fragment android:name="com.dexcom.phoenix.ui.screens.onboarding.home.appsetup.uom.ConfirmForcedUomFragment" android:id="@id/id_confirm_forced_uom" android:layout="@layout/screen_onboarding_confirm_forced_uom">
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <action android:id="@id/action_id_confirm_forced_uom_to_id_contact_select_uom" app:destination="@id/id_contact_select_uom" />
+    </fragment>
+    <dialog android:label="@string/contact" android:name="com.dexcom.phoenix.ui.screens.settings.contact.ContactWebViewDialog" android:id="@id/id_contact_select_uom" />
+</navigation>

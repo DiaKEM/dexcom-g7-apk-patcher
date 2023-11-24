@@ -1,0 +1,10 @@
+.class public interface abstract Lcom/google/android/gms/common/api/Releasable;
+.super Ljava/lang/Object;
+
+
+# virtual methods
+.method public abstract release()V
+.end method
+
+.method public varargs abstract ࡩࡥᫀ(I[Ljava/lang/Object;)Ljava/lang/Object;
+.end method

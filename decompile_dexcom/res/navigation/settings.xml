@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/id_tab_settings" app:startDestination="@id/id_settings_screen"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <dialog android:name="com.dexcom.phoenix.ui.screens.settings.alerts.profile.AddNewProfileDialog" android:id="@id/id_add_new_profile_dialog">
+        <action android:id="@id/action_id_add_new_profile_dialog_to_id_alert_profile_created_dialog" app:destination="@id/id_alert_profile_created_dialog" />
+        <action android:id="@id/action_id_alert_dialog_to_id_alert_profile_details" app:destination="@id/id_alert_profile_details">
+            <argument android:name="alertProfileType" android:defaultValue="SECONDARY" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertProfileType" />
+        </action>
+        <argument android:name="changeProfileName" android:defaultValue="false" app:argType="boolean" />
+        <argument android:name="alertProfileType" android:defaultValue="SECONDARY" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertProfileType" />
+    </dialog>
+    <dialog android:name="com.dexcom.phoenix.ui.screens.settings.alerts.profile.AlertProfileCreatedDialog" android:id="@id/id_alert_profile_created_dialog">
+        <action android:id="@id/action_id_alert_profile_created_dialog_to_id_alert_profile_details" app:destination="@id/id_alert_profile_details">
+            <argument android:name="alertProfileType" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertProfileType" />
+        </action>
+    </dialog>
+    <dialog android:name="com.dexcom.phoenix.ui.screens.settings.alerts.reset.ResetAlertSettingsDialogFragment" android:id="@id/id_reset_alert_settings_dialog">
+        <action android:id="@id/action_id_reset_alert_settings_dialog_to_id_alert_settings" app:destination="@id/id_alerts_settings" app:popUpTo="@id/id_alerts_settings" app:popUpToInclusive="true" />
+    </dialog>
+    <dialog android:name="com.dexcom.phoenix.ui.screens.settings.alerts.DelayHoursMinutesFragment" android:id="@id/id_delay_hours_minutes">
+        <argument android:name="alertProfileType" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertProfileType" />
+        <argument android:name="delaySettingType" app:argType="com.dexcom.phoenix.ui.screens.settings.alerts.DelaySettingType" />
+    </dialog>
+    <dialog android:name="com.dexcom.dexcomone.ui.screens.settings.alerts.system.BriefSensorIssueDelayFragment" android:id="@id/id_brief_sensor_issue_for_more_than">
+        <argument android:name="alertProfileType" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertProfileType" />
+    </dialog>
+    <fragment android:label="@string/tab_title_profile" android:name="com.dexcom.phoenix.ui.screens.settings.SettingsScreenFragment" android:id="@id/id_settings_screen" app:navGraph="@navigation/settings">
+        <argument android:name="@string/navigation_override_up" android:defaultValue="true" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <action android:id="@id/action_id_tab_settings_to_id_glucose_tab_settings" app:destination="@id/id_glucose_tab_settings" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" />
+        <action android:id="@id/action_id_tab_settings_to_alert_settings" app:destination="@id/id_alert_settings" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" />
+        <action android:id="@id/action_id_tab_settings_to_id_about_settings" app:destination="@id/id_about_settings" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" />
+        <action android:id="@id/action_id_tab_settings_to_id_account_settings" app:destination="@id/id_account_settings" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" />
+        <action android:id="@id/action_id_tab_settings_to_id_contact_settings" app:destination="@id/id_contact_settings" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" />
+        <action android:id="@id/action_id_tab_settings_to_id_data_consents" app:destination="@id/id_data_consents" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" />
+        <action android:id="@id/action_id_tab_settings_to_id_help_settings" app:destination="@id/id_help_settings" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" />
+        <action android:id="@id/action_id_tab_settings_to_id_qualtrics_feedback" app:destination="@id/id_qualtrics_feedback" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" />
+        <action android:id="@id/action_id_from_settings_to_g7_phone_safety_dialog" app:destination="@id/id_g7_phone_safety_dialog" />
+        <action android:id="@id/action_id_from_settings_to_g7_android_safety_dialog" app:destination="@id/id_g7_android_safety" />
+    </fragment>
+    <fragment android:label="@string/glucose_tab" android:name="com.dexcom.phoenix.ui.screens.settings.glucosetab.GlucoseTabSettingsFragment" android:id="@id/id_glucose_tab_settings">
+        <argument android:name="@string/navigation_override_up" android:defaultValue="true" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <action android:id="@id/action_id_glucose_tab_settings_to_id_graph_height_settings" app:destination="@id/id_graph_height_settings" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" />
+        <action android:id="@id/action_id_tab_settings_to_id_target_range_settings" app:destination="@id/id_target_range_settings" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment android:label="@string/graph_height" android:name="com.dexcom.phoenix.ui.screens.settings.glucosetab.GraphHeightSettingsFragment" android:id="@id/id_graph_height_settings">
+        <argument android:name="@string/navigation_override_up" android:defaultValue="true" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+    </fragment>
+    <fragment android:label="@string/target_range" android:name="com.dexcom.phoenix.ui.screens.settings.TargetRangeSettingsFragment" android:id="@id/id_target_range_settings">
+        <argument android:name="@string/navigation_override_up" android:defaultValue="true" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+    </fragment>
+    <fragment android:label="@string/alerts" android:name="com.dexcom.phoenix.ui.screens.settings.alerts.AlertsSettingsScreenFragment" android:id="@id/id_alerts_settings">
+        <argument android:name="@string/navigation_override_up" android:defaultValue="true" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <argument android:name="alertProfileType" android:defaultValue="PRIMARY" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertProfileType" />
+        <action android:id="@id/action_id_alerts_settings_to_id_add_new_profile_dialog" app:destination="@id/id_add_new_profile_dialog" />
+        <action android:id="@id/action_id_alert_settings_to_reset_alert_settings_dialog" app:destination="@id/id_reset_alert_settings_dialog" />
+        <action android:id="@id/action_id_alerts_settings_to_id_alert_profile_created_dialog" app:destination="@id/id_alert_profile_created_dialog" />
+        <action android:id="@id/action_id_alerts_settings_to_id_alert_profile_details_primary" app:destination="@id/id_alert_profile_details">
+            <argument android:name="alertProfileType" android:defaultValue="PRIMARY" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertProfileType" />
+        </action>
+        <action android:id="@id/action_id_alerts_settings_to_id_alert_profile_details_secondary" app:destination="@id/id_alert_profile_details">
+            <argument android:name="alertProfileType" android:defaultValue="SECONDARY" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertProfileType" />
+        </action>
+        <action android:id="@id/action_id_alert_settings_to_high_alert_settings_detail_fragment" app:destination="@id/id_high_alert_settings_detail" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right">
+            <argument android:name="alertProfileType" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertProfileType" />
+        </action>
+        <action android:id="@id/action_id_alert_settings_to_low_alert_settings_detail_fragment" app:destination="@id/id_low_alert_settings_detail" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right">
+            <argument android:name="alertProfileType" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertProfileType" />
+        </action>
+        <action android:id="@id/action_id_alert_settings_to_urgent_low_settings" app:destination="@id/id_urgent_low_settings" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" app:popUpTo="@id/id_alerts_settings">
+            <argument android:name="alertProfileType" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertProfileType" />
+        </action>
+        <action android:id="@id/action_id_alert_settings_to_technical_alert_settings" app:destination="@id/id_technical_alert_settings" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" app:popUpTo="@id/id_alerts_settings">
+            <argument android:name="alertProfileType" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertProfileType" />
+        </action>
+        <action android:id="@id/action_id_alert_settings_to_rising_fast_settings" app:destination="@id/id_rising_fast_settings" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" app:popUpTo="@id/id_alerts_settings">
+            <argument android:name="alertProfileType" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertProfileType" />
+        </action>
+        <action android:id="@id/action_id_alert_settings_to_falling_fast_settings" app:destination="@id/id_falling_fast_settings" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" app:popUpTo="@id/id_alerts_settings">
+            <argument android:name="alertProfileType" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertProfileType" />
+        </action>
+        <action android:id="@id/action_id_alert_settings_to_id_signal_loss_settings" app:destination="@id/id_signal_loss_settings" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right">
+            <argument android:name="alertProfileType" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertProfileType" />
+        </action>
+        <action android:id="@id/action_id_alert_settings_to_id_brief_sensor_issue_settings" app:destination="@id/id_brief_sensor_issue_settings" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right">
+            <argument android:name="alertProfileType" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertProfileType" />
+        </action>
+        <action android:id="@id/action_id_alert_settings_to_urgent_low_soon_settings" app:destination="@id/id_urgent_low_soon_settings" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" app:popUpTo="@id/id_alerts_settings">
+            <argument android:name="alertProfileType" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertProfileType" />
+        </action>
+    </fragment>
+    <fragment android:label="@string/urgent_low" android:name="com.dexcom.phoenix.ui.screens.settings.alerts.glucose.urgentlow.UrgentLowSettingsFragment" android:id="@id/id_urgent_low_settings">
+        <argument android:name="@string/navigation_override_up" android:defaultValue="true" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <argument android:name="alertType" android:defaultValue="UrgentLow" app:argType="com.dexcom.coresdk.cgmkit.persistence.alerts.AlertTypes" />
+        <argument android:name="alertProfileType" android:defaultValue="PRIMARY" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertProfileType" />
+        <action android:id="@id/action_id_urgent_low_alert_settings_to_id_quiet_modes_silence_timer" app:destination="@id/id_quiet_modes_silence_timer" />
+        <action android:id="@id/action_id_urgent_low_alert_settings_to_id_quiet_modes_vibrate_timer" app:destination="@id/id_quiet_modes_vibrate_timer" />
+        <action android:id="@id/action_id_urgent_low_alert_settings_to_alert_sound_vibrate_settings" app:destination="@id/id_alert_sound_vibrate_settings" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" app:popUpTo="@id/id_urgent_low_settings">
+            <argument android:name="alertType" android:defaultValue="UrgentLow" app:argType="com.dexcom.coresdk.cgmkit.persistence.alerts.AlertTypes" />
+            <argument android:name="alertProfileType" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertProfileType" />
+        </action>
+    </fragment>
+    <fragment android:label="@string/rising_fast" android:name="com.dexcom.phoenix.ui.screens.settings.alerts.glucose.risingfast.RisingFastAlertSettingsDetailFragment" android:id="@id/id_rising_fast_settings">
+        <argument android:name="@string/navigation_override_up" android:defaultValue="true" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <argument android:name="alertType" android:defaultValue="RisingFast" app:argType="com.dexcom.coresdk.cgmkit.persistence.alerts.AlertTypes" />
+        <argument android:name="alertProfileType" android:defaultValue="PRIMARY" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertProfileType" />
+        <action android:id="@id/action_id_rising_fast_settings_detail_to_id_rising_fast_threshold_picker" app:destination="@id/id_rising_fast_threshold_picker" />
+        <action android:id="@id/action_id_rising_fast_alert_settings_to_id_quiet_modes_silence_timer" app:destination="@id/id_quiet_modes_silence_timer" />
+        <action android:id="@id/action_id_rising_fast_alert_settings_to_id_quiet_modes_vibrate_timer" app:destination="@id/id_quiet_modes_vibrate_timer" />
+        <action android:id="@id/action_id_rising_fast_alert_settings_to_alert_sound_vibrate_settings" app:destination="@id/id_alert_sound_vibrate_settings" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" app:popUpTo="@id/id_urgent_low_settings">
+            <argument android:name="alertType" android:defaultValue="RisingFast" app:argType="com.dexcom.coresdk.cgmkit.persistence.alerts.AlertTypes" />
+            <argument android:name="alertProfileType" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertProfileType" />
+        </action>
+    </fragment>
+    <fragment android:label="@string/urgent_low_soon" android:name="com.dexcom.phoenix.ui.screens.settings.alerts.glucose.urgentlowsoon.UrgentLowSoonSettingsFragment" android:id="@id/id_urgent_low_soon_settings">
+        <argument android:name="@string/navigation_override_up" android:defaultValue="true" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <argument android:name="alertType" android:defaultValue="UrgentLowSoon" app:argType="com.dexcom.coresdk.cgmkit.persistence.alerts.AlertTypes" />
+        <argument android:name="alertProfileType" android:defaultValue="PRIMARY" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertProfileType" />
+        <action android:id="@id/action_id_urgent_low_soon_alert_settings_to_id_quiet_modes_silence_timer" app:destination="@id/id_quiet_modes_silence_timer" />
+        <action android:id="@id/action_id_urgent_low_soon_alert_settings_to_id_quiet_modes_vibrate_timer" app:destination="@id/id_quiet_modes_vibrate_timer" />
+        <action android:id="@id/action_id_urgent_low_soon_alert_settings_to_alert_sound_vibrate_settings" app:destination="@id/id_alert_sound_vibrate_settings" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" app:popUpTo="@id/id_high_alert_settings_detail">
+            <argument android:name="alertType" android:defaultValue="UrgentLowSoon" app:argType="com.dexcom.coresdk.cgmkit.persistence.alerts.AlertTypes" />
+            <argument android:name="alertProfileType" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertProfileType" />
+        </action>
+    </fragment>
+    <fragment android:label="@string/technical_alerts" android:name="com.dexcom.phoenix.ui.screens.settings.alerts.system.technical.TechnicalAlertSettingsFragment" android:id="@id/id_technical_alert_settings">
+        <argument android:name="@string/navigation_override_up" android:defaultValue="true" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <argument android:name="alertType" android:defaultValue="Technical" app:argType="com.dexcom.coresdk.cgmkit.persistence.alerts.AlertTypes" />
+        <argument android:name="alertProfileType" android:defaultValue="PRIMARY" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertProfileType" />
+        <action android:id="@id/action_id_technical_alerts_settings_to_id_quiet_modes_silence_timer" app:destination="@id/id_quiet_modes_silence_timer" />
+        <action android:id="@id/action_id_technical_alerts_settings_to_id_quiet_modes_vibrate_timer" app:destination="@id/id_quiet_modes_vibrate_timer" />
+        <action android:id="@id/action_id_technical_alerts_settings_to_alert_sound_vibrate_setting" app:destination="@id/id_alert_sound_vibrate_settings" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" app:popUpTo="@id/id_urgent_low_settings">
+            <argument android:name="alertType" android:defaultValue="Technical" app:argType="com.dexcom.coresdk.cgmkit.persistence.alerts.AlertTypes" />
+            <argument android:name="alertProfileType" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertProfileType" />
+        </action>
+    </fragment>
+    <fragment android:label="@string/falling_fast" android:name="com.dexcom.phoenix.ui.screens.settings.alerts.glucose.fallingfast.FallingFastAlertSettingsDetailFragment" android:id="@id/id_falling_fast_settings">
+        <argument android:name="@string/navigation_override_up" android:defaultValue="true" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <argument android:name="alertType" android:defaultValue="FallingFast" app:argType="com.dexcom.coresdk.cgmkit.persistence.alerts.AlertTypes" />
+        <argument android:name="alertProfileType" android:defaultValue="PRIMARY" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertProfileType" />
+        <action android:id="@id/action_id_falling_fast_settings_detail_to_id_falling_fast_threshold_picker" app:destination="@id/id_falling_fast_threshold_picker" />
+        <action android:id="@id/action_id_falling_fast_alert_settings_to_id_quiet_modes_silence_timer" app:destination="@id/id_quiet_modes_silence_timer" />
+        <action android:id="@id/action_id_falling_fast_alert_settings_to_id_quiet_modes_vibrate_timer" app:destination="@id/id_quiet_modes_vibrate_timer" />
+        <action android:id="@id/action_id_falling_fast_alert_settings_to_alert_sound_vibrate_settings" app:destination="@id/id_alert_sound_vibrate_settings" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" app:popUpTo="@id/id_urgent_low_settings">
+            <argument android:name="alertType" android:defaultValue="FallingFast" app:argType="com.dexcom.coresdk.cgmkit.persistence.alerts.AlertTypes" />
+            <argument android:name="alertProfileType" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertProfileType" />
+        </action>
+    </fragment>
+    <fragment android:name="com.dexcom.phoenix.ui.screens.settings.alerts.detail.AlertProfileDetailsFragment" android:id="@id/id_alert_profile_details">
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <argument android:name="alertProfileType" android:defaultValue="PRIMARY" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertProfileType" />
+    </fragment>
+    <fragment android:label="@string/about" android:name="com.dexcom.phoenix.ui.screens.settings.about.AboutSettingsFragment" android:id="@id/id_about_settings">
+        <argument android:name="@string/navigation_override_up" android:defaultValue="true" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <action android:id="@id/action_id_about_settings_to_terms_of_use" app:destination="@id/id_terms_of_use" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" />
+        <action android:id="@id/action_id_about_settings_to_privacy_policy" app:destination="@id/id_privacy_policy" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <dialog android:label="@string/contact" android:name="com.dexcom.phoenix.ui.screens.settings.contact.ContactWebViewDialog" android:id="@id/id_contact_settings" />
+    <fragment android:label="@string/help" android:name="com.dexcom.phoenix.ui.screens.settings.help.HelpSettingsFragment" android:id="@id/id_help_settings">
+        <argument android:name="@string/navigation_override_up" android:defaultValue="true" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <action android:id="@id/action_id_help_settings_to_how_to" app:destination="@id/id_how_to" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" />
+        <action android:id="@id/action_id_help_settings_to_find_answers" app:destination="@id/id_find_answers" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" />
+        <action android:id="@id/action_id_help_settings_to_start_here_guide" app:destination="@id/id_start_here_guide" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" />
+        <action android:id="@id/action_id_help_settings_to_user_guide" app:destination="@id/id_user_guide" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" />
+        <action android:id="@id/action_id_help_settings_to_cgm_safety_statements" app:destination="@id/id_cgm_safety_statements" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment android:label="@string/how_to" android:name="com.dexcom.phoenix.ui.screens.settings.help.howto.HowToSettingsFragment" android:id="@id/id_how_to">
+        <argument android:name="@string/navigation_override_up" android:defaultValue="true" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <action android:id="@id/action_id_how_to_to_id_sensor_removal_dialog" app:destination="@id/id_sensor_removal_dialog" />
+        <action android:id="@id/action_id_how_to_to_id_sensor_insertion_dialog" app:destination="@id/id_settings_sensor_insertion_instructions" />
+        <action android:id="@id/action_id_how_to_to_id_sensor_readings_text_version_dialog" app:destination="@id/id_sensor_readings_text_version_dialog" />
+        <action android:id="@id/action_id_how_to_to_id_alerts_text_version_dialog" app:destination="@id/id_alerts_text_version_dialog" />
+        <action android:id="@id/action_id_how_to_to_id_when_to_use_your_blood_glucose_meter_text_version_dialog" app:destination="@id/id_when_to_use_your_blood_glucose_meter_text_version_dialog" />
+    </fragment>
+    <fragment android:label="@string/high_alert" android:name="com.dexcom.phoenix.ui.screens.settings.alerts.glucose.high.HighGlucoseAlertSettingsDetailFragment" android:id="@id/id_high_alert_settings_detail">
+        <argument android:name="@string/navigation_override_up" android:defaultValue="true" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <argument android:name="alertType" android:defaultValue="High" app:argType="com.dexcom.coresdk.cgmkit.persistence.alerts.AlertTypes" />
+        <argument android:name="alertProfileType" android:defaultValue="PRIMARY" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertProfileType" />
+        <action android:id="@id/action_id_high_alert_settings_detail_to_id_high_alert_threshold_picker" app:destination="@id/id_high_alert_threshold_picker" />
+        <action android:id="@id/action_id_high_alert_settings_detail_timing_to_id_delay_hours_minutes" app:destination="@id/id_delay_hours_minutes">
+            <argument android:name="alertProfileType" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertProfileType" />
+            <argument android:name="delaySettingType" android:defaultValue="HIGH_ALERT" app:argType="com.dexcom.phoenix.ui.screens.settings.alerts.DelaySettingType" />
+        </action>
+        <action android:id="@id/action_id_high_alert_settings_detail_repeat_to_id_delay_hours_minutes" app:destination="@id/id_delay_hours_minutes">
+            <argument android:name="alertProfileType" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertProfileType" />
+            <argument android:name="delaySettingType" android:defaultValue="HIGH_ALERT_REPEAT" app:argType="com.dexcom.phoenix.ui.screens.settings.alerts.DelaySettingType" />
+        </action>
+        <action android:id="@id/action_id_high_alert_settings_to_id_quiet_modes_silence_timer" app:destination="@id/id_quiet_modes_silence_timer" />
+        <action android:id="@id/action_id_high_alert_settings_to_id_quiet_modes_vibrate_timer" app:destination="@id/id_quiet_modes_vibrate_timer" />
+        <action android:id="@id/action_id_high_alert_settings_to_alert_sound_vibrate_settings" app:destination="@id/id_alert_sound_vibrate_settings" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" app:popUpTo="@id/id_high_alert_settings_detail">
+            <argument android:name="alertType" android:defaultValue="High" app:argType="com.dexcom.coresdk.cgmkit.persistence.alerts.AlertTypes" />
+            <argument android:name="alertProfileType" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertProfileType" />
+        </action>
+    </fragment>
+    <fragment android:label="@string/low_alert" android:name="com.dexcom.phoenix.ui.screens.settings.alerts.glucose.low.LowGlucoseAlertSettingsDetailFragment" android:id="@id/id_low_alert_settings_detail">
+        <argument android:name="@string/navigation_override_up" android:defaultValue="true" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <argument android:name="alertType" android:defaultValue="Low" app:argType="com.dexcom.coresdk.cgmkit.persistence.alerts.AlertTypes" />
+        <argument android:name="alertProfileType" android:defaultValue="PRIMARY" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertProfileType" />
+        <action android:id="@id/action_id_low_alert_settings_detail_to_id_low_alert_threshold_picker" app:destination="@id/id_low_alert_threshold_picker" />
+        <action android:id="@id/action_id_low_alert_settings_detail_to_id_delay_hours_minutes" app:destination="@id/id_delay_hours_minutes">
+            <argument android:name="alertProfileType" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertProfileType" />
+            <argument android:name="delaySettingType" android:defaultValue="LOW_ALERT_REPEAT" app:argType="com.dexcom.phoenix.ui.screens.settings.alerts.DelaySettingType" />
+        </action>
+        <action android:id="@id/action_id_low_alert_settings_to_id_quiet_modes_silence_timer" app:destination="@id/id_quiet_modes_silence_timer" />
+        <action android:id="@id/action_id_low_alert_settings_to_id_quiet_modes_vibrate_timer" app:destination="@id/id_quiet_modes_vibrate_timer" />
+        <action android:id="@id/action_id_low_alert_settings_to_alert_sound_vibrate_settings" app:destination="@id/id_alert_sound_vibrate_settings" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" app:popUpTo="@id/id_low_alert_settings_detail">
+            <argument android:name="alertType" android:defaultValue="Low" app:argType="com.dexcom.coresdk.cgmkit.persistence.alerts.AlertTypes" />
+            <argument android:name="alertProfileType" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertProfileType" />
+        </action>
+    </fragment>
+    <dialog android:name="com.dexcom.phoenix.ui.screens.settings.alerts.glucose.high.HighGlucoseThresholdPickerDialogFragment" android:id="@id/id_high_alert_threshold_picker">
+        <argument android:name="enableStatus" android:defaultValue="false" app:argType="boolean" />
+        <argument android:name="alertProfileType" android:defaultValue="PRIMARY" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertProfileType" />
+    </dialog>
+    <dialog android:name="com.dexcom.phoenix.ui.screens.settings.alerts.glucose.low.LowGlucoseThresholdPickerDialogFragment" android:id="@id/id_low_alert_threshold_picker">
+        <argument android:name="enableStatus" android:defaultValue="false" app:argType="boolean" />
+        <argument android:name="alertProfileType" android:defaultValue="PRIMARY" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertProfileType" />
+    </dialog>
+    <dialog android:name="com.dexcom.phoenix.ui.screens.settings.alerts.glucose.risingfast.RisingFastGlucoseThresholdPickerDialogFragment" android:id="@id/id_rising_fast_threshold_picker">
+        <argument android:name="alertProfileType" android:defaultValue="PRIMARY" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertProfileType" />
+        <argument android:name="enableStatus" android:defaultValue="false" app:argType="boolean" />
+    </dialog>
+    <dialog android:name="com.dexcom.phoenix.ui.screens.settings.alerts.glucose.fallingfast.FallingFastGlucoseThresholdPickerDialogFragment" android:id="@id/id_falling_fast_threshold_picker">
+        <argument android:name="alertProfileType" android:defaultValue="PRIMARY" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertProfileType" />
+        <argument android:name="enableStatus" android:defaultValue="false" app:argType="boolean" />
+    </dialog>
+    <fragment android:label="@string/scheduling" android:name="com.dexcom.phoenix.ui.screens.settings.alerts.schedule.AlertProfileScheduleFragment" android:id="@id/id_alert_scheduling_details">
+        <argument android:name="@string/navigation_override_up" android:defaultValue="true" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+    </fragment>
+    <fragment android:label="@string/signal_loss" android:name="com.dexcom.phoenix.ui.screens.settings.alerts.system.signalloss.SignalLossSettingsFragment" android:id="@id/id_signal_loss_settings">
+        <argument android:name="@string/navigation_override_up" android:defaultValue="true" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <argument android:name="alertType" android:defaultValue="SignalLoss" app:argType="com.dexcom.coresdk.cgmkit.persistence.alerts.AlertTypes" />
+        <argument android:name="alertProfileType" android:defaultValue="PRIMARY" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertProfileType" />
+        <action android:id="@id/action_id_signal_loss_settings_to_id_delay_hours_minutes_settings" app:destination="@id/id_delay_hours_minutes">
+            <argument android:name="alertProfileType" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertProfileType" />
+            <argument android:name="delaySettingType" android:defaultValue="SIGNAL_LOSS" app:argType="com.dexcom.phoenix.ui.screens.settings.alerts.DelaySettingType" />
+        </action>
+        <action android:id="@id/action_id_signal_loss_settings_to_id_quiet_modes_silence_timer" app:destination="@id/id_quiet_modes_silence_timer" />
+        <action android:id="@id/action_id_signal_loss_settings_to_id_quiet_modes_vibrate_timer" app:destination="@id/id_quiet_modes_vibrate_timer" />
+        <action android:id="@id/action_id_signal_loss_alert_settings_to_alert_sound_vibrate_settings" app:destination="@id/id_alert_sound_vibrate_settings" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" app:popUpTo="@id/id_urgent_low_settings">
+            <argument android:name="alertType" android:defaultValue="SignalLoss" app:argType="com.dexcom.coresdk.cgmkit.persistence.alerts.AlertTypes" />
+            <argument android:name="alertProfileType" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertProfileType" />
+        </action>
+    </fragment>
+    <fragment android:label="@string/brief_sensor_issue_toolbar_title" android:name="com.dexcom.phoenix.ui.screens.settings.alerts.system.briefsensorissue.BriefSensorIssueSettingsFragment" android:id="@id/id_brief_sensor_issue_settings">
+        <argument android:name="@string/navigation_override_up" android:defaultValue="true" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <argument android:name="alertType" android:defaultValue="BriefSensorIssue" app:argType="com.dexcom.coresdk.cgmkit.persistence.alerts.AlertTypes" />
+        <argument android:name="alertProfileType" android:defaultValue="PRIMARY" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertProfileType" />
+        <action android:id="@id/action_id_brief_sensor_issue_settings_to_id_brief_sensor_issue_for_more_than_settings" app:destination="@id/id_brief_sensor_issue_for_more_than" />
+        <action android:id="@id/action_id_brief_sensor_issue_settings_to_id_quiet_modes_silence_timer" app:destination="@id/id_quiet_modes_silence_timer" />
+        <action android:id="@id/action_id_brief_sensor_issue_settings_to_id_quiet_modes_vibrate_timer" app:destination="@id/id_quiet_modes_vibrate_timer" />
+        <action android:id="@id/action_id_brief_sensor_issue_settings_to_alert_sound_vibrate_settings" app:destination="@id/id_alert_sound_vibrate_settings" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" app:popUpTo="@id/id_urgent_low_settings">
+            <argument android:name="alertType" android:defaultValue="BriefSensorIssue" app:argType="com.dexcom.coresdk.cgmkit.persistence.alerts.AlertTypes" />
+            <argument android:name="alertProfileType" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertProfileType" />
+        </action>
+    </fragment>
+    <fragment android:label="@string/alert_sound_vibrate_screen_title" android:name="com.dexcom.phoenix.ui.screens.settings.alerts.notification.AlertSoundVibrateSettingsFragment" android:id="@id/id_alert_sound_vibrate_settings">
+        <argument android:name="@string/navigation_override_up" android:defaultValue="true" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <argument android:name="alertType" android:defaultValue="NotSet" app:argType="com.dexcom.coresdk.cgmkit.persistence.alerts.AlertTypes" />
+        <argument android:name="alertProfileType" android:defaultValue="PRIMARY" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertProfileType" />
+        <action android:id="@id/action_id_alert_sound_vibrate_settings_to_id_quiet_modes_silence_timer" app:destination="@id/id_quiet_modes_silence_timer" />
+        <action android:id="@id/action_id_alert_sound_vibrate_settings_to_id_quiet_modes_vibrate_timer" app:destination="@id/id_quiet_modes_vibrate_timer" />
+        <action android:id="@id/action_alert_sound_vibrate_settings_to_sound_vibrate_confirmation_dialog" app:destination="@id/id_alert_sound_vibrate_confirmation_dialog" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right">
+            <argument android:name="alertType" android:defaultValue="NotSet" app:argType="com.dexcom.coresdk.cgmkit.persistence.alerts.AlertTypes" />
+            <argument android:name="soundSetting" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.alertssettings.AlertSoundSetting" />
+            <argument android:name="alertProfileType" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertProfileType" />
+        </action>
+        <action android:id="@id/action_id_low_alert_settings_detail_to_id_sound_setting" app:destination="@id/id_sound_setting" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right">
+            <argument android:name="soundSettingType" android:defaultValue="LOW_ALERT" app:argType="com.dexcom.phoenix.ui.screens.settings.alerts.SoundSettingViewModel$SoundSettingType" />
+            <argument android:name="alertProfileType" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertProfileType" />
+        </action>
+        <action android:id="@id/action_id_high_alert_settings_detail_to_id_sound_setting" app:destination="@id/id_sound_setting" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right">
+            <argument android:name="soundSettingType" android:defaultValue="HIGH_ALERT" app:argType="com.dexcom.phoenix.ui.screens.settings.alerts.SoundSettingViewModel$SoundSettingType" />
+            <argument android:name="alertProfileType" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertProfileType" />
+        </action>
+        <action android:id="@id/action_id_urgent_low_alert_settings_detail_to_id_sound_setting" app:destination="@id/id_sound_setting" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right">
+            <argument android:name="soundSettingType" android:defaultValue="URGENT_LOW" app:argType="com.dexcom.phoenix.ui.screens.settings.alerts.SoundSettingViewModel$SoundSettingType" />
+            <argument android:name="alertProfileType" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertProfileType" />
+        </action>
+        <action android:id="@id/action_id_urgent_low_soon_alert_settings_detail_to_id_sound_setting" app:destination="@id/id_sound_setting" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right">
+            <argument android:name="soundSettingType" android:defaultValue="URGENT_LOW_SOON" app:argType="com.dexcom.phoenix.ui.screens.settings.alerts.SoundSettingViewModel$SoundSettingType" />
+            <argument android:name="alertProfileType" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertProfileType" />
+        </action>
+        <action android:id="@id/action_id_rising_fast_alert_settings_detail_to_id_sound_setting" app:destination="@id/id_sound_setting" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right">
+            <argument android:name="soundSettingType" android:defaultValue="RISING_FAST" app:argType="com.dexcom.phoenix.ui.screens.settings.alerts.SoundSettingViewModel$SoundSettingType" />
+            <argument android:name="alertProfileType" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertProfileType" />
+        </action>
+        <action android:id="@id/action_id_falling_fast_alert_settings_detail_to_id_sound_setting" app:destination="@id/id_sound_setting" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right">
+            <argument android:name="soundSettingType" android:defaultValue="FALLING_FAST" app:argType="com.dexcom.phoenix.ui.screens.settings.alerts.SoundSettingViewModel$SoundSettingType" />
+            <argument android:name="alertProfileType" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertProfileType" />
+        </action>
+        <action android:id="@id/action_id_signal_loss_settings_to_id_sound_setting" app:destination="@id/id_sound_setting" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right">
+            <argument android:name="soundSettingType" android:defaultValue="SIGNAL_LOSS" app:argType="com.dexcom.phoenix.ui.screens.settings.alerts.SoundSettingViewModel$SoundSettingType" />
+            <argument android:name="alertProfileType" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertProfileType" />
+        </action>
+        <action android:id="@id/action_id_brief_sensor_issue_settings_to_id_sound_setting" app:destination="@id/id_sound_setting" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right">
+            <argument android:name="soundSettingType" android:defaultValue="BRIEF_SENSOR_ISSUE" app:argType="com.dexcom.phoenix.ui.screens.settings.alerts.SoundSettingViewModel$SoundSettingType" />
+            <argument android:name="alertProfileType" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertProfileType" />
+        </action>
+        <action android:id="@id/action_id_technical_alerts_settings_to_id_sound_setting" app:destination="@id/id_sound_setting" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right">
+            <argument android:name="soundSettingType" android:defaultValue="TECHNICAL_ALERTS" app:argType="com.dexcom.phoenix.ui.screens.settings.alerts.SoundSettingViewModel$SoundSettingType" />
+            <argument android:name="alertProfileType" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertProfileType" />
+        </action>
+    </fragment>
+    <fragment android:label="@string/alert_sound_cell_title" android:name="com.dexcom.phoenix.ui.screens.settings.alerts.SoundSettingFragment" android:id="@id/id_sound_setting">
+        <argument android:name="@string/navigation_override_up" android:defaultValue="true" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <argument android:name="soundSettingType" android:defaultValue="SIGNAL_LOSS" app:argType="com.dexcom.phoenix.ui.screens.settings.alerts.SoundSettingViewModel$SoundSettingType" />
+        <argument android:name="alertProfileType" android:defaultValue="PRIMARY" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertProfileType" />
+        <action android:id="@id/action_id_sound_settings_to_id_sound_setting_intensity_level_dialog" app:destination="@id/id_alert_sound_intensity_level_dialog">
+            <argument android:name="alertType" android:defaultValue="VIBRATE_ONLY" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertSound" />
+            <argument android:name="soundSettingType" android:defaultValue="SIGNAL_LOSS" app:argType="com.dexcom.phoenix.ui.screens.settings.alerts.SoundSettingViewModel$SoundSettingType" />
+            <argument android:name="alertProfileType" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertProfileType" />
+        </action>
+        <action android:id="@id/action_id_sound_settings_to_id_sound_setting_conflicts_dialog" app:destination="@id/id_alert_sound_conflict_dialog">
+            <argument android:name="alertSounds" android:defaultValue="@null" app:argType="string[]" app:nullable="true" />
+            <argument android:name="alertType" android:defaultValue="VIBRATE_ONLY" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertSound" />
+            <argument android:name="soundSettingType" android:defaultValue="SIGNAL_LOSS" app:argType="com.dexcom.phoenix.ui.screens.settings.alerts.SoundSettingViewModel$SoundSettingType" />
+            <argument android:name="alertProfileType" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertProfileType" />
+        </action>
+    </fragment>
+    <dialog android:label="@string/brief_sensor_issue" android:name="com.dexcom.phoenix.ui.screens.glucose.inappalerts.ConflictScreenDialogFragment" android:id="@id/id_alert_sound_conflict_dialog">
+        <argument android:name="alertSounds" android:defaultValue="@null" app:argType="string[]" app:nullable="true" />
+        <argument android:name="alertProfileType" android:defaultValue="PRIMARY" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertProfileType" />
+        <argument android:name="soundSettingType" android:defaultValue="SIGNAL_LOSS" app:argType="com.dexcom.phoenix.ui.screens.settings.alerts.SoundSettingViewModel$SoundSettingType" />
+        <argument android:name="alertType" android:defaultValue="VIBRATE_ONLY" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertSound" />
+        <action android:id="@id/action_id_conflict_dialog_to_id_sound_setting" app:destination="@id/id_sound_setting" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" app:popUpTo="@id/id_alert_sound_vibrate_settings">
+            <argument android:name="alertProfileType" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertProfileType" />
+            <argument android:name="soundSettingType" android:defaultValue="TECHNICAL_ALERTS" app:argType="com.dexcom.phoenix.ui.screens.settings.alerts.SoundSettingViewModel$SoundSettingType" />
+        </action>
+    </dialog>
+    <dialog android:label="@string/brief_sensor_issue" android:name="com.dexcom.phoenix.ui.screens.glucose.inappalerts.SoundIntensityLevelDialogFragment" android:id="@id/id_alert_sound_intensity_level_dialog">
+        <argument android:name="alertProfileType" android:defaultValue="PRIMARY" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertProfileType" />
+        <argument android:name="soundSettingType" android:defaultValue="SIGNAL_LOSS" app:argType="com.dexcom.phoenix.ui.screens.settings.alerts.SoundSettingViewModel$SoundSettingType" />
+        <argument android:name="alertType" android:defaultValue="VIBRATE_ONLY" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertSound" />
+        <action android:id="@id/action_id_conflict_dialog_to_id_sound_setting" app:destination="@id/id_sound_setting" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" app:popUpTo="@id/id_alert_sound_vibrate_settings">
+            <argument android:name="alertProfileType" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertProfileType" />
+            <argument android:name="soundSettingType" android:defaultValue="TECHNICAL_ALERTS" app:argType="com.dexcom.phoenix.ui.screens.settings.alerts.SoundSettingViewModel$SoundSettingType" />
+        </action>
+    </dialog>
+    <dialog android:name="com.dexcom.phoenix.ui.screens.settings.alerts.notification.AlertSoundVibrateConfirmationFragment" android:id="@id/id_alert_sound_vibrate_confirmation_dialog">
+        <argument android:name="alertType" android:defaultValue="NotSet" app:argType="com.dexcom.coresdk.cgmkit.persistence.alerts.AlertTypes" />
+        <argument android:name="soundSetting" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.alertssettings.AlertSoundSetting" />
+        <argument android:name="alertProfileType" android:defaultValue="PRIMARY" app:argType="com.dexcom.coresdk.cgmkit.persistence.uiutils.AlertProfileType" />
+    </dialog>
+    <dialog android:name="com.dexcom.phoenix.ui.screens.settings.help.howto.SensorRemovalDialogFragment" android:id="@id/id_sensor_removal_dialog">
+        <action android:id="@id/action_id_sensor_removal_dialog_to_faq_web_view" app:destination="@id/faq_web_view" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" />
+    </dialog>
+    <dialog android:name="com.dexcom.phoenix.ui.screens.settings.help.howto.SensorReadingsTextVersionDialogFragment" android:id="@id/id_sensor_readings_text_version_dialog">
+        <action android:id="@id/action_id_how_to_sensor_readings_text_version_dialog_to_sensor_readings_text_version_dialog2" app:destination="@id/id_sensor_readings_text_version_dialog2" />
+    </dialog>
+    <dialog android:name="com.dexcom.phoenix.ui.screens.settings.help.howto.SensorReadingsTextVersionDialogPart2Fragment" android:id="@id/id_sensor_readings_text_version_dialog2">
+        <action android:id="@id/action_id_how_to_sensor_readings_text_version_dialog_2_to_sensor_readings_text_version_dialog3" app:destination="@id/id_sensor_readings_text_version_dialog3" />
+        <action android:id="@id/action_sensor_readings_text_version_dialog2_to_id_how_to" app:destination="@id/id_how_to" app:popUpTo="@id/id_how_to" app:popUpToInclusive="true" />
+    </dialog>
+    <dialog android:name="com.dexcom.phoenix.ui.screens.settings.help.howto.SensorReadingsTextVersionDialogPart3Fragment" android:id="@id/id_sensor_readings_text_version_dialog3">
+        <action android:id="@id/action_sensor_readings_text_version_dialog3_to_how_to" app:destination="@id/id_how_to" app:popUpTo="@id/id_how_to" app:popUpToInclusive="true" />
+    </dialog>
+    <dialog android:name="com.dexcom.phoenix.ui.screens.settings.help.howto.AlertsTextVersionDialogFragment" android:id="@id/id_alerts_text_version_dialog">
+        <action android:id="@id/action_id_how_to_alerts_text_version_dialog_to_alerts_text_version_dialog2" app:destination="@id/id_alerts_text_version_dialog2" />
+    </dialog>
+    <dialog android:name="com.dexcom.phoenix.ui.screens.settings.help.howto.AlertsTextVersionDialogPart2Fragment" android:id="@id/id_alerts_text_version_dialog2">
+        <action android:id="@id/action_id_alerts_text_version_dialog2_to_how_to" app:destination="@id/id_how_to" app:popUpTo="@id/id_how_to" app:popUpToInclusive="true" />
+    </dialog>
+    <dialog android:name="com.dexcom.phoenix.ui.screens.settings.help.howto.TreatmentDecisionsTextVersionDialogFragment" android:id="@id/id_when_to_use_your_blood_glucose_meter_text_version_dialog">
+        <action android:id="@id/action_id_when_to_use_your_blood_glucose_meter_text_version_dialog_to_id_when_to_use_your_blood_glucose_meter_text_version_dialog2" app:destination="@id/id_when_to_use_your_blood_glucose_meter_text_version_dialog2" />
+    </dialog>
+    <dialog android:name="com.dexcom.phoenix.ui.screens.settings.help.howto.TreatmentDecisionsTextVersionDialogPart2Fragment" android:id="@id/id_when_to_use_your_blood_glucose_meter_text_version_dialog2">
+        <action android:id="@id/action_id_when_to_use_your_blood_glucose_meter_text_version_dialog2_to_id_when_to_use_your_blood_glucose_meter_text_version_dialog3" app:destination="@id/id_when_to_use_your_blood_glucose_meter_text_version_dialog3" />
+        <action android:id="@id/action_id_when_to_use_your_blood_glucose_meter_text_version_dialog2_to_id_how_to" app:destination="@id/id_how_to" app:popUpTo="@id/id_how_to" app:popUpToInclusive="true" />
+    </dialog>
+    <dialog android:name="com.dexcom.phoenix.ui.screens.settings.help.howto.TreatmentDecisionsTextVersionDialogPart3Fragment" android:id="@id/id_when_to_use_your_blood_glucose_meter_text_version_dialog3">
+        <action android:id="@id/action_id_when_to_use_your_blood_glucose_meter_text_version_dialog3_to_id_how_to" app:destination="@id/id_how_to" app:popUpTo="@id/id_how_to" app:popUpToInclusive="true" />
+    </dialog>
+    <fragment android:label="" android:name="com.dexcom.phoenix.ui.screens.DexcomWebViewFragment" android:id="@id/faq_web_view">
+        <argument android:name="web_url_key" app:argType="string" />
+        <argument android:name="web_url_title" app:argType="string" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+    </fragment>
+    <fragment android:label="" android:name="com.dexcom.phoenix.ui.screens.DexcomWebViewFragment" android:id="@id/id_account_settings">
+        <argument android:name="web_url_key" app:argType="string" />
+        <argument android:name="web_url_title" app:argType="string" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+    </fragment>
+    <fragment android:label="" android:name="com.dexcom.phoenix.ui.screens.DexcomWebViewFragment" android:id="@id/id_data_consents">
+        <argument android:name="web_url_key" app:argType="string" />
+        <argument android:name="web_url_title" app:argType="string" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+    </fragment>
+    <fragment android:label="" android:name="com.dexcom.phoenix.ui.screens.DexcomWebViewFragment" android:id="@id/id_terms_of_use">
+        <argument android:name="web_url_key" app:argType="string" />
+        <argument android:name="web_url_title" app:argType="string" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+    </fragment>
+    <fragment android:label="" android:name="com.dexcom.phoenix.ui.screens.DexcomWebViewFragment" android:id="@id/id_privacy_policy">
+        <argument android:name="web_url_key" app:argType="string" />
+        <argument android:name="web_url_title" app:argType="string" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+    </fragment>
+    <fragment android:label="" android:name="com.dexcom.phoenix.ui.screens.DexcomWebViewFragment" android:id="@id/id_find_answers">
+        <argument android:name="web_url_key" app:argType="string" />
+        <argument android:name="web_url_title" app:argType="string" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+    </fragment>
+    <fragment android:label="" android:name="com.dexcom.phoenix.ui.screens.DexcomWebViewFragment" android:id="@id/id_start_here_guide">
+        <argument android:name="web_url_key" app:argType="string" />
+        <argument android:name="web_url_title" app:argType="string" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+    </fragment>
+    <fragment android:label="" android:name="com.dexcom.phoenix.ui.screens.DexcomWebViewFragment" android:id="@id/id_user_guide">
+        <argument android:name="web_url_key" app:argType="string" />
+        <argument android:name="web_url_title" app:argType="string" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+    </fragment>
+    <fragment android:label="" android:name="com.dexcom.phoenix.ui.screens.DexcomWebViewFragment" android:id="@id/id_cgm_safety_statements">
+        <argument android:name="web_url_key" app:argType="string" />
+        <argument android:name="web_url_title" app:argType="string" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+    </fragment>
+    <dialog android:name="com.dexcom.phoenix.ui.screens.settings.phonesettings.G7PhoneSafetyViewDialogFragment" android:id="@id/id_g7_phone_safety_dialog">
+        <action android:id="@id/action_id_from_safety_dialog_to_g7_android_safety_dialog" app:destination="@id/id_g7_android_safety" app:popUpTo="@id/id_settings_screen" />
+    </dialog>
+    <fragment android:label="" android:name="com.dexcom.phoenix.ui.screens.DexcomWebViewFragment" android:id="@id/id_qualtrics_feedback">
+        <argument android:name="web_url_key" app:argType="string" />
+        <argument android:name="web_url_title" app:argType="string" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+    </fragment>
+    <dialog android:name="com.dexcom.phoenix.ui.screens.settings.help.howto.SensorInsertionDialogFragmentOne" android:id="@id/id_settings_sensor_insertion_instructions">
+        <action android:id="@id/action_id_insert_sensor1_dialog_to_id_insert_sensor2_dialog" app:destination="@id/id_settings_sensor_insertion_instructions2" />
+        <action android:id="@id/action_id_sensor_insertion_dialog_to_dexcomWebViewFragment" app:destination="@id/id_insert_sensor_dialog" />
+    </dialog>
+    <dialog android:name="com.dexcom.phoenix.ui.screens.settings.help.howto.SensorInsertionDialogFragmentTwo" android:id="@id/id_settings_sensor_insertion_instructions2">
+        <action android:id="@id/action_id_insert_sensor2_dialog_to_id_insert_sensor3_dialog" app:destination="@id/id_settings_sensor_insertion_instructions3" />
+        <action android:id="@id/action_id_insert_sensor2_dialog_to_how_to" app:destination="@id/id_how_to" app:popUpTo="@id/id_how_to" app:popUpToInclusive="true" />
+    </dialog>
+    <dialog android:name="com.dexcom.phoenix.ui.screens.settings.help.howto.SensorInsertionDialogFragmentThree" android:id="@id/id_settings_sensor_insertion_instructions3">
+        <action android:id="@id/action_id_insert_sensor3_dialog_to_how_to" app:destination="@id/id_how_to" app:popUpTo="@id/id_how_to" app:popUpToInclusive="true" />
+    </dialog>
+    <dialog android:label="DexcomWebViewFragment" android:name="com.dexcom.phoenix.ui.screens.settings.help.howto.InsertSensorWebViewDialog" android:id="@id/id_insert_sensor_dialog">
+        <action android:id="@id/action_id_insert_sensor_dialog_to_how_to" app:destination="@id/id_how_to" app:popUpTo="@id/id_how_to" app:popUpToInclusive="true" />
+    </dialog>
+    <include app:graph="@navigation/navigation_alert_settings" />
+    <include app:graph="@navigation/g7_android_safety" />
+</navigation>

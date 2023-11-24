@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/id_g7_android_safety" app:startDestination="@id/id_g7_android_safety_dialog"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <dialog android:name="com.dexcom.phoenix.ui.screens.settings.phonesettings.G7AndroidSafetyDialogFragment" android:id="@id/id_g7_android_safety_dialog">
+        <action android:id="@id/action_id_g7_phone_safety_to_id_web_url" app:destination="@id/id_g7_phone_safety_web_url" app:popUpTo="@id/id_g7_android_safety_dialog" />
+    </dialog>
+    <dialog android:name="com.dexcom.phoenix.ui.screens.settings.phonesettings.G7WebUrlFragment" android:id="@id/id_g7_phone_safety_web_url">
+        <argument android:name="web_url_key" android:defaultValue="" app:argType="string" />
+        <argument android:name="anchorText" android:defaultValue="" app:argType="string" />
+        <argument android:name="webUrlTitle" android:defaultValue="" app:argType="string" />
+    </dialog>
+</navigation>

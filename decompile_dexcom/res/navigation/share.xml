@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:label="@string/share" android:id="@id/id_share" app:startDestination="@id/id_share_home"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include app:graph="@navigation/share_no_followers" />
+    <include app:graph="@navigation/share_resend_invitation" />
+    <fragment android:label="@string/share" android:name="com.dexcom.phoenix.ui.screens.connections.share.ShareHomeFragment" android:id="@id/id_share_home">
+        <argument android:name="@string/navigation_override_up" android:defaultValue="true" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <argument android:name="shareHomeSnackbarType" android:defaultValue="NONE" app:argType="com.dexcom.phoenix.ui.screens.connections.share.ShareHomeSnackbarType" />
+        <argument android:name="removedFollowerName" android:defaultValue="" app:argType="string" />
+        <argument android:name="addedFollowerName" android:defaultValue="" app:argType="string" />
+        <action android:id="@id/action_id_share_home_to_id_share_no_followers" app:destination="@id/id_share_no_followers" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right">
+            <argument android:name="showSnackbar" app:argType="boolean" />
+        </action>
+        <action android:id="@id/action_id_share_home_go_to_invite_follower" app:destination="@id/id_share_invite_follower_flow" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" />
+        <action android:id="@id/action_id_share_home_to_id_share_follower_details" app:destination="@id/id_share_follower_details" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" />
+        <action android:id="@id/id_share_home_share_to_id_cams_consent_revoked" app:destination="@id/id_cams_consent_revoked_dialog" />
+        <action android:id="@id/id_share_home_to_id_connections" app:popUpTo="@id/id_connections_screen" app:popUpToInclusive="false" />
+        <action android:id="@id/action_id_share_home_to_id_share_status" app:destination="@id/id_share_status" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment android:name="com.dexcom.phoenix.ui.screens.connections.share.followerdetails.ShareFollowerDetailsFragment" android:id="@id/id_share_follower_details">
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <argument android:name="shareFollowerSnackbarType" android:defaultValue="NONE" app:argType="com.dexcom.phoenix.ui.screens.connections.share.followerdetails.ShareFollowerSnackbarType" />
+        <action android:id="@id/action_id_share_follower_details_to_id_share_home" app:destination="@id/id_share_home" app:popUpTo="@id/id_share_home" app:popUpToInclusive="true">
+            <argument android:name="shareHomeSnackbarType" app:argType="com.dexcom.phoenix.ui.screens.connections.share.ShareHomeSnackbarType" />
+            <argument android:name="removedFollowerName" app:argType="string" />
+        </action>
+        <action android:id="@id/action_id_share_follower_details_to_id_share_invite_follower_review_invitation" app:destination="@id/id_share_resend_invitation" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right">
+            <argument android:name="container" app:argType="com.dexcom.phoenix.ui.screens.connections.share.invite_follower.ShareInviteFollowerReviewInvitationViewModel$InvitationContainer" />
+        </action>
+        <action android:id="@id/action_id_share_follower_details_to_id_share_follower_details_edit_nickname" app:destination="@id/id_share_follower_details_edit_nickname" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment android:label="@string/edit_nickname" android:name="com.dexcom.phoenix.ui.screens.connections.share.followerdetails.ShareFollowerDetailsEditNicknameFragment" android:id="@id/id_share_follower_details_edit_nickname">
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <argument android:name="@string/navigation_view_gone" android:defaultValue="true" app:argType="boolean" />
+        <action android:id="@id/action_id_share_follower_details_edit_nickname_to_id_share_follower_details" app:destination="@id/id_share_follower_details" app:enterAnim="@anim/slide_in_left" app:exitAnim="@anim/slide_out_right" app:popEnterAnim="@anim/slide_in_right" app:popExitAnim="@anim/slide_out_left" app:popUpTo="@id/id_share_follower_details" app:popUpToInclusive="true" />
+    </fragment>
+    <fragment android:label="@string/status_home" android:name="com.dexcom.phoenix.ui.screens.connections.share.status.StatusHomeFragment" android:id="@id/id_share_status">
+        <argument android:name="@string/navigation_override_up" android:defaultValue="false" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <action android:id="@id/action_id_server_outage_to_dexcomWebViewFragment" app:destination="@id/dexcomWebViewFragment" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" />
+        <action android:id="@id/action_id_share_status_to_connection_screen" app:destination="@id/id_share_home" app:popUpTo="@id/id_share_home" app:popUpToInclusive="true" />
+    </fragment>
+    <fragment android:label="" android:name="com.dexcom.phoenix.ui.screens.DexcomWebViewFragment" android:id="@id/dexcomWebViewFragment">
+        <argument android:name="web_url_key" app:argType="string" />
+        <argument android:name="web_url_title" app:argType="string" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+    </fragment>
+</navigation>

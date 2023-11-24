@@ -1,0 +1,60 @@
+.class public final Lfk/᫞ࡠ;
+.super Ljava/lang/Object;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/dexcom/dexcomone/ui/screens/glucose/screenstates/CoarseLocationOffHelpViewModel;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = "\u1ace"
+.end annotation
+
+.annotation runtime Lfk/᫄ࡱᫀ;
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    bv = {}
+    d1 = {
+        "\u06feuhaxclet\u0707pipktm|{x\u0711zs\u0003{~\u0717~\u0720{\u0012\u071c.~.\u007fB\u0008\n\u0005\u0748\u000b\u0008\u0017\n[\u0018\u001b\u000f\'\u0010?\u0014i\u073ag\u0758\u001b\u0018!\u0739k(+!7 O&y\u074aw\u0768+(1\u0749\u077302"
+    }
+    d2 = {
+        "\u0012*76p\')=!.-o\u001e 4 EDGG7\u0002I>|B3C/0:@\u0015NT^ERWJ\rRCS?@JPjXl^e\"7dOacV6ZONzpwwQijMckpWc`sJ\u0006{}\u00066V\u0004\u0003~p~zyyG",
+        "",
+        "mo\u001e",
+        "\u0018\u000c\u0019\u001e\u000b\u0015\t\t\u001d\u000f\u0005\u0013\u0007\u0004\u000f\u0010\u001f&&",
+        "",
+        "\u0019\u000c\u001c\u001d\u000b\u0011\u000b\u0018\u001d\u0011\u0005\u0012\u000f\u007f\u000f\u00115\u001a\'\u001d\u0017",
+        "",
+        "\'78()y\u0016**$!4\u001f"
+    }
+    k = 0x1
+    mv = {
+        0x1,
+        0x7,
+        0x1
+    }
+    pn = ""
+    xi = 0x30
+    xs = ""
+.end annotation
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/DefaultConstructorMarker;)V
+    .locals 0
+
+    invoke-direct {p0}, Lfk/᫞ࡠ;-><init>()V
+
+    return-void
+.end method

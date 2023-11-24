@@ -1,0 +1,2 @@
+.class public interface abstract Lkotlinx/coroutines/NotCompleted;
+.super Ljava/lang/Object;

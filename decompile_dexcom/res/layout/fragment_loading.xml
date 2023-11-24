@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/bg_rounded_corners" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingHorizontal="60.0dip" android:paddingVertical="20.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/id_loading_progress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" android:indeterminateDrawable="@drawable/pairing_progress_bar" android:indeterminateDuration="500" android:indeterminateBehavior="repeat" />
+    <TextView android:textSize="20.0dip" android:textColor="@color/black" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/id_loading_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="19.0dip" android:text="@string/cert_loading" />
+</LinearLayout>

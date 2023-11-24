@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:tag="layout/onboard_enable_notifications_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:id="@id/id_onboarding_enable_notifications_app_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <androidx.appcompat.widget.Toolbar android:id="@id/id_onboarding_enable_notifications_tool_bar" app:title="@string/app_setup" style="@style/OnboardingToolbar" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.core.widget.NestedScrollView android:id="@id/id_sensor_insertion_instructions_scrollview" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/id_enable_notification_image" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@mipmap/onboarding_enable_notifications" android:contentDescription="@string/app_setup_notifications_is_disabled_title" app:layout_constraintTop_toTopOf="parent" />
+            <TextView android:id="@id/id_enable_notification_title" android:tag="binding_1" android:layout_marginTop="0.0dip" android:paddingHorizontal="24.0dip" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/id_enable_notification_image" style="@style/OnboardingTitleAppSetup" />
+            <TextView android:id="@id/id_enable_notification_description" android:tag="binding_2" android:layout_marginTop="8.0dip" android:paddingHorizontal="24.0dip" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/id_enable_notification_title" style="@style/OnboardingDescriptionAppSetupRegularText" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_gravity="bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip">
+        <com.google.android.material.button.MaterialButton android:id="@id/id_turn_on_notifications_button" android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/turn_on_notifications" android:layout_marginStart="32.0dip" android:layout_marginEnd="32.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/DexcomButton.Primary.Large" />
+        <com.google.android.material.button.MaterialButton android:id="@id/id_next_button" android:tag="binding_4" android:layout_width="148.0dip" android:layout_height="48.0dip" android:layout_marginBottom="8.0dip" android:text="@string/next" android:layout_marginEnd="16.0dip" app:icon="@drawable/ico_droid_arrow_fw" app:iconTint="@color/white" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" style="@style/DexcomButton.Primary.Large.Icon" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

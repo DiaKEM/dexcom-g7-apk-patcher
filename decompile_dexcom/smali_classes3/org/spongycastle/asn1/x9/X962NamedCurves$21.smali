@@ -1,0 +1,517 @@
+.class public final Lorg/spongycastle/asn1/x9/X962NamedCurves$21;
+.super Lorg/spongycastle/asn1/x9/X9ECParametersHolder;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lorg/spongycastle/asn1/x9/X962NamedCurves;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x9
+    name = null
+.end annotation
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Lorg/spongycastle/asn1/x9/X9ECParametersHolder;-><init>()V
+
+    return-void
+.end method
+
+.method private varargs ᫝ࡢ࡯(I[Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 18
+
+    move/from16 v2, p1
+
+    const/4 v0, 0x0
+
+    const v1, 0x7654c69e
+
+    invoke-static {}, Lfk/᫞᫖;->᫛()I
+
+    move-result v0
+
+    xor-int/2addr v1, v0
+
+    rem-int/2addr v2, v1
+
+    packed-switch v2, :pswitch_data_0
+
+    move-object/from16 v1, p0
+
+    move-object/from16 v0, p2
+
+    invoke-super {v1, v2, v0}, Lorg/spongycastle/asn1/x9/X9ECParametersHolder;->ࡩࡥᫀ(I[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :pswitch_0
+    new-instance v3, Ljava/math/BigInteger;
+
+    const-string v5, "\u001e}{a&\"\u0016\u001c\u0014\u001c\u001d)R\u001aH1;\u0015\u0016t\rZ\'8>]\t\u00012\u0019v6\u0010^ma\u0018+\u0011K\u001a\u001e3f\u00060{gz#{u\u0017N\\\u0015\u000c\u0004\nm\u0019?,\u000cl\u00140G3C\u0002\u0006R\u001eAcj\u0013 +(1VxF\u0003S)7}"
+
+    const/16 v6, -0x76
+
+    const/16 v4, -0x23ce
+
+    invoke-static {}, Lfk/ᫍ᫉;->᫛()I
+
+    move-result v0
+
+    or-int v2, v0, v6
+
+    xor-int/lit8 v1, v0, -0x1
+
+    xor-int/lit8 v0, v6, -0x1
+
+    or-int/2addr v1, v0
+
+    and-int/2addr v2, v1
+
+    int-to-short v9, v2
+
+    invoke-static {}, Lfk/ᫍ᫉;->᫛()I
+
+    move-result v0
+
+    or-int v2, v0, v4
+
+    xor-int/lit8 v1, v0, -0x1
+
+    xor-int/lit8 v0, v4, -0x1
+
+    or-int/2addr v1, v0
+
+    and-int/2addr v2, v1
+
+    int-to-short v8, v2
+
+    invoke-virtual {v5}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    new-array v7, v0, [I
+
+    new-instance v6, Lfk/ࡳ᫃;
+
+    invoke-direct {v6, v5}, Lfk/ࡳ᫃;-><init>(Ljava/lang/String;)V
+
+    const/4 v5, 0x0
+
+    :goto_0
+    invoke-virtual {v6}, Lfk/ࡳ᫃;->ᫀࡨ᫛()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v6}, Lfk/ࡳ᫃;->ࡪࡨ᫛()I
+
+    move-result v0
+
+    invoke-static {v0}, Lfk/ࡧ᫚;->᫛(I)Lfk/ࡧ᫚;
+
+    move-result-object v11
+
+    invoke-virtual {v11, v0}, Lfk/ࡧ᫚;->᫔᫆(I)I
+
+    move-result v10
+
+    sget-object v1, Lfk/᫚ࡦ;->᫛:[S
+
+    array-length v0, v1
+
+    rem-int v0, v5, v0
+
+    aget-short v4, v1, v0
+
+    mul-int v1, v5, v8
+
+    and-int v0, v1, v9
+
+    or-int/2addr v1, v9
+
+    add-int/2addr v0, v1
+
+    or-int v2, v4, v0
+
+    xor-int/lit8 v1, v4, -0x1
+
+    xor-int/lit8 v0, v0, -0x1
+
+    or-int/2addr v1, v0
+
+    and-int/2addr v2, v1
+
+    sub-int/2addr v10, v2
+
+    invoke-virtual {v11, v10}, Lfk/ࡧ᫚;->᫃᫆(I)I
+
+    move-result v0
+
+    aput v0, v7, v5
+
+    const/4 v0, 0x1
+
+    add-int/2addr v5, v0
+
+    goto :goto_0
+
+    :cond_0
+    new-instance v1, Ljava/lang/String;
+
+    const/4 v0, 0x0
+
+    invoke-direct {v1, v7, v0, v5}, Ljava/lang/String;-><init>([III)V
+
+    const/16 v8, 0x10
+
+    invoke-direct {v3, v1, v8}, Ljava/math/BigInteger;-><init>(Ljava/lang/String;I)V
+
+    const-wide/16 v0, 0x4c
+
+    invoke-static {v0, v1}, Ljava/math/BigInteger;->valueOf(J)Ljava/math/BigInteger;
+
+    move-result-object p2
+
+    new-instance v14, Lorg/spongycastle/math/ec/ECCurve$F2m;
+
+    new-instance v6, Ljava/math/BigInteger;
+
+    const-string v4, "\u0004S%\u000b)Ls\'LLQ9]MX5v~4J\u000cwUQ\u001bX<\roW:\u0019Hn\tRl\u0007itj\u0012GN836x\u0017;}8$mFZpyLK8?\u000b}s\u001ci\u000cv{h1\u001fJ7\u0004pA\"\td\u0016xXVEP\u001cua"
+
+    const/16 v2, 0x9e2
+
+    invoke-static {}, Lfk/ࡥ᫚;->᫛()I
+
+    move-result v0
+
+    xor-int/lit8 v1, v2, -0x1
+
+    and-int/2addr v1, v0
+
+    xor-int/lit8 v0, v0, -0x1
+
+    and-int/2addr v0, v2
+
+    or-int/2addr v1, v0
+
+    int-to-short v0, v1
+
+    invoke-static {v4, v0}, Lfk/᫁᫞;->᫖(Ljava/lang/String;S)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-direct {v6, v0, v8}, Ljava/math/BigInteger;-><init>(Ljava/lang/String;I)V
+
+    new-instance v5, Ljava/math/BigInteger;
+
+    const-string v11, "qrtn\u0001l}hholwgkdfbt^rpao]i\\ifSYVdTP_RTNP\\HIJXKURDCCE<@N<AII888836/662310,)8+\'%+6\'\u001f$%\u001c\u001d\u001d\u001a!\u001f\u001e"
+
+    const/16 v2, 0x6cc0
+
+    const/16 v1, 0x6ace
+
+    invoke-static {}, Lfk/ࡠ᫘;->᫛()I
+
+    move-result v0
+
+    xor-int/2addr v0, v2
+
+    int-to-short v10, v0
+
+    invoke-static {}, Lfk/ࡠ᫘;->᫛()I
+
+    move-result v0
+
+    xor-int/2addr v0, v1
+
+    int-to-short v9, v0
+
+    invoke-virtual {v11}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    new-array v7, v0, [I
+
+    new-instance v4, Lfk/ࡳ᫃;
+
+    invoke-direct {v4, v11}, Lfk/ࡳ᫃;-><init>(Ljava/lang/String;)V
+
+    const/4 v2, 0x0
+
+    :goto_1
+    invoke-virtual {v4}, Lfk/ࡳ᫃;->ᫀࡨ᫛()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    invoke-virtual {v4}, Lfk/ࡳ᫃;->ࡪࡨ᫛()I
+
+    move-result v0
+
+    invoke-static {v0}, Lfk/ࡧ᫚;->᫛(I)Lfk/ࡧ᫚;
+
+    move-result-object v11
+
+    invoke-virtual {v11, v0}, Lfk/ࡧ᫚;->᫔᫆(I)I
+
+    move-result v13
+
+    move v12, v10
+
+    move v1, v2
+
+    :goto_2
+    if-eqz v1, :cond_1
+
+    xor-int v0, v12, v1
+
+    and-int/2addr v12, v1
+
+    shl-int/lit8 v1, v12, 0x1
+
+    move v12, v0
+
+    goto :goto_2
+
+    :cond_1
+    :goto_3
+    if-eqz v13, :cond_2
+
+    xor-int v0, v12, v13
+
+    and-int/2addr v12, v13
+
+    shl-int/lit8 v13, v12, 0x1
+
+    move v12, v0
+
+    goto :goto_3
+
+    :cond_2
+    and-int v0, v12, v9
+
+    or-int/2addr v12, v9
+
+    add-int/2addr v0, v12
+
+    invoke-virtual {v11, v0}, Lfk/ࡧ᫚;->᫃᫆(I)I
+
+    move-result v0
+
+    aput v0, v7, v2
+
+    const/4 v1, 0x1
+
+    and-int v0, v2, v1
+
+    or-int/2addr v2, v1
+
+    add-int/2addr v0, v2
+
+    move v2, v0
+
+    goto :goto_1
+
+    :cond_3
+    new-instance v1, Ljava/lang/String;
+
+    const/4 v0, 0x0
+
+    invoke-direct {v1, v7, v0, v2}, Ljava/lang/String;-><init>([III)V
+
+    invoke-direct {v5, v1, v8}, Ljava/math/BigInteger;-><init>(Ljava/lang/String;I)V
+
+    const/16 v15, 0x167
+
+    const/16 v16, 0x44
+
+    move-object/from16 p1, v3
+
+    move-object/from16 p0, v5
+
+    move-object/from16 v17, v6
+
+    invoke-direct/range {v14 .. v20}, Lorg/spongycastle/math/ec/ECCurve$F2m;-><init>(IILjava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;Ljava/math/BigInteger;)V
+
+    new-instance v12, Lorg/spongycastle/asn1/x9/X9ECParameters;
+
+    new-instance v4, Lorg/spongycastle/asn1/x9/X9ECPoint;
+
+    const-string v5, "W)|jJ\u000b(V\u0013qnN\u0001\r2R&\u0018\u007ft1y,\u00155e\u0006Ka\u0017,Hf\u0006f;Jix\u0008\n.M_*G*]J7\nhy\u0004c5\u001f\u0001GXU<k\u0012?a\"[43\u0016\u0007t\u0018!c.\u00186? nu\u0018:8CL(\u0012\u0004k"
+
+    const/16 v2, 0x4ecb
+
+    invoke-static {}, Lfk/ࡥ᫚;->᫛()I
+
+    move-result v0
+
+    xor-int/lit8 v1, v2, -0x1
+
+    and-int/2addr v1, v0
+
+    xor-int/lit8 v0, v0, -0x1
+
+    and-int/2addr v0, v2
+
+    or-int/2addr v1, v0
+
+    int-to-short v8, v1
+
+    invoke-virtual {v5}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    new-array v6, v0, [I
+
+    new-instance v7, Lfk/ࡳ᫃;
+
+    invoke-direct {v7, v5}, Lfk/ࡳ᫃;-><init>(Ljava/lang/String;)V
+
+    const/4 v5, 0x0
+
+    :goto_4
+    invoke-virtual {v7}, Lfk/ࡳ᫃;->ᫀࡨ᫛()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    invoke-virtual {v7}, Lfk/ࡳ᫃;->ࡪࡨ᫛()I
+
+    move-result v0
+
+    invoke-static {v0}, Lfk/ࡧ᫚;->᫛(I)Lfk/ࡧ᫚;
+
+    move-result-object v10
+
+    invoke-virtual {v10, v0}, Lfk/ࡧ᫚;->᫔᫆(I)I
+
+    move-result v11
+
+    sget-object v1, Lfk/᫚ࡦ;->᫛:[S
+
+    array-length v0, v1
+
+    rem-int v0, v5, v0
+
+    aget-short v1, v1, v0
+
+    move v0, v8
+
+    and-int v9, v8, v0
+
+    or-int/2addr v0, v8
+
+    add-int/2addr v9, v0
+
+    add-int/2addr v9, v5
+
+    or-int v2, v1, v9
+
+    xor-int/lit8 v1, v1, -0x1
+
+    xor-int/lit8 v0, v9, -0x1
+
+    or-int/2addr v1, v0
+
+    and-int/2addr v2, v1
+
+    :goto_5
+    if-eqz v11, :cond_4
+
+    xor-int v0, v2, v11
+
+    and-int/2addr v2, v11
+
+    shl-int/lit8 v11, v2, 0x1
+
+    move v2, v0
+
+    goto :goto_5
+
+    :cond_4
+    invoke-virtual {v10, v2}, Lfk/ࡧ᫚;->᫃᫆(I)I
+
+    move-result v0
+
+    aput v0, v6, v5
+
+    const/4 v0, 0x1
+
+    add-int/2addr v5, v0
+
+    goto :goto_4
+
+    :cond_5
+    new-instance v1, Ljava/lang/String;
+
+    const/4 v0, 0x0
+
+    invoke-direct {v1, v6, v0, v5}, Ljava/lang/String;-><init>([III)V
+
+    invoke-static {v1}, Lorg/spongycastle/util/encoders/Hex;->decode(Ljava/lang/String;)[B
+
+    move-result-object v0
+
+    invoke-direct {v4, v14, v0}, Lorg/spongycastle/asn1/x9/X9ECPoint;-><init>(Lorg/spongycastle/math/ec/ECCurve;[B)V
+
+    const/16 v17, 0x0
+
+    move-object v13, v14
+
+    move-object v14, v4
+
+    move-object v15, v3
+
+    move-object/from16 v16, p2
+
+    invoke-direct/range {v12 .. v17}, Lorg/spongycastle/asn1/x9/X9ECParameters;-><init>(Lorg/spongycastle/math/ec/ECCurve;Lorg/spongycastle/asn1/x9/X9ECPoint;Ljava/math/BigInteger;Ljava/math/BigInteger;[B)V
+
+    return-object v12
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+
+# virtual methods
+.method public createParameters()Lorg/spongycastle/asn1/x9/X9ECParameters;
+    .locals 2
+
+    const/4 v0, 0x0
+
+    new-array v1, v0, [Ljava/lang/Object;
+
+    const v0, 0x1dc90
+
+    invoke-direct {p0, v0, v1}, Lorg/spongycastle/asn1/x9/X962NamedCurves$21;->᫝ࡢ࡯(I[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lorg/spongycastle/asn1/x9/X9ECParameters;
+
+    return-object v0
+.end method
+
+.method public varargs ࡩࡥᫀ(I[Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Lorg/spongycastle/asn1/x9/X962NamedCurves$21;->᫝ࡢ࡯(I[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+.end method

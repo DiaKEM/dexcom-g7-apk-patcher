@@ -1,0 +1,807 @@
+.class public final Lfk/ࡥࡳࡱ;
+.super Lkotlin/coroutines/jvm/internal/SuspendLambda;
+
+# interfaces
+.implements Lkotlin/jvm/functions/Function2;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lfk/ᫀࡰ᫛;->ᫀ(Lfk/᫅ࡰ᫛;Lcom/dexcom/coresdk/cgmkit/persistence/alerts/AlertSetting;)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lkotlin/coroutines/jvm/internal/SuspendLambda;",
+        "Lkotlin/jvm/functions/Function2<",
+        "Lkotlinx/coroutines/CoroutineScope;",
+        "Lkotlin/coroutines/Continuation<",
+        "-",
+        "Lkotlin/Unit;",
+        ">;",
+        "Ljava/lang/Object;",
+        ">;"
+    }
+.end annotation
+
+.annotation runtime Lfk/᫄ࡱᫀ;
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    bv = {}
+    d1 = {
+        "\u06feghaxcletgp\u0709xk\u0005m\u001dn\u0019q!\u0713;\u07205"
+    }
+    d2 = {
+        "\u001227=.,2=l\"/3)00&D<K\u0008\u0015BFDCC9?/\u001e/<VL#",
+        "",
+        "\u0002(680<1432}"
+    }
+    k = 0x3
+    mv = {
+        0x1,
+        0x7,
+        0x1
+    }
+    pn = ""
+    xs = ""
+.end annotation
+
+.annotation runtime Lkotlin/coroutines/jvm/internal/DebugMetadata;
+    c = "\"-*i\u001f\u001f1\u001b&#b\u0018\u0018*\u0014\u001f\u001c\u001d\u001b\u0011X\u001f\u0012U\u001c\u000f\u001a\u0018\u000c\u000e\u0014M\u0001\u0013\t\u0007~z\rxDW\n\u007f}Uq\u0004oY{rqnz+mqyfqte@jbnoJk]j[chXV\u0015\""
+    f = "D3\u001c4dctH%`{.!U\u001f\u0016_"
+    i = {}
+    l = {
+        0xaf,
+        0xb3,
+        0xb4
+    }
+    m = "%r\u00196i\u001ec~)V5T\u001b"
+    n = {}
+    s = {}
+.end annotation
+
+
+# instance fields
+.field public ࡣ:Ljava/lang/Object;
+
+.field public ࡧ:Ljava/lang/Object;
+
+.field public ࡭:Ljava/lang/Object;
+
+.field public ࡱ:Ljava/lang/Object;
+
+.field public ᪿ:Ljava/lang/Object;
+
+.field public final synthetic ᫃:Lfk/ᫀࡰ᫛;
+
+.field public final synthetic ᫅:Ljava/lang/String;
+
+.field public ᫏:Ljava/lang/Object;
+
+.field public ᫑:Ljava/lang/Object;
+
+.field public ᫒:Ljava/lang/Object;
+
+.field public final synthetic ᫔:Lcom/dexcom/coresdk/cgmkit/persistence/alerts/AlertSetting;
+
+.field public ᫖:Ljava/lang/Object;
+
+.field public final synthetic ᫚:Lfk/᫅ࡰ᫛;
+
+.field public ᫛:I
+
+
+# direct methods
+.method public constructor <init>(Lfk/ᫀࡰ᫛;Ljava/lang/String;Lcom/dexcom/coresdk/cgmkit/persistence/alerts/AlertSetting;Lfk/᫅ࡰ᫛;Lkotlin/coroutines/Continuation;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lfk/\u1ac0\u0870\u1adb;",
+            "Ljava/lang/String;",
+            "Lcom/dexcom/coresdk/cgmkit/persistence/alerts/AlertSetting;",
+            "Lfk/\u1ac5\u0870\u1adb;",
+            "Lkotlin/coroutines/Continuation<",
+            "-",
+            "Lfk/\u0865\u0873\u0871;",
+            ">;)V"
+        }
+    .end annotation
+
+    iput-object p1, p0, Lfk/ࡥࡳࡱ;->᫃:Lfk/ᫀࡰ᫛;
+
+    iput-object p2, p0, Lfk/ࡥࡳࡱ;->᫅:Ljava/lang/String;
+
+    iput-object p3, p0, Lfk/ࡥࡳࡱ;->᫔:Lcom/dexcom/coresdk/cgmkit/persistence/alerts/AlertSetting;
+
+    iput-object p4, p0, Lfk/ࡥࡳࡱ;->᫚:Lfk/᫅ࡰ᫛;
+
+    const/4 v0, 0x2
+
+    invoke-direct {p0, v0, p5}, Lkotlin/coroutines/jvm/internal/SuspendLambda;-><init>(ILkotlin/coroutines/Continuation;)V
+
+    return-void
+.end method
+
+.method private varargs ࡯᫓ࡳ(I[Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 51
+
+    move/from16 v4, p1
+
+    const/4 v0, 0x0
+
+    const v1, 0x7654c69e
+
+    invoke-static {}, Lfk/᫞᫖;->᫛()I
+
+    move-result v0
+
+    xor-int/2addr v1, v0
+
+    rem-int/2addr v4, v1
+
+    move-object/from16 v3, p0
+
+    move-object/from16 v2, p2
+
+    sparse-switch v4, :sswitch_data_0
+
+    invoke-super {v3, v4, v2}, Lkotlin/coroutines/jvm/internal/SuspendLambda;->ࡩࡥᫀ(I[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    return-object v0
+
+    :sswitch_0
+    const/4 v0, 0x0
+
+    aget-object v1, v2, v0
+
+    check-cast v1, Ljava/lang/Object;
+
+    const/4 v0, 0x1
+
+    aget-object v0, v2, v0
+
+    check-cast v0, Ljava/lang/Object;
+
+    check-cast v1, Lkotlinx/coroutines/CoroutineScope;
+
+    check-cast v0, Lkotlin/coroutines/Continuation;
+
+    invoke-virtual {v3, v1, v0}, Lfk/ࡥࡳࡱ;->create(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+
+    move-result-object v1
+
+    check-cast v1, Lfk/ࡥࡳࡱ;
+
+    sget-object v0, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+
+    invoke-virtual {v1, v0}, Lfk/ࡥࡳࡱ;->invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v8
+
+    goto/16 :goto_5
+
+    :sswitch_1
+    const/4 v0, 0x0
+
+    aget-object v15, v2, v0
+
+    check-cast v15, Ljava/lang/Object;
+
+    invoke-static {}, Lkotlin/coroutines/intrinsics/IntrinsicsKt;->getCOROUTINE_SUSPENDED()Ljava/lang/Object;
+
+    move-result-object v8
+
+    iget v0, v3, Lfk/ࡥࡳࡱ;->᫛:I
+
+    const/4 v6, 0x3
+
+    const/4 v7, 0x2
+
+    const/4 v5, 0x1
+
+    if-eqz v0, :cond_2
+
+    if-eq v0, v5, :cond_1
+
+    if-eq v0, v7, :cond_0
+
+    if-ne v0, v6, :cond_6
+
+    iget-object v14, v3, Lfk/ࡥࡳࡱ;->᫑:Ljava/lang/Object;
+
+    check-cast v14, Ljava/lang/Integer;
+
+    iget-object v13, v3, Lfk/ࡥࡳࡱ;->ࡧ:Ljava/lang/Object;
+
+    check-cast v13, Ljava/lang/Boolean;
+
+    iget-object v12, v3, Lfk/ࡥࡳࡱ;->᫖:Ljava/lang/Object;
+
+    check-cast v12, Ljava/lang/Boolean;
+
+    iget-object v11, v3, Lfk/ࡥࡳࡱ;->ᪿ:Ljava/lang/Object;
+
+    check-cast v11, Ljava/lang/Boolean;
+
+    iget-object v10, v3, Lfk/ࡥࡳࡱ;->᫒:Ljava/lang/Object;
+
+    check-cast v10, Ljava/lang/String;
+
+    iget-object v9, v3, Lfk/ࡥࡳࡱ;->ࡣ:Ljava/lang/Object;
+
+    check-cast v9, Ljava/lang/String;
+
+    iget-object v0, v3, Lfk/ࡥࡳࡱ;->᫏:Ljava/lang/Object;
+
+    check-cast v0, Lfk/᫋ࡩ;
+
+    iget-object v1, v3, Lfk/ࡥࡳࡱ;->࡭:Ljava/lang/Object;
+
+    check-cast v1, Lfk/ࡰࡩ;
+
+    iget-object v2, v3, Lfk/ࡥࡳࡱ;->ࡱ:Ljava/lang/Object;
+
+    check-cast v2, Lcom/dexcom/dexcomone/ui/uiutils/bulkdata/IBulkDataUtils;
+
+    invoke-static {v15}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
+
+    :goto_0
+    check-cast v15, Ljava/lang/Integer;
+
+    iget-object v3, v3, Lfk/ࡥࡳࡱ;->᫚:Lfk/᫅ࡰ᫛;
+
+    iget-object v3, v3, Lfk/᫅ࡰ᫛;->ࡱ:Ljava/util/UUID;
+
+    invoke-virtual {v3}, Ljava/util/UUID;->toString()Ljava/lang/String;
+
+    move-result-object v16
+
+    const/16 v17, 0x0
+
+    const/16 v18, 0x0
+
+    const/16 v19, 0x0
+
+    const/16 v20, 0x0
+
+    const/16 v21, 0x0
+
+    const/16 v22, 0x0
+
+    const/16 v23, 0x0
+
+    const/16 v24, 0x0
+
+    const/16 v25, 0x0
+
+    const/16 v26, 0x0
+
+    const/16 v27, 0x0
+
+    const/16 v28, 0x0
+
+    const/16 v29, 0x0
+
+    const/16 v30, 0x0
+
+    const/16 v31, 0x0
+
+    const/16 v32, 0x0
+
+    const/16 v33, 0x0
+
+    const/16 v34, 0x0
+
+    const/16 v35, 0x0
+
+    const/16 v36, 0x0
+
+    const/16 v37, 0x0
+
+    const/16 v38, 0x0
+
+    const/16 v39, 0x0
+
+    const/16 v40, 0x0
+
+    const/16 v41, 0x0
+
+    const/16 v42, 0x0
+
+    const/16 v43, 0x0
+
+    const/16 v45, 0x0
+
+    const/16 v46, 0x0
+
+    const/16 v47, 0x0
+
+    const/16 v48, 0x0
+
+    const/16 v49, 0x0
+
+    const/16 v50, 0x0
+
+    const/16 p0, -0x100
+
+    const/16 p1, 0x3f7
+
+    const/16 p2, 0x0
+
+    new-instance v8, Lcom/dexcom/dexcomone/ui/uiutils/bulkdata/metadata/BulkMetadata;
+
+    const-string v4, "jfk"
+
+    const/16 v7, -0x46f1
+
+    invoke-static {}, Lfk/࡯᫗;->᫛()I
+
+    move-result v5
+
+    or-int v3, v5, v7
+
+    xor-int/lit8 v6, v5, -0x1
+
+    xor-int/lit8 v5, v7, -0x1
+
+    or-int/2addr v6, v5
+
+    and-int/2addr v3, v6
+
+    int-to-short v3, v3
+
+    invoke-static {v4, v3}, Lfk/ࡤ᫒;->ᪿ(Ljava/lang/String;S)Ljava/lang/String;
+
+    move-result-object v44
+
+    invoke-direct/range {v8 .. v53}, Lcom/dexcom/dexcomone/ui/uiutils/bulkdata/metadata/BulkMetadata;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Boolean;Ljava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Double;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Double;Ljava/lang/String;Ljava/lang/String;Ljava/util/UUID;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Boolean;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IILkotlin/jvm/internal/DefaultConstructorMarker;)V
+
+    invoke-interface {v2, v1, v0, v8}, Lcom/dexcom/dexcomone/ui/uiutils/bulkdata/IBulkDataUtils;->addUserActivityRecord(Lfk/ࡰࡩ;Lfk/᫋ࡩ;Lcom/dexcom/dexcomone/ui/uiutils/bulkdata/metadata/BulkMetadata;)V
+
+    sget-object v8, Lkotlin/Unit;->INSTANCE:Lkotlin/Unit;
+
+    :goto_1
+    goto/16 :goto_5
+
+    :cond_0
+    iget-object v13, v3, Lfk/ࡥࡳࡱ;->ࡧ:Ljava/lang/Object;
+
+    check-cast v13, Ljava/lang/Boolean;
+
+    iget-object v12, v3, Lfk/ࡥࡳࡱ;->᫖:Ljava/lang/Object;
+
+    check-cast v12, Ljava/lang/Boolean;
+
+    iget-object v11, v3, Lfk/ࡥࡳࡱ;->ᪿ:Ljava/lang/Object;
+
+    check-cast v11, Ljava/lang/Boolean;
+
+    iget-object v10, v3, Lfk/ࡥࡳࡱ;->᫒:Ljava/lang/Object;
+
+    check-cast v10, Ljava/lang/String;
+
+    iget-object v9, v3, Lfk/ࡥࡳࡱ;->ࡣ:Ljava/lang/Object;
+
+    check-cast v9, Ljava/lang/String;
+
+    iget-object v0, v3, Lfk/ࡥࡳࡱ;->᫏:Ljava/lang/Object;
+
+    check-cast v0, Lfk/᫋ࡩ;
+
+    iget-object v1, v3, Lfk/ࡥࡳࡱ;->࡭:Ljava/lang/Object;
+
+    check-cast v1, Lfk/ࡰࡩ;
+
+    iget-object v2, v3, Lfk/ࡥࡳࡱ;->ࡱ:Ljava/lang/Object;
+
+    check-cast v2, Lcom/dexcom/dexcomone/ui/uiutils/bulkdata/IBulkDataUtils;
+
+    invoke-static {v15}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
+
+    goto :goto_3
+
+    :cond_1
+    iget-object v9, v3, Lfk/ࡥࡳࡱ;->ࡣ:Ljava/lang/Object;
+
+    check-cast v9, Ljava/lang/String;
+
+    iget-object v0, v3, Lfk/ࡥࡳࡱ;->᫏:Ljava/lang/Object;
+
+    check-cast v0, Lfk/᫋ࡩ;
+
+    iget-object v1, v3, Lfk/ࡥࡳࡱ;->࡭:Ljava/lang/Object;
+
+    check-cast v1, Lfk/ࡰࡩ;
+
+    iget-object v2, v3, Lfk/ࡥࡳࡱ;->ࡱ:Ljava/lang/Object;
+
+    check-cast v2, Lcom/dexcom/dexcomone/ui/uiutils/bulkdata/IBulkDataUtils;
+
+    invoke-static {v15}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
+
+    goto :goto_2
+
+    :cond_2
+    invoke-static {v15}, Lkotlin/ResultKt;->throwOnFailure(Ljava/lang/Object;)V
+
+    iget-object v0, v3, Lfk/ࡥࡳࡱ;->᫃:Lfk/ᫀࡰ᫛;
+
+    iget-object v2, v0, Lfk/ᫀࡰ᫛;->᫒:Lcom/dexcom/dexcomone/ui/uiutils/bulkdata/IBulkDataUtils;
+
+    sget-object v1, Lfk/ࡰࡩ;->GlucoseAlert:Lfk/ࡰࡩ;
+
+    sget-object v0, Lfk/᫋ࡩ;->NotificationPresented:Lfk/᫋ࡩ;
+
+    iget-object v9, v3, Lfk/ࡥࡳࡱ;->᫅:Ljava/lang/String;
+
+    iget-object v4, v3, Lfk/ࡥࡳࡱ;->᫃:Lfk/ᫀࡰ᫛;
+
+    iput-object v2, v3, Lfk/ࡥࡳࡱ;->ࡱ:Ljava/lang/Object;
+
+    iput-object v1, v3, Lfk/ࡥࡳࡱ;->࡭:Ljava/lang/Object;
+
+    iput-object v0, v3, Lfk/ࡥࡳࡱ;->᫏:Ljava/lang/Object;
+
+    iput-object v9, v3, Lfk/ࡥࡳࡱ;->ࡣ:Ljava/lang/Object;
+
+    iput v5, v3, Lfk/ࡥࡳࡱ;->᫛:I
+
+    invoke-static {v4, v3}, Lfk/ᫀࡰ᫛;->᫖(Lfk/ᫀࡰ᫛;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object v15
+
+    if-ne v15, v8, :cond_3
+
+    goto :goto_1
+
+    :cond_3
+    :goto_2
+    move-object v10, v15
+
+    check-cast v10, Ljava/lang/String;
+
+    iget-object v4, v3, Lfk/ࡥࡳࡱ;->᫔:Lcom/dexcom/coresdk/cgmkit/persistence/alerts/AlertSetting;
+
+    invoke-virtual {v4}, Lcom/dexcom/coresdk/cgmkit/persistence/alerts/AlertSetting;->isEnabled()Z
+
+    move-result v4
+
+    invoke-static {v4}, Lkotlin/coroutines/jvm/internal/Boxing;->boxBoolean(Z)Ljava/lang/Boolean;
+
+    move-result-object v11
+
+    const/4 v4, 0x0
+
+    invoke-static {v4}, Lkotlin/coroutines/jvm/internal/Boxing;->boxBoolean(Z)Ljava/lang/Boolean;
+
+    move-result-object v12
+
+    invoke-static {v4}, Lkotlin/coroutines/jvm/internal/Boxing;->boxBoolean(Z)Ljava/lang/Boolean;
+
+    move-result-object v13
+
+    iget-object v4, v3, Lfk/ࡥࡳࡱ;->᫃:Lfk/ᫀࡰ᫛;
+
+    iget-object v5, v4, Lfk/ᫀࡰ᫛;->᫒:Lcom/dexcom/dexcomone/ui/uiutils/bulkdata/IBulkDataUtils;
+
+    iget-object v4, v3, Lfk/ࡥࡳࡱ;->᫅:Ljava/lang/String;
+
+    iput-object v2, v3, Lfk/ࡥࡳࡱ;->ࡱ:Ljava/lang/Object;
+
+    iput-object v1, v3, Lfk/ࡥࡳࡱ;->࡭:Ljava/lang/Object;
+
+    iput-object v0, v3, Lfk/ࡥࡳࡱ;->᫏:Ljava/lang/Object;
+
+    iput-object v9, v3, Lfk/ࡥࡳࡱ;->ࡣ:Ljava/lang/Object;
+
+    iput-object v10, v3, Lfk/ࡥࡳࡱ;->᫒:Ljava/lang/Object;
+
+    iput-object v11, v3, Lfk/ࡥࡳࡱ;->ᪿ:Ljava/lang/Object;
+
+    iput-object v12, v3, Lfk/ࡥࡳࡱ;->᫖:Ljava/lang/Object;
+
+    iput-object v13, v3, Lfk/ࡥࡳࡱ;->ࡧ:Ljava/lang/Object;
+
+    iput v7, v3, Lfk/ࡥࡳࡱ;->᫛:I
+
+    invoke-interface {v5, v4, v3}, Lcom/dexcom/dexcomone/ui/uiutils/bulkdata/IBulkDataUtils;->getAlertCount(Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object v15
+
+    if-ne v15, v8, :cond_4
+
+    goto/16 :goto_1
+
+    :cond_4
+    :goto_3
+    move-object v14, v15
+
+    check-cast v14, Ljava/lang/Integer;
+
+    iget-object v4, v3, Lfk/ࡥࡳࡱ;->᫃:Lfk/ᫀࡰ᫛;
+
+    iget-object v5, v4, Lfk/ᫀࡰ᫛;->᫒:Lcom/dexcom/dexcomone/ui/uiutils/bulkdata/IBulkDataUtils;
+
+    iget-object v4, v3, Lfk/ࡥࡳࡱ;->᫅:Ljava/lang/String;
+
+    iput-object v2, v3, Lfk/ࡥࡳࡱ;->ࡱ:Ljava/lang/Object;
+
+    iput-object v1, v3, Lfk/ࡥࡳࡱ;->࡭:Ljava/lang/Object;
+
+    iput-object v0, v3, Lfk/ࡥࡳࡱ;->᫏:Ljava/lang/Object;
+
+    iput-object v9, v3, Lfk/ࡥࡳࡱ;->ࡣ:Ljava/lang/Object;
+
+    iput-object v10, v3, Lfk/ࡥࡳࡱ;->᫒:Ljava/lang/Object;
+
+    iput-object v11, v3, Lfk/ࡥࡳࡱ;->ᪿ:Ljava/lang/Object;
+
+    iput-object v12, v3, Lfk/ࡥࡳࡱ;->᫖:Ljava/lang/Object;
+
+    iput-object v13, v3, Lfk/ࡥࡳࡱ;->ࡧ:Ljava/lang/Object;
+
+    iput-object v14, v3, Lfk/ࡥࡳࡱ;->᫑:Ljava/lang/Object;
+
+    iput v6, v3, Lfk/ࡥࡳࡱ;->᫛:I
+
+    invoke-interface {v5, v4, v3}, Lcom/dexcom/dexcomone/ui/uiutils/bulkdata/IBulkDataUtils;->getLifetimeAlertCount(Ljava/lang/String;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+
+    move-result-object v15
+
+    if-ne v15, v8, :cond_5
+
+    goto/16 :goto_1
+
+    :cond_5
+    goto/16 :goto_0
+
+    :cond_6
+    new-instance v6, Ljava/lang/IllegalStateException;
+
+    const-string v2, "\u0007\u0006\u0012\u0013G\u001d\u0019JR\u001f\u0013\"%\u001e\u0017YS\u0017\u001b\u001d\'+\u001fZb&,5/,\'ic</;0h-:><CC9?7"
+
+    const/16 v1, 0x1a69
+
+    invoke-static {}, Lfk/ࡥ᫚;->᫛()I
+
+    move-result v0
+
+    xor-int/2addr v0, v1
+
+    int-to-short v7, v0
+
+    invoke-virtual {v2}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    new-array v5, v0, [I
+
+    new-instance v4, Lfk/ࡳ᫃;
+
+    invoke-direct {v4, v2}, Lfk/ࡳ᫃;-><init>(Ljava/lang/String;)V
+
+    const/4 v3, 0x0
+
+    :goto_4
+    invoke-virtual {v4}, Lfk/ࡳ᫃;->ᫀࡨ᫛()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_7
+
+    invoke-virtual {v4}, Lfk/ࡳ᫃;->ࡪࡨ᫛()I
+
+    move-result v0
+
+    invoke-static {v0}, Lfk/ࡧ᫚;->᫛(I)Lfk/ࡧ᫚;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Lfk/ࡧ᫚;->᫔᫆(I)I
+
+    move-result v1
+
+    move v0, v7
+
+    add-int/2addr v0, v7
+
+    add-int/2addr v0, v7
+
+    add-int/2addr v0, v3
+
+    sub-int/2addr v1, v0
+
+    invoke-virtual {v2, v1}, Lfk/ࡧ᫚;->᫃᫆(I)I
+
+    move-result v0
+
+    aput v0, v5, v3
+
+    const/4 v1, 0x1
+
+    and-int v0, v3, v1
+
+    or-int/2addr v3, v1
+
+    add-int/2addr v0, v3
+
+    move v3, v0
+
+    goto :goto_4
+
+    :cond_7
+    new-instance v1, Ljava/lang/String;
+
+    const/4 v0, 0x0
+
+    invoke-direct {v1, v5, v0, v3}, Ljava/lang/String;-><init>([III)V
+
+    invoke-direct {v6, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v6
+
+    :sswitch_2
+    const/4 v0, 0x0
+
+    aget-object v0, v2, v0
+
+    check-cast v0, Ljava/lang/Object;
+
+    const/4 v0, 0x1
+
+    aget-object v13, v2, v0
+
+    check-cast v13, Lkotlin/coroutines/Continuation;
+
+    new-instance v8, Lfk/ࡥࡳࡱ;
+
+    iget-object v9, v3, Lfk/ࡥࡳࡱ;->᫃:Lfk/ᫀࡰ᫛;
+
+    iget-object v10, v3, Lfk/ࡥࡳࡱ;->᫅:Ljava/lang/String;
+
+    iget-object v11, v3, Lfk/ࡥࡳࡱ;->᫔:Lcom/dexcom/coresdk/cgmkit/persistence/alerts/AlertSetting;
+
+    iget-object v12, v3, Lfk/ࡥࡳࡱ;->᫚:Lfk/᫅ࡰ᫛;
+
+    invoke-direct/range {v8 .. v13}, Lfk/ࡥࡳࡱ;-><init>(Lfk/ᫀࡰ᫛;Ljava/lang/String;Lcom/dexcom/coresdk/cgmkit/persistence/alerts/AlertSetting;Lfk/᫅ࡰ᫛;Lkotlin/coroutines/Continuation;)V
+
+    :goto_5
+    return-object v8
+
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        0x2 -> :sswitch_2
+        0x5 -> :sswitch_1
+        0xb28 -> :sswitch_0
+    .end sparse-switch
+.end method
+
+
+# virtual methods
+.method public final create(Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Lkotlin/coroutines/Continuation;
+    .locals 2
+    .param p1    # Ljava/lang/Object;
+        .annotation build Lorg/jetbrains/annotations/Nullable;
+            value = ""
+        .end annotation
+    .end param
+    .param p2    # Lkotlin/coroutines/Continuation;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+            value = ""
+        .end annotation
+    .end param
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Object;",
+            "Lkotlin/coroutines/Continuation<",
+            "*>;)",
+            "Lkotlin/coroutines/Continuation<",
+            "Lkotlin/Unit;",
+            ">;"
+        }
+    .end annotation
+
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+        value = ""
+    .end annotation
+
+    const/4 v0, 0x2
+
+    new-array v1, v0, [Ljava/lang/Object;
+
+    const/4 v0, 0x0
+
+    aput-object p1, v1, v0
+
+    const/4 v0, 0x1
+
+    aput-object p2, v1, v0
+
+    const v0, 0x91ca3
+
+    invoke-direct {p0, v0, v1}, Lfk/ࡥࡳࡱ;->࡯᫓ࡳ(I[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lkotlin/coroutines/Continuation;
+
+    return-object v0
+.end method
+
+.method public bridge synthetic invoke(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    const/4 v0, 0x2
+
+    new-array v1, v0, [Ljava/lang/Object;
+
+    const/4 v0, 0x0
+
+    aput-object p1, v1, v0
+
+    const/4 v0, 0x1
+
+    aput-object p2, v1, v0
+
+    const v0, 0x7c8a3
+
+    invoke-direct {p0, v0, v1}, Lfk/ࡥࡳࡱ;->࡯᫓ࡳ(I[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public final invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+    .param p1    # Ljava/lang/Object;
+        .annotation build Lorg/jetbrains/annotations/NotNull;
+            value = ""
+        .end annotation
+    .end param
+    .annotation build Lorg/jetbrains/annotations/Nullable;
+        value = ""
+    .end annotation
+
+    const/4 v0, 0x1
+
+    new-array v1, v0, [Ljava/lang/Object;
+
+    const/4 v0, 0x0
+
+    aput-object p1, v1, v0
+
+    const v0, 0x99a0f
+
+    invoke-direct {p0, v0, v1}, Lfk/ࡥࡳࡱ;->࡯᫓ࡳ(I[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Object;
+
+    return-object v0
+.end method
+
+.method public varargs ࡩࡥᫀ(I[Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Lfk/ࡥࡳࡱ;->࡯᫓ࡳ(I[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+.end method

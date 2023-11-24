@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/id_onboarding" app:startDestination="@id/id_onboarding_home"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <fragment android:name="com.dexcom.phoenix.ui.screens.onboarding.OnboardingHomeScreenFragment" android:id="@id/id_onboarding_home">
+        <argument android:name="@string/navigation_override_up" android:defaultValue="true" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <argument android:name="@string/navigation_view_gone" android:defaultValue="true" app:argType="boolean" />
+        <action android:id="@id/action_id_onboarding_home_to_id_onboarding_basics" app:destination="@id/id_onboarding_basics" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" />
+        <action android:id="@id/action_id_onboarding_setup_to_enable_bluetooth" app:destination="@id/id_onboarding_enable_bluetooth" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" />
+        <action android:id="@id/action_id_onboarding_setup_to_enable_bluetooth_permissions" app:destination="@id/id_onboarding_bluetooth_permissions" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" />
+        <action android:id="@id/action_id_onboarding_home_to_onboarding_pairing" app:destination="@id/id_onboarding_pairing_wearable" />
+        <action android:id="@id/action_id_onboarding_start_sensor_to_sensor_insertion_instructions" app:destination="@id/id_on_boarding_sensor_insertion" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment android:name="com.dexcom.phoenix.ui.screens.onboarding.OnboardingBasicsFragment" android:id="@id/id_onboarding_basics">
+        <argument android:name="@string/navigation_override_up" android:defaultValue="true" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <argument android:name="@string/navigation_view_gone" android:defaultValue="true" app:argType="boolean" />
+        <action android:id="@id/action_id_onboarding_basics_to_onboarding_sensor_readings" app:destination="@id/id_onboarding_sensor_readings" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment android:name="com.dexcom.phoenix.ui.screens.onboarding.sensorreadings.OnboardingSensorReadingsTextVersionFragment" android:id="@id/id_onboarding_sensor_readings_text_version">
+        <argument android:name="@string/navigation_override_up" android:defaultValue="true" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <argument android:name="@string/navigation_view_gone" android:defaultValue="true" app:argType="boolean" />
+        <action android:id="@id/action_id_onboarding_sensor_readings_text_version_1_to_id_onboarding_sensor_readings_text_version_2" app:destination="@id/id_onboarding_sensor_readings_text_version_2" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment android:name="com.dexcom.phoenix.ui.screens.onboarding.sensorreadings.OnboardingSensorReadingsTextVersionPart2Fragment" android:id="@id/id_onboarding_sensor_readings_text_version_2">
+        <argument android:name="@string/navigation_override_up" android:defaultValue="true" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <argument android:name="@string/navigation_view_gone" android:defaultValue="true" app:argType="boolean" />
+        <action android:id="@id/action_id_onboarding_sensor_readings_text_version_2_to_id_onboarding_sensor_readings_text_version_3" app:destination="@id/id_onboarding_sensor_readings_text_version_3" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment android:name="com.dexcom.phoenix.ui.screens.onboarding.sensorreadings.OnboardingSensorReadingsTextVersionPart3Fragment" android:id="@id/id_onboarding_sensor_readings_text_version_3">
+        <argument android:name="@string/navigation_override_up" android:defaultValue="true" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <argument android:name="@string/navigation_view_gone" android:defaultValue="true" app:argType="boolean" />
+        <action android:id="@id/action_id_onboarding_sensor_reading_text_version_to_id_onboarding_sensor_readings" app:destination="@id/id_onboarding_sensor_readings" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" app:popUpTo="@id/id_onboarding_sensor_readings" app:popUpToInclusive="true" />
+    </fragment>
+    <fragment android:name="com.dexcom.phoenix.ui.screens.onboarding.sensorreadings.OnboardingSensorReadingsFragment" android:id="@id/id_onboarding_sensor_readings">
+        <argument android:name="@string/navigation_override_up" android:defaultValue="true" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <argument android:name="@string/navigation_view_gone" android:defaultValue="true" app:argType="boolean" />
+        <action android:id="@id/action_id_onboarding_sensor_readings_to_id_onboarding_alerts" app:destination="@id/id_onboarding_alerts" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" />
+        <action android:id="@id/action_id_onboarding_sensor_readings_to_id_onboarding_text_version" app:destination="@id/id_onboarding_sensor_readings_text_version" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment android:name="com.dexcom.phoenix.ui.screens.onboarding.alerts.OnboardingAlertsFragment" android:id="@id/id_onboarding_alerts">
+        <argument android:name="@string/navigation_override_up" android:defaultValue="true" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <argument android:name="@string/navigation_view_gone" android:defaultValue="true" app:argType="boolean" />
+        <action android:id="@id/action_id_onboarding_alerts_to_id_onboarding_treatment_decisions" app:destination="@id/id_onboarding_treatment_decisions" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" />
+        <action android:id="@id/action_id_onboarding_alerts_to_id_onboarding_alerts_text_version" app:destination="@id/id_onboarding_alerts_text_version" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment android:name="com.dexcom.phoenix.ui.screens.onboarding.alerts.OnboardingAlertsTextVersionFragment" android:id="@id/id_onboarding_alerts_text_version">
+        <argument android:name="@string/navigation_override_up" android:defaultValue="true" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <argument android:name="@string/navigation_view_gone" android:defaultValue="true" app:argType="boolean" />
+        <action android:id="@id/action_id_onboarding_alerts_text_version_to_id_onboarding_alerts_text_version2" app:destination="@id/id_onboarding_alerts_text_version2" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment android:name="com.dexcom.phoenix.ui.screens.onboarding.alerts.OnboardingAlertsTextVersionPart2Fragment" android:id="@id/id_onboarding_alerts_text_version2">
+        <argument android:name="@string/navigation_override_up" android:defaultValue="true" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <argument android:name="@string/navigation_view_gone" android:defaultValue="true" app:argType="boolean" />
+        <action android:id="@id/action_id_onboarding_alerts_text_version2_to_id_onboarding_alerts" app:destination="@id/id_onboarding_alerts" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment android:name="com.dexcom.phoenix.ui.screens.onboarding.treatmentdecisions.OnboardingTreatmentDecisionsTextVersionFragment" android:id="@id/id_onboarding_treatment_decisions_text_version">
+        <argument android:name="@string/navigation_override_up" android:defaultValue="true" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <argument android:name="@string/navigation_view_gone" android:defaultValue="true" app:argType="boolean" />
+        <action android:id="@id/action_id_onboarding_treatment_decisions_text_version_1_to_id_onboarding_treatment_decisions_text_version_2" app:destination="@id/id_onboarding_treatment_decisions_text_version_2" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment android:name="com.dexcom.phoenix.ui.screens.onboarding.treatmentdecisions.OnboardingTreatmentDecisionsTextVersionPart2Fragment" android:id="@id/id_onboarding_treatment_decisions_text_version_2">
+        <argument android:name="@string/navigation_override_up" android:defaultValue="true" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <argument android:name="@string/navigation_view_gone" android:defaultValue="true" app:argType="boolean" />
+        <action android:id="@id/action_id_onboarding_treatment_decisions_text_version_2_to_id_onboarding_treatment_decisions_text_version_3" app:destination="@id/id_onboarding_treatment_decisions_text_version_3" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment android:name="com.dexcom.phoenix.ui.screens.onboarding.treatmentdecisions.OnboardingTreatmentDecisionsTextVersionPart3Fragment" android:id="@id/id_onboarding_treatment_decisions_text_version_3">
+        <argument android:name="@string/navigation_override_up" android:defaultValue="true" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <argument android:name="@string/navigation_view_gone" android:defaultValue="true" app:argType="boolean" />
+        <action android:id="@id/action_id_onboarding_treatment_decisions_text_version_3_to_id_onboarding_treatment_decisions" app:destination="@id/id_onboarding_treatment_decisions" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" app:popUpTo="@id/id_onboarding_treatment_decisions" app:popUpToInclusive="true" />
+    </fragment>
+    <fragment android:name="com.dexcom.phoenix.ui.screens.onboarding.treatmentdecisions.OnboardingTreatmentDecisionsFragment" android:id="@id/id_onboarding_treatment_decisions">
+        <argument android:name="@string/navigation_override_up" android:defaultValue="true" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <argument android:name="@string/navigation_view_gone" android:defaultValue="true" app:argType="boolean" />
+        <action android:id="@id/action_id_onboarding_treatment_decisions_to_id_onboarding_text_version" app:destination="@id/id_onboarding_treatment_decisions_text_version" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" />
+        <action android:id="@id/action_id_onboarding_treatment_decisions_to_id_onboarding_safety_statements" app:destination="@id/id_onboarding_safety_information" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment android:name="com.dexcom.phoenix.ui.screens.onboarding.OnboardingSafetyStatementsFragment" android:id="@id/id_onboarding_safety_information">
+        <argument android:name="@string/navigation_override_up" android:defaultValue="true" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <argument android:name="@string/navigation_view_gone" android:defaultValue="true" app:argType="boolean" />
+        <action android:id="@id/action_id_onboarding_safety_statements_to_id_onboarding_app_setup" app:destination="@id/id_onboarding_home" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" />
+        <action android:id="@id/action_id_full_safety_statement_to_id_web_url" app:destination="@id/id_onboarding_full_safety_statement" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment android:name="com.dexcom.phoenix.ui.screens.onboarding.home.appsetup.bluetooth.EnableBluetoothFragment" android:id="@id/id_onboarding_enable_bluetooth">
+        <argument android:name="@string/navigation_override_up" android:defaultValue="true" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <argument android:name="@string/navigation_view_gone" android:defaultValue="true" app:argType="boolean" />
+        <action android:id="@id/action_id_onboarding_enable_bluetooth_to_enable_location" app:destination="@id/id_onboarding_enable_location" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" />
+        <action android:id="@id/action_id_onboarding_enable_bluetooth_to_onboarding_do_not_disturb" app:destination="@id/id_onboarding_do_not_disturb" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment android:name="com.dexcom.phoenix.ui.screens.onboarding.home.appsetup.location.EnableLocationFragment" android:id="@id/id_onboarding_enable_location">
+        <argument android:name="@string/navigation_override_up" android:defaultValue="true" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <argument android:name="@string/navigation_view_gone" android:defaultValue="true" app:argType="boolean" />
+        <action android:id="@id/action_id_tab_glucose_to_id_coarse_location_off_help_dialog" app:destination="@id/id_coarse_location_off_help_dialog" />
+        <action android:id="@id/action_id_tab_glucose_to_id_coarse_location_denied_dialog" app:destination="@id/id_coarse_location_denied_dialog" />
+        <action android:id="@id/action_id_onboarding_enable_location_to_id_onboarding_do_not_disturb" app:destination="@id/id_onboarding_do_not_disturb" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment android:name="com.dexcom.phoenix.ui.screens.onboarding.home.appsetup.nearbydevices.EnableBluetoothPermissionsFragment" android:id="@id/id_onboarding_bluetooth_permissions">
+        <argument android:name="@string/navigation_override_up" android:defaultValue="true" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <argument android:name="@string/navigation_view_gone" android:defaultValue="true" app:argType="boolean" />
+        <action android:id="@id/action_id_onboarding_bluetooth_permissions_to_id_bluetooth_permissions_off_dialog" app:destination="@id/id_bluetooth_permissions_off_dialog" />
+        <action android:id="@id/action_id_onboarding_enable_bluetooth_permissions_to_id_onboarding_enable_bluetooth" app:destination="@id/id_onboarding_enable_bluetooth" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <dialog android:label="" android:name="com.dexcom.phoenix.ui.screens.onboarding.home.appsetup.nearbydevices.BluetoothPermissionsOffDialog" android:id="@id/id_bluetooth_permissions_off_dialog" />
+    <fragment android:name="com.dexcom.phoenix.ui.screens.onboarding.home.appsetup.dnd.DoNotDisturbFragment" android:id="@id/id_onboarding_do_not_disturb">
+        <argument android:name="@string/navigation_override_up" android:defaultValue="true" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <argument android:name="@string/navigation_view_gone" android:defaultValue="true" app:argType="boolean" />
+        <action android:id="@id/action_doNotDisturbFragment_to_mustAllowDoNotDisturbDialog" app:destination="@id/id_onboarding_must_allow_dnd_dialog" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" />
+        <action android:id="@id/action_id_onboarding_do_not_disturb_to_onboarding_battery_optimization" app:destination="@id/id_battery_optimization" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment android:name="com.dexcom.phoenix.ui.screens.onboarding.home.appsetup.notification.EnableNotificationsFragment" android:id="@id/id_onboarding_enable_notifications">
+        <argument android:name="@string/navigation_override_up" android:defaultValue="true" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <argument android:name="@string/navigation_view_gone" android:defaultValue="true" app:argType="boolean" />
+        <action android:id="@id/action_id_onboarding_enable_notifications_to_onboarding_overview" app:destination="@id/id_onboarding_home" app:launchSingleTop="true" app:popUpTo="@id/id_onboarding_home" app:popUpToInclusive="true" />
+        <action android:id="@id/action_id_enable_to_id_notification_denied_dialog" app:destination="@id/id_notifications_denied_dialog" />
+    </fragment>
+    <dialog android:label="" android:name="com.dexcom.phoenix.ui.screens.onboarding.home.appsetup.notification.NotificationsDeniedDialog" android:id="@id/id_notifications_denied_dialog" />
+    <fragment android:name="com.dexcom.phoenix.ui.screens.onboarding.startsensor.OnboardingPairingWearableFragment" android:id="@id/id_onboarding_pairing_wearable">
+        <argument android:name="@string/navigation_override_up" android:defaultValue="true" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <argument android:name="@string/navigation_view_gone" android:defaultValue="true" app:argType="boolean" />
+        <action android:id="@id/action_id_onboarding_pairing_wearable_to_pairing_wearable_help" app:destination="@id/pairing_wearable_help" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <dialog android:label="" android:name="com.dexcom.phoenix.ui.screens.onboarding.home.appsetup.location.LocationOffHelpDialog" android:id="@id/id_coarse_location_off_help_dialog" />
+    <dialog android:label="" android:name="com.dexcom.phoenix.ui.screens.onboarding.home.appsetup.location.LocationDeniedDialog" android:id="@id/id_coarse_location_denied_dialog" />
+    <dialog android:label="" android:name="com.dexcom.phoenix.ui.screens.onboarding.home.appsetup.dnd.MustAllowDoNotDisturbDialog" android:id="@id/id_onboarding_must_allow_dnd_dialog" />
+    <dialog android:label="" android:name="com.dexcom.phoenix.ui.screens.onboarding.OnboardingSafetyStatementsWebviewFragment" android:id="@id/id_onboarding_full_safety_statement" />
+    <fragment android:label="@string/app_setup" android:name="com.dexcom.phoenix.ui.screens.onboarding.home.appsetup.batteryoptimization.BatteryOptimizationFragment" android:id="@id/id_battery_optimization">
+        <argument android:name="@string/navigation_override_up" android:defaultValue="true" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <argument android:name="@string/navigation_view_gone" android:defaultValue="true" app:argType="boolean" />
+        <action android:id="@id/action_id_battery_optimization_to_id_onboard_permission_dialog" app:destination="@id/id_onboard_permission_dialog">
+            <argument android:name="appSetupState" android:defaultValue="BATTERY_OPTIMIZATION" app:argType="com.dexcom.phoenix.ui.screens.onboarding.home.appsetup.data.AppSetupState" />
+        </action>
+        <action android:id="@id/action_id_onboard_battery_optimization_to_id_enable_notifications" app:destination="@id/id_onboarding_enable_notifications" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <dialog android:name="com.dexcom.phoenix.ui.screens.onboarding.home.appsetup.batteryoptimization.OnboardBatteryOptimizationPermissionsDialog" android:id="@id/id_onboard_permission_dialog">
+        <argument android:name="appSetupState" app:argType="com.dexcom.phoenix.ui.screens.onboarding.home.appsetup.data.AppSetupState" />
+        <action android:id="@id/action_id_onboard_permission_dialog_to_id_onboarding_enable_notifications" app:destination="@id/id_onboarding_enable_notifications" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" />
+    </dialog>
+    <include app:graph="@navigation/sensor_insertion" />
+    <include app:graph="@navigation/sensor_pairing" />
+    <include app:graph="@navigation/pairing_wearable_help" />
+</navigation>

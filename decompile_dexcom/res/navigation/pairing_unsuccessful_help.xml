@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/pairing_unsuccessful_help" app:startDestination="@id/id_pairing_unsuccessful_help"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <fragment android:name="com.dexcom.phoenix.ui.screens.glucose.screenstates.InsertSensorToPairFragment" android:id="@id/id_insert_sensor_to_pair">
+        <action android:id="@id/action_id_insert_sensor_to_pair_to_id_sensor_insertion_instructions" app:destination="@id/id_pairing_unsuccessful_sensor_insertion" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" />
+        <argument android:name="@string/navigation_view_gone" android:defaultValue="true" app:argType="boolean" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+    </fragment>
+    <fragment android:name="com.dexcom.phoenix.ui.screens.glucose.screenstates.CheckPairingCodeFragment" android:id="@id/id_check_pairing_code">
+        <action android:id="@id/action_id_check_pairing_code_to_id_edit_pairing_code" app:destination="@id/id_edit_pairing_code" />
+        <argument android:name="@string/navigation_view_gone" android:defaultValue="true" app:argType="boolean" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+    </fragment>
+    <fragment android:name="com.dexcom.phoenix.ui.screens.glucose.screenstates.MoveAwayFragment" android:id="@id/id_move_away">
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <argument android:name="@string/navigation_view_gone" android:defaultValue="true" app:argType="boolean" />
+    </fragment>
+    <fragment android:name="com.dexcom.phoenix.ui.screens.glucose.screenstates.PairingUnsuccessfulHelpFragment" android:id="@id/id_pairing_unsuccessful_help">
+        <action android:id="@id/action_id_pairing_unsuccessful_help_to_id_tab_glucose" app:destination="@id/id_tab_glucose" app:popUpTo="@id/id_tab_glucose" app:popUpToInclusive="true" />
+        <action android:id="@id/action_id_pairing_unsuccessful_help_to_id_insert_new_sensor" app:destination="@id/id_insert_new_sensor" app:popUpTo="@id/id_insert_new_sensor" app:popUpToInclusive="true" />
+        <action android:id="@id/action_id_pairing_unsuccessful_help_to_id_keep_phone_close" app:destination="@id/id_keep_phone_close" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" />
+        <action android:id="@id/action_id_pairing_unsuccessful_help_to_id_insert_sensor_to_pair" app:destination="@id/id_insert_sensor_to_pair" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" />
+        <action android:id="@id/action_id_pairing_unsuccessful_help_to_id_check_pairing_code" app:destination="@id/id_check_pairing_code" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" />
+        <action android:id="@id/action_id_pairing_unsuccessful_help_to_id_move_away" app:destination="@id/id_move_away" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <argument android:name="@string/navigation_view_gone" android:defaultValue="true" app:argType="boolean" />
+    </fragment>
+    <fragment android:name="com.dexcom.phoenix.ui.screens.glucose.screenstates.KeepPhoneCloseFragment" android:id="@id/id_keep_phone_close">
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <argument android:name="@string/navigation_view_gone" android:defaultValue="true" app:argType="boolean" />
+    </fragment>
+    <fragment android:name="com.dexcom.phoenix.ui.screens.glucose.screenstates.TransmitterPairingHelpFragment" android:id="@id/id_start_new_sensor">
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <argument android:name="@string/navigation_view_gone" android:defaultValue="true" app:argType="boolean" />
+    </fragment>
+    <dialog android:name="com.dexcom.phoenix.ui.screens.glucose.screenstates.EditPairingCodeDialogFragment" android:id="@id/id_edit_pairing_code">
+        <action android:id="@id/action_id_edit_pairing_code_to_id_pairing_selection" app:destination="@id/sensor_pairing" app:popUpTo="@id/id_tab_glucose" />
+    </dialog>
+</navigation>

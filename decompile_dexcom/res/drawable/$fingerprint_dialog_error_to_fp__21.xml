@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set android:ordering="together"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt">
+    <objectAnimator android:interpolator="@drawable/$fingerprint_dialog_error_to_fp__22" android:duration="33" android:startOffset="0" android:valueFrom="10" android:valueTo="10" android:valueType="floatType" android:propertyName="rotation" />
+    <objectAnimator android:interpolator="@drawable/$fingerprint_dialog_error_to_fp__23" android:duration="367" android:startOffset="33" android:valueFrom="10" android:valueTo="-180" android:valueType="floatType" android:propertyName="rotation" />
+</set>

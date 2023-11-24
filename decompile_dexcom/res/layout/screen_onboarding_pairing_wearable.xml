@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:tag="layout/screen_onboarding_pairing_wearable_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:id="@id/id_onboarding_pairing_werable_app_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <androidx.appcompat.widget.Toolbar android:id="@id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:menu="@menu/onboarding_pairing_wearable_menu" style="@style/OnboardingToolbar" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.core.widget.NestedScrollView android:id="@id/id_onboarding_pairing_wearable" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingHorizontal="24.0dip">
+            <ProgressBar android:id="@id/id_onboarding_pairing_wearable_progress_bar" android:layout_width="53.0dip" android:layout_height="53.0dip" android:layout_marginTop="49.0dip" android:indeterminate="true" android:indeterminateDrawable="@drawable/pairing_progress_bar" android:indeterminateDuration="500" android:indeterminateBehavior="repeat" />
+            <TextView android:textSize="20.0dip" android:textColor="@color/dex_gray_500" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:text="@string/onboarding_searching_for_sensor" android:fontFamily="@string/roboto_regular" android:textAlignment="center" />
+            <TextView android:textSize="48.0dip" android:textColor="@color/dex_gray_900" android:tag="binding_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:fontFamily="@string/roboto_regular" android:letterSpacing="0.38" />
+            <TextView android:textSize="18.0dip" android:textColor="@color/dex_gray_900" android:id="@id/id_onboarding_keep_phone_within_6_meters" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="32.0dip" android:text="@string/onboarding_keep_phone_within_6_meters" android:fontFamily="@string/roboto_regular" android:textAlignment="center" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

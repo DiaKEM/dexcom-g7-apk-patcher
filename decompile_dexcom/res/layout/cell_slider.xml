@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeightSmall"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.slider.Slider android:id="@id/slider" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginStart="2.0dip" app:layout_constraintEnd_toStartOf="@id/meta_data" app:layout_constraintStart_toStartOf="parent" app:tickColor="@android:color/transparent" style="@style/Widget.Polaris.Slider" />
+    <TextView android:textAppearance="@style/TextAppearance.Polaris.Cell.Detail" android:ellipsize="end" android:gravity="end|center" android:id="@id/meta_data" android:layout_width="120.0dip" android:layout_height="fill_parent" android:maxLines="1" android:paddingEnd="16.0dip" android:hyphenationFrequency="full" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@id/slider" />
+</androidx.constraintlayout.widget.ConstraintLayout>

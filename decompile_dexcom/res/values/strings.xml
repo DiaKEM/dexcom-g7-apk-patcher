@@ -1,0 +1,2192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="N_A">N/A</string>
+    <string name="ab">AB</string>
+    <string name="abc_action_bar_home_description">Navigate home</string>
+    <string name="abc_action_bar_up_description">Navigate up</string>
+    <string name="abc_action_menu_overflow_description">More options</string>
+    <string name="abc_action_mode_done">Done</string>
+    <string name="abc_activity_chooser_view_see_all">See all</string>
+    <string name="abc_activitychooserview_choose_application">Choose an app</string>
+    <string name="abc_capital_off">OFF</string>
+    <string name="abc_capital_on">ON</string>
+    <string name="abc_menu_alt_shortcut_label">Alt+</string>
+    <string name="abc_menu_ctrl_shortcut_label">Ctrl+</string>
+    <string name="abc_menu_delete_shortcut_label">delete</string>
+    <string name="abc_menu_enter_shortcut_label">enter</string>
+    <string name="abc_menu_function_shortcut_label">Function+</string>
+    <string name="abc_menu_meta_shortcut_label">Meta+</string>
+    <string name="abc_menu_shift_shortcut_label">Shift+</string>
+    <string name="abc_menu_space_shortcut_label">space</string>
+    <string name="abc_menu_sym_shortcut_label">Sym+</string>
+    <string name="abc_prepend_shortcut_label">Menu+</string>
+    <string name="abc_search_hint">Search…</string>
+    <string name="abc_searchview_description_clear">Clear query</string>
+    <string name="abc_searchview_description_query">Search query</string>
+    <string name="abc_searchview_description_search">Search</string>
+    <string name="abc_searchview_description_submit">Submit query</string>
+    <string name="abc_searchview_description_voice">Voice search</string>
+    <string name="abc_shareactionprovider_share_with">Share with</string>
+    <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
+    <string name="abc_toolbar_collapse_description">Collapse</string>
+    <string name="about">About</string>
+    <string name="about_calibration">About Calibration</string>
+    <string name="about_calibration_description">"Your next sensor reading will reflect the calibration you just entered.
+
+You can see your calibrations in the History tab's event log."</string>
+    <string name="about_copyright">© %1$s Dexcom, Inc.</string>
+    <string name="about_copyright_title">Copyright</string>
+    <string name="about_eu_address">"MDSS GmbH
+Schiffgraben 41
+30175 Hannover, Germany"</string>
+    <string name="about_europe">Europe</string>
+    <string name="about_gtin_title">GTIN</string>
+    <string name="about_insulin">About Insulin</string>
+    <string name="about_note">About Note</string>
+    <string name="about_note_info">Add a short note to help you keep track of a health event or a change in your glucose management that might affect your glucose</string>
+    <string name="about_note_info_2">Notes will be processed by Dexcom in accordance with our Privacy Policy. For more information about privacy, view our</string>
+    <string name="about_note_privacy_policy">Privacy Policy</string>
+    <string name="about_privacy_policy_title">Privacy Policy</string>
+    <string name="about_regulatory_certification">Regulatory Certification</string>
+    <string name="about_software_number_title">Software Number</string>
+    <string name="about_software_revision_title">Software Revision</string>
+    <string name="about_supported_systems_title">Supported Systems</string>
+    <string name="about_terms_of_use_title">Terms of Use</string>
+    <string name="about_uk_address">"MDSS-UK RP LIMITED
+6 Wilmslow Road,
+Rusholme,
+Manchester M14 5TP
+United Kingdom
+"</string>
+    <string name="about_united_kingdom">United Kingdom</string>
+    <string name="above">above</string>
+    <string name="accessibility_fingerprint_dialog_help_area">Help message area</string>
+    <string name="account">Account</string>
+    <string name="acm_error_description">We are unable to verify the compatibility of your phone with the Dexcom ONE CGM system at this time. Please make sure that your phone is connected to the internet.</string>
+    <string name="acm_error_description_g7">"We are unable to verify the compatibility of your phone with the Dexcom G7 CGM system at this time.
+
+Please make sure that your phone is connected to the internet."</string>
+    <string name="activated_on">Activated On</string>
+    <string name="activity">Activity</string>
+    <string name="activity_date_field">Activity DatePicker</string>
+    <string name="activity_deleted">Activity deleted</string>
+    <string name="activity_description">Duration and intensity</string>
+    <string name="activity_duration_field">Activity Duration Control</string>
+    <string name="activity_heavy_intensity">Heavy</string>
+    <string name="activity_heavy_intensity_full">Heavy intensity</string>
+    <string name="activity_intensity_field">Activity Intensity Control</string>
+    <string name="activity_intensity_heavy_field">Activity Intensity Heavy Control</string>
+    <string name="activity_intensity_light_field">Activity Intensity Light Control</string>
+    <string name="activity_intensity_medium_field">Activity Intensity Medium Control</string>
+    <string name="activity_intensity_title">Intensity</string>
+    <string name="activity_light_intensity">Light</string>
+    <string name="activity_light_intensity_full">Light intensity</string>
+    <string name="activity_light_intensity_placeholder">Light intensity</string>
+    <string name="activity_medium_intensity">Medium</string>
+    <string name="activity_medium_intensity_full">Medium intensity</string>
+    <string name="activity_saved">Activity saved</string>
+    <string name="activity_time_field">Activity TimePicker</string>
+    <string name="activity_updated">Activity updated</string>
+    <string name="add_event">Add Event</string>
+    <string name="add_second_alert_profile">Add Second Alert Profile</string>
+    <string name="adult_age">All people ages 2 years and older</string>
+    <string name="adult_sensor_site">Can use the abdomen or back of arm</string>
+    <string name="after_setup_customize_alert">After setup, you can customize alert settings in <b>Profile > Alerts.</b></string>
+    <string name="alcohol_wipe">Alcohol Wipe (not included)</string>
+    <string name="alert_detail_note_no_override">Dexcom ONE alerts will <b>NOT</b> override your phone settings.</string>
+    <string name="alert_detail_note_silent">You will NOT hear or feel alerts if your phone is set to silent.</string>
+    <string name="alert_high_description">Alerts you when your sensor reading is at or above the set level.</string>
+    <string name="alert_high_dialog_description">Alerts you when your sensor reading is at or above this level.</string>
+    <string name="alert_high_line_description">"It's the yellow line on the glucose graph."</string>
+    <string name="alert_hours_and_mins">%1$s %2$s</string>
+    <string name="alert_low_description">Alerts you when your sensor reading is at or below the set level.</string>
+    <string name="alert_low_dialog_description">Alerts you when your sensor reading is at or below this level.</string>
+    <string name="alert_low_line_description">"It's the red line on the glucose graph."</string>
+    <string name="alert_match_option_description_brief_sensor_issue">Depending on the phone sound settings, alerts will vibrate or sound.</string>
+    <string name="alert_match_option_description_falling_fast">@string/alert_match_option_description_brief_sensor_issue</string>
+    <string name="alert_match_option_description_high">@string/alert_match_option_description_brief_sensor_issue</string>
+    <string name="alert_match_option_description_low">@string/alert_match_option_description_brief_sensor_issue</string>
+    <string name="alert_match_option_description_rising_fast">@string/alert_match_option_description_brief_sensor_issue</string>
+    <string name="alert_match_option_description_signal_loss">@string/alert_match_option_description_brief_sensor_issue</string>
+    <string name="alert_match_option_description_technical_alerts">"When phone sound is on: Alert sounds.
+
+When phone sound is off: Alerts vibrate first, but will sound if you haven't acknowledged them."</string>
+    <string name="alert_match_option_description_urgent_low">@string/alert_match_option_description_technical_alerts</string>
+    <string name="alert_match_option_description_urgent_low_soon">@string/alert_match_option_description_brief_sensor_issue</string>
+    <string name="alert_match_option_title">Match Phone Settings</string>
+    <string name="alert_notification_channel_id">channel_alerts</string>
+    <string name="alert_profile_created_description">"Each alert is set to the default. Tap any alert to customize.
+
+If you want to schedule when this profile is used, tap "<b>Scheduling.</b></string>
+    <string name="alert_profile_created_format">%1$s Alert Profile Created</string>
+    <string name="alert_profile_name">Alert profile name</string>
+    <string name="alert_profile_schedule_turn_off">Scheduled to turn off:</string>
+    <string name="alert_profile_schedule_turn_on">Scheduled to turn on:</string>
+    <string name="alert_profile_selected">%1$s alert profile activated.</string>
+    <string name="alert_profiles">Alert Profiles</string>
+    <string name="alert_profiles_tooltip_back">BACK</string>
+    <string name="alert_profiles_tooltip_close">CLOSE</string>
+    <string name="alert_profiles_tooltip_done">DONE</string>
+    <string name="alert_profiles_tooltip_four_count">4 of 4</string>
+    <string name="alert_profiles_tooltip_four_description">Tap profile to view and edit settings.</string>
+    <string name="alert_profiles_tooltip_four_title">Customizing profiles</string>
+    <string name="alert_profiles_tooltip_next">NEXT</string>
+    <string name="alert_profiles_tooltip_one_count">1 of 4</string>
+    <string name="alert_profiles_tooltip_one_description">Your new alert profile is here.</string>
+    <string name="alert_profiles_tooltip_three_count">3 of 4</string>
+    <string name="alert_profiles_tooltip_three_description">Tap circle to turn on a profile.</string>
+    <string name="alert_profiles_tooltip_three_title">Turn on a profile</string>
+    <string name="alert_profiles_tooltip_two_count">2 of 4</string>
+    <string name="alert_profiles_tooltip_two_description">Your original profile is now named</string>
+    <string name="alert_profiles_tooltip_two_title">Primary</string>
+    <string name="alert_schedule">Alert Schedule</string>
+    <string name="alert_schedule_activated">Your alert schedule has been activated.</string>
+    <string name="alert_schedule_text_description">Use the alert schedule to automatically switch on your %1$s alert profile at days and times you set.</string>
+    <string name="alert_settings">Alert Settings</string>
+    <string name="alert_settings_collision_title">Alert Settings Conflict</string>
+    <string name="alert_settings_high_collision">Your High alert setting must be at least %1$s more than your Low alert setting.</string>
+    <string name="alert_settings_high_description">Alerts you when your sensor reading is at or above the set level.</string>
+    <string name="alert_settings_high_dialog_description">Alerts when your sensor reading is at or above this level.</string>
+    <string name="alert_settings_low_collision">Your Low alert setting must be at least %1$s less than your High alert setting.</string>
+    <string name="alert_settings_low_description">Alerts you when your sensor reading is at or below the set level.</string>
+    <string name="alert_settings_low_dialog_description">Alerts when your sensor reading is at or below this level.</string>
+    <string name="alert_settings_text">The yellow line on your graph shows your High alert setting.</string>
+    <string name="alert_settings_text2">The red line shows your Low alert setting.</string>
+    <string name="alert_settings_text3">Urgent Low lets you know when your glucose is at or below %1$s %2$s.</string>
+    <string name="alert_settings_title">Alert Settings</string>
+    <string name="alert_sound_also_in_use">Sound is also in use for:</string>
+    <string name="alert_sound_cell_title">Alert Sound</string>
+    <string name="alert_sound_option_description">Alert will sound regardless of phone settings.</string>
+    <string name="alert_sound_option_description_brief_sensor_issue">Alert will sound regardless of phone settings.</string>
+    <string name="alert_sound_option_description_falling_fast">@string/alert_sound_option_description_brief_sensor_issue</string>
+    <string name="alert_sound_option_description_high">@string/alert_sound_option_description_brief_sensor_issue</string>
+    <string name="alert_sound_option_description_low">@string/alert_sound_option_description_brief_sensor_issue</string>
+    <string name="alert_sound_option_description_rising_fast">@string/alert_sound_option_description_brief_sensor_issue</string>
+    <string name="alert_sound_option_description_signal_loss">@string/alert_sound_option_description_brief_sensor_issue</string>
+    <string name="alert_sound_option_description_technical_alerts">@string/alert_sound_option_description_brief_sensor_issue</string>
+    <string name="alert_sound_option_description_urgent_low">@string/alert_sound_option_description_brief_sensor_issue</string>
+    <string name="alert_sound_option_description_urgent_low_soon">@string/alert_sound_option_description_brief_sensor_issue</string>
+    <string name="alert_sound_option_title">Sound</string>
+    <string name="alert_sound_speaker_arrow_description">Select Alert Sound</string>
+    <string name="alert_sound_speaker_image_description">Alert Sound Speaker Image</string>
+    <string name="alert_sound_system_alert_info_description">System Alert Information Icon</string>
+    <string name="alert_sound_title_brief_sensor_issue">G7 System Alert</string>
+    <string name="alert_sound_title_falling_fast">G7 Falling Fast</string>
+    <string name="alert_sound_title_high">G7 High</string>
+    <string name="alert_sound_title_low">G7 Low</string>
+    <string name="alert_sound_title_rising_fast">G7 Rising Fast</string>
+    <string name="alert_sound_title_signal_loss">@string/alert_sound_title_brief_sensor_issue</string>
+    <string name="alert_sound_title_technical_alerts">@string/alert_sound_title_brief_sensor_issue</string>
+    <string name="alert_sound_title_urgent_low">G7 Urgent Low</string>
+    <string name="alert_sound_title_urgent_low_soon">G7 Urgent Low Soon</string>
+    <string name="alert_sound_vibrate_confirm_checkbox_text">I understand</string>
+    <string name="alert_sound_vibrate_confirm_match_option_for_brief_sensor_issue">"Brief Sensor Issue won't sound when your phone sound settings are off."</string>
+    <string name="alert_sound_vibrate_confirm_match_option_for_signal_loss">"Signal Loss won't sound when your phone sound settings are off."</string>
+    <string name="alert_sound_vibrate_confirm_vibrate_option_for_brief_sensor_issue">Brief Sensor Issue will only vibrate even if your phone sound settings are on.</string>
+    <string name="alert_sound_vibrate_confirm_vibrate_option_for_signal_loss">Signal Loss will only vibrate even if your phone sound settings are on.</string>
+    <string name="alert_sound_vibrate_options_instructions">Choose how your alert notifies you: sound, vibrate, or match phone settings.</string>
+    <string name="alert_sound_vibrate_quiet_mode_footnote_pointer">*</string>
+    <string name="alert_sound_vibrate_screen_title">Sound/Vibrate</string>
+    <string name="alert_sound_vibrate_silence_all_footnote_text">* Silence All Quiet Mode is on. It overrides your Sound/Vibrate setting.</string>
+    <string name="alert_vibrate_footnote_text">* Vibrate Quiet Mode is on. It overrides your Sound/Vibrate setting.</string>
+    <string name="alert_vibrate_option_description_brief_sensor_issue">Alert will vibrate regardless of phone settings.</string>
+    <string name="alert_vibrate_option_description_falling_fast">@string/alert_vibrate_option_description_brief_sensor_issue</string>
+    <string name="alert_vibrate_option_description_high">@string/alert_vibrate_option_description_brief_sensor_issue</string>
+    <string name="alert_vibrate_option_description_low">@string/alert_vibrate_option_description_brief_sensor_issue</string>
+    <string name="alert_vibrate_option_description_rising_fast">@string/alert_vibrate_option_description_brief_sensor_issue</string>
+    <string name="alert_vibrate_option_description_signal_loss">@string/alert_vibrate_option_description_brief_sensor_issue</string>
+    <string name="alert_vibrate_option_description_technical_alerts">"Alerts will vibrate first, but then sound if you haven't acknowledged them."</string>
+    <string name="alert_vibrate_option_description_urgent_low">@string/alert_vibrate_option_description_technical_alerts</string>
+    <string name="alert_vibrate_option_description_urgent_low_soon">@string/alert_vibrate_option_description_brief_sensor_issue</string>
+    <string name="alert_vibrate_option_title">Vibrate</string>
+    <string name="alerts">Alerts</string>
+    <string name="alerts_are_off">Alerts are Off</string>
+    <string name="alerts_description">Overview of glucose alerts</string>
+    <string name="alerts_let_you_know">Alerts let you know when your glucose goes too high or low.</string>
+    <string name="alerts_off">Alerts Off</string>
+    <string name="alerts_on">Alerts On</string>
+    <string name="alerts_second_profile_description">You can create a second alert profile with customized alerts. <font fgcolor="#137D00">More information</font>" "</string>
+    <string name="alerts_second_profile_description_more_info">You can create a second alert profile with customized alerts. For example, a nighttime or work profile. You can switch between or schedule profiles.</string>
+    <string name="alerts_sounds_baby_cry">Baby Cry</string>
+    <string name="alerts_sounds_beep">Beep</string>
+    <string name="alerts_sounds_blamo_dings">Blamo Dings</string>
+    <string name="alerts_sounds_bsi">G7 Brief Sensor Issue</string>
+    <string name="alerts_sounds_buzzer_alarm_clock">Buzzer Alarm Clock</string>
+    <string name="alerts_sounds_dinging">Dinging</string>
+    <string name="alerts_sounds_door_bell">Door Bell</string>
+    <string name="alerts_sounds_fall_rate">Fall Rate</string>
+    <string name="alerts_sounds_g7_falling_fast">G7 Falling Fast</string>
+    <string name="alerts_sounds_g7_high">G7 High</string>
+    <string name="alerts_sounds_g7_low">G7 Low</string>
+    <string name="alerts_sounds_g7_rising_fast">G7 Rising Fast</string>
+    <string name="alerts_sounds_g7_urgent_low">G7 Urgent Low</string>
+    <string name="alerts_sounds_g7_urgent_low_soon">G7 Urgent Low Soon</string>
+    <string name="alerts_sounds_high">High</string>
+    <string name="alerts_sounds_high_alert">High Alert</string>
+    <string name="alerts_sounds_low">Low</string>
+    <string name="alerts_sounds_low_alert">Low Alert</string>
+    <string name="alerts_sounds_nerd_alert">Nerd Alert</string>
+    <string name="alerts_sounds_police_siren">Police Siren</string>
+    <string name="alerts_sounds_rise_rate">Rise Rate</string>
+    <string name="alerts_sounds_short_beeps">Short Beeps</string>
+    <string name="alerts_sounds_signal_loss">G7 Signal Loss</string>
+    <string name="alerts_sounds_signal_loss_alert">Signal Loss Alert</string>
+    <string name="alerts_sounds_siren">5–0 Siren</string>
+    <string name="alerts_sounds_sonar_horn">Sonar Horn</string>
+    <string name="alerts_sounds_system_alert">G7 System Alert</string>
+    <string name="alerts_sounds_tacataca">Tacataca</string>
+    <string name="alerts_sounds_technical_alert">G7 Technical Alerts</string>
+    <string name="alerts_sounds_truck_siren">Truck Siren</string>
+    <string name="alerts_sounds_uh_oh">Uh-oh</string>
+    <string name="alerts_sounds_urgent_low">Urgent Low</string>
+    <string name="alerts_sounds_urgent_low_alarm">Urgent Low Alarm</string>
+    <string name="alerts_sounds_urgent_low_soon">Urgent Low Soon</string>
+    <string name="alerts_sounds_vibrate_only">Vibrate Only</string>
+    <string name="alerts_two_more_alerts">Two more alerts are Urgent Low and Urgent Low Soon.</string>
+    <string name="alerts_urgent_low_description">"Alerts you when your sensor reading is %1$s %2$s or below. This can't be changed or turned off."</string>
+    <string name="allow_app_to_always_run">Allow app to always run</string>
+    <string name="always_keep_phone_within">Always keep phone within %1$s of sensor.</string>
+    <string name="androidx_camera_default_config_provider">androidx.camera.camera2.Camera2Config$DefaultProvider</string>
+    <string name="androidx_startup">androidx.startup</string>
+    <string name="another_issue">Another issue</string>
+    <string name="app_bluetooth_permissions_off_description">"The app needs Nearby Devices permission for Bluetooth to work. Bluetooth sends your sensor readings to the app.
+
+On the next screen, "<b>Allow</b> Nearby Devices permission for Dexcom so you get sensor readings and alerts.</string>
+    <string name="app_bluetooth_permissions_off_state_description">Bluetooth needs Nearby Devices permission so you get sensor readings and alerts.</string>
+    <string name="app_bluetooth_permissions_off_title">App Bluetooth Permission is Off</string>
+    <string name="app_bluetooth_permissions_on_description">You will get sensor readings and alerts.</string>
+    <string name="app_bluetooth_permissions_on_title">App Bluetooth Permission is On</string>
+    <string name="app_bluetooth_permissions_title">App Bluetooth Permission</string>
+    <string name="app_language">EN</string>
+    <string name="app_location_is_off_description">Bluetooth always needs app location permission to get your sensor readings and alerts.</string>
+    <string name="app_location_is_off_description_12">Dexcom needs to confirm your country of residence.</string>
+    <string name="app_location_is_off_description_g7">To get sensor readings and alerts Bluetooth needs app Location Permission.</string>
+    <string name="app_location_is_off_state">Location permission is off</string>
+    <string name="app_name">QualtricsSI</string>
+    <string name="app_pause_label">App Pause</string>
+    <string name="app_setup">App Setup</string>
+    <string name="app_setup_notifications_is_disabled_description">Turn on notifications to get all your alerts.</string>
+    <string name="app_setup_notifications_is_disabled_title">Allow Notifications</string>
+    <string name="app_setup_notifications_is_enabled_description">You will receive notifications. Dexcom recommends keeping notifications on so you can get alerts.</string>
+    <string name="app_setup_notifications_is_enabled_description_g7">You will receive alerts. Dexcom recommends keeping notifications on so you get your alerts.</string>
+    <string name="app_setup_notifications_is_enabled_title">Notifications are on</string>
+    <string name="app_setup_notifications_is_enabled_title_caps">Notifications are On</string>
+    <string name="app_stopped_phone_storage_full">"App Stopped:
+Phone Storage Full"</string>
+    <string name="app_stopped_working">App Stopped Working</string>
+    <string name="app_unrecoverable_alert">Tap for more information.</string>
+    <string name="appbar_scrolling_view_behavior">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
+    <string name="applicator_check_for_damage">Applicator (check for damage)</string>
+    <string name="are_you_sure">Are You Sure?</string>
+    <string name="areas_that_get_bumped">Areas that get bumped</string>
+    <string name="attach_transmitter">7. Attach Transmitter</string>
+    <string name="attention">Attention</string>
+    <string name="available_connections">Available Connections</string>
+    <string name="average_glucose">Average Glucose</string>
+    <string name="average_glucose_description">The average of all the glucose readings in the selected date range.</string>
+    <string name="avoid_areas">Avoid areas</string>
+    <string name="banner_image_description">Banner Image</string>
+    <string name="battery_optimization_is_off_description">"Battery optimizing is off so app can run in the background.
+
+Your alerts won't be delayed."</string>
+    <string name="battery_optimization_is_off_followers_description">"Battery optimizing is off so app can run in the background.
+
+Your alerts, and information sent to Followers, won't be delayed."</string>
+    <string name="battery_optimization_is_off_title">App is Always Running</string>
+    <string name="battery_optimization_is_on_description">"Alerts may be delayed because battery optimizing is on. This prevents the app from running in the background.
+
+Tap button below, then "<b>turn off battery optimizing mode.</b></string>
+    <string name="battery_optimization_is_on_share_followers_delayed_description">"Alerts may be delayed because battery optimizing is on. This prevents the app from running in the background.
+
+If you're using Share, information sent to Followers may also be delayed.
+
+Tap button below, then "<b>turn off battery optimizing mode.</b></string>
+    <string name="battery_optimization_is_on_title">Allow app to always run</string>
+    <string name="battery_optimization_is_on_title_capital">Allow App To Always Run</string>
+    <string name="battery_optimization_off_warning">Alerts may be delayed because battery optimizing is on. This prevents the app from running in the background.</string>
+    <string name="battery_saver_mode_label">Battery Saver Mode</string>
+    <string name="below">below</string>
+    <string name="best_timing">Best timing for me</string>
+    <string name="bg_calibration_description">You can only calibrate when you are getting sensor readings.</string>
+    <string name="bg_clear_egv_field">Clear BG EGV</string>
+    <string name="bg_date_field">BG DatePicker</string>
+    <string name="bg_meter_dashes_egv_suffix">- - -</string>
+    <string name="bg_meter_value">BG meter value</string>
+    <string name="bg_meter_value_egv_suffix">" %1$s"</string>
+    <string name="bg_meter_value_out_of_range">BG Meter Value Out of Range</string>
+    <string name="bg_time_field">BG TimePicker</string>
+    <string name="bleeding_or_discomfort">Bleeding/Discomfort</string>
+    <string name="blood_glucose">Blood Glucose</string>
+    <string name="blood_glucose_deleted">Blood Glucose deleted</string>
+    <string name="blood_glucose_saved">Blood glucose saved</string>
+    <string name="blood_glucose_updated">Blood glucose updated</string>
+    <string name="bluetooth_off_card_description">Turn on Bluetooth to get readings and alerts.</string>
+    <string name="bluetooth_off_state">Phone Bluetooth is Off</string>
+    <string name="bluetooth_permissions_step_1_g7">Tap <b>Open Phone Settings</b> below.</string>
+    <string name="bluetooth_permissions_step_2_g7">Turn on the Nearby Devices permission.</string>
+    <string name="bones">Bones</string>
+    <string name="bottom_sheet_behavior">com.google.android.material.bottomsheet.BottomSheetBehavior</string>
+    <string name="bottomsheet_action_expand_halfway">Expand halfway</string>
+    <string name="brief_sensor_issue">Brief Sensor Issue</string>
+    <string name="brief_sensor_issue_alert">Brief Sensor Issue Alert</string>
+    <string name="brief_sensor_issue_alert_footer">"Alerts you when the sensor can't read your glucose right now."</string>
+    <string name="brief_sensor_issue_bullet_1">"Patch isn't peeling off"</string>
+    <string name="brief_sensor_issue_bullet_1_g7">"Patch isn't peeling off. For better adhesion, use overpatch or medical tape."</string>
+    <string name="brief_sensor_issue_bullet_2">Nothing is pressing on the sensor, like a waistband or seatbelt.</string>
+    <string name="brief_sensor_issue_bullet_3">Transmitter is snapped flat in its holder</string>
+    <string name="brief_sensor_issue_description"><b>Brief Sensor Issue</b>" lets you know there's a temporary issue with your sensor, and you aren't getting sensor readings."</string>
+    <string name="brief_sensor_issue_description_1">Your sensor has a temporary issue. This issue can happen anytime, especially in the first 24 hours of inserting a new sensor. It usually fixes itself within 3 hours.</string>
+    <string name="brief_sensor_issue_description_2">What to do:</string>
+    <string name="brief_sensor_issue_description_2_g7">What to do</string>
+    <string name="brief_sensor_issue_description_3">Don’t remove sensor. Use BG meter for treatment decisions.</string>
+    <string name="brief_sensor_issue_description_4">"Check your sensor and transmitter.
+Make sure:"</string>
+    <string name="brief_sensor_issue_description_4_g7">Check your sensor. Make sure:</string>
+    <string name="brief_sensor_issue_description_5">If Brief Sensor Issue continues for more than 3 hours, contact technical support.</string>
+    <string name="brief_sensor_issue_for_more_than_description">"Don't get alert until Brief Sensor Issue lasts this long. Select a time between 20 and 60 minutes."</string>
+    <string name="brief_sensor_issue_message">"No readings or alerts. Don't remove sensor."</string>
+    <string name="brief_sensor_issue_state_description">Don’t remove sensor. Temporary issue. Wait up to 3 hours.</string>
+    <string name="brief_sensor_issue_sub_bullet_1">For support, use overpatch or medical tape</string>
+    <string name="brief_sensor_issue_sub_bullet_2">Order free overpatches at %1$s or</string>
+    <string name="brief_sensor_issue_sub_bullet_2_bold_text">Settings > Contact</string>
+    <string name="brief_sensor_issue_sub_bullet_url">dexcom.com/tech-support</string>
+    <string name="brief_sensor_issue_toolbar_title">Brief Sensor Issue</string>
+    <string name="bullet_1">1.</string>
+    <string name="bullet_2">2.</string>
+    <string name="calibration">Calibration</string>
+    <string name="calibration_in_progress">Calibration in progress</string>
+    <string name="calibration_in_progress_steps">Your calibration is in progress. Your next sensor reading will reflect your calibration.</string>
+    <string name="calibration_not_available">Calibration not available</string>
+    <string name="calibration_not_used">Calibration not used</string>
+    <string name="calibration_not_used_steps">"G7 couldn't calibrate using the BG meter value you entered at %s. To give your glucose and the sensor time to adjust, try calibrating again in about an hour using a new fingerstick.
+
+To get an accurate BG meter value, follow these steps:
+
+1. Wash your hands with soap and water
+2. Dry your hands
+3. Take a fingerstick"</string>
+    <string name="calibration_saved">Calibration saved</string>
+    <string name="call_tech_support_button">Call Tech Support</string>
+    <string name="callout_high_egv">HIGH</string>
+    <string name="callout_low_egv">LOW</string>
+    <string name="callout_time_today">Today, %1$s</string>
+    <string name="callout_time_yesterday">Yesterday, %1$s</string>
+    <string name="camera_access_restricted">Camera Access Restricted</string>
+    <string name="camera_access_restricted_description">"You can't take a photo without camera access."</string>
+    <string name="cams_consent_revoked_description">Share cannot be used until consent is restored.</string>
+    <string name="cams_consent_revoked_header">You’ve revoked consent to data sharing</string>
+    <string name="can_not_restart_sensor">"Once stopped, you can't restart your sensor."</string>
+    <string name="cancel">Cancel</string>
+    <string name="cancel_search">Cancel Search</string>
+    <string name="cancel_search_dialog_message">This will cancel searching for sensor.</string>
+    <string name="cancel_search_dialog_title">Cancel Search?</string>
+    <string name="cancel_search_text">Cancel Search</string>
+    <string name="cannot_pair_sensor">Cannot Pair Sensor</string>
+    <string name="cannot_pair_sensor_description">"Your sensor is paired to another phone. Sensors can only be paired to one phone. 
+
+ To change phones:
+"</string>
+    <string name="cannot_pair_sensor_step1">"1. Unpair or delete app from old phone
+"</string>
+    <string name="cannot_pair_sensor_step2">"2. Wait 15 minutes
+"</string>
+    <string name="cannot_pair_sensor_step3">3. Tap OK, then Start New Sensor</string>
+    <string name="carbs">Carbs</string>
+    <string name="cert_error_description">Check your internet connection and try again. If this happens again, contact tech support.</string>
+    <string name="cert_error_retry">RETRY</string>
+    <string name="cert_error_title">Connection error</string>
+    <string name="cert_loading">Loading…</string>
+    <string name="cert_retrying">Retrying…</string>
+    <string name="cgm">CGM</string>
+    <string name="cgm_basics">CGM Basics</string>
+    <string name="cgm_safety_statements">CGM Safety Statements</string>
+    <string name="change_alert_settings">Change Alert Settings</string>
+    <string name="change_alerts_later">You can change this later in <b>Profile > Alerts</b>.</string>
+    <string name="character_counter_content_description">Characters entered %1$d of %2$d</string>
+    <string name="character_counter_overflowed_content_description">Character limit exceeded %1$d of %2$d</string>
+    <string name="character_counter_pattern">%1$d/%2$d</string>
+    <string name="check_pairing_code">Check pairing code</string>
+    <string name="check_phone_settins_message">"After you turn on Dexcom ONE alerts, check your phone's settings, or you may miss an alert."</string>
+    <string name="check_transmitter_sn">Check Transmitter SN</string>
+    <string name="chip_text">Chip text</string>
+    <string name="choose_sensor_site">1. Choose Sensor Site</string>
+    <string name="clarity_card_14_unselected">14</string>
+    <string name="clarity_card_14days_selected">14 Days</string>
+    <string name="clarity_card_30_unselected">30</string>
+    <string name="clarity_card_30days_selected">30 Days</string>
+    <string name="clarity_card_3_unselected">3</string>
+    <string name="clarity_card_3days_selected">3 Days</string>
+    <string name="clarity_card_7_unselected">7</string>
+    <string name="clarity_card_7days_selected">7 Days</string>
+    <string name="clarity_card_90_unselected">90</string>
+    <string name="clarity_card_90days_selected">90 Days</string>
+    <string name="clarity_card_generic_decimalFormat">%.1f</string>
+    <string name="clarity_card_generic_decimalPercentageFormat">%.1f</string>
+    <string name="clarity_card_generic_noValuePlaceholder">- - -</string>
+    <string name="clarity_card_generic_notAvailable">Not available</string>
+    <string name="clarity_card_generic_notEnoughData">Not enough data</string>
+    <string name="clarity_card_generic_wholeNumberFormat">%.0f</string>
+    <string name="clarity_card_generic_wholePercentageFormat">%.0f%%</string>
+    <string name="clarity_card_stats_averageGlucose">Average Glucose</string>
+    <string name="clarity_card_stats_averageGlucose_mgdl_unit">mg/dL</string>
+    <string name="clarity_card_stats_averageGlucose_mmol_unit">mmol/L</string>
+    <string name="clarity_card_stats_ea1c">eA1C</string>
+    <string name="clarity_card_stats_ea1c_unit">%</string>
+    <string name="clarity_card_stats_gmi">GMI</string>
+    <string name="clarity_card_stats_gmi_unit">%</string>
+    <string name="clarity_card_stats_header_14days">14-Day Glucose Summary</string>
+    <string name="clarity_card_stats_header_30days">30-Day Glucose Summary</string>
+    <string name="clarity_card_stats_header_3days">3-Day Glucose Summary</string>
+    <string name="clarity_card_stats_header_7days">7-Day Glucose Summary</string>
+    <string name="clarity_card_stats_header_90days">90-Day Glucose Summary</string>
+    <string name="clarity_card_tir_changeDescription">%1$+d%% change since prior %2$d-day period</string>
+    <string name="clarity_card_tir_generic_lessThan1Percent">&lt;1%</string>
+    <string name="clarity_card_tir_header">Time in Range</string>
+    <string name="clarity_card_tir_high">High</string>
+    <string name="clarity_card_tir_inRange">In Range</string>
+    <string name="clarity_card_tir_low">Low</string>
+    <string name="clarity_card_tir_noChangeDescription">No change since prior %1$d-day period</string>
+    <string name="clarity_card_tir_not_enough_data">Not enough data</string>
+    <string name="clarity_card_tir_not_enough_prior_data">Not enough data to compare the prior %1$d-day period</string>
+    <string name="clarity_card_tir_veryHigh">Very High</string>
+    <string name="clarity_card_tir_veryLow">Very Low</string>
+    <string name="clarity_card_title">Clarity</string>
+    <string name="clarity_link">Open Clarity app</string>
+    <string name="clarity_link_description">Dexcom Clarity highlights your glucose patterns, trends and statistics.</string>
+    <string name="clarity_package_name">com.dexcom.clarity.mobile</string>
+    <string name="clarity_report">Clarity Report</string>
+    <string name="clarity_report_description">Show or hide the Clarity Glucose Summary</string>
+    <string name="clarity_target_range_very_high">Above %1$s %2$s</string>
+    <string name="clarity_target_range_very_low">Below %1$s %2$s</string>
+    <string name="clean_and_dry">3. Clean and Dry</string>
+    <string name="clean_and_dry_bullet_a">a. Wash hands and site with soap and water. Dry.</string>
+    <string name="clean_and_dry_bullet_b">b. Scrub site with an alcohol wipe. Let dry.</string>
+    <string name="clean_transmitter_with_alcohol_wipe">a. Clean transmitter with alcohol wipe.</string>
+    <string name="clear_text_end_icon_content_description">Clear text</string>
+    <string name="close">Close</string>
+    <string name="coarse_location_off_state">App Location is Off</string>
+    <string name="coarse_location_off_state_description">To get sensor readings and alerts, Bluetooth needs app Location Permission.</string>
+    <string name="coarse_location_off_state_help">Bluetooth needs app Location Permission to get your sensor readings and alerts.</string>
+    <string name="colors_text">The graph and sensor reading background colors show where your glucose is.</string>
+    <string name="colors_text2">When your glucose goes high, they turn yellow.</string>
+    <string name="colors_text3">Low or heading toward %1$s %2$s fast? They turn red.</string>
+    <string name="colors_title">Colors</string>
+    <string name="com.google.firebase.crashlytics.mapping_file_id">52d4f5ff7e1545628e02a188e1db5808</string>
+    <string name="common_google_play_services_enable_button">Enable</string>
+    <string name="common_google_play_services_enable_text">"%1$s won't work unless you enable Google Play services."</string>
+    <string name="common_google_play_services_enable_title">Enable Google Play services</string>
+    <string name="common_google_play_services_install_button">Install</string>
+    <string name="common_google_play_services_install_text">"%1$s won't run without Google Play services, which are missing from your device."</string>
+    <string name="common_google_play_services_install_title">Get Google Play services</string>
+    <string name="common_google_play_services_notification_channel_name">Google Play services availability</string>
+    <string name="common_google_play_services_notification_ticker">Google Play services error</string>
+    <string name="common_google_play_services_unknown_issue">%1$s is having trouble with Google Play services. Please try again.</string>
+    <string name="common_google_play_services_unsupported_text">"%1$s won't run without Google Play services, which are not supported by your device."</string>
+    <string name="common_google_play_services_update_button">Update</string>
+    <string name="common_google_play_services_update_text">"%1$s won't run unless you update Google Play services."</string>
+    <string name="common_google_play_services_update_title">Update Google Play services</string>
+    <string name="common_google_play_services_updating_text">"%1$s won't run without Google Play services, which are currently updating."</string>
+    <string name="common_google_play_services_wear_update_text">New version of Google Play services needed. It will update itself shortly.</string>
+    <string name="common_open_on_phone">Open on phone</string>
+    <string name="common_signin_button_text">Sign in</string>
+    <string name="common_signin_button_text_long">Sign in with Google</string>
+    <string name="complete">Complete</string>
+    <string name="complete_guide_to_dexcom_android_settings">Complete guide to Dexcom Android Settings</string>
+    <string name="confirm">Confirm</string>
+    <string name="confirm_activity">Confirm Activity</string>
+    <string name="confirm_blood_glucose">Confirm Blood Glucose</string>
+    <string name="confirm_calibration">Confirm Calibration</string>
+    <string name="confirm_deleting_secondary_profile">This will delete your second alert profile</string>
+    <string name="confirm_device_credential_password">Use password</string>
+    <string name="confirm_dialog_description">My sensor is inserted and my transmitter is attached.</string>
+    <string name="confirm_forced_uom_title">Country of Residence: %1$s</string>
+    <string name="confirm_insulin">Confirm Insulin</string>
+    <string name="confirm_meal">Confirm Meal</string>
+    <string name="confirm_note">Confirm Note</string>
+    <string name="confirm_sensor_code">Confirm Sensor Code</string>
+    <string name="confirm_transmitter_sn">Confirm Transmitter SN</string>
+    <string name="confirm_unit_of_measure">Confirm Unit of Measure</string>
+    <string name="confirm_uom_advisory">"If that's not right, tap Change Unit of Measure."</string>
+    <string name="confirm_uom_description_mgdl">Your app will show your sensor readings in &lt;b>mg/dL&lt;/b>.</string>
+    <string name="confirm_uom_description_mmol">Your app will show your sensor readings in &lt;b>mmol/L&lt;/b>.</string>
+    <string name="confirm_uom_screen_change_uom">Change Unit of Measure</string>
+    <string name="confirm_uom_title">Unit of Measure</string>
+    <string name="confirmation">Confirmation</string>
+    <string name="congratulations">Congratulations!</string>
+    <string name="connect">Connect</string>
+    <string name="connect_three_devices_label">Connect up to 2 Display Devices</string>
+    <string name="connected">Connected</string>
+    <string name="connecting">Connecting…</string>
+    <string name="connecting_your_phone">Connecting Your Phone</string>
+    <string name="connection_error">Connection error</string>
+    <string name="connection_error_acm_retry">Retry</string>
+    <string name="connection_error_internet">Check your internet connection and try again.</string>
+    <string name="connection_error_retry">RETRY</string>
+    <string name="connection_error_server">Dexcom server issue. Try again later.</string>
+    <string name="consent_request_description1">Dexcom needs your consent to select and use certain products and services in this app.</string>
+    <string name="consent_request_description2">Tap Continue to review and update your consent. You can change your choices at any time.</string>
+    <string name="consent_required">Consent Required</string>
+    <string name="consent_required_to_turn_on_share">Data consent required to turn on Share.</string>
+    <string name="contact">Contact</string>
+    <string name="continue_editing">Continue Editing</string>
+    <string name="continue_text">Continue</string>
+    <string name="continue_to_app">Continue to App</string>
+    <string name="continue_to_start_new_sensor">Continue to start a new sensor.</string>
+    <string name="continuous_glucose_monitoring">Continuous Glucose Monitoring</string>
+    <string name="copyright">Copyright © %1$s Dexcom, Inc.</string>
+    <string name="copyright_year">2022 - 2023</string>
+    <string name="create_account_button">Create Account</string>
+    <string name="create_account_text">New to Dexcom?</string>
+    <string name="current_high_alert_setting">Current High Setting: %1$s</string>
+    <string name="current_low_alert_setting">Current Low Setting: %1$s</string>
+    <string name="d1_app_name">Dexcom ONE</string>
+    <string name="dashes">- - -</string>
+    <string name="data_consent_review">Consent Review</string>
+    <string name="data_consents">Data Consents</string>
+    <string name="data_consents_badge_number">1</string>
+    <string name="data_sharing">Data sharing</string>
+    <string name="date">Date</string>
+    <string name="date_of_manufacture">Date of Manufacture</string>
+    <string name="days">Days</string>
+    <string name="days_updated">Days have been updated</string>
+    <string name="default_acm_incompatible">This app is invalid, and all features are disabled at this time. Please contact Dexcom for more information.</string>
+    <string name="default_acm_warning">Warning! Please contact Dexcom for more information. Accepting this warning message will allow you to continue using the App, however there may be a known issue with some functionality.</string>
+    <string name="default_error_msg">Unknown error</string>
+    <string name="default_sound_suffix">%1$s (Default)</string>
+    <string name="default_web_client_id">251145227290-2rfbgdhi8vklqtnvb6i733f9kvmio548.apps.googleusercontent.com</string>
+    <string name="delay_first_alert">Delay 1st Alert</string>
+    <string name="delay_first_alert_dialog_description">Delay first alert until your sensor reading is high for this long. Select a delay time between 15 minutes and 4 hours.</string>
+    <string name="delay_first_alert_footer">Turn on to delay your first alert until your sensor reading is high for a while. You choose for how long.</string>
+    <string name="delay_first_alert_timing_description">Delay first alert until your sensor reading is high for this long.</string>
+    <string name="delay_first_notification">Delay 1st Notification</string>
+    <string name="delay_first_notification_description">Only notify your Follower with the %1$s notification after this amount of time.</string>
+    <string name="delay_settings_first_alert">Delay 1st Alert</string>
+    <string name="delay_settings_first_alert_dialog_description">Select a time between 15 minutes and 4 hours.</string>
+    <string name="delay_settings_first_alert_footer">Turn on to delay your first alert until your sensor reading is high for a while. You choose for how long.</string>
+    <string name="delay_settings_first_alert_timing_description">Delay first alert until your sensor reading is high for this long.</string>
+    <string name="delete">Delete</string>
+    <string name="delete_blood_glucose_message">Are you sure you want to delete this blood glucose from your events?</string>
+    <string name="delete_event">Delete Event</string>
+    <string name="delete_event_activity_message">Are you sure you want to delete this activity from your events?</string>
+    <string name="delete_event_insulin_message">Are you sure you want to delete this %s from your events?</string>
+    <string name="delete_event_meal_message">Are you sure you want to delete this meal from your events?</string>
+    <string name="delete_note_message">Are you sure you want to delete this note from your events?</string>
+    <string name="delete_second_alert_profile">Delete Second Alert Profile</string>
+    <string name="delete_this_event_title">Delete this event</string>
+    <string name="delete_this_event_title_caps">Delete This Event</string>
+    <string name="details">Details</string>
+    <string name="dexcom_app_is_running">Dexcom app is running</string>
+    <string name="dexcom_faq_url">dexcom.com/⁠faqs</string>
+    <string name="dexcom_glucose_acces_not_available">"Your sensor reading isn't available."</string>
+    <string name="dexcom_glucose_access_mg_falling">"You're %1$s milligrams per deciliter and falling."</string>
+    <string name="dexcom_glucose_access_mg_falling_high">"You're above %1$s milligrams per deciliter and falling."</string>
+    <string name="dexcom_glucose_access_mg_falling_low">"You're below %1$s milligrams per deciliter and falling."</string>
+    <string name="dexcom_glucose_access_mg_none">"You're %1$s milligrams per deciliter and there's no trend arrow."</string>
+    <string name="dexcom_glucose_access_mg_none_high">"You're above %1$s milligrams per deciliter and there's no trend arrow."</string>
+    <string name="dexcom_glucose_access_mg_none_low">"You're below %1$s milligrams per deciliter and there's no trend arrow."</string>
+    <string name="dexcom_glucose_access_mg_rapid_falling">"You're %1$s milligrams per deciliter and rapidly falling."</string>
+    <string name="dexcom_glucose_access_mg_rapid_falling_high">"You're above %1$s milligrams per deciliter and rapidly falling."</string>
+    <string name="dexcom_glucose_access_mg_rapid_falling_low">"You're below %1$s milligrams per deciliter and rapidly falling."</string>
+    <string name="dexcom_glucose_access_mg_rapid_rising">"You're %1$s milligrams per deciliter and rapidly rising."</string>
+    <string name="dexcom_glucose_access_mg_rapid_rising_high">"You're above %1$s milligrams per deciliter and rapidly rising."</string>
+    <string name="dexcom_glucose_access_mg_rapid_rising_low">"You're below %1$s milligrams per deciliter and rapidly rising."</string>
+    <string name="dexcom_glucose_access_mg_rising">"You're %1$s milligrams per deciliter and rising."</string>
+    <string name="dexcom_glucose_access_mg_rising_high">"You're above %1$s milligrams per deciliter and rising."</string>
+    <string name="dexcom_glucose_access_mg_rising_low">"You're below %1$s milligrams per deciliter and rising."</string>
+    <string name="dexcom_glucose_access_mg_slow_falling">"You're %1$s milligrams per deciliter and slowly falling."</string>
+    <string name="dexcom_glucose_access_mg_slow_falling_high">"You're above %1$s milligrams per deciliter and slowly falling."</string>
+    <string name="dexcom_glucose_access_mg_slow_falling_low">"You're below %1$s milligrams per deciliter and slowly falling."</string>
+    <string name="dexcom_glucose_access_mg_slow_rising">"You're %1$s milligrams per deciliter and slowly rising."</string>
+    <string name="dexcom_glucose_access_mg_slow_rising_high">"You're above %1$s milligrams per deciliter and slowly rising."</string>
+    <string name="dexcom_glucose_access_mg_slow_rising_low">"You're below %1$s milligrams per deciliter and slowly rising."</string>
+    <string name="dexcom_glucose_access_mg_steady">"You're %1$s milligrams per deciliter and steady."</string>
+    <string name="dexcom_glucose_access_mg_steady_high">"You're above %1$s milligrams per deciliter and steady."</string>
+    <string name="dexcom_glucose_access_mg_steady_low">"You're below %1$s milligrams per deciliter and steady."</string>
+    <string name="dexcom_glucose_access_ml_falling">"You're %1$s millimoles per liter and falling."</string>
+    <string name="dexcom_glucose_access_ml_falling_high">"You're above %1$s millimoles per liter and falling."</string>
+    <string name="dexcom_glucose_access_ml_falling_low">"You're below %1$s millimoles per liter and falling."</string>
+    <string name="dexcom_glucose_access_ml_none">"You're %1$s millimoles per liter and there's no trend arrow."</string>
+    <string name="dexcom_glucose_access_ml_none_high">"You're above %1$s millimoles per liter and there's no trend arrow."</string>
+    <string name="dexcom_glucose_access_ml_none_low">"You're below %1$s millimoles per liter and there's no trend arrow."</string>
+    <string name="dexcom_glucose_access_ml_rapid_falling">"You're %1$s millimoles per liter and rapidly falling."</string>
+    <string name="dexcom_glucose_access_ml_rapid_falling_high">"You're above %1$s millimoles per liter and rapidly falling."</string>
+    <string name="dexcom_glucose_access_ml_rapid_falling_low">"You're below %1$s millimoles per liter and rapidly falling."</string>
+    <string name="dexcom_glucose_access_ml_rapid_rising">"You're %1$s millimoles per liter and rapidly rising."</string>
+    <string name="dexcom_glucose_access_ml_rapid_rising_high">"You're above %1$s millimoles per liter and rapidly rising."</string>
+    <string name="dexcom_glucose_access_ml_rapid_rising_low">"You're below %1$s millimoles per liter and rapidly rising."</string>
+    <string name="dexcom_glucose_access_ml_rising">"You're %1$s millimoles per liter and rising."</string>
+    <string name="dexcom_glucose_access_ml_rising_high">"You're above %1$s millimoles per liter and rising."</string>
+    <string name="dexcom_glucose_access_ml_rising_low">"You're below %1$s millimoles per liter and rising."</string>
+    <string name="dexcom_glucose_access_ml_slow_falling">"You're %1$s millimoles per liter and slowly falling."</string>
+    <string name="dexcom_glucose_access_ml_slow_falling_high">"You're above %1$s millimoles per liter and slowly falling."</string>
+    <string name="dexcom_glucose_access_ml_slow_falling_low">"You're below %1$s millimoles per liter and slowly falling."</string>
+    <string name="dexcom_glucose_access_ml_slow_rising">"You're %1$s millimoles per liter and slowly rising."</string>
+    <string name="dexcom_glucose_access_ml_slow_rising_high">"You're above %1$s millimoles per liter and slowly rising."</string>
+    <string name="dexcom_glucose_access_ml_slow_rising_low">"You're below %1$s millimoles per liter and slowly rising."</string>
+    <string name="dexcom_glucose_access_ml_steady">"You're %1$s millimoles per liter and steady."</string>
+    <string name="dexcom_glucose_access_ml_steady_high">"You're above %1$s millimoles per liter and steady."</string>
+    <string name="dexcom_glucose_access_ml_steady_low">"You're below %1$s millimoles per liter and steady."</string>
+    <string name="dexcom_glucose_adjusting_clock">Adjusting Clock</string>
+    <string name="dexcom_glucose_bluetooth_is_off">Bluetooth is Off</string>
+    <string name="dexcom_glucose_bluetooth_off_help_1">Bluetooth on your smart device is off. Bluetooth must be on in order to get glucose information on your smart device.</string>
+    <string name="dexcom_glucose_bluetooth_off_help_2">Exit this app. Tap Settings > Bluetooth and turn Bluetooth to on.</string>
+    <string name="dexcom_glucose_calibrate_after">"Calibrate after
+%s"</string>
+    <string name="dexcom_glucose_calibrate_again">Calibrate again</string>
+    <string name="dexcom_glucose_calibrate_again_help_1">Your recent calibration was not accepted.</string>
+    <string name="dexcom_glucose_calibrate_again_help_2">Enter a new blood glucose reading to recalibrate your sensor.</string>
+    <string name="dexcom_glucose_calibrate_error_help_1">Your recent calibration was not accepted.</string>
+    <string name="dexcom_glucose_calibrate_error_help_2">Enter a new blood glucose reading to recalibrate your sensor after</string>
+    <string name="dexcom_glucose_calibrate_error_help_in_15_min">"Your recent calibration was not accepted.
+
+Enter a new blood glucose reading to recalibrate your sensor in 15 min."</string>
+    <string name="dexcom_glucose_calibrate_in_15_min">"Calibrate in
+15 min"</string>
+    <string name="dexcom_glucose_calibration_error">Calibration Error</string>
+    <string name="dexcom_glucose_calibration_help_1">At the beginning of your sensor session you will need to take two fingerSticks with your meter.</string>
+    <string name="dexcom_glucose_calibration_help_2">"Enter your blood glucose readings into either the app or receiver. You don't need to enter the readings into both."</string>
+    <string name="dexcom_glucose_cgm_status_action_button_text_default">Action Button</string>
+    <string name="dexcom_glucose_cgm_status_display_detail_default">Default Status</string>
+    <string name="dexcom_glucose_cgm_status_display_title_default">Default Title</string>
+    <string name="dexcom_glucose_compass_egv_default">- - -</string>
+    <string name="dexcom_glucose_egv_high">@string/callout_high_egv</string>
+    <string name="dexcom_glucose_egv_low">@string/callout_low_egv</string>
+    <string name="dexcom_glucose_enter_1st_blood_glucose_reading">"Enter Your 1st
+Blood Glucose
+Reading"</string>
+    <string name="dexcom_glucose_enter_2nd_blood_glucose_reading">"Enter Your 2nd
+Blood Glucose
+Reading"</string>
+    <string name="dexcom_glucose_font_name" />
+    <string name="dexcom_glucose_help">Help</string>
+    <string name="dexcom_glucose_mgdl">mg/dL</string>
+    <string name="dexcom_glucose_mmol">mmol/L</string>
+    <string name="dexcom_glucose_no_data">No data</string>
+    <string name="dexcom_glucose_no_reading">No Readings</string>
+    <string name="dexcom_glucose_no_readings_help_3">Make sure your transmitter is snapped into your sensor pod.</string>
+    <string name="dexcom_glucose_no_readings_help_4">If No Readings continues for more than 3 hours, contact Tech Support.</string>
+    <string name="dexcom_glucose_no_readings_sensor_error_help_1">You will not receive alerts, alarms, or sensor glucose readings.</string>
+    <string name="dexcom_glucose_no_readings_sensor_error_help_2">Use your blood glucose meter for treatment decisions.</string>
+    <string name="dexcom_glucose_pair_new_transmitter">Pair New Transmitter</string>
+    <string name="dexcom_glucose_please_wait">Please wait…</string>
+    <string name="dexcom_glucose_remaining_hr">%dh remaining</string>
+    <string name="dexcom_glucose_remaining_hr_min" formatted="false">%dh %dmin remaining</string>
+    <string name="dexcom_glucose_remaining_hrs">%dh remaining</string>
+    <string name="dexcom_glucose_remaining_hrs_min" formatted="false">%dh %dmin remaining</string>
+    <string name="dexcom_glucose_remaining_min">%dmin remaining</string>
+    <string name="dexcom_glucose_remaining_min_less_than_or_equal_five">About 5mins remaining</string>
+    <string name="dexcom_glucose_sensor_error">Sensor Error</string>
+    <string name="dexcom_glucose_sensor_error_help_3">If the sensor error continues for more than 30 minutes, contact Tech Support.</string>
+    <string name="dexcom_glucose_sensor_insertion_video">Sensor Insertion Video</string>
+    <string name="dexcom_glucose_sensor_insertion_video_url">https://www.dexcom.com/links/g6/sensor-insertion</string>
+    <string name="dexcom_glucose_signal_loss">Signal Loss</string>
+    <string name="dexcom_glucose_start_sensor">Start Sensor</string>
+    <string name="dexcom_glucose_time_loss_help_1">The time has been changed on this smart device. Please wait up to 10 minutes while the Dexcom CGM adjusts to the new time.</string>
+    <string name="dexcom_glucose_time_loss_help_2">The Adjusting Clock warning will go away as soon as the adjustment is finished.</string>
+    <string name="dexcom_glucose_title" />
+    <string name="dexcom_glucose_transmitter_not_found">Transmitter Not Found</string>
+    <string name="dexcom_glucose_transmitter_pairing_not_found_help_1">Make sure your transmitter is properly inserted into your sensor pod.</string>
+    <string name="dexcom_glucose_transmitter_pairing_not_found_help_2">If the error continues, go to Menu > Settings > Transmitter > Pair new to go through the pairing process again.</string>
+    <string name="dexcom_glucose_transmitter_signal_loss_help_1">Avoid barriers between your transmitter and smart device. Keep them within 20 feet of each other</string>
+    <string name="dexcom_glucose_transmitter_signal_loss_help_2">It may take up to 30 minutes to reconnect.</string>
+    <string name="dexcom_logo">dexcom logo</string>
+    <string name="dexcom_one_basics">Dexcom ONE Basics</string>
+    <string name="dexcom_privacy_policy_link">https://www.dexcom.com/linked/documentservice/PrivacyPolicy</string>
+    <string name="dexcom_status_url">status.dexcom.com</string>
+    <string name="dexcom_tech_support_url">https://dexcom.com/tech-support</string>
+    <string name="discard">Discard</string>
+    <string name="discard_caps">DISCARD</string>
+    <string name="discard_changes">Discard Changes?</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="disconnect_from_google_fit_message">Are you sure you want to disconnect and stop sharing data with Google Fit?</string>
+    <string name="disconnect_from_google_fit_title">Disconnect From Google Fit</string>
+    <string name="disconnected">Disconnected</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="display_device_dexcom_receiver">"1 Dexcom
+Receiver"</string>
+    <string name="display_device_smart_phone">"1 Smart
+Phone"</string>
+    <string name="display_device_smart_watch">"1 Smart
+Watch"</string>
+    <string name="display_devices_info_label">Get your glucose information on your phone or Dexcom receiver or both.</string>
+    <string name="display_devices_title">Display Devices</string>
+    <string name="display_stop_time_one_day">%1$s (+1 day)</string>
+    <string name="do_not_touch_adhesive">Do not touch adhesive.</string>
+    <string name="done">Done</string>
+    <string name="dont_allow">"Don't allow"</string>
+    <string name="dont_allow_capital">"Don't Allow"</string>
+    <string name="dont_show_this_again">"Don't show this again"</string>
+    <string name="dont_use_features_description">"These phone features can prevent the app from working. The app can't alert you about these phone features."</string>
+    <string name="dont_use_feaures_title">"Don't Use These Android Features"</string>
+    <string name="duration">Duration</string>
+    <string name="dx1_number_and_arrow_description">Dexcom ONE gives you your sensor readings and if it is trending up or down.</string>
+    <string name="dynamic_button_placeholder">" "</string>
+    <string name="ea1c">eA1C</string>
+    <string name="ea1c_description">Estimated A1C (eA1C) approximates the laboratory A1C level. Requires a minimum set of sensor readings over 12 days.</string>
+    <string name="edit_event">Edit Event</string>
+    <string name="edit_nickname">Edit Nickname</string>
+    <string name="edit_pairing_code">Edit Pairing Code</string>
+    <string name="edit_pairing_code_description">This will cancel searching for sensor with pairing code:</string>
+    <string name="edit_pairing_code_question">Edit Pairing Code?</string>
+    <string name="edit_transmitter_sn">Edit Transmitter SN</string>
+    <string name="elc_app_stopped_notification">App Stopped</string>
+    <string name="elc_app_stopped_notification_description">No readings until you choose a supported language.</string>
+    <string name="elc_blocking_summary_description">"The G7 app isn't available in your selected language.
+
+Choose one of these languages:
+\u0009- English
+\u0009- Spanish
+
+No readings or alerts until you choose a language listed above."</string>
+    <string name="elc_fix_text">"1. Tap Open Phone Settings below
+2. Navigate to Languages
+3. Choose a language listed above"</string>
+    <string name="elc_fix_title">How to fix:</string>
+    <string name="elc_language_not_available">Language not available</string>
+    <string name="elc_onboarding_summary_description">"The G7 app isn't available in your selected language.
+
+Choose one of these languages:
+\u0009- English
+\u0009- Spanish"</string>
+    <string name="elc_open_phone_settings">Open Phone Settings</string>
+    <string name="enable_bluetooth">Enable Bluetooth</string>
+    <string name="enable_bluetooth_description">Bluetooth must be on for Dexcom ONE to work. It pairs the transmitter with the app.</string>
+    <string name="enable_bluetooth_on_description">You will be able to pair the transmitter with the app.</string>
+    <string name="enable_bluetooth_on_title">Bluetooth is on</string>
+    <string name="enable_location">Enable Location</string>
+    <string name="enable_nearby_device_permissions">Enable Nearby Devices</string>
+    <string name="enabled_both">Signal Loss and Brief Sensor Issue alerts are on.</string>
+    <string name="enabled_bsi">Brief Sensor Issue alert is on.</string>
+    <string name="enabled_signal_loss">Signal Loss alert is on.</string>
+    <string name="enter_4_digit_sensor_code">Enter 4-Digit Sensor Code</string>
+    <string name="enter_4_digit_sensor_code_description">"Sensor Code is on sensor applicator.
+ONLY enter Sensor Code from sensor you insert."</string>
+    <string name="enter_a_bg_meter_value_between_mgdl_message">"Enter a BG meter value between
+20 and 600 mg/dL"</string>
+    <string name="enter_a_bg_meter_value_between_mmol_message">"Enter a BG meter value between
+1.1 and 33.3 mmol/L"</string>
+    <string name="enter_code_manually">Enter Code Manually</string>
+    <string name="enter_fingerstick">"Enter fingerstick within 5 minutes of taking it. Use current date and time.
+You can't edit saved calibrations."</string>
+    <string name="enter_pairing_code">Enter Pairing Code</string>
+    <string name="enter_primary_profile_name_description">Enter a name for your primary alert profile</string>
+    <string name="enter_secondary_profile_name_description">Enter a name for your second alert profile</string>
+    <string name="enter_sn_manually">Enter SN Manually</string>
+    <string name="enter_transmitter_sn">Enter Transmitter SN</string>
+    <string name="enter_transmitter_sn_description">The transmitter SN is printed on the bottom of your transmitter and on the outside of the transmitter box.</string>
+    <string name="enter_your_first_event_button">Enter your first event</string>
+    <string name="entry_type">Entry Type</string>
+    <string name="error">Error</string>
+    <string name="error_icon_content_description">Error</string>
+    <string name="event_tooltip_description">Below the event name is the time and sensor reading when you saved it.</string>
+    <string name="events">Events</string>
+    <string name="events_not_entered_description">Use events to track your insulin doses, BG meter values, meals, activity or add information. If you choose to calibrate, you can do that here.</string>
+    <string name="events_not_entered_title">"You haven't entered an event yet"</string>
+    <string name="every_few_minutes">Every %1$s minutes</string>
+    <string name="exit_app">"1. Exit app
+"</string>
+    <string name="exposed_dropdown_menu_content_description">Show dropdown menu</string>
+    <string name="extremely_helpful">Extremely helpful</string>
+    <string name="extremely_unhelpful">Extremely unhelpful</string>
+    <string name="fab_transformation_scrim_behavior">com.google.android.material.transformation.FabTransformationScrimBehavior</string>
+    <string name="fab_transformation_sheet_behavior">com.google.android.material.transformation.FabTransformationSheetBehavior</string>
+    <string name="fall_rate">Fall Rate</string>
+    <string name="falling_fast">Falling Fast</string>
+    <string name="falling_fast_alert">Falling Fast Alert</string>
+    <string name="falling_fast_alert_description">Alerts you when your sensor readings are going down quickly.</string>
+    <string name="falling_fast_single_unicode">↓ Falling Fast</string>
+    <string name="falling_fast_unicode">↓↓ Falling Fast</string>
+    <string name="falling_level_text_description">"Get alert only when:
+    1.    your glucose is falling fast and
+    2.    glucose is below this number"</string>
+    <string name="fast_acting">Fast-acting</string>
+    <string name="fast_acting_info">Typically taken when dosing for meals or corrections.</string>
+    <string name="fast_acting_insulin">Fast-Acting Insulin</string>
+    <string name="fast_acting_insulin_deleted">Fast-acting insulin deleted</string>
+    <string name="fast_acting_insulin_saved">Fast-acting insulin saved</string>
+    <string name="fast_acting_insulin_updated_message">Fast-acting insulin updated</string>
+    <string name="fast_acting_out_of_range_error_message">You can only enter 0.1–50.0 units of fast-acting insulin.</string>
+    <string name="fast_acting_title">Fast-Acting</string>
+    <string name="feedback">Feedback</string>
+    <string name="feedback_thanks">Thanks for your feedback.</string>
+    <string name="feedback_thanks_message">Thanks for your feedback</string>
+    <string name="filter_view_dexcom_schema">Dexcom schema filter</string>
+    <string name="find_answers">Find Answers</string>
+    <string name="fingerprint_dialog_touch_sensor">Touch the fingerprint sensor</string>
+    <string name="fingerprint_error_hw_not_available">Fingerprint hardware not available.</string>
+    <string name="fingerprint_error_hw_not_present">This device does not have a fingerprint sensor</string>
+    <string name="fingerprint_error_lockout">Too many attempts. Please try again later.</string>
+    <string name="fingerprint_error_no_fingerprints">No fingerprints enrolled.</string>
+    <string name="fingerprint_error_user_canceled">Fingerprint operation canceled by user.</string>
+    <string name="fingerprint_not_recognized">Not recognized</string>
+    <string name="fingerstick_or_calibration">Fingerstick or calibration</string>
+    <string name="finish">Finish</string>
+    <string name="firebase_database_url">https://prod-eu-6e-g7-firebase.firebaseio.com</string>
+    <string name="firmware">Firmware</string>
+    <string name="firmware_title">Firmware</string>
+    <string name="five_mins_remaining">5min or less remaining</string>
+    <string name="focus_mode_label">Focus Mode</string>
+    <string name="fold_and_break_off_safety_guard">b. Fold and break off safety guard.</string>
+    <string name="fonts_untranslatable">fonts</string>
+    <string name="for_more_than">For More Than</string>
+    <string name="for_more_than_description">"Don't get alert until Signal Loss lasts this long."</string>
+    <string name="foreground_channel">Foreground Channel</string>
+    <string name="formatted_date_time">%1$s, %2$s</string>
+    <string name="free_up_storage">"3. Free up storage
+"</string>
+    <string name="frequently_asked_questions">Frequently Asked Questions</string>
+    <string name="friday">F</string>
+    <string name="full_hours_and_min_left">%1$s and %2$s left</string>
+    <string name="full_safety_statement">Full Safety Statement</string>
+    <string name="g7_action_required">Action Required!</string>
+    <string name="g7_action_required_text">You must allow these phone settings to continue using the G7 app.</string>
+    <string name="g7_action_required_text2">You must allow these phone settings to continue using the app.</string>
+    <string name="g7_android_safety">G7 Android Safety</string>
+    <string name="g7_android_safety_header_title">G7 Android Safety</string>
+    <string name="g7_android_safety_tool_tip_description">To view safety information again, tap here.</string>
+    <string name="g7_app_name">Dexcom G7</string>
+    <string name="g7_background_restriction_notification_description">No readings or alerts until you turn off the background restriction. Tap for more information.</string>
+    <string name="g7_battery_optimization_notification_description">No readings or alerts until you turn off battery optimizing. Tap for more information.</string>
+    <string name="g7_calibration_title">Calibration not used.</string>
+    <string name="g7_cannot_pair_sensor">Cannot pair sensor</string>
+    <string name="g7_cannot_pair_sensor_message">Sensors can only be paired with one phone at a time. Tap for more info.</string>
+    <string name="g7_do_not_disturb_notification_description">No readings or alerts until you give permission. Tap for more information.</string>
+    <string name="g7_do_not_disturb_permission_required">Do Not Disturb Permission Required</string>
+    <string name="g7_enable_bluetooth_description">Bluetooth must be on for Dexcom G7 to work. It pairs the sensor with the app.</string>
+    <string name="g7_enable_bluetooth_on_description">You will be able to pair the sensor with the app.</string>
+    <string name="g7_enable_bluetooth_on_title">Bluetooth is On</string>
+    <string name="g7_falling_fast_single_unicode">%1$s ↓ Falling Fast</string>
+    <string name="g7_falling_fast_unicode">%1$s ↓↓ Falling Fast</string>
+    <string name="g7_grace_period_2_hour_message">2 hours left in grace period.</string>
+    <string name="g7_grace_period_30_min_message">30 minutes left in grace period.</string>
+    <string name="g7_grace_period_expiration_message">Grace period expired. No readings or alerts until you start a new sensor.</string>
+    <string name="g7_grace_period_expiration_title">Replace Sensor Now</string>
+    <string name="g7_grace_period_readings_stop_soon">Readings Stop Soon</string>
+    <string name="g7_location_permissions_denied_description">You must always allow location permission to continue.</string>
+    <string name="g7_location_permissions_denied_title">You denied location permission</string>
+    <string name="g7_location_permissions_on_title">Location permission is on</string>
+    <string name="g7_low">G7 Low</string>
+    <string name="g7_pairing_too_long_1_message">Tap for troubleshooting tips.</string>
+    <string name="g7_pairing_too_long_2_message">Check pairing code. Tap for more troubleshooting tips.</string>
+    <string name="g7_pairing_too_long_3_message">Move at least %1$s away from others wearing a sensor. Tap for more troubleshooting tips.</string>
+    <string name="g7_phone_bluetooth_off_description">"Your phone Bluetooth is off. It must be on for you to get sensor readings and alerts.
+
+Tap below to turn on phone Bluetooth."</string>
+    <string name="g7_phone_conflict_description">Your phone settings are preventing the Dexcom system from functioning as intended.</string>
+    <string name="g7_phone_conflict_detail_background_fix_1">How to turn off background restriction:</string>
+    <string name="g7_phone_conflict_detail_background_fix_2">"1. Tap Open Phone Settings below.
+2. Turn off background restriction."</string>
+    <string name="g7_phone_conflict_detail_battery_optimization_description">"Because battery optimizing is on, your alerts may be delayed. If you're using Share, information sent to Followers may also be delayed."</string>
+    <string name="g7_phone_conflict_detail_battery_optimization_fix">&lt;b>How to turn off battery optimizing:&lt;/b>&lt;br>&lt;br>1. Tap &lt;b>Open Phone Settings&lt;/b> below.&lt;br>2. &lt;b>Turn off&lt;/b> battery optimizing.</string>
+    <string name="g7_phone_conflict_detail_battery_optimizing_fix_detail">1. Tap <b>Open Phone Settings</b>" below.
+2. Find "<b>Battery usage</b>".
+3. Set battery usage to "<b>Unrestricted</b>".
+4. Tap the Back button to return."</string>
+    <string name="g7_phone_conflict_detail_battery_optimizing_fix_text">1. Tap Open Phone Settings below.&lt;br>2. Turn off battery optimizing.</string>
+    <string name="g7_phone_conflict_detail_battery_optimizing_fix_title">How to turn off battery optimizing:</string>
+    <string name="g7_phone_conflict_detail_dnd_fix_1">How to turn Do Not Disturb Permission on:</string>
+    <string name="g7_phone_conflict_detail_dnd_fix_2">"1. Tap Open Phone Settings below
+2. Find Dexcom G7 app
+3. Allow Do Not Disturb access
+4. Tap the Back button to return"</string>
+    <string name="g7_phone_conflict_detail_notifications_description">"Because Notifications are Off, alerts won't show on your phone. Urgent Low and Sensor Failed will sound but other alerts may not."</string>
+    <string name="g7_phone_conflict_detail_notifications_fix_text">1. Tap Open Phone Settings below.&lt;br>2. Tap Notifications.&lt;br>3. Turn on Notification.</string>
+    <string name="g7_phone_conflict_detail_notifications_fix_title">How to turn on notifications:</string>
+    <string name="g7_phone_conflict_detail_time_issue_description">"Because you changed the phone's time, your app stopped working correctly."</string>
+    <string name="g7_phone_conflict_detail_time_issue_fix_text">"Connect your phone to the Internet. When connected, the issue should resolve immediately.&lt;br>&lt;br>To prevent the app time issue, don't change the phone's time when not connected to the Internet."</string>
+    <string name="g7_phone_conflict_detail_time_issue_fix_title">How to fix:</string>
+    <string name="g7_phone_conflict_dialog_text">&lt;b>Phone Setting Conflict&lt;/b>&lt;br>&lt;br>Your phone settings are preventing your app from working as designed. Tap the icon at the top left corner to fix.</string>
+    <string name="g7_phone_conflict_error_battery_optimization">Battery Optimizing is On</string>
+    <string name="g7_phone_conflict_error_battery_usage">"App isn't Running in Background"</string>
+    <string name="g7_phone_conflict_error_dnd">Do Not Disturb Permission is Off</string>
+    <string name="g7_phone_conflict_error_notifications_off">Notifications are Off</string>
+    <string name="g7_phone_conflict_error_time_issue">App Time Issue</string>
+    <string name="g7_phone_conflict_notification_description">"Your alerts won't show on your phone."</string>
+    <string name="g7_phone_conflict_summary_battery_optimization_description">Your alerts, as well as information sent to Followers, may be delayed.</string>
+    <string name="g7_phone_conflict_summary_more_info_link">Tap here for a complete guide</string>
+    <string name="g7_phone_location_off_message">To get sensor readings and alerts Bluetooth needs phone location.</string>
+    <string name="g7_phone_settings_conflict_text">Phone Setting Conflict</string>
+    <string name="g7_phone_settings_conflicts_text">Phone Setting Conflicts</string>
+    <string name="g7_rising_fast_single_unicode">%1$s ↑ Rising Fast</string>
+    <string name="g7_rising_fast_unicode">%1$s ↑↑ Rising Fast</string>
+    <string name="g7_sensor_expired_message">12 hours left in grace period.</string>
+    <string name="g7_sensor_expires_24_hour_title">Sensor Expires in 24 Hours</string>
+    <string name="g7_sensor_expires_two_hours_title">Sensor Expires in 2 Hours</string>
+    <string name="g7_sensor_failed_alert_message">No readings or alerts.</string>
+    <string name="g7_sensor_failed_due_to_restart_message">Sensors can only be used for one session. No readings or alerts until you start a new sensor.</string>
+    <string name="g7_sensor_not_found_yet">Sensor not found yet</string>
+    <string name="g7_sensor_paired">Sensor Paired</string>
+    <string name="g7_sensor_paired_message">Your sensor is now warming up.</string>
+    <string name="gather_supplies">2. Gather Supplies</string>
+    <string name="gcm_defaultSenderId">251145227290</string>
+    <string name="gcs_cor_error_description_g7">"Your Dexcom country of residence is different from your phone's location. 
+
+You must resolve this with Dexcom technical support to continue."</string>
+    <string name="gcs_cor_error_link_g7">Tap here to contact Dexcom technical support.</string>
+    <string name="gcs_cor_issue_text">Country of residence issue</string>
+    <string name="gcs_error_description_g7">"Make sure your phone is connected to the internet and try again. 
+
+Dexcom needs the internet to confirm your phone's compatibility."</string>
+    <string name="gcs_info_description">Your account profile lists your Country of Residence (COR) as <b>%1$s</b>, and your app will display your sensor readings in <b>%2$s</b>.</string>
+    <string name="generic_error_user_canceled">Authentication canceled by user.</string>
+    <string name="get_started">Get Started</string>
+    <string name="glucose_alerts">Glucose Alerts</string>
+    <string name="glucose_high_title">High Glucose</string>
+    <string name="glucose_low_title">Low Glucose</string>
+    <string name="glucose_tab">Glucose Tab</string>
+    <string name="glucose_urgent_low_soon_message">Act now to prevent low.</string>
+    <string name="glucose_urgent_low_soon_title">Urgent Low Soon</string>
+    <string name="glucose_urgent_low_title">Urgent Low</string>
+    <string name="gmi">GMI</string>
+    <string name="gmi_description">Glucose Management Indicator (GMI) is calculated using your average sensor glucose data. GMI can be an indicator of how well you are managing your glucose levels. Your GMI will likely differ from your A1C. Go to your product instructions for more information.</string>
+    <string name="go_back">Go Back</string>
+    <string name="go_to_phone_settings">"2. Go to storage in your phone settings
+"</string>
+    <string name="go_to_settings">Go to settings</string>
+    <string name="go_to_settings_camera">Go to Settings</string>
+    <string name="go_to_settings_g7">Go To Phone Settings</string>
+    <string name="google_api_key">AIzaSyDRWfX4RNw1rc0cxLUhtq2ON2JThoGFvK8</string>
+    <string name="google_app_id">1:251145227290:android:bf8053a484bcbc484595a3</string>
+    <string name="google_crash_reporting_api_key">AIzaSyDRWfX4RNw1rc0cxLUhtq2ON2JThoGFvK8</string>
+    <string name="google_fit">Google Fit</string>
+    <string name="google_fit_description">Google Fit tracks your activities and gathers data from other devices and apps so you see all your health stats in one place.</string>
+    <string name="google_fit_view_details">To view the details, open Google Fit app.</string>
+    <string name="google_play_store_not_installed">Google Play Store not installed</string>
+    <string name="google_storage_bucket">prod-eu-6e-g7-firebase.appspot.com</string>
+    <string name="grace_period">Grace Period</string>
+    <string name="grace_period_alert_details">"Your G7 sensor lasts for 10 days.
+
+In case you need more time to replace your sensor, we give you an extra 12 hour grace period. Your system works exactly as it did during your sensor session."</string>
+    <string name="grace_period_expired_no_readings_or_alerts">Grace period expired. No readings or alerts until you start a new sensor.</string>
+    <string name="grace_period_mins">%1$s</string>
+    <string name="grams_sufix">g</string>
+    <string name="graph_container_lib_name">graph-container</string>
+    <string name="graph_height">Graph Height</string>
+    <string name="help">Help</string>
+    <string name="help_improve_text">Please help us to improve our products. Why did you stop early?</string>
+    <string name="hide_bottom_always_behavior">com.dexcom.dexcomone.ui.navigation.behavior.HideBottomViewAlways</string>
+    <string name="hide_bottom_view_on_scroll_behavior">com.google.android.material.behavior.HideBottomViewOnScrollBehavior</string>
+    <string name="high">High</string>
+    <string name="high_alert">High Alert</string>
+    <string name="high_alert_repeat_dialog_description">After you acknowledge your first alert, it repeats if your sensor reading stays high for this long. Select a repeat time between 15 minutes and 4 hours.</string>
+    <string name="high_alert_repeat_timing">After you acknowledge your first alert, it repeats if your sensor reading stays high for this long.</string>
+    <string name="high_alert_snooze_description">Turn on Snooze to get a repeat alert if your sensor reading stays high.</string>
+    <string name="high_alert_toolbar_title">High Alert</string>
+    <string name="high_alerts_description">Glucose alerts let you know when your glucose has gone too high.</string>
+    <string name="high_glucose">High Glucose</string>
+    <string name="high_glucose_alert">High Glucose Alert</string>
+    <string name="high_no_trend">HIGH</string>
+    <string name="high_settings_alert_repeat_dialog_description">After you acknowledge your first alert, it repeats if your sensor reading stays high for this long. Select a snooze time between 15 minutes and 4 hours.</string>
+    <string name="high_settings_alert_repeat_timing">After you acknowledge your first alert, it repeats if your sensor reading stays high for this long.</string>
+    <string name="high_settings_alert_snooze_description">Turn on to get a repeat alert if your sensor reading stays high for a while. You choose for how long.</string>
+    <string name="hour">h</string>
+    <string name="hours">hr</string>
+    <string name="hours_and_mins_left">%1$s %2$s left</string>
+    <string name="how_it_works">How it works</string>
+    <string name="how_it_works_description">After you insert a sensor, attach a transmitter, and start a session, the transmitter sends sensor readings to your phone.</string>
+    <string name="how_to">How To</string>
+    <string name="how_to_fix">How to Fix</string>
+    <string name="how_to_fix_location_off_permission">How to turn on Location Permission:</string>
+    <string name="how_to_insert_a_sensor">How to Insert a Sensor</string>
+    <string name="how_to_insert_new_sensor_text">How to insert Sensor?</string>
+    <string name="how_to_insert_sensor">How to insert Sensor?</string>
+    <string name="how_to_turn_on_location_permission">How to turn on location permission:</string>
+    <string name="how_to_turn_on_nearby_devices_permission">How to turn on Nearby Devices permission:</string>
+    <string name="i_understand">I Understand</string>
+    <string name="i_would_like">I would like:</string>
+    <string name="icon_content_description">Dialog Icon</string>
+    <string name="if_code_doesnt_match">"If code doesn't match:"</string>
+    <string name="if_not_insert_sensor_and_attach_transmitter_now">If not, insert sensor and attach transmitter now.</string>
+    <string name="if_sn_does_not_match">If SN doesn’t match:</string>
+    <string name="if_sn_does_not_match_description">Tap below, then enter the Transmitter SN on the box.</string>
+    <string name="if_sn_matches">If SN matches:</string>
+    <string name="important">Important!</string>
+    <string name="in_progress">In progress</string>
+    <string name="in_starter_kit">In Starter Kit</string>
+    <string name="inaccurate_readings">Inaccurate readings</string>
+    <string name="incompatible">Incompatible</string>
+    <string name="information">Information</string>
+    <string name="insert_and_pair_sensor">Insert &amp; pair sensor</string>
+    <string name="insert_new_sensor">Insert New Sensor</string>
+    <string name="insert_new_sensor_now">Insert new Sensor now</string>
+    <string name="insert_sensor">5. Insert Sensor</string>
+    <string name="insert_sensor_and_pair_transmitter">Insert sensor &amp; pair transmitter</string>
+    <string name="insert_sensor_title">Insert Sensor</string>
+    <string name="insert_sensor_to_pair">Insert sensor to pair</string>
+    <string name="insert_transmitter_tab_first_into_holder">b. Insert transmitter, tab first, into holder.</string>
+    <string name="insertion_and_attachment">Insertion &amp; Attachment</string>
+    <string name="insertion_instructions">Insertion Instructions</string>
+    <string name="instructions">Instructions</string>
+    <string name="insulin">Insulin</string>
+    <string name="insulin_clear_insulin_field">Clear insulin units</string>
+    <string name="insulin_date_field">Insulin DatePicker</string>
+    <string name="insulin_deleted">Insulin deleted</string>
+    <string name="insulin_description">Fast- or long-acting dose</string>
+    <string name="insulin_event_not_saved">Insulin event not saved</string>
+    <string name="insulin_saved">Insulin saved</string>
+    <string name="insulin_time_field">Insulin TimePicker</string>
+    <string name="insulin_type">Insulin Type</string>
+    <string name="insulin_type_lowercase">Insulin type</string>
+    <string name="insulin_units">Insulin units</string>
+    <string name="insulin_units_dashes_suffix">- -</string>
+    <string name="insulin_units_out_of_range">Insulin Units Out of Range</string>
+    <string name="insulin_units_suffix">u</string>
+    <string name="insulin_units_value_suffix">" u"</string>
+    <string name="intensity_level">Intensity level</string>
+    <string name="intensity_level_intense">Intense</string>
+    <string name="intensity_level_medium">Medium</string>
+    <string name="intensity_level_soft">Soft</string>
+    <string name="internet_required">Internet Required</string>
+    <string name="invalid_character_regex">[\"“;:”`\\\\/&lt;>]</string>
+    <string name="invalid_country">Invalid Country of Residence (COR)</string>
+    <string name="invalid_country_description">"Dexcom ONE isn’t licensed for use in the COR saved in your account profile.
+
+1. Delete the app and reinstall it
+
+2. Create a new account using the prompt in the app"</string>
+    <string name="invalid_country_description_g7">"This Dexcom app isn't licensed for use in the country of residence saved in your account profile."</string>
+    <string name="invalid_country_g7">Invalid Country of Residence</string>
+    <string name="invalid_country_list_g7_1">"1. Delete the app and reinstall it
+"</string>
+    <string name="invalid_country_list_g7_2">2. Create a new account using the prompt in the app</string>
+    <string name="invalid_pairing_code">Invalid Pairing Code</string>
+    <string name="invalid_profile_name_message">Profile Name cannot contain “;:”`\\/&lt;></string>
+    <string name="invalid_sensor_code">Invalid Sensor Code</string>
+    <string name="invalid_sensor_code_instructions">Re-enter code</string>
+    <string name="invite_follower">Invite Follower</string>
+    <string name="invite_followers">Invite Followers</string>
+    <string name="irritated_skin">Irritated skin</string>
+    <string name="is_calibration_pending">Your last calibration is in progress. Wait up to 5 minutes for calibration to finish.</string>
+    <string name="is_removing_patch_more_tips">"For more tips see "</string>
+    <string name="is_removing_patch_painful">Is pulling the patch off painful?</string>
+    <string name="is_removing_patch_painful_remedy">Rub patch with oil before removing it. Use any oil meant for skin, like baby oil. Check oil manufacturer warnings.</string>
+    <string name="is_removing_patch_painful_remedy_more_tips">"Rub patch with oil before removing it. Use any oil meant for skin, like baby oil. Check oil manufacturer warnings.
+
+For more tips see "</string>
+    <string name="is_the_sensor_inserted_and_transmitter_attached">Is the sensor inserted and transmitter attached?</string>
+    <string name="is_this_the_pairing_code_on_the_applicator">Is this the pairing code on the applicator?</string>
+    <string name="item_view_role_description">Tab</string>
+    <string name="keep_phone_close">Keep phone close</string>
+    <string name="keep_phone_close_description">Move your phone within %1$s of your transmitter.</string>
+    <string name="kid_age">Ages 2 – 17 years only</string>
+    <string name="kid_sensor_site">Can use upper buttocks</string>
+    <string name="label">Label</string>
+    <string name="landscape_tooltip_description">To see more details, hold then drag your finger on the graph.</string>
+    <string name="landscape_tooltip_title">Landscape Tips</string>
+    <string name="last_calibration_title">Last Calibration</string>
+    <string name="last_session_alert">Last Session Alert</string>
+    <string name="last_sync_time_format">Last sync: %1$s %2$s</string>
+    <string name="learn_more">Learn More</string>
+    <string name="learn_more_description">"Calibrating is optional. Use it to move your sensor reading closer to your BG meter value.
+
+To get an accurate BG meter value, follow these steps:
+
+1. Wash your hands with soap and water
+2. Dry your hands
+3. Take a fingerstick
+
+If you want to calibrate, enter the BG meter value within 5 minutes.
+
+Your sensor readings come from different fluids than your BG meter values, so they won’t usually match. Neither number is as accurate as the lab test your doctor does."</string>
+    <string name="learn_more_for_more_info">For more information on comparing your sensor reading with your BG meter value, go to</string>
+    <string name="level">Level</string>
+    <string name="library_android_database_sqlcipher_author">Zetetic, LLC</string>
+    <string name="library_android_database_sqlcipher_authorWebsite">https://www.zetetic.net/sqlcipher/</string>
+    <string name="library_android_database_sqlcipher_isOpenSource">true</string>
+    <string name="library_android_database_sqlcipher_libraryDescription">Android SQLite API based on SQLCipher</string>
+    <string name="library_android_database_sqlcipher_libraryName">SQLCipher for Android</string>
+    <string name="library_android_database_sqlcipher_libraryVersion">${clientVersionNumber}</string>
+    <string name="library_android_database_sqlcipher_libraryWebsite">https://www.zetetic.net/sqlcipher/</string>
+    <string name="library_android_database_sqlcipher_licenseLink">https://www.zetetic.net/sqlcipher/license/</string>
+    <string name="library_android_database_sqlcipher_repositoryLink">https://github.com/sqlcipher/android-database-sqlcipher</string>
+    <string name="line_up_and_keep">Line up and keep the pairing code in the green frame.</string>
+    <string name="line_up_pairing_code">Line up pairing code in green frame</string>
+    <string name="link_to_google_play_store_listing">https://play.google.com/store/apps/details?id=%1$s</string>
+    <string name="location_disabled_action">Turn On Phone Location</string>
+    <string name="location_disabled_state">Phone Location is Off</string>
+    <string name="location_disabled_state_description">Bluetooth needs phone location to pair.</string>
+    <string name="location_disabled_state_description_g7">To get sensor readings and alerts Bluetooth needs phone location.</string>
+    <string name="location_permission">Location permission</string>
+    <string name="location_permission_denied_description">The app needs Location Permissions to get your sensor readings and alerts.</string>
+    <string name="location_permission_denied_title">"Permission Wasn't Granted"</string>
+    <string name="location_permission_step_1">"1.     Tap the button below"</string>
+    <string name="location_permission_step_1_g7">Tap <b>Go To Phone Settings</b> below</string>
+    <string name="location_permission_step_2">"2.     Turn on the app Location Permission"</string>
+    <string name="location_permission_step_2_g7">Turn on the app Location Permission</string>
+    <string name="location_permission_step_3">"3.     Tap always allow"</string>
+    <string name="location_permissions">Location permissions</string>
+    <string name="location_permissions_off_description_10">"The app needs Location permission for Bluetooth to work. Bluetooth sends your sensor readings to the app.
+
+On the next screen, "<b>Always allow</b> Location permission for Dexcom so you get sensor readings and alerts.</string>
+    <string name="location_permissions_off_description_11">"The app always needs location permission for Bluetooth so you get sensor readings and alerts. It also needs it for setup to confirm your country of residence. Dexcom doesn't track your location.
+
+Tap "<b>Next</b>, then <b>always</b> allow Dexcom to use your location.</string>
+    <string name="location_permissions_off_description_12">"Dexcom needs to confirm your country of residence to continue.
+
+Location permission is for system setup only. Dexcom doesn't track your location.
+
+Tap "<b>Next</b> and then allow Dexcom to use your location.</string>
+    <string name="location_permissions_on_description">You can continue to set up the app. Once set up, you will get sensor readings and alerts.</string>
+    <string name="location_permissions_on_description_12">You can continue to set up the app.</string>
+    <string name="location_permissions_on_title">Location Permissions is on</string>
+    <string name="log_blood_glucose">Log blood glucose</string>
+    <string name="login_again">Log In Again</string>
+    <string name="login_again_description">"Tap Log In Now and re-enter your password.
+
+To sync your data with Clarity and tech support, you need to be logged in."</string>
+    <string name="login_again_text">Click on Log in Now and re-enter your password. To use Share, you need to log in to your Dexcom account.</string>
+    <string name="login_button">Log In</string>
+    <string name="login_later_button">Log In Later</string>
+    <string name="login_now_button">Log In Now</string>
+    <string name="login_text">"I'm an existing Dexcom user"</string>
+    <string name="long_acting">Long-acting</string>
+    <string name="long_acting_info">Typically taken once or twice a day, no matter when you eat.</string>
+    <string name="long_acting_insulin">Long-Acting Insulin</string>
+    <string name="long_acting_insulin_deleted">Long-acting insulin deleted</string>
+    <string name="long_acting_insulin_saved">Long-acting insulin saved</string>
+    <string name="long_acting_insulin_updated_message">Long-acting insulin updated</string>
+    <string name="long_acting_out_of_range_error_message">You can only enter 1.0–100.0 units of long-acting insulin.</string>
+    <string name="long_acting_title">Long-Acting</string>
+    <string name="low">Low</string>
+    <string name="low_alert">Low Alert</string>
+    <string name="low_alert_repeat_dialog_description">After you acknowledge your first alert, it repeats if your sensor reading stays low for this long. Select a repeat time between 15 minutes and 4 hours.</string>
+    <string name="low_alert_repeat_timing">After you acknowledge your first alert, it repeats if your sensor reading stays low for this long.</string>
+    <string name="low_alert_snooze_description">Turn on Snooze to get a repeat alert if your sensor reading stays low.</string>
+    <string name="low_alert_toolbar_title">Low Alert</string>
+    <string name="low_alerts_description">Glucose alerts let you know when your glucose has gone too low.</string>
+    <string name="low_glucose">Low Glucose</string>
+    <string name="low_glucose_alert">Low Glucose Alert</string>
+    <string name="low_no_trend">LOW</string>
+    <string name="low_settings_alert_repeat_dialog_description">Select a snooze time between 15 minutes and 4 hours.</string>
+    <string name="low_settings_alert_repeat_timing">After you acknowledge your first alert, it repeats if your sensor reading stays low for this long.</string>
+    <string name="low_settings_alert_snooze_description">Turn on to get a repeat alert if your sensor reading stays low for a while. You choose for how long.</string>
+    <string name="m3_ref_typeface_brand_medium">sans-serif-medium</string>
+    <string name="m3_ref_typeface_brand_regular">sans-serif</string>
+    <string name="m3_ref_typeface_plain_medium">sans-serif-medium</string>
+    <string name="m3_ref_typeface_plain_regular">sans-serif</string>
+    <string name="m3_sys_motion_easing_emphasized">path(M 0,0 C 0.05, 0, 0.133333, 0.06, 0.166666, 0.4 C 0.208333, 0.82, 0.25, 1, 1, 1)</string>
+    <string name="m3_sys_motion_easing_emphasized_accelerate">cubic-bezier(0.3, 0.0, 0.8, 0.2)</string>
+    <string name="m3_sys_motion_easing_emphasized_decelerate">cubic-bezier(0.1, 0.7, 0.1, 1.0)</string>
+    <string name="m3_sys_motion_easing_emphasized_path_data">M 0,0 C 0.05, 0, 0.133333, 0.06, 0.166666, 0.4 C 0.208333, 0.82, 0.25, 1, 1, 1</string>
+    <string name="m3_sys_motion_easing_legacy">cubic-bezier(0.4, 0.0, 0.2, 1.0)</string>
+    <string name="m3_sys_motion_easing_legacy_accelerate">cubic-bezier(0.4, 0.0, 1.0, 1.0)</string>
+    <string name="m3_sys_motion_easing_legacy_decelerate">cubic-bezier(0.0, 0.0, 0.2, 1.0)</string>
+    <string name="m3_sys_motion_easing_linear">cubic-bezier(0.0, 0.0, 1.0, 1.0)</string>
+    <string name="m3_sys_motion_easing_standard">cubic-bezier(0.2, 0.0, 0.0, 1.0)</string>
+    <string name="m3_sys_motion_easing_standard_accelerate">cubic-bezier(0.3, 0.0, 1.0, 1.0)</string>
+    <string name="m3_sys_motion_easing_standard_decelerate">cubic-bezier(0.0, 0.0, 0.0, 1.0)</string>
+    <string name="make_sure_it_is_flat_and_snug_in_its_holder">d. Make sure it is flat and snug in its holder.</string>
+    <string name="make_sure_the_transmitter_is_flat_and_snug_in_transmitter_holder">Make sure the transmitter is flat and snug in transmitter holder</string>
+    <string name="make_sure_your_sensor_is_inserted">Make sure your sensor is inserted. If it is not, insert sensor now.</string>
+    <string name="material_clock_display_divider">:</string>
+    <string name="material_clock_toggle_content_description">Select AM or PM</string>
+    <string name="material_hour_selection">Select hour</string>
+    <string name="material_hour_suffix">"%1$s o'clock"</string>
+    <string name="material_minute_selection">Select minutes</string>
+    <string name="material_minute_suffix">%1$s minutes</string>
+    <string name="material_motion_easing_accelerated">cubic-bezier(0.4, 0.0, 1.0, 1.0)</string>
+    <string name="material_motion_easing_decelerated">cubic-bezier(0.0, 0.0, 0.2, 1.0)</string>
+    <string name="material_motion_easing_emphasized">path(M 0,0 C 0.05, 0, 0.133333, 0.06, 0.166666, 0.4 C 0.208333, 0.82, 0.25, 1, 1, 1)</string>
+    <string name="material_motion_easing_linear">cubic-bezier(0.0, 0.0, 1.0, 1.0)</string>
+    <string name="material_motion_easing_standard">cubic-bezier(0.4, 0.0, 0.2, 1.0)</string>
+    <string name="material_slider_range_end">Range end,</string>
+    <string name="material_slider_range_start">Range start,</string>
+    <string name="material_timepicker_am">AM</string>
+    <string name="material_timepicker_clock_mode_description">Switch to clock mode for the time input.</string>
+    <string name="material_timepicker_hour">Hour</string>
+    <string name="material_timepicker_minute">Minute</string>
+    <string name="material_timepicker_pm">PM</string>
+    <string name="material_timepicker_select_time">Select time</string>
+    <string name="material_timepicker_text_input_mode_description">Switch to text input mode for the time input.</string>
+    <string name="meal">Meal</string>
+    <string name="meal_clear_carbs_field">Clear Meal Carbs</string>
+    <string name="meal_date_field">Meal DatePicker</string>
+    <string name="meal_deleted">Meal deleted</string>
+    <string name="meal_description">"Carbs you've eaten"</string>
+    <string name="meal_saved">Meal saved</string>
+    <string name="meal_time_field">Meal TimePicker</string>
+    <string name="meal_updated">Meal updated</string>
+    <string name="meal_value_suffix">"  g"</string>
+    <string name="medium">Medium</string>
+    <string name="mgdl_unit_of_measurement">mg/⁠dL</string>
+    <string name="mgdl_unit_of_measurement_bg_calibration">mg/dL</string>
+    <string name="mins_remaining">%1$smin remaining</string>
+    <string name="minutes">min</string>
+    <string name="mmol_unit_of_measurement">mmol/⁠L</string>
+    <string name="mmol_unit_of_measurement_bg_calibration">mmol/L</string>
+    <string name="mobile_devices_label">Mobile Device</string>
+    <string name="monday">M</string>
+    <string name="more_info">More Info</string>
+    <string name="more_information">More Information</string>
+    <string name="move_away_from_others_wearing_sensors">Move away from others wearing sensors</string>
+    <string name="mtrl_badge_numberless_content_description">New notification</string>
+    <string name="mtrl_chip_close_icon_content_description">Remove %1$s</string>
+    <string name="mtrl_exceed_max_badge_number_content_description">More than %1$d new notifications</string>
+    <string name="mtrl_exceed_max_badge_number_suffix">%1$d%2$s</string>
+    <string name="mtrl_picker_a11y_next_month">Change to next month</string>
+    <string name="mtrl_picker_a11y_prev_month">Change to previous month</string>
+    <string name="mtrl_picker_announce_current_selection">Current selection: %1$s</string>
+    <string name="mtrl_picker_cancel">@android:string/cancel</string>
+    <string name="mtrl_picker_confirm">SAVE</string>
+    <string name="mtrl_picker_date_header_selected">%1$s</string>
+    <string name="mtrl_picker_date_header_title">Select Date</string>
+    <string name="mtrl_picker_date_header_unselected">Selected date</string>
+    <string name="mtrl_picker_day_of_week_column_header">Column of days: %1$s</string>
+    <string name="mtrl_picker_invalid_format">Invalid format.</string>
+    <string name="mtrl_picker_invalid_format_example">Example: %1$s</string>
+    <string name="mtrl_picker_invalid_format_use">Use: %1$s</string>
+    <string name="mtrl_picker_invalid_range">Invalid range.</string>
+    <string name="mtrl_picker_navigate_to_year_description">Navigate to year %1$s</string>
+    <string name="mtrl_picker_out_of_range">Out of range: %1$s</string>
+    <string name="mtrl_picker_range_header_only_end_selected">Start date – %1$s</string>
+    <string name="mtrl_picker_range_header_only_start_selected">%1$s – End date</string>
+    <string name="mtrl_picker_range_header_selected">%1$s – %2$s</string>
+    <string name="mtrl_picker_range_header_title">Select Range</string>
+    <string name="mtrl_picker_range_header_unselected">Start date – End date</string>
+    <string name="mtrl_picker_save">Save</string>
+    <string name="mtrl_picker_text_input_date_hint">Date</string>
+    <string name="mtrl_picker_text_input_date_range_end_hint">End date</string>
+    <string name="mtrl_picker_text_input_date_range_start_hint">Start date</string>
+    <string name="mtrl_picker_text_input_day_abbr">d</string>
+    <string name="mtrl_picker_text_input_month_abbr">m</string>
+    <string name="mtrl_picker_text_input_year_abbr">y</string>
+    <string name="mtrl_picker_toggle_to_calendar_input_mode">Switch to calendar input mode</string>
+    <string name="mtrl_picker_toggle_to_day_selection">Tap to switch to selecting a day</string>
+    <string name="mtrl_picker_toggle_to_text_input_mode">Switch to text input mode</string>
+    <string name="mtrl_picker_toggle_to_year_selection">Tap to switch to selecting a year</string>
+    <string name="mtrl_timepicker_confirm">OK</string>
+    <string name="must_have_secure_internet_text">Must have secure internet access during setup</string>
+    <string name="name">Name</string>
+    <string name="nav_app_bar_navigate_up_description">Navigate up</string>
+    <string name="nav_app_bar_open_drawer_description">Open navigation drawer</string>
+    <string name="navigation_override_up">navigation_override_up</string>
+    <string name="navigation_toolbar_action_menu">navigation_toolbar_action_menu</string>
+    <string name="navigation_toolbar_subtitle">navigation_toolbar_subtitle</string>
+    <string name="navigation_toolbar_visibility">navigation_toolbar_visibility</string>
+    <string name="navigation_view_gone">navigation_view_gone</string>
+    <string name="nearby_device_permission_steps">1.Tap <b>Open Phone Settings</b>" below.
+2.Turn on the Nearby Devices permission."</string>
+    <string name="neither_helpful_nor_unhelpful">Neither helpful nor unhelpful</string>
+    <string name="new_profile">New Profile</string>
+    <string name="new_sensor_is_inserted_text">New Sensor is Inserted</string>
+    <string name="next">Next</string>
+    <string name="no_alerts">No Alerts</string>
+    <string name="no_alerts_disk_storage_full">No readings or alerts if your phone storage is full.</string>
+    <string name="no_alerts_until_you_free_up_storage">No readings or alerts until you free up storage.</string>
+    <string name="no_arrow">No Arrow</string>
+    <string name="no_arrow_colon">"No arrow, can't 
+determine trend:"</string>
+    <string name="no_data">No Data</string>
+    <string name="no_events">No Events</string>
+    <string name="no_follower">No Follower</string>
+    <string name="no_number_colon">No number:</string>
+    <string name="no_number_or_trend_arrow_toast">No number or trend arrow. Use your BG meter for treatment decisions.</string>
+    <string name="no_number_toast">No number. Use your BG meter for treatment decisions.</string>
+    <string name="no_readings">No readings</string>
+    <string name="no_trend_arrow_toast">No trend arrow. Use your BG meter for treatment decisions.</string>
+    <string name="no_trend_description">No trend. Use blood glucose meter for treatment decisions.</string>
+    <string name="none">None</string>
+    <string name="not_active">Not Active</string>
+    <string name="not_paired">Not Paired</string>
+    <string name="not_used">Not used</string>
+    <string name="note">Note</string>
+    <string name="note_date_field">Note DatePicker</string>
+    <string name="note_deleted">Note deleted</string>
+    <string name="note_description">Add information</string>
+    <string name="note_error_invalid_character">"Can't use \";:\"'\\/&lt;>"</string>
+    <string name="note_error_limit_reached">Limit reached</string>
+    <string name="note_error_storage_limit_reached">Storage limit reached. Emojis take up more storage.</string>
+    <string name="note_input_hint">Type a note</string>
+    <string name="note_saved">Note saved</string>
+    <string name="note_time_field">Note TimePicker</string>
+    <string name="note_updated">Note updated</string>
+    <string name="notice">Notice</string>
+    <string name="notification_permissions_description">Notifications must be on for you to get all your alerts.</string>
+    <string name="notifications">Notifications</string>
+    <string name="now">Now</string>
+    <string name="number_12">12</string>
+    <string name="number_24">24</string>
+    <string name="number_3">3</string>
+    <string name="number_6">6</string>
+    <string name="number_and_arrow">Number and Arrow</string>
+    <string name="number_and_arrow_colon">Number and Arrow:</string>
+    <string name="number_in_circle_description">The number in the circle is your most recent reading.</string>
+    <string name="off">Off</string>
+    <string name="ok">OK</string>
+    <string name="ok_lowercase">OK</string>
+    <string name="on">On</string>
+    <string name="onboard_app_setup">2. App Setup</string>
+    <string name="onboard_applicator_bullet_1">Applicator inserts sensor under skin</string>
+    <string name="onboard_applicator_bullet_2">Sensor gets sensor readings</string>
+    <string name="onboard_applicator_header">Applicator With Built-in Sensor</string>
+    <string name="onboard_complete">- Complete</string>
+    <string name="onboard_connecting_your_phone">Connecting your phone</string>
+    <string name="onboard_how_to_turn_on_location_permission">How to turn on Location Permission:</string>
+    <string name="onboard_number_in_circle_description">The number in the circle is your most recent sensor reading. It updates every 5 minutes.</string>
+    <string name="onboard_overview">1. Overview</string>
+    <string name="onboard_overview_description">How Dexcom ONE works</string>
+    <string name="onboard_overview_g7_description">How G7 works</string>
+    <string name="onboard_sensor_readings_text_version_arrow_description">"The trend arrow shows where your glucose is going and how fast. It's based on your last few readings."</string>
+    <string name="onboard_sensor_readings_text_version_last_3_hour_readings">The black dots to the left show the last 3 hours of sensor readings.</string>
+    <string name="onboard_sensor_readings_text_version_lets_explore">"Let's explore how sensor readings display."</string>
+    <string name="onboard_sensor_readings_text_version_most_recent_reading">Your most recent sensor reading is here - the white dot on the far right side of your graph.</string>
+    <string name="onboard_sensor_readings_text_version_no_trend_arrow_toast">No trend. Use blood glucose meter (BG meter) for treatment decisions.</string>
+    <string name="onboard_sensor_readings_text_version_rapidly_rising_falling">Rapidly Rising or Falling</string>
+    <string name="onboard_sensor_readings_text_version_readings_also_on_graph">Your recent sensor readings are also on your graph.</string>
+    <string name="onboard_sensor_readings_text_version_rising_falling">Rising or Falling</string>
+    <string name="onboard_sensor_readings_text_version_slowly_rising_falling">Slowly Rising or Falling</string>
+    <string name="onboard_sensor_readings_text_version_two_arrows">Two arrows</string>
+    <string name="onboard_start_sensor">3. Start Sensor</string>
+    <string name="onboard_start_sensor_image_description">Start Sensor</string>
+    <string name="onboard_target_range_description">The gray rectangle shows where you want your glucose to be or your target range.</string>
+    <string name="onboard_transmitter_bullet">Sends sensor readings from sensor to your phone</string>
+    <string name="onboarding_alert_message">Dexcom ONE offers alerts that let you know when your glucose has gone too <b>high</b>, <b>low</b> or when sensor readings are <b>temporarily unavailable</b>.</string>
+    <string name="onboarding_are_you_sure">Are you sure?</string>
+    <string name="onboarding_battery_optimization_is_on_title">Allow App to Always Run</string>
+    <string name="onboarding_current_alert_settings">"High: %1$s %2$s
+Low: %3$s %4$s
+
+You can customize these in
+Profile > Alerts."</string>
+    <string name="onboarding_current_alert_settings_header">Current alert settings:</string>
+    <string name="onboarding_current_alert_settings_imported_header">"We imported your alert settings.
+These include:"</string>
+    <string name="onboarding_dnd_allow_access">Allow Access</string>
+    <string name="onboarding_dnd_allow_access_instructions">"G7 needs your permission to sound when your device is on the most restrictive Do Not Disturb setting.
+
+ 1.   Tap "<b>Allow Access</b>" Below
+ 2.   Find Dexcom G7 app
+ 3.   Allow Do not Disturb Access
+ 4.   Tap Back to Return to app "</string>
+    <string name="onboarding_dnd_find_dexcom_g7_app_toast">Find Dexcom G7 app</string>
+    <string name="onboarding_dnd_must_allow_do_not_disturb_access_description">Without Do Not Disturb access, you won’t get alerts if the most restrictive Do Not Disturb is on.</string>
+    <string name="onboarding_dnd_must_allow_do_not_disturb_access_title">Must Allow Do Not Disturb Access</string>
+    <string name="onboarding_dnd_on">Do Not Disturb Access is On</string>
+    <string name="onboarding_dnd_on_description">You will hear alerts even if most restrictive Do Not Disturb setting is on.</string>
+    <string name="onboarding_g7_24_months_6_years"><b>Age 2 years (24 months) - 6 years:</b> Use back of upper arm or upper buttocks</string>
+    <string name="onboarding_g7_24_months_6_years_abdomen"><b>Age 2 years (24 months) - 6 years:</b> Use back of upper arm, upper buttocks, or abdomen</string>
+    <string name="onboarding_g7_adhesive_patch_care_text">"The longer you keep the patch dry and sweat-free in the first 12 hours, the longer it may stick to your skin.
+
+When it gets wet, gently pat it dry as soon as you can.
+
+If it peels off your skin, trim the peeled parts and put on medical tape."</string>
+    <string name="onboarding_g7_adhesive_patch_care_title">Adhesive Patch Care</string>
+    <string name="onboarding_g7_advice_health_care_provider">(If worn on sites not listed below, sensor may not work as expected. Talk to your healthcare provider about the best site for you.)</string>
+    <string name="onboarding_g7_advice_health_care_provider_arm_only"><b>IMPORTANT!</b> If you wore G6 sensors on your abdomen, wear G7 sensors on the back of your upper arm. Children ages 2–6 years can also use their upper buttocks.</string>
+    <string name="onboarding_g7_age_7_years_and_older"><b>Age 7 years and older:</b> Use back of upper arm</string>
+    <string name="onboarding_g7_age_7_years_and_older_abdomen"><b>Age 7 years and older:</b> Use back of upper arm or abdomen</string>
+    <string name="onboarding_g7_and">and</string>
+    <string name="onboarding_g7_applicator">Sensor and Applicator</string>
+    <string name="onboarding_g7_applicator_info"><li>We’ll show you how to use the applicator to insert the built-in sensor under your skin</li>"
+
+"<li>The sensor sends a glucose reading to your display device(s) every 5 minutes</li></string>
+    <string name="onboarding_g7_back">Back</string>
+    <string name="onboarding_g7_basics">G7 Basics</string>
+    <string name="onboarding_g7_choose_sensor_site">1. Choose Sensor Site by Age</string>
+    <string name="onboarding_g7_clean_and_dry">2. Clean and Dry</string>
+    <string name="onboarding_g7_connected_devices">Use up to 2 display devices</string>
+    <string name="onboarding_g7_devices">Get your glucose information on your phone or Dexcom receiver or both.</string>
+    <string name="onboarding_g7_dont_ignore_symptoms">"Don't ignore your symptoms, treat with your BG meter."</string>
+    <string name="onboarding_g7_dont_treat_using_system">"If you're missing either a number or trend arrow, "<b>"don't treat using your system."</b></string>
+    <string name="onboarding_g7_example_exercising_start_feeling_dizzy">"For example, maybe you're exercising and start to feel dizzy, but your sensor reading is in your target range with a steady arrow."</string>
+    <string name="onboarding_g7_in_other_words">In other words:</string>
+    <string name="onboarding_g7_just_remember">Just remember…</string>
+    <string name="onboarding_g7_keep_sensor_attached">To keep the sensor attached see</string>
+    <string name="onboarding_g7_no_arrow">No arrow</string>
+    <string name="onboarding_g7_no_cgm_treatment_decision">no CGM treatment decision.</string>
+    <string name="onboarding_g7_no_number">No number</string>
+    <string name="onboarding_g7_no_number_no_arrow">No number or no arrow,</string>
+    <string name="onboarding_g7_notifications_permisison_denied_description">"Without Notifications, alerts won't show on your phone. Urgent Low and Sensor Fail alerts will sound but other alerts may not."</string>
+    <string name="onboarding_g7_notifications_permisison_denied_title">Must allow Notifications</string>
+    <string name="onboarding_g7_number_and_arrow">1. Number and arrow</string>
+    <string name="onboarding_g7_overpatch">Overpatch</string>
+    <string name="onboarding_g7_remove_applicator_point_a">"a.  Save applicator because you'll need its pairing code
+"</string>
+    <string name="onboarding_g7_remove_applicator_point_b">"b.  Screw cap back on applicator"</string>
+    <string name="onboarding_g7_remove_applicator_title">5. Remove Applicator</string>
+    <string name="onboarding_g7_rub_patch_point_a">"a.  Rub firmly around patch 3 times"</string>
+    <string name="onboarding_g7_rub_patch_point_b">"b.  Gently press on top of sensor for 10 seconds"</string>
+    <string name="onboarding_g7_rub_patch_subtitle">To help keep the patch on your skin:</string>
+    <string name="onboarding_g7_rub_patch_title">6. Rub Patch</string>
+    <string name="onboarding_g7_rub_site_alcohol">"b.  Rub site with an alcohol wipe."</string>
+    <string name="onboarding_g7_sensor_info">After you insert the sensor, you must apply the overpatch to keep the sensor on your body.</string>
+    <string name="onboarding_g7_sensor_reading_trend_arrow">You must have both <b>a sensor reading</b> and <b>a trend arrow</b> to use your system to treat.</string>
+    <string name="onboarding_g7_trust_how_you_feel">2. Trust how you feel</string>
+    <string name="onboarding_g7_unscrew_cap_title">3. Unscrew Cap</string>
+    <string name="onboarding_g7_use_applicator_point_a">"a.  Relax any muscles near site.
+"</string>
+    <string name="onboarding_g7_use_applicator_point_b">"b.  Press and hold applicator firmly against skin until clear safety guard is pushed in. Then push button on side of applicator."</string>
+    <string name="onboarding_g7_use_applicator_title">4. Use Applicator to Insert Sensor</string>
+    <string name="onboarding_g7_use_bg_meter_not_match_sensor_reading">"Use your BG meter to treat when how you feel doesn't match your sensor reading."</string>
+    <string name="onboarding_g7_use_overpatch_point_a">"a.  Carefully pull off both clear liners, one at a time. Don't touch white adhesive area."</string>
+    <string name="onboarding_g7_use_overpatch_point_b">"b.  Use colored tab to place overpatch around sensor."</string>
+    <string name="onboarding_g7_use_overpatch_point_c">"c.  Rub around overpatch."</string>
+    <string name="onboarding_g7_use_overpatch_point_d">"d.  Use tab to peel off colored liner."</string>
+    <string name="onboarding_g7_use_overpatch_point_e">"e.  Rub around overpatch."</string>
+    <string name="onboarding_g7_use_overpatch_subtitle">The overpatch helps keep the sensor on your skin. Find the overpatch bundled with the instructions in the sensor box.</string>
+    <string name="onboarding_g7_use_overpatch_subtitle_US">You must apply the overpatch to keep the sensor on your body. It’s bundled with the instructions in the sensor box.</string>
+    <string name="onboarding_g7_use_overpatch_title">7. Use Overpatch</string>
+    <string name="onboarding_g7_use_overpatch_title_US">7. Apply Overpatch</string>
+    <string name="onboarding_g7_wait_completely_dry">"c.  Wait until completely dry."</string>
+    <string name="onboarding_g7_wash_hands">"a.  Wash hands with soap and water. Dry."</string>
+    <string name="onboarding_g7_wash_hands_confirm_bg_meter">Wash your hands and confirm with your BG meter.</string>
+    <string name="onboarding_g7_watch_video">Watch video or view text version above to continue</string>
+    <string name="onboarding_g7_when_in_doubt_get_your_meter_out">When in doubt, get your meter out.</string>
+    <string name="onboarding_g7_your_motto_colon">Your motto:</string>
+    <string name="onboarding_how_to_turn_on_location_11">"1. Tap the button below.
+2. Always allow location permission."</string>
+    <string name="onboarding_how_to_turn_on_location_12">1. Tap <b>Open Phone Settings</b>"
+2. Select "<b>Allow all the time</b>, or <b>Allow while using the app</b></string>
+    <string name="onboarding_keep_phone_within_6_meters">Always keep your phone within %1$s of your sensor.</string>
+    <string name="onboarding_remember_blood_glucose_header">Remember, use your blood glucose (BG) meter when:</string>
+    <string name="onboarding_remember_blood_glucose_text1">No number or no arrow</string>
+    <string name="onboarding_remember_blood_glucose_text2">"How you feel doesn't match your sensor reading"</string>
+    <string name="onboarding_safety_statements_dont_wear_sensor_in_room_mri">"Don't wear your G7 during MRI or diathermy treatment.
+
+You can get a CT scan if the sensor is covered with a lead apron and isn't in the scanned area."</string>
+    <string name="onboarding_searching_for_sensor">"Searching for sensor with
+your pairing code:"</string>
+    <string name="onboarding_sensor_readings_you_will_see">In your app, you’ll see your sensor reading, trend arrow, and graph.</string>
+    <string name="onboarding_throw_out_applicator">Throw out applicator following local guidelines.</string>
+    <string name="one_arrow_down">One arrow down</string>
+    <string name="one_arrow_option">%1$s–%2$s %3$s per min</string>
+    <string name="one_arrow_up">One arrow up</string>
+    <string name="open_phone_settings">Open Phone Settings</string>
+    <string name="open_phone_settings_g7">Open Phone Settings</string>
+    <string name="overview">Overview</string>
+    <string name="pair_new">Pair New</string>
+    <string name="pairing">Pairing</string>
+    <string name="pairing_auto_instruction_1">Line up and keep the %1$s in the green frame.</string>
+    <string name="pairing_auto_instruction_2">Photo taken automatically.</string>
+    <string name="pairing_auto_title">Line up %1$s in green frame</string>
+    <string name="pairing_code_description">Find and enter the 4-digit pairing code on the applicator you used to insert the sensor.</string>
+    <string name="pairing_code_title">Pairing Code</string>
+    <string name="pairing_complete">Pairing Complete!</string>
+    <string name="pairing_complete_alert_title">Pairing Complete</string>
+    <string name="pairing_complete_description">Always keep your smart device within 6 meters of your transmitter.</string>
+    <string name="pairing_entry_error">Invalid Transmitter SN</string>
+    <string name="pairing_entry_error_instructions">Re-enter SN</string>
+    <string name="pairing_success_alert">You successfully paired. Open your app to start your session.</string>
+    <string name="pairing_taking_too_long_message">@string/state_card_description</string>
+    <string name="pairing_taking_too_long_title">Sensor not found yet</string>
+    <string name="pairing_timeout_description">"No SN found.
+
+Take photo of transmitter SN again, or enter code manually."</string>
+    <string name="pairing_unsuccessful">Pairing Unsuccessful</string>
+    <string name="pairing_unsuccessful_alert">Tap for troubleshooting tips.</string>
+    <string name="password_toggle_content_description">Show password</string>
+    <string name="path_password_eye">M12,4.5C7,4.5 2.73,7.61 1,12c1.73,4.39 6,7.5 11,7.5s9.27,-3.11 11,-7.5c-1.73,-4.39 -6,-7.5 -11,-7.5zM12,17c-2.76,0 -5,-2.24 -5,-5s2.24,-5 5,-5 5,2.24 5,5 -2.24,5 -5,5zM12,9c-1.66,0 -3,1.34 -3,3s1.34,3 3,3 3,-1.34 3,-3 -1.34,-3 -3,-3z</string>
+    <string name="path_password_eye_mask_strike_through">M2,4.27 L19.73,22 L22.27,19.46 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
+    <string name="path_password_eye_mask_visible">M2,4.27 L2,4.27 L4.54,1.73 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
+    <string name="path_password_strike_through">M3.27,4.27 L19.74,20.74</string>
+    <string name="peel_off_adhesive_backings">4. Peel off adhesive backings</string>
+    <string name="phone_bluetooth_is_off">Phone Bluetooth is Off</string>
+    <string name="phone_bluetooth_off_description">"Your phone Bluetooth is off. It must be on for you to get sensor readings and alerts.
+
+Tap next, then turn on phone Bluetooth."</string>
+    <string name="phone_conflict_description">Your phone settings are preventing your app from working as designed.</string>
+    <string name="phone_conflict_detail_battery_description">Battery optimizing is on.&lt;br>&lt;br>Your glucose alerts may be delayed.</string>
+    <string name="phone_conflict_detail_battery_fix">&lt;b>How to turn off battery optimizing:&lt;/b>&lt;br>&lt;br>1. Tap &lt;b>Open Phone Settings&lt;/b> below.&lt;br>2. &lt;b>Turn off&lt;/b> battery optimizing.</string>
+    <string name="phone_conflict_detail_data_description">"Background restriction is on. You won't get alerts when app isn't running in the background."</string>
+    <string name="phone_conflict_detail_data_fix">&lt;b>How to turn off background restriction:&lt;/b>&lt;br>&lt;br>1. Tap &lt;b>Open Phone Settings&lt;/b> below.&lt;br>2. &lt;b>Turn off&lt;/b> background restriction.</string>
+    <string name="phone_conflict_detail_do_not_disturb_description">"Your phone's Do Not Disturb setting is on. This stops all Dexcom G7 alerts. You won't get any alerts until you turn it off."</string>
+    <string name="phone_conflict_detail_do_not_disturb_fix">&lt;b>How to turn off do not disturb:&lt;/b>&lt;br>&lt;br>1. Tap &lt;b>Open Phone Settings&lt;/b> below.&lt;br>2. &lt;b>Turn off&lt;/b> most restrictive do not disturb</string>
+    <string name="phone_conflict_detail_notifications_description">"Because Notifications are off, you won't get alerts."</string>
+    <string name="phone_conflict_detail_notifications_fix">&lt;b>How to turn off background restriction:&lt;/b>&lt;br>&lt;br>1. Tap &lt;b>Open Phone Settings&lt;/b> below.&lt;br>2. Tap &lt;b>Notifications&lt;/b>.&lt;br>3. Turn on &lt;b>Notification&lt;/b>.</string>
+    <string name="phone_conflict_dialog_text">&lt;b>Phone Setting Conflict&lt;/b>&lt;br>&lt;br>Your phone settings are preventing your app from working as designed. Tap the icon at the top left corner to fix.</string>
+    <string name="phone_conflict_error_battery_usage">"App isn't running in background"</string>
+    <string name="phone_conflict_error_data_usage">"App can't run in background"</string>
+    <string name="phone_conflict_error_do_not_disturb">Do not disturb is on</string>
+    <string name="phone_conflict_error_notifications_off">Notifications are off</string>
+    <string name="phone_conflict_more_info_text">Learn more about all the phone settings that will allow you to safely use the app.</string>
+    <string name="phone_conflict_summary_battery_optimization_description">Your glucose alerts may be delayed.</string>
+    <string name="phone_conflict_summary_data_usage_description">"You won't get alerts when app isn't running in the background."</string>
+    <string name="phone_conflict_summary_dnd_description">"You won't get any alerts."</string>
+    <string name="phone_conflict_summary_more_info_link">Go to Settings > Android Settings Guide</string>
+    <string name="phone_conflict_summary_notification_description">"Because Notifications are off, you won't get alerts."</string>
+    <string name="phone_conflict_title">New Phone Setting Conflict</string>
+    <string name="phone_conflicts_summary_battery_usage_description">Sensor readings and alerts may be delayed.</string>
+    <string name="phone_location_off_description">"Bluetooth needs phone location to pair.
+
+Dexcom doesn't track your location.
+
+Tap next, then turn on phone Location."</string>
+    <string name="phone_location_off_description_g7">"Bluetooth needs phone location to pair.
+
+Dexcom doesn't track your location.
+
+Tap below to turn on phone Location."</string>
+    <string name="phone_safety_notification_count">1</string>
+    <string name="phone_setting_stop_alert_description">Find out which phone settings stop your alerts and app from working.</string>
+    <string name="phone_settings">Phone Settings</string>
+    <string name="phone_settings_description">Your phone settings can prevent your app from working as designed.</string>
+    <string name="phone_storage_almost_full">"Your phone storage is almost full. Take these steps to fix:
+"</string>
+    <string name="phone_storage_full">"Your phone storage is too full for app to work. Take these steps to fix:
+"</string>
+    <string name="phone_storage_full_alert">No readings or alerts until you free up storage.</string>
+    <string name="phone_storage_full_title">App Stopped: Phone Storage Full</string>
+    <string name="phone_storage_low">Phone Storage Low</string>
+    <string name="phone_storage_low_alert">Your phone storage is almost full.</string>
+    <string name="phone_storage_very_low">Phone Storage Very Low</string>
+    <string name="phone_storage_very_low_alert">Your phone storage is very full.</string>
+    <string name="place_applicator_on_skin">a. Place applicator on skin.</string>
+    <string name="play_video">Play Video</string>
+    <string name="press_button_to_insert_sensor">c. Press button to insert sensor.</string>
+    <string name="previous_events_clarity_description">Previous events can be seen in Dexcom Clarity. <font fgcolor="#007a43">Open Clarity app</font></string>
+    <string name="primary_alert_description">This is your primary alert profile. It becomes active anytime your second alert profile is inactive.</string>
+    <string name="primary_profile">Primary Profile</string>
+    <string name="project_id">prod-eu-6e-g7-firebase</string>
+    <string name="qualtrics_channel_description">Show surveys for feedback</string>
+    <string name="qualtrics_channel_name">Qualtrics feedback requests</string>
+    <string name="qualtrics_close_button">Close</string>
+    <string name="qualtrics_dialog_text">Dialog</string>
+    <string name="qualtrics_submit_button">Submit</string>
+    <string name="quick_glance">Quick Glance</string>
+    <string name="quick_glance_description">Quickly check your G7 information in your notification drawer by swiping down from the top of your screen.</string>
+    <string name="quick_glance_glucose_empty">---</string>
+    <string name="quick_glance_more_info">Tap for more information.</string>
+    <string name="quick_glance_no_readings">No readings or glucose alerts</string>
+    <string name="quiet_mode_timer_duration_default_value">0min</string>
+    <string name="quiet_mode_timer_duration_h">h</string>
+    <string name="quiet_mode_timer_duration_min">min</string>
+    <string name="quiet_modes">Quiet Modes</string>
+    <string name="quiet_modes_activate">Activate</string>
+    <string name="quiet_modes_authenticate_biometric">Authenticate to activate</string>
+    <string name="quiet_modes_authenticate_biometric_silence">Authenticate to activate silence all</string>
+    <string name="quiet_modes_authenticate_biometric_vibrate">Authenticate to activate vibrate</string>
+    <string name="quiet_modes_authenticate_error_description">This feature requires a passcode, Fingerprint, or Face Unlock. Go to Settings to enable.</string>
+    <string name="quiet_modes_authenticate_error_settings">SETTINGS</string>
+    <string name="quiet_modes_authenticate_error_title">Cannot be activated</string>
+    <string name="quiet_modes_banner_button_text">EDIT</string>
+    <string name="quiet_modes_banner_date_format">h:mm a</string>
+    <string name="quiet_modes_click_off">ClickOff</string>
+    <string name="quiet_modes_click_on">ClickToActivate</string>
+    <string name="quiet_modes_duration">0min.</string>
+    <string name="quiet_modes_info">Quiet Modes cannot be activated while Notifications are off.</string>
+    <string name="quiet_modes_info_content">"Quickly change your alerts to be more discreet. These override your phone sound setting. You still see alerts on your phone's lock screen and in the app."</string>
+    <string name="quiet_modes_info_silence_content">"All alerts, including Urgent Low and Sensor Fail, won't sound or vibrate. You can set Silence All for up to %1$s."</string>
+    <string name="quiet_modes_info_silence_tooltip_content">All alerts, including Urgent Low and Sensor Fail, will not sound or vibrate.</string>
+    <string name="quiet_modes_info_vibrate_content">"All alerts vibrate. You can set vibrate mode for up to 6 hours or indefinitely.
+
+For safety, Urgent Low and Sensor Fail are different. They vibrate first, but will sound if you haven't acknowledged them within 20 minutes."</string>
+    <string name="quiet_modes_info_vibrate_content_dialog">"All alerts vibrate. You can set vibrate mode for up to 6 hours or indefinitely.
+
+For safety, Urgent Low and Sensor Fail are different. They vibrate first, but will sound if you haven't acknowledged them."</string>
+    <string name="quiet_modes_match_phone_settings">Match Phone Settings</string>
+    <string name="quiet_modes_off">OFF</string>
+    <string name="quiet_modes_override_info">Overrides your alert profile settings.</string>
+    <string name="quiet_modes_show">Show Quiet Modes</string>
+    <string name="quiet_modes_silence">Silence All</string>
+    <string name="quiet_modes_silenced">Silenced</string>
+    <string name="quiet_modes_timer">Set time duration</string>
+    <string name="quiet_modes_timer_current">Current settings</string>
+    <string name="quiet_modes_timer_edit">Edit duration</string>
+    <string name="quiet_modes_timer_indefinite">Indefinite</string>
+    <string name="quiet_modes_timer_set">Set time duration</string>
+    <string name="quiet_modes_timer_until">Until</string>
+    <string name="quiet_modes_timer_vibrate_on">Vibrate On</string>
+    <string name="quiet_modes_vibrate">Vibrate</string>
+    <string name="quiet_modes_vibrate_acknowledge_message">"All alerts will only vibrate.
+Unless acknowledged, after 20 minutes Urgent Low and Sensor Fail sound and vibrate."</string>
+    <string name="rapidly_rising_or_falling">Rapidly Rising or Falling (two arrows)</string>
+    <string name="read_text">Read Text</string>
+    <string name="readings_stop_soon">Readings Stop Soon</string>
+    <string name="receiver_label">Receiver</string>
+    <string name="receiver_paired">Paired</string>
+    <string name="recommended_alert_settings">Recommended Alert Settings</string>
+    <string name="recommended_alert_settings_instructions">Tap &lt;b>Change Alert Settings&lt;/b> to turn on %1$s.</string>
+    <string name="recommended_alert_settings_suggestion">Because Low Alert is on, you may want to turn on %1$s.</string>
+    <string name="recommended_settings">Recommended Settings</string>
+    <string name="reenter">Re-enter</string>
+    <string name="reenter_code_manually">Re-Enter Code Manually</string>
+    <string name="release_transmitter_description">To release the transmitter, snap the latch on the holder by pressing down on the lip at the bottom of the latch.</string>
+    <string name="release_transmitter_title">2. Release Transmitter</string>
+    <string name="remind_me_later">Remind Me Later</string>
+    <string name="remove_applicator_from_skin_leaving_patch_and_holder_on">d. Remove applicator from skin leaving patch and holder on.</string>
+    <string name="remove_sensor">Remove Sensor</string>
+    <string name="remove_sensor_description">To remove sensor, peel off patch from the edge. When you peel off the adhesive, the sensor, transmitter holder and transmitter will all be removed. Do not remove the transmitter from the holder until all components have been removed from your body.</string>
+    <string name="remove_sensor_now">Remove Sensor Now</string>
+    <string name="remove_sensor_now_more_info">More info</string>
+    <string name="remove_sensor_now_text">Peel off patch from the edge.</string>
+    <string name="remove_sensor_now_text_instructions">To remove sensor, peel off patch from the edge.</string>
+    <string name="remove_sensor_number">1. </string>
+    <string name="remove_sensor_text">Peel off patch from the edge.</string>
+    <string name="remove_sensor_title">Remove sensor from your body</string>
+    <string name="remove_transmitter_description">Remove the transmitter by pulling it straight out of the holder. Keep the transmitter to use again in your next sensor session.</string>
+    <string name="remove_transmitter_title">3. Remove Transmitter</string>
+    <string name="replace_sensor">Replace Sensor</string>
+    <string name="replace_sensor_alert">Replace your sensor now. No readings or alerts until you start a new sensor.</string>
+    <string name="replace_sensor_now">Replace Sensor Now</string>
+    <string name="replace_sensor_question">Replace Sensor?</string>
+    <string name="reports_clarity_summary_disclaimer">Glucose Summary numbers may differ slightly from the numbers within Clarity</string>
+    <string name="reports_target_range_description">"Target Range: %1$s - %2$s
+Very High: Above %3$s
+Very Low: Below %4$s"</string>
+    <string name="reports_target_range_target_range">Target Range</string>
+    <string name="reports_target_range_very_high">Very High</string>
+    <string name="reports_target_range_very_low">Very Low</string>
+    <string name="reset_alert_settings">Reset Alert Settings</string>
+    <string name="reset_alert_settings_dialog_title">Reset Alert Settings?</string>
+    <string name="reset_alert_settings_text_description_default">This will reset all alert settings to factory defaults.</string>
+    <string name="reset_alert_settings_text_description_with_second_profile">This will reset all alert settings to factory defaults. This will also delete your second alert profile.</string>
+    <string name="reset_app">Reset App</string>
+    <string name="retrying">Retrying</string>
+    <string name="rise_rate">Rise Rate</string>
+    <string name="rising_fast">Rising Fast</string>
+    <string name="rising_fast_alert">Rising Fast Alert</string>
+    <string name="rising_fast_alert_description">Alerts you when your sensor readings are going up quickly.</string>
+    <string name="rising_fast_single_unicode">↑ Rising Fast</string>
+    <string name="rising_fast_unicode">↑↑ Rising Fast</string>
+    <string name="rising_level_text_description">"Get alert only when:
+    1.    your glucose is rising fast and 
+    2.    glucose is above this level"</string>
+    <string name="rising_or_falling">Rising or Falling</string>
+    <string name="roboto_black">sans-serif-black</string>
+    <string name="roboto_condensed">sans-serif-condensed</string>
+    <string name="roboto_light">sans-serif-light</string>
+    <string name="roboto_medium">sans-serif-medium</string>
+    <string name="roboto_regular">sans-serif</string>
+    <string name="roboto_thin">sans-serif-thin</string>
+    <string name="rooted_phone_details">"Your phone isn't secure.
+
+This is a violation of the Dexcom Terms of Use."</string>
+    <string name="rooted_phone_detected">Rooted phone detected</string>
+    <string name="rooted_phone_lockscreen_box">Go to phone product instructions for more information.</string>
+    <string name="rooted_phone_lockscreen_summary">"Your phone isn't secure. Tap for more info."</string>
+    <string name="rooted_phone_lockscreen_title">Rooted phone detected</string>
+    <string name="rooted_phone_modal">Rooted phone</string>
+    <string name="rooted_phone_more_info">More Information</string>
+    <string name="rooted_phone_not_secure">"Your phone isn't secure."</string>
+    <string name="rooted_phone_title">Rooted phone</string>
+    <string name="rub_around_patch_3_times">e. Rub around patch 3 times.</string>
+    <string name="safety_information">Safety Information</string>
+    <string name="safety_information_description">"Don't wear your sensor in a room with MRI, CT, or diathermy medical equipment."</string>
+    <string name="safety_statement">Safety Statement</string>
+    <string name="sales_support">Sales Support</string>
+    <string name="sales_support_phone_number">+1 234 56789</string>
+    <string name="saturday">S</string>
+    <string name="save">Save</string>
+    <string name="save_this_selection">Save this selection?</string>
+    <string name="scheduling">Scheduling</string>
+    <string name="scroll_down_to_continue">Please scroll down to continue</string>
+    <string name="search_menu_title">Search</string>
+    <string name="searching">Searching…</string>
+    <string name="searching_for_sensor">Searching for sensor</string>
+    <string name="searching_for_sensor_text">Searching for sensor</string>
+    <string name="searching_for_transmitter">Searching for transmitter</string>
+    <string name="select_alert_schedule_text">* You must select at least one day</string>
+    <string name="select_uom_advisory">Not sure which to choose? Ask your healthcare provider.</string>
+    <string name="select_uom_cor">%1$s %2$s</string>
+    <string name="select_uom_description">Choose Unit of Measure</string>
+    <string name="select_uom_textview_prefix">"If that's not right, tap here to contact Dexcom technical support."</string>
+    <string name="select_uom_title">Country of Residence:</string>
+    <string name="select_uom_using_mgdl">Using mg/dL</string>
+    <string name="select_uom_using_mmol">Using mmol/L</string>
+    <string name="sensor_code">Sensor Code</string>
+    <string name="sensor_code_manual_entry_hint">• • • •</string>
+    <string name="sensor_code_timeout_description">"No code found.
+
+Take photo of Sensor Code again, or enter code manually."</string>
+    <string name="sensor_details_title">Sensor</string>
+    <string name="sensor_duration_info">Sensor session lasts up to 10 days.</string>
+    <string name="sensor_ended_alert">Your sensor session has ended. Replace your sensor.</string>
+    <string name="sensor_ended_description">No readings or alerts until you start a new sensor.</string>
+    <string name="sensor_expired">Sensor Expired</string>
+    <string name="sensor_expired_text">Expired</string>
+    <string name="sensor_expires">Sensor Expires</string>
+    <string name="sensor_expires_in_twenty_four_hours">Sensor Expires in 24 Hours</string>
+    <string name="sensor_expires_in_two_hours">Sensor Expires in 2 Hours</string>
+    <string name="sensor_expiring">Sensor Expiring</string>
+    <string name="sensor_expiring_hours_alert">Your sensor session will end in less than %1$s hours.</string>
+    <string name="sensor_expiring_mins_alert">Your sensor session will end in less than 30 minutes.</string>
+    <string name="sensor_failed">Sensor Failed</string>
+    <string name="sensor_failed_description">No readings or alerts until you start a new sensor.</string>
+    <string name="sensor_failed_due_to_restart_description">Sensors can only be used for one session. No readings or alerts until you start a new sensor.</string>
+    <string name="sensor_fell_off">Sensor fell off</string>
+    <string name="sensor_is_inserted_and_transmitter_is_attached">Sensor is inserted and transmitter is attached</string>
+    <string name="sensor_reading_enable_alerts_description">Dexcom ONE offers alerts that let you know when your glucose has gone too <b>high, low</b> or when sensor readings are <b>temporarily unavailable.</b></string>
+    <string name="sensor_reading_high_default_mgdl">250 mg/dL</string>
+    <string name="sensor_reading_high_default_mmol_comma">14,0 mmol/L</string>
+    <string name="sensor_reading_high_default_mmol_decimal">14.0 mmol/L</string>
+    <string name="sensor_reading_low_default_mgdl">70 mg/dL</string>
+    <string name="sensor_reading_low_default_mmol_comma">3,9 mmol/L</string>
+    <string name="sensor_reading_low_default_mmol_decimal">3.9 mmol/L</string>
+    <string name="sensor_readings">Sensor Readings</string>
+    <string name="sensor_readings_alert_settings_description">These are your default alert settings. You can change them later in Settings > Alerts. If your settings were imported, confirm them in Settings > Alerts.</string>
+    <string name="sensor_readings_alerts_description_1">Glucose alerts let you know when your glucose has gone too high or low.</string>
+    <string name="sensor_readings_alerts_description_2">By default, alerts are turned off.</string>
+    <string name="sensor_readings_alerts_description_3">To turn on alerts, go to:</string>
+    <string name="sensor_readings_alerts_description_4">Yellow Line: Where you set your High alert.</string>
+    <string name="sensor_readings_alerts_description_5">Red Line: Where you set your Low alert</string>
+    <string name="sensor_readings_arrow_description">The trend arrow shows the direction your glucose is going and how fast.</string>
+    <string name="sensor_readings_description">Learn how to find your glucose levels: current, past, and trend.</string>
+    <string name="sensor_readings_title">Sensor readings</string>
+    <string name="sensor_removal">Sensor Removal</string>
+    <string name="sensor_removal_instructions">Sensor Removal Instructions</string>
+    <string name="sensor_session">Sensor Session</string>
+    <string name="sensor_session_info_label">10 days left</string>
+    <string name="sensor_start">Sensor Start</string>
+    <string name="sensor_start_time">Sensor Start</string>
+    <string name="sensor_stopped">Sensor Session Stopped</string>
+    <string name="sensor_warmup">Sensor Warmup</string>
+    <string name="serial_number">SN</string>
+    <string name="session_ended">Session Ended</string>
+    <string name="session_ended_snackbar">Your sensor has been stopped.</string>
+    <string name="set_up_phone_settings">Learn how to safely set up your phone in the Settings tab in the app.</string>
+    <string name="setings_how_to_text_version">%1$d of %2$d</string>
+    <string name="settings_g7_android_safety_settings_instructions">Avoid phone settings that stop your alerts and app from working.</string>
+    <string name="settings_imported">Settings Imported</string>
+    <string name="settings_imported_detail">These G6/G7 app settings have been imported from your Dexcom account:</string>
+    <string name="settings_imported_text1">Glucose Graph Height</string>
+    <string name="settings_imported_text2">Alert Settings</string>
+    <string name="settings_imported_text3">Share Settings</string>
+    <string name="settings_to_alert">Settings > Alerts.</string>
+    <string name="setup_complete">Setup Complete</string>
+    <string name="setup_wizard">Setup Wizard</string>
+    <string name="share">Share</string>
+    <string name="share_allow_access">Allow Access</string>
+    <string name="share_cancel_invitation_caps">CANCEL INVITATION</string>
+    <string name="share_cancel_invitation_question">Cancel invitation?</string>
+    <string name="share_change_data_consent">Change Data Consent</string>
+    <string name="share_choose_from_contacts">Choose from Contacts</string>
+    <string name="share_consent_explanation">"You can't use Share if you don't allow data sharing to the cloud."</string>
+    <string name="share_contacts_permission_first_body">"Without Contacts Access you won't be able to use Choose From Contacts feature."</string>
+    <string name="share_contacts_permission_second_body">Allow access so you can use Choose from Contacts.</string>
+    <string name="share_continue_editing_caps">CONTINUE EDITING</string>
+    <string name="share_continue_sharing">Continue Sharing</string>
+    <string name="share_continued_sharing_with">You continued sharing with %s.</string>
+    <string name="share_current_sensor_reading">Current sensor reading</string>
+    <string name="share_current_sensor_reading_and_trend_graph">Current sensor reading and trend graph</string>
+    <string name="share_data_consent_required">Data Consent Required</string>
+    <string name="share_data_option">Choose what data you want to share with %s.</string>
+    <string name="share_data_sensor_reading">Only sensor reading</string>
+    <string name="share_data_sensor_reading_trend_graph">Sensor reading and trend graph</string>
+    <string name="share_data_setting">You can change this setting later.</string>
+    <string name="share_data_setting_updated">Data sharing updated.</string>
+    <string name="share_data_sharing">Data Sharing</string>
+    <string name="share_delay_notification">Delay 1st Notification</string>
+    <string name="share_description">Allow friends and family to view your sensor readings.</string>
+    <string name="share_disabled_label">Off</string>
+    <string name="share_edit">Edit</string>
+    <string name="share_edit_invitation">Edit Invitation</string>
+    <string name="share_email">Email</string>
+    <string name="share_enabled_label">On</string>
+    <string name="share_follower">Follower</string>
+    <string name="share_follower_details_invitation_expired">Invitation expired</string>
+    <string name="share_follower_details_invitation_sent">Invitation sent</string>
+    <string name="share_followers_email_address">"What is your Follower's email address?"</string>
+    <string name="share_followers_recommended_alerts">Recommended alert settings.</string>
+    <string name="share_get_started_description">"Invite people to become your Followers.
+
+A Follower has access to:
+• Your sensor readings
+• Glucose and system notifications"</string>
+    <string name="share_give_follower_nickname">Give your Follower a nickname</string>
+    <string name="share_go_to_consent">Go to Consent</string>
+    <string name="share_go_to_consent_caps">GO TO CONSENT</string>
+    <string name="share_go_to_invite_follower">Invite Follower</string>
+    <string name="share_has_been_turned_off">Share has been turned off</string>
+    <string name="share_high_alert">High</string>
+    <string name="share_home_data_consent_required">Data Consent Required</string>
+    <string name="share_home_followers">Followers</string>
+    <string name="share_home_status_label">Status</string>
+    <string name="share_home_status_working">Working</string>
+    <string name="share_i_dont_want_to_use_share">"I DON'T WANT TO USE SHARE"</string>
+    <string name="share_invalid_email">Not a valid Email address.</string>
+    <string name="share_invalid_email_duplicate">You already have a Follower with this email.</string>
+    <string name="share_invalid_nickname">"Nicknames can't contain “;:”`\\/&lt;>"</string>
+    <string name="share_invalid_nickname_duplicate">You already have a Follower with this nickname.</string>
+    <string name="share_invitation_expired">Invitation Expired</string>
+    <string name="share_invitation_sent">Invitation Sent</string>
+    <string name="share_invitation_sent_to_nickname">Invitation sent to %s.</string>
+    <string name="share_invitation_will_not_be_sent">This invitation will not be sent.</string>
+    <string name="share_invite_follower_high_description">Notify %s when your sensor reading is at or above the level you set for the amount of time.</string>
+    <string name="share_invite_follower_low_description">Notify %s when your sensor reading is at or below the level you set for the amount of time.</string>
+    <string name="share_invite_follower_no_data_description">Notify %s when they stop receiving your sensor readings for the amount of time.</string>
+    <string name="share_invite_follower_urgent_low_description">Notify %s when your sensor reading is at or below the level you set.</string>
+    <string name="share_invite_follower_urgent_low_subtitle">%s can change these settings later.</string>
+    <string name="share_is_off_message">Share is off. Your Followers are not receiving readings or alerts.</string>
+    <string name="share_login_required">Log In Required</string>
+    <string name="share_low_alert">Low</string>
+    <string name="share_max_followers_message">"You've reached the maximum 10 Followers. To add a new Follower, remove a current Follower first."</string>
+    <string name="share_nickname">Nickname</string>
+    <string name="share_nickname_did_not_accept_invitation">"%s didn't accept within 7 days."</string>
+    <string name="share_nickname_has_7_days">%s has 7 days to accept it.</string>
+    <string name="share_nickname_stopped_following_you">%s stopped following you</string>
+    <string name="share_no_active_followers">No Active Followers</string>
+    <string name="share_no_data">No Data</string>
+    <string name="share_no_data_alert">No Data</string>
+    <string name="share_no_followers_description">To activate Share, invite your first Follower.</string>
+    <string name="share_no_followers_title">You don’t have any Followers yet.</string>
+    <string name="share_no_internet_connection">No Internet Connection</string>
+    <string name="share_not_ready_message">Please try again after sensor warmup.</string>
+    <string name="share_not_ready_title">Share is not currently available</string>
+    <string name="share_notifications">Notifications</string>
+    <string name="share_open_phone_settings">Open Phone Settings</string>
+    <string name="share_pause_follower">Pause Follower</string>
+    <string name="share_pause_follower_dialog_confirm">PAUSE SHARING</string>
+    <string name="share_pause_follower_dialog_description">You can restart sharing again later.</string>
+    <string name="share_pause_follower_dialog_title">Pause sharing with %s?</string>
+    <string name="share_pause_follower_snackbar">You paused sharing with %s.</string>
+    <string name="share_please_review_invitation">Please review your invitation</string>
+    <string name="share_publisher_control_message">You control what data is shared with %s.</string>
+    <string name="share_remove_follower">Remove Follower</string>
+    <string name="share_remove_follower_caps">REMOVE FOLLOWER</string>
+    <string name="share_remove_follower_confirmation_message">Follower %s has been removed.</string>
+    <string name="share_remove_follower_dialog_cancel">Cancel</string>
+    <string name="share_remove_follower_dialog_confirm">Remove Follower</string>
+    <string name="share_remove_follower_dialog_title">Remove %s as a Follower?</string>
+    <string name="share_resend_invitation">Resend Invitation</string>
+    <string name="share_select_contact">Select Contact</string>
+    <string name="share_send_invitation">Send Invitation</string>
+    <string name="share_server_connection_error_message">"Cannot access the Dexcom Server.
+Please try again later."</string>
+    <string name="share_server_outage">Server Outage</string>
+    <string name="share_sharing_paused">Sharing Paused</string>
+    <string name="share_sharing_paused_lowercase">Sharing paused</string>
+    <string name="share_sharing_stopped">You stopped sharing with %s.</string>
+    <string name="share_stopped_following_you">Stopped Following You</string>
+    <string name="share_subscriber_control_message">%s controls these settings.</string>
+    <string name="share_tutorial_consent_required_description">Share requires your consent to sharing data to the cloud.</string>
+    <string name="share_tutorial_data_sharing_description">Allow your Follower to see your glucose graph and recent sensor readings.</string>
+    <string name="share_tutorial_done">Done</string>
+    <string name="share_tutorial_internet_required_description">"You need to be online to use Share.
+
+Your Follower also needs to be online to get sensor readings or alerts from you.
+
+Your Dexcom G7 app should always be the primary source of glucose information."</string>
+    <string name="share_tutorial_invite_follower_description"><b>Add up to 10 Followers</b>"
+Choose family, friend, or other trusted caregiver.
+
+"<b>A Follower has access to:</b>"
+• Your sensor readings
+• Glucose and system notifications
+
+You're in control. Edit or remove Followers at any time."</string>
+    <string name="share_tutorial_notifications_description">Your Follower can receive glucose and system notifications. Your Follower can change the settings later.</string>
+    <string name="share_urgent_low_alert">Urgent Low</string>
+    <string name="share_what_are_your_followers">"What are your Follower's nickname and email address?"</string>
+    <string name="share_you_denied_contacts_access">You Denied Contacts Access</string>
+    <string name="show_target_range">Show Target Range</string>
+    <string name="signal_loss">Signal Loss</string>
+    <string name="signal_loss_alert">Signal Loss Alert</string>
+    <string name="signal_loss_alert_default">Signal Loss Alert (Default)</string>
+    <string name="signal_loss_alert_description">"Alerts you when the app temporarily stops getting readings from the sensor because there's an issue with the Bluetooth connection."</string>
+    <string name="signal_loss_alert_message">No readings or alerts until reconnected.</string>
+    <string name="signal_loss_card_description">Always keep phone within %1$s of transmitter. Wait up to 30 minutes.</string>
+    <string name="signal_loss_card_description_g7">Always keep phone within %1$s of sensor. Wait up to 30 minutes.</string>
+    <string name="signal_loss_continues_text"><b>If Signal Loss continues</b> for more than 30 minutes, contact technical support. Go to <b>Profile > Contact</b></string>
+    <string name="signal_loss_description"><b>Signal Loss</b>" tells you that you've lost your Bluetooth connection and aren't getting sensor readings."</string>
+    <string name="signal_loss_help_bullet_1">Turn Bluetooth off. Then turn it back on and leave it on.</string>
+    <string name="signal_loss_help_bullet_2">Keep your phone within %1$s of the sensor with nothing between them, including your body, walls, and water.</string>
+    <string name="signal_loss_help_bullet_3">Keep your phone on the same side of your body as your sensor. Bluetooth works best when the sensor and phone are in sight of each other.</string>
+    <string name="signal_loss_help_bullet_4">"Keep the app open. Don't swipe it closed."</string>
+    <string name="signal_loss_help_bullet_5">Restart your phone and the app.</string>
+    <string name="signal_loss_help_bullet_6">Use recommended phone settings listed in the app at &lt;b>Profile > Phone Settings&lt;/b></string>
+    <string name="signal_loss_help_bullet_7">Keep your phone charged to at least 20%.</string>
+    <string name="signal_loss_help_to_help_prevent">To help prevent:</string>
+    <string name="signal_loss_help_troubleshooting_tips">Troubleshooting tips:</string>
+    <string name="signal_loss_help_troubleshooting_tips_description">It will take up to 5 minutes for any of these to work.</string>
+    <string name="silence_all_banner_message_with_time">Silence All on until %1$s</string>
+    <string name="silenced">Silenced</string>
+    <string name="six_hour_sensor_expiration_description">"Your session will end in less than 6 hours.
+
+You will not receive alerts or readings after this time unless you replace your sensor."</string>
+    <string name="six_meters">6 meters</string>
+    <string name="six_meters_keep_phone_close">6 Meters</string>
+    <string name="skip">Skip</string>
+    <string name="skip_feedback">Skip Feedback</string>
+    <string name="slowly_rising_or_falling">Slowly Rising or Falling</string>
+    <string name="sn_matches_description_label">Return to previous page and follow instructions.</string>
+    <string name="sn_title">SN</string>
+    <string name="snap_in_transmitter_it_clicks_into_place">c. Snap in transmitter. It clicks into place.</string>
+    <string name="snooze">Snooze</string>
+    <string name="software_number">Software Number</string>
+    <string name="software_number_title">Software Number</string>
+    <string name="software_version">Software Version</string>
+    <string name="somewhat_helpful">Somewhat helpful</string>
+    <string name="somewhat_unhelpful">Somewhat unhelpful</string>
+    <string name="sound">Tone</string>
+    <string name="sound_and_vibrate">Sound/Vibrate</string>
+    <string name="sound_being_used">Sound already used</string>
+    <string name="sound_being_used_description">The alert sound you selected is also being used for:</string>
+    <string name="sound_description">"Dexcom ONE alerts will not override your phone settings.
+
+You will NOT hear or feel alerts if your phone is set to silent."</string>
+    <string name="sound_setting">Sound</string>
+    <string name="start_here_guide">Start Here Guide</string>
+    <string name="start_new_sensor">Start New Sensor</string>
+    <string name="start_sensor">Start Sensor</string>
+    <string name="start_sensor_warmup">Start Sensor Warmup</string>
+    <string name="start_time">Start Time</string>
+    <string name="start_time_updated">Start time has been updated</string>
+    <string name="state_card_description">Tap Help for troubleshooting tips.</string>
+    <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="status_home">Status</string>
+    <string name="status_home_data_consent_granted">Granted</string>
+    <string name="status_home_data_consent_label">Data Consent</string>
+    <string name="status_home_data_consent_not_granted">Not Granted</string>
+    <string name="status_home_data_consent_status">Data Consent Status</string>
+    <string name="status_home_followers_active">%1$d Active</string>
+    <string name="status_home_followers_label">Followers</string>
+    <string name="status_home_followers_message">Share requires active Followers who have accepted your invitation.</string>
+    <string name="status_home_followers_no_active">No Active Followers</string>
+    <string name="status_home_followers_not_available">Not Available</string>
+    <string name="status_home_followers_status">Followers Status</string>
+    <string name="status_home_inactive">Inactive</string>
+    <string name="status_home_internet_connected">Connected</string>
+    <string name="status_home_internet_label">Internet</string>
+    <string name="status_home_internet_message">Check your internet connection. Share will automatically reconnect once you are back online.</string>
+    <string name="status_home_internet_offline">Offline</string>
+    <string name="status_home_internet_server_outage">Server Outage</string>
+    <string name="status_home_internet_status">Internet Status</string>
+    <string name="status_home_label">Status</string>
+    <string name="status_home_my_connections">My Connections</string>
+    <string name="status_home_not_working">Not Working</string>
+    <string name="status_home_server_outage_message">"Dexcom is working to correct this issue. For more information, visit "</string>
+    <string name="status_home_server_outage_title">Dexcom Status</string>
+    <string name="status_home_share_fully_active_message">All components must be working for Share to work as designed.</string>
+    <string name="status_home_working">Working</string>
+    <string name="stay_more_than_six_meters_away">Stay more than %1$s away from other sensors until pairing is complete.</string>
+    <string name="steady">Steady</string>
+    <string name="step_1">Step 1</string>
+    <string name="step_2">Step 2</string>
+    <string name="stop_current_sensor_session">This stops your current sensor session, which has %1$s.</string>
+    <string name="stop_sensor">Stop Sensor</string>
+    <string name="stop_sensor_confirmation_description">This stops your current sensor session, which has %1$s.</string>
+    <string name="stop_sensor_feedback">Feedback</string>
+    <string name="stop_sensor_question">Stop Sensor?</string>
+    <string name="stop_sensor_session">Stop Sensor Session</string>
+    <string name="stop_sensor_text">This stops your current sensor session, which has %s.</string>
+    <string name="stop_sensor_warning">Once stopped, you can not restart your sensor.</string>
+    <string name="stop_time">Stop Time</string>
+    <string name="stop_time_updated">Stop time has been updated</string>
+    <string name="submit">Submit</string>
+    <string name="suggestion_both">Signal Loss and Brief Sensor Issue alerts</string>
+    <string name="suggestion_bsi">Brief Sensor Issue alert</string>
+    <string name="suggestion_signal_loss">Signal Loss alert</string>
+    <string name="sunday">S</string>
+    <string name="support">Support</string>
+    <string name="system_alerts">System Alerts</string>
+    <string name="tab_app_settings">App Settings</string>
+    <string name="tab_phone_settings">Phone Settings</string>
+    <string name="tab_title_connections">Connections</string>
+    <string name="tab_title_events">Events</string>
+    <string name="tab_title_glucose">Glucose</string>
+    <string name="tab_title_history">History</string>
+    <string name="tab_title_profile">Profile</string>
+    <string name="tab_title_reports">Reports</string>
+    <string name="tab_title_settings">Settings</string>
+    <string name="take_photo">Take Photo</string>
+    <string name="tamper_detail_summary_fix"><b>Take these steps to fix:</b>"
+
+1. Delete G7 app: Delete or disable apps on Android
+
+2. Tap to go to Google Play Store.
+
+To prevent this from happening again, don't download the app from anywhere but the Google Play Store.
+
+3. Download the G7 app.
+
+4. Open app and follow on screen instructions to set up"</string>
+    <string name="tamper_detail_summary_replace"><b>Replace G7 app now</b>"
+
+Until you replace the app, use your BG meter to treat. Don't remove your sensor."</string>
+    <string name="tamper_lockscreen_unsupported">"You're using an unsupported G7 app."</string>
+    <string name="tamper_modal_summary">"You're using an unsupported G7 app.
+
+Until you replace the app, use your BG meter to treat. Don't remove your sensor."</string>
+    <string name="tamper_modal_summary_replace">How to delete and install app</string>
+    <string name="tap_below_then_enter_pairing">Tap below, then enter the pairing code on the applicator.</string>
+    <string name="target_range">Target Range</string>
+    <string name="target_range_description">Target Range represents your goal for glucose readings. It is shown as a gray rectangle on the glucose graph.</string>
+    <string name="target_range_image_description_1">If your trend dots are above or below the gray area, you are outside of your target range during that time.</string>
+    <string name="target_range_image_description_2">Target range is %1$s, and cannot be changed</string>
+    <string name="target_range_preset">%1$s - %2$s %3$s</string>
+    <string name="target_range_preset_description">Target Range is set at %1$s and cannot be changed.</string>
+    <string name="task_get_server_time">Get Server Time</string>
+    <string name="task_post_patient_data">Post Patient Data -> %s</string>
+    <string name="tattoos">Tattoos</string>
+    <string name="technical_alerts">Technical Alerts</string>
+    <string name="technical_alerts_alert_description">Alerts you when you’re not getting sensor readings. They include App Stopped, Replace Sensor Now, and similar alerts.</string>
+    <string name="technical_alerts_description">Technical alerts let you know when you’re not getting sensor readings. They include App Stopped, Replace Sensor Now, and similar alerts. <b>Technical alerts are always On.</b></string>
+    <string name="technical_alerts_sound_description">"Technical Alerts can’t be turned off, but you can choose how your alert notifies you.
+
+%1$s"</string>
+    <string name="technical_alerts_toolbar_title">Technical Alerts</string>
+    <string name="technical_settings_alerts_sound_description">"Technical Alerts can't be turned off, but you can choose how your alert notifies you: sound, vibrate, or match phone settings."</string>
+    <string name="technical_support">Technical Support</string>
+    <string name="technical_support_phone_number">+1 234 56789</string>
+    <string name="then_you_get_a_twelve_hour_grace_period">Then you get a 12 hour grace period to replace the sensor.</string>
+    <string name="thirty_mins_sensor_expiration_description">"Your session will end in less than 30 minutes.
+
+You will not receive alerts or readings after this time unless you replace your sensor."</string>
+    <string name="throw_away_applicator">6. Throw Away Applicator</string>
+    <string name="throw_away_applicator_warning">Follow local guidelines for blood-contacting components when throwing applicator away.</string>
+    <string name="thumbs_down">Thumbs Down</string>
+    <string name="thumbs_up">Thumbs Up</string>
+    <string name="thursday">T</string>
+    <string name="time">Time</string>
+    <string name="time_in_range">Time in Range</string>
+    <string name="time_in_range_description">The percentage of time that glucose levels are in low, target and high ranges.</string>
+    <string name="time_left">%1$s left</string>
+    <string name="time_left_in_grace_period">Time left in grace period:</string>
+    <string name="time_loss_alert">"You changed the phone's time. To fix, reconnect to the internet."</string>
+    <string name="time_loss_alert_description">"You changed the phone's time. That makes the app stop working correctly."</string>
+    <string name="time_loss_dialog_description">"Confirm that your phone is connected to the internet. If connected, the issue should resolve immediately.
+
+To prevent this, don't change the phone's time."</string>
+    <string name="time_loss_state">App Stopped Working</string>
+    <string name="time_loss_state_description">"You changed the phone's time. That makes the app stop working correctly."</string>
+    <string name="timed_out">Timed Out</string>
+    <string name="timing">Timing</string>
+    <string name="tip_tap_green_frame_to_focus">Tip: Tap green frame to focus if needed.</string>
+    <string name="to_fix">To fix:</string>
+    <string name="to_pair_make_sure">To pair make sure:</string>
+    <string name="today">Today</string>
+    <string name="transmitter">Transmitter</string>
+    <string name="transmitter_battery_low">Transmitter Battery Low</string>
+    <string name="transmitter_battery_low_alert">Your transmitter battery is critically low.</string>
+    <string name="transmitter_code_placeholder">1234</string>
+    <string name="transmitter_correct_position_title">Make sure the transmitter is flat and snug in transmitter holder</string>
+    <string name="transmitter_eol_three_weeks_description">"Your transmitter will expire in about 3 weeks.
+
+Do not replace your current transmitter with a new one yet. Wait until the system tells you to replace it.
+
+If you haven't already, please order a new transmitter."</string>
+    <string name="transmitter_eol_two_weeks_description">"Your transmitter will expire in about 2 weeks.
+
+Do not replace your current transmitter with a new one yet. Wait until the system tells you to replace it.
+
+If you haven't already, please order a new transmitter."</string>
+    <string name="transmitter_expire_in_2_weeks_alert">Your transmitter will expire in about 2 weeks.</string>
+    <string name="transmitter_expire_in_3_weeks_alert">Your transmitter will expire in about 3 weeks.</string>
+    <string name="transmitter_failed">Transmitter Failed</string>
+    <string name="transmitter_failed_alert">Your transmitter is not working. Pair a new transmitter.</string>
+    <string name="transmitter_failed_description">Replace the old and pair a new transmitter with a new sensor.</string>
+    <string name="transmitter_is_flat_and_snug_in_transmitter_holder">Transmitter is flat and snug in transmitter holder</string>
+    <string name="transmitter_last_session_description">"This is your last transmitter session.
+
+You need a new transmitter for your next session.
+
+If you don’t have a new transmitter, order one now."</string>
+    <string name="transmitter_low_battery_description">"Do not replace your current transmitter with a new one. Wait until the system tells you to replace it.
+
+While the transmitter battery is low, it can still last through another sensor session.
+
+If you haven't already done so, order a new transmitter."</string>
+    <string name="transmitter_pairing_code_state_description">"Searching for sensor with pairing code:
+"</string>
+    <string name="transmitter_pairing_help_description">Pairing can take up to 30 minutes.</string>
+    <string name="transmitter_pairing_help_description_g7">Pairing usually takes less than 5 minutes.</string>
+    <string name="transmitter_pairing_state_description">"Searching for your transmitter.
+
+Pairing can take up to 30 minutes. Keep phone within %1$s of transmitter."</string>
+    <string name="transmitter_sn">Transmitter SN</string>
+    <string name="transmitter_sn_lowercase">transmitter SN</string>
+    <string name="treatment_decisions">Treatment Decisions</string>
+    <string name="trend_arrows">Trend Arrows</string>
+    <string name="trend_falling">" ↓ "</string>
+    <string name="trend_falling_rapidly">" ↓↓ "</string>
+    <string name="trend_falling_slowly">" ↘︎ "</string>
+    <string name="trend_flat">" → "</string>
+    <string name="trend_graph">Trend graph</string>
+    <string name="trend_graph_12pm">12PM</string>
+    <string name="trend_graph_1pm">1PM</string>
+    <string name="trend_graph_2pm">2PM</string>
+    <string name="trend_graph_description">The trend graph shows where your glucose has been. The white circle on the right is your most current reading, the black dots are your past readings.</string>
+    <string name="trend_graph_menu_content_description">Menu</string>
+    <string name="trend_rising">" ↑ "</string>
+    <string name="trend_rising_rapidly">" ↑↑ "</string>
+    <string name="trend_rising_slowly">" ↗︎ "</string>
+    <string name="troubleshooting_tips">Troubleshooting Tips</string>
+    <string name="try_pairing_again">Try Pairing Again</string>
+    <string name="tuesday">T</string>
+    <string name="turn_on_alert_later">You can turn alerts on later in Settings.</string>
+    <string name="turn_on_later">Turn On Later</string>
+    <string name="turn_on_notifications">Turn on Notifications</string>
+    <string name="turn_on_phone_bluetooth">Turn On Phone Bluetooth</string>
+    <string name="twenty_feet_keep_phone_close">20 feet</string>
+    <string name="twenty_feet_keep_phone_close_upper_case">20 Feet</string>
+    <string name="twenty_four_hour_sensor_expiration_description">"Your session will end in less than 24 hours.
+
+You will not receive alerts or readings after this time unless you replace your sensor."</string>
+    <string name="two_arrow_option">%1$s %2$s or more per min</string>
+    <string name="two_arrows_down">Two arrows down</string>
+    <string name="two_arrows_up">Two arrows up</string>
+    <string name="two_hour_sensor_expiration_description">"Your session will end in less than 2 hours.
+
+You will not receive alerts or readings after this time unless you replace your sensor."</string>
+    <string name="tx_sn_help_title">Is this the Transmitter SN on the box?</string>
+    <string name="unit_gram">g</string>
+    <string name="unrecoverable_error_description">"The app needs to be reset to factory defaults.
+
+To fix, tap "<b>Reset App</b>" below.
+
+You will be able to continue your current sensor session."</string>
+    <string name="uom_home_both">:\"both\"</string>
+    <string name="uom_home_mmol">:\"mmol\"</string>
+    <string name="update_app_now">Update App Now</string>
+    <string name="update_available">Update Available</string>
+    <string name="urgent_low">Urgent Low</string>
+    <string name="urgent_low_alert">Urgent Low Alert</string>
+    <string name="urgent_low_alert_repeat_timing_description">"After you acknowledge your first alert, it repeats if your sensor reading stays urgently low for this long. This setting can't be changed."</string>
+    <string name="urgent_low_soon">Urgent Low Soon</string>
+    <string name="urgent_low_soon_alert">Urgent Low Soon Alert</string>
+    <string name="urgent_low_soon_alert_description">Alerts you when your sensor reading will be %1$s %2$s or below in less than 20 minutes.</string>
+    <string name="urgent_low_soon_alert_repeat_timing_description">"After you acknowledge your first alert, it repeats if your sensor reading stays in the urgently low soon state for this long. This setting can't be changed."</string>
+    <string name="urgent_low_soon_banner1">%1$s %2$s within 20 minutes</string>
+    <string name="urgent_low_soon_banner2">%1$s %2$s within 10 minutes</string>
+    <string name="urgent_low_soon_prediction">%1$s %2$s within 20 minutes</string>
+    <string name="urgent_low_soon_predicts">Urgent Low Soon predicts when your glucose will be at or below %1$s %2$s within 20 minutes.</string>
+    <string name="urgent_low_soon_text">Act now to prevent low.</string>
+    <string name="urgent_low_sound_setting_description">Choose how your alert notifies you: sound, vibrate, or match phone settings.</string>
+    <string name="use_as_calibration">Use as calibration</string>
+    <string name="use_bg_meter">Use BG meter</string>
+    <string name="use_dexcom_one">Use Dexcom ONE</string>
+    <string name="use_take_photo_to_pair_faster">Use <b>Take Photo</b> to pair faster.</string>
+    <string name="used_profile_name_error_message">"Name already used.
+Your two alert profile names must be different."</string>
+    <string name="user_guide">User Guide</string>
+    <string name="valid_sensor_code_message">Success! Your Sensor Code is valid.</string>
+    <string name="valid_sn_message">Success! Your Transmitter SN is valid.</string>
+    <string name="version">Version %1$s</string>
+    <string name="vibrate_on_banner_message">Vibrate on</string>
+    <string name="vibrate_on_banner_message_with_time">Vibrate on until %1$s</string>
+    <string name="video_error_message">"Video can't be played. View text version or try again later."</string>
+    <string name="video_error_title">Video Error</string>
+    <string name="view_now">View Now</string>
+    <string name="view_now_label">View Now!</string>
+    <string name="view_text_version">View Text Version</string>
+    <string name="warmup_complete_alert">You are now getting readings and alerts.</string>
+    <string name="warmup_complete_title">Sensor Warmup Complete</string>
+    <string name="warmup_dialog_description">Before a sensor can provide accurate readings, it needs time to get used to your body.</string>
+    <string name="warmup_dialog_title">What is Sensor Warmup?</string>
+    <string name="warmup_is_complete">Sensor Warmup Complete. You are now getting readings and alerts.</string>
+    <string name="warmup_snackbar_warning_message">You will NOT hear or feel alerts if your phone is set to silent.</string>
+    <string name="warmup_snackbar_warning_message_g7">Your sensor is now warming up. No readings or alerts until warmup is done.</string>
+    <string name="warmup_state_5_minutes_remaining">minutes or less remaining</string>
+    <string name="warmup_state_description">Your sensor is now warming up. No readings or alerts until warmup is done.</string>
+    <string name="warmup_state_minutes_remaining">minutes remaining</string>
+    <string name="warning">Warning</string>
+    <string name="wednesday">W</string>
+    <string name="when_in_doubt_use_your_bg_meter">When in doubt, use your BG meter.</string>
+    <string name="when_to_use_bg_meter">When to use your blood glucose meter</string>
+    <string name="when_to_use_bg_meter_description">CGM and treatment decisions</string>
+    <string name="when_to_use_dexcom_one">When to Use Dexcom ONE</string>
+    <string name="when_to_use_dexcom_one_description">Only use Dexcom ONE when you see both a number and arrow, like this:</string>
+    <string name="when_to_use_your_blood_glucose_description">Use your blood glucose (BG) meter if the number or arrow is missing, like this:</string>
+    <string name="when_to_use_your_blood_glucose_description_2">"If your number doesn't match how you feel, take a fingerstick. Always trust your body."</string>
+    <string name="when_to_use_your_blood_glucose_meter">When to Use Your Blood Glucose Meter</string>
+    <string name="why_stop_early">Why did you stop early?</string>
+    <string name="yesterday">Yesterday</string>
+    <string name="you_cant_take_a_photo_without_camera_access">"You can't take a photo without camera access"</string>
+    <string name="your_phone_has_an_app_time_issue">Your phone has an app time issue.</string>
+    <string name="your_reading_is_falling">Your reading is falling %1$s %2$s or more per minute.</string>
+    <string name="your_reading_is_falling1">Your reading is falling %1$s - %2$s %3$s per minute.</string>
+    <string name="your_reading_is_high">Your reading is high.</string>
+    <string name="your_reading_is_low">Your reading is low.</string>
+    <string name="your_reading_is_rising">Your reading is rising %1$s %2$s or more per minute.</string>
+    <string name="your_reading_is_rising1">Your reading is rising %1$s - %2$s %3$s per minute.</string>
+</resources>

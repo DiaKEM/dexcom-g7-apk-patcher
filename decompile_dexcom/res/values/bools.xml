@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="abc_action_bar_embed_tabs">true</bool>
+    <bool name="abc_config_actionMenuItemAllCaps">true</bool>
+    <bool name="bar_chart_line_dashed">true</bool>
+    <bool name="glucose_y_axis_tick_mark_dashed">false</bool>
+    <bool name="high_shading_closed">true</bool>
+    <bool name="line_dashed">true</bool>
+    <bool name="low_shading_closed">true</bool>
+    <bool name="mtrl_btn_textappearance_all_caps">true</bool>
+    <bool name="timeline_axis_line_dashed">false</bool>
+    <bool name="timeline_axis_line_enabled">true</bool>
+    <bool name="urgent_low_shading_closed">true</bool>
+</resources>

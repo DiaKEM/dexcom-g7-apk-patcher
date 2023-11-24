@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<splits>
+    <module name="">
+        <language>
+            <entry key="cs" split="config.cs" />
+            <entry key="da" split="config.da" />
+            <entry key="de" split="config.de" />
+            <entry key="es" split="config.es" />
+            <entry key="fi" split="config.fi" />
+            <entry key="fr" split="config.fr" />
+            <entry key="it" split="config.it" />
+            <entry key="nb" split="config.nb" />
+            <entry key="nl" split="config.nl" />
+            <entry key="pt" split="config.pt" />
+            <entry key="sk" split="config.sk" />
+            <entry key="sl" split="config.sl" />
+            <entry key="sv" split="config.sv" />
+        </language>
+    </module>
+</splits>

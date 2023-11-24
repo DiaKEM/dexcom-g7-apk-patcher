@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/sensor_pairing" app:startDestination="@id/id_pairing_selection"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <fragment android:name="com.dexcom.phoenix.ui.screens.pairing.PairingSelectionScreenFragment" android:id="@id/id_pairing_selection">
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <argument android:name="@string/navigation_view_gone" android:defaultValue="true" app:argType="boolean" />
+        <action android:id="@id/action_id_pairing_selection_to_id_pairing_manual_entry" app:destination="@id/id_pairing_manual_entry" />
+        <action android:id="@id/action_id_pairing_selection_to_id_pairing_photo_permissions" app:destination="@id/id_pairing_photo_permissions" />
+        <action android:id="@id/action_id_pairing_selection_to_id_coarse_location_off_help_dialog" app:destination="@id/id_coarse_location_off_help_dialog" />
+        <action android:id="@id/action_id_pairing_selection_to_id_bluetooth_permissions_off_dialog" app:destination="@id/id_bluetooth_permissions_off_dialog" />
+    </fragment>
+    <fragment android:name="com.dexcom.phoenix.ui.screens.pairing.PairingManualEntryFragment" android:id="@id/id_pairing_manual_entry">
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <argument android:name="@string/navigation_view_gone" android:defaultValue="true" app:argType="boolean" />
+        <action android:id="@id/action_id_pairing_manual_entry_to_id_pairing_invalid_code" app:destination="@id/id_pairing_invalid_code" />
+        <action android:id="@id/action_id_pairing_manual_entry_to_id_glucose_screen" app:destination="@id/id_tab_glucose" app:popUpTo="@id/id_tab_glucose" app:popUpToInclusive="true" />
+        <action android:id="@id/action_id_pairing_manual_entry_to_id_onboarding_pairing_wearable" app:destination="@id/id_onboarding_pairing_wearable" app:popUpTo="@id/id_pairing_selection" app:popUpToInclusive="true" />
+        <action android:id="@id/action_id_pairing_manual_entry_to_id_sensor_details" app:destination="@id/id_sensor_details" app:popUpTo="@id/id_sensor_details" app:popUpToInclusive="true" />
+    </fragment>
+    <dialog android:label="" android:name="com.dexcom.phoenix.ui.screens.pairing.PairingInvalidCodeFragment" android:id="@id/id_pairing_invalid_code">
+        <argument android:name="@string/navigation_view_gone" android:defaultValue="true" app:argType="boolean" />
+        <action android:id="@id/action_id_pairing_invalid_code_to_id_pairing_manual_entry" app:destination="@id/id_pairing_manual_entry" app:enterAnim="@anim/nav_default_enter_anim" app:exitAnim="@anim/nav_default_exit_anim" app:popEnterAnim="@anim/nav_default_pop_enter_anim" app:popExitAnim="@anim/nav_default_pop_exit_anim" app:popUpTo="@id/id_pairing_selection" app:popUpToInclusive="true" />
+        <action android:id="@id/action_id_pairing_invalid_code_to_id_pairing_photo_permissions" app:destination="@id/id_pairing_photo_permissions" app:popUpTo="@id/id_pairing_selection" app:popUpToInclusive="false" />
+    </dialog>
+    <dialog android:name="com.dexcom.phoenix.ui.screens.pairing.PairingPhotoPermissionsFragment" android:id="@id/id_pairing_photo_permissions">
+        <argument android:name="@string/navigation_view_gone" android:defaultValue="true" app:argType="boolean" />
+        <action android:id="@id/action_id_pairing_photo_permissions_to_id_pairing_photo_entry" app:destination="@id/id_pairing_photo_entry" app:popUpTo="@id/id_pairing_photo_permissions" app:popUpToInclusive="true" />
+        <action android:id="@id/action_id_pairing_photo_permissions_to_id_pairing_selection" app:popUpTo="@id/id_pairing_selection" app:popUpToInclusive="false" />
+        <action android:id="@id/action_id_pairing_photo_permissions_to_id_pairing_photo_permissions_restricted" app:destination="@id/id_pairing_photo_permissions_restricted" app:popUpTo="@id/id_pairing_photo_permissions" app:popUpToInclusive="true" />
+    </dialog>
+    <dialog android:name="com.dexcom.phoenix.ui.screens.pairing.PairingPhotoPermissionsRestrictedFragment" android:id="@id/id_pairing_photo_permissions_restricted">
+        <argument android:name="@string/navigation_view_gone" android:defaultValue="true" app:argType="boolean" />
+        <action android:id="@id/action_id_pairing_photo_permissions_restricted_to_id_pairing_selection" app:popUpTo="@id/id_pairing_selection" app:popUpToInclusive="false" />
+        <action android:id="@id/action_id_pairing_photo_permissions_restricted_to_id_pairing_photo_entry" app:destination="@id/id_pairing_photo_entry" />
+    </dialog>
+    <fragment android:name="com.dexcom.phoenix.ui.screens.pairing.PairingPhotoEntryFragment" android:id="@id/id_pairing_photo_entry">
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <argument android:name="@string/navigation_view_gone" android:defaultValue="true" app:argType="boolean" />
+        <action android:id="@id/action_id_pairing_photo_entry_to_id_pairing_invalid_code" app:destination="@id/id_pairing_invalid_code" />
+        <action android:id="@id/action_id_pairing_photo_entry_to_id_glucose_screen" app:destination="@id/id_tab_glucose" app:popUpTo="@id/id_pairing_selection" app:popUpToInclusive="true" />
+        <action android:id="@id/action_id_pairing_photo_entry_to_id_onboarding_pairing_wearable" app:destination="@id/id_onboarding_pairing_wearable" app:popUpTo="@id/id_pairing_selection" app:popUpToInclusive="true" />
+        <action android:id="@id/action_id_pairing_photo_entry_to_id_pairing_manual_entry" app:destination="@id/id_pairing_manual_entry" app:popUpTo="@id/id_pairing_selection" app:popUpToInclusive="false" />
+        <action android:id="@id/action_id_pairing_photo_entry_to_id_pairing_selection" app:destination="@id/id_pairing_selection" app:launchSingleTop="true" app:popUpTo="@id/id_pairing_selection" app:popUpToInclusive="true" />
+        <action android:id="@id/action_id_pairing_photo_entry_to_id_sensor_details" app:destination="@id/id_sensor_details" app:popUpTo="@id/id_sensor_details" app:popUpToInclusive="true" />
+    </fragment>
+    <dialog android:label="" android:name="com.dexcom.phoenix.ui.screens.onboarding.home.appsetup.location.LocationOffHelpDialog" android:id="@id/id_coarse_location_off_help_dialog" />
+    <dialog android:label="" android:name="com.dexcom.phoenix.ui.screens.onboarding.home.appsetup.nearbydevices.BluetoothPermissionsOffDialog" android:id="@id/id_bluetooth_permissions_off_dialog" />
+</navigation>

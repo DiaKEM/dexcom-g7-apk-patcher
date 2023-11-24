@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="days">
+        <item quantity="other">%d days left</item>
+        <item quantity="one">%d day left</item>
+    </plurals>
+    <plurals name="g7_number_of_conflicts">
+        <item quantity="other">Conflicts</item>
+        <item quantity="one">Conflict</item>
+    </plurals>
+    <plurals name="hours">
+        <item quantity="other">%dh</item>
+        <item quantity="one">%dh</item>
+    </plurals>
+    <plurals name="hours_full">
+        <item quantity="other">%d hours</item>
+        <item quantity="one">%d hour</item>
+    </plurals>
+    <plurals name="mins">
+        <item quantity="other">%dmin</item>
+        <item quantity="one">%dmin</item>
+    </plurals>
+    <plurals name="minutes">
+        <item quantity="other">%d minutes</item>
+        <item quantity="one">%d minute</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="other">%d new notifications</item>
+        <item quantity="one">%d new notification</item>
+    </plurals>
+    <plurals name="number_of_conflicts">
+        <item quantity="other">%d Conflicts</item>
+        <item quantity="one">%d Conflict</item>
+    </plurals>
+    <plurals name="pill_hours">
+        <item quantity="other">%d Hours</item>
+        <item quantity="one">%d Hour</item>
+    </plurals>
+    <plurals name="time_hours">
+        <item quantity="other">%dh</item>
+        <item quantity="one">%dh</item>
+    </plurals>
+</resources>

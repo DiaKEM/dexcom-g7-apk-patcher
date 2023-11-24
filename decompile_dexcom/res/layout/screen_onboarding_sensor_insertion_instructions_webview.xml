@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:tag="layout/screen_onboarding_sensor_insertion_instructions_webview_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:id="@id/id_appBar" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <androidx.appcompat.widget.Toolbar android:id="@id/id_sensor_insertion_instructions_webview_toolbar" android:tag="binding_1" android:layout_width="fill_parent" android:layout_height="?actionBarSize" style="@style/OnboardingToolbar" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <WebView android:id="@id/id_webview_url" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/id_appBar" />
+</androidx.constraintlayout.widget.ConstraintLayout>

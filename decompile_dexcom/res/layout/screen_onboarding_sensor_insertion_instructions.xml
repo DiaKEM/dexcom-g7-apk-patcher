@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:id="@id/id_onboarding_sensor_insertion_instructions_coordnator_layout" android:tag="layout/screen_onboarding_sensor_insertion_instructions_0" android:background="@color/dex_gray_200" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:id="@id/id_onboarding_sensor_insertion_instructions_app_bar" android:background="@color/dex_gray_200" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <androidx.appcompat.widget.Toolbar android:id="@id/id_sensor_insertion_instructions_tool_bar" android:tag="binding_1" app:menu="@menu/sensor_insertion_instructions_menu" app:title="@string/onboarding_g7_back" style="@style/OnboardingToolbar" />
+        <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/id_header_dialog" android:tag="binding_2" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:id="@id/id_sensor_insertion_header_title" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/OnboardingHelpTitle" />
+            <com.google.android.material.button.MaterialButton android:id="@id/id_sensor_insertion_done_button" android:text="@string/done" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/DoneButtonSettingsDialog" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.core.widget.NestedScrollView android:id="@id/id_sensor_insertion_instructions_scrollview" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/id_sensor_insertion_instructions_components" android:paddingBottom="24.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip">
+            <androidx.cardview.widget.CardView android:id="@id/id_onboarding_choose_sensor_site_by_age_card_view" android:layout_marginTop="24.0dip" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/WhiteCardView">
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <TextView android:id="@id/id_onboarding_choose_sensor_site_label" android:tag="binding_3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" style="@style/SubtitleGreenText" />
+                    <TextView android:textSize="16.0dip" android:id="@id/id_onboarding_choose_sensor_site_parenthesis" android:tag="binding_4" android:fontFamily="@string/roboto_medium" android:layout_marginStart="16.0dip" style="@style/SensorInsertionInstructionsTextView" />
+                    <TextView android:id="@id/id_onboarding_7_years_and_older" android:tag="binding_5" style="@style/SensorInsertionInstructionsTextView" />
+                    <ImageView android:id="@id/id_onboarding_choose_sensor_site_by_age_adult_card_view" android:src="@mipmap/onboarding_sensor_insertion_sensor_site_adult" android:contentDescription="@string/onboarding_g7_age_7_years_and_older" style="@style/ImageViewStyle" />
+                    <TextView android:id="@id/id_onboarding_24_months_6_years" android:tag="binding_6" android:layout_marginTop="16.0dip" style="@style/SensorInsertionInstructionsTextView" />
+                    <ImageView android:id="@id/id_onboarding_choose_sensor_site_by_age_child_card_view" android:src="@mipmap/onboarding_sensor_insertion_sensor_site_child" android:contentDescription="@string/onboarding_g7_24_months_6_years" style="@style/ImageViewStyle" />
+                    <TextView android:textStyle="bold" android:id="@id/id_onboarding_avoid_areas" android:layout_marginTop="15.0dip" android:text="@string/avoid_areas" style="@style/SensorInsertionInstructionsTextView" />
+                    <TextView android:id="@id/id_onboarding_avoid_areas_bullet_points" android:tag="binding_7" style="@style/SensorInsertionInstructionsTextView" />
+                    <TextView android:id="@id/id_onboarding_keep_sensor_attached" android:layout_marginTop="16.0dip" android:text="@string/onboarding_g7_keep_sensor_attached" style="@style/SensorInsertionInstructionsTextView" />
+                    <TextView android:textColor="@color/dex_green_500" android:id="@id/id_onboarding_dexcom_faq" android:layout_marginTop="0.0dip" android:layout_marginBottom="24.0dip" android:text="@string/dexcom_faq_url" style="@style/SensorInsertionInstructionsTextView" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView android:id="@id/id_onboarding_clean_and_dry" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/id_onboarding_choose_sensor_site_by_age_card_view" style="@style/WhiteCardView">
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <TextView android:id="@id/id_onboarding_clean_and_dry_label" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="@string/onboarding_g7_clean_and_dry" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" style="@style/SubtitleGreenText" />
+                    <TextView android:id="@id/id_onboarding_wash_hands_text" android:tag="binding_8" style="@style/SensorInsertionInstructionsTextView" />
+                    <ImageView android:id="@id/id_onboarding_start_sensor_site_wash_hands_card_view" android:src="@mipmap/onboarding_sensor_insertion_sensor_site_wash_hands" android:contentDescription="@string/onboarding_g7_wash_hands" style="@style/ImageViewStyle" />
+                    <TextView android:id="@id/id_onboarding_rub_with_alcohol_text" android:tag="binding_9" android:layout_marginTop="16.0dip" style="@style/SensorInsertionInstructionsTextView" />
+                    <ImageView android:id="@id/id_onboarding_start_sensor_site_rub_alcohol_card_view" android:src="@mipmap/onboarding_sensor_insertion_sensor_site_clean_dry" android:contentDescription="@string/onboarding_g7_rub_site_alcohol" style="@style/ImageViewStyle" />
+                    <TextView android:id="@id/id_onboarding_wait_completely_dry_text" android:tag="binding_10" android:layout_marginTop="16.0dip" android:layout_marginBottom="16.0dip" style="@style/SensorInsertionInstructionsTextView" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <com.google.android.material.button.MaterialButton android:id="@id/id_onboarding_next_button_sensor_insertion_instructions" android:layout_width="148.0dip" android:layout_height="wrap_content" android:layout_marginTop="40.0dip" android:text="@string/next" app:icon="@drawable/ic_right_arrow" app:iconGravity="textEnd" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toBottomOf="@id/id_onboarding_clean_and_dry" style="@style/DexcomButton.Primary.Large" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

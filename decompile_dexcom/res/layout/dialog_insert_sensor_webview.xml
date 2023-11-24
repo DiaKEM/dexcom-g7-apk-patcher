@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:tag="layout/dialog_insert_sensor_webview_0" android:background="@drawable/bg_bottom_sheet_dialog" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout android:id="@id/id_sensor_insertion_app_bar" android:background="@drawable/bg_bottom_sheet_dialog" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout android:id="@id/id_header_dialog" android:background="@drawable/bg_bottom_sheet_dialog" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.google.android.material.button.MaterialButton android:id="@id/id_sensor_insertion_back_button" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/BackButtonSettingsDialog" />
+            <TextView android:id="@id/id_sensor_insertion_header_title" android:text="@string/insert_sensor_title" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/TitleSettingsDialog" />
+            <com.google.android.material.button.MaterialButton android:id="@id/id_sensor_insertion_done_button" android:text="@string/done" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" style="@style/DoneButtonSettingsDialog" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <WebView android:id="@id/id_webview_url" android:layout_width="fill_parent" android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/id_sensor_insertion_app_bar" />
+</androidx.constraintlayout.widget.ConstraintLayout>

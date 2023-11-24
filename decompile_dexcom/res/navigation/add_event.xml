@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/id_add_event" app:startDestination="@id/id_add_event_dialog"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <dialog android:name="com.dexcom.phoenix.ui.screens.events.addevent.AddEventDialogFragment" android:id="@id/id_add_event_dialog">
+        <action android:id="@id/action_id_add_event_dialog_to_id_log_glucose_calibration" app:destination="@id/id_log_bg" />
+        <action android:id="@id/action_id_add_event_dialog_to_id_log_meal" app:destination="@id/id_log_meal" />
+        <action android:id="@id/action_id_add_event_dialog_to_logInsulinFragment" app:destination="@id/id_log_insulin_fragment" />
+        <action android:id="@id/action_id_add_event_dialog_to_logActivityFragment" app:destination="@id/id_log_activity_fragment">
+            <argument android:name="eventID" app:argType="long" />
+        </action>
+        <action android:id="@id/action_id_add_event_dialog_to_log_note_fragment" app:destination="@id/id_log_note_fragment" />
+    </dialog>
+    <fragment android:name="com.dexcom.phoenix.ui.screens.events.addevent.logbg.LogBGFragment" android:id="@id/id_log_bg">
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <argument android:name="@string/navigation_view_gone" android:defaultValue="true" app:argType="boolean" />
+        <action android:id="@id/action_id_log_bg_to_id_log_bg_entry_out_of_range_dialog" app:destination="@id/id_log_bg_entry_out_of_range_dialog" />
+        <action android:id="@id/action_id_log_bg_to_id_calibration_learn_more_dialog" app:destination="@id/id_calibration_learn_more_dialog" />
+        <action android:id="@id/action_id_log_bg_to_id_log_bg_confirmation" app:destination="@id/id_log_bg_confirmation" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right">
+            <argument android:name="eventData" app:argType="com.dexcom.phoenix.ui.screens.events.addevent.BloodGlucoseEventData" />
+        </action>
+        <action android:id="@id/action_id_log_bg_to_id_about_calibration" app:destination="@id/id_about_calibration" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right">
+            <argument android:name="eventData" app:argType="com.dexcom.phoenix.ui.screens.events.addevent.BloodGlucoseEventData" />
+        </action>
+    </fragment>
+    <dialog android:name="com.dexcom.phoenix.ui.screens.events.addevent.logbg.LogBGEntryOutOfRangeDialogFragment" android:id="@id/id_log_bg_entry_out_of_range_dialog" />
+    <dialog android:name="com.dexcom.phoenix.ui.screens.events.addevent.logbg.CalibrationLearnMoreDialogFragment" android:id="@id/id_calibration_learn_more_dialog">
+        <action android:id="@id/action_id_calibration_learn_more_dialog_to_dexcomWebViewFragment" app:destination="@id/dexcom_webview_fragment" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" />
+    </dialog>
+    <fragment android:name="com.dexcom.phoenix.ui.screens.events.addevent.logmeal.LogMealFragment" android:id="@id/id_log_meal">
+        <argument android:name="eventID" android:defaultValue="0L" app:argType="long" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <argument android:name="@string/navigation_view_gone" android:defaultValue="true" app:argType="boolean" />
+        <action android:id="@id/action_id_log_meal_to_id_log_meal_confirmation" app:destination="@id/id_log_meal_confirmation" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right">
+            <argument android:name="eventID" android:defaultValue="0L" app:argType="long" />
+            <argument android:name="eventData" app:argType="com.dexcom.phoenix.ui.screens.events.addevent.MealEventData" />
+        </action>
+    </fragment>
+    <fragment android:name="com.dexcom.phoenix.ui.screens.events.addevent.logbg.confirmation.LogBGConfirmationFragment" android:id="@id/id_log_bg_confirmation">
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <argument android:name="@string/navigation_view_gone" android:defaultValue="true" app:argType="boolean" />
+        <argument android:name="eventData" app:argType="com.dexcom.phoenix.ui.screens.events.addevent.BloodGlucoseEventData" />
+        <action android:id="@id/action_id_log_bg_confirmation_to_events_screen" app:destination="@id/id_tab_events" app:popUpTo="@id/id_log_bg" app:popUpToInclusive="true">
+            <argument android:name="snackbarMessage" app:argType="string" />
+            <argument android:name="isCalibration" app:argType="boolean" />
+        </action>
+        <action android:id="@id/action_id_log_bg_confirmation_to_glucose_screen" app:destination="@id/id_tab_glucose" app:popUpTo="@id/id_log_bg" app:popUpToInclusive="true">
+            <argument android:name="snackbarMessage" app:argType="string" />
+        </action>
+    </fragment>
+    <fragment android:name="com.dexcom.phoenix.ui.screens.events.addevent.logmeal.LogMealConfirmationFragment" android:id="@id/id_log_meal_confirmation">
+        <argument android:name="eventID" android:defaultValue="0L" app:argType="long" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <argument android:name="@string/navigation_view_gone" android:defaultValue="true" app:argType="boolean" />
+        <argument android:name="eventData" app:argType="com.dexcom.phoenix.ui.screens.events.addevent.MealEventData" />
+        <action android:id="@id/action_id_log_meal_confirmation_to_events_screen" app:destination="@id/id_tab_events" app:popUpTo="@id/id_tab_glucose" app:popUpToInclusive="false">
+            <argument android:name="snackbarMessage" app:argType="string" />
+        </action>
+        <action android:id="@id/action_id_log_meal_confirmation_to_glucose_tab" app:destination="@id/id_tab_glucose" app:popUpTo="@id/id_log_meal" app:popUpToInclusive="false">
+            <argument android:name="snackbarMessage" app:argType="string" />
+        </action>
+    </fragment>
+    <fragment android:name="com.dexcom.phoenix.ui.screens.events.addevent.logbg.confirmation.AboutCalibrationFragment" android:id="@id/id_about_calibration">
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <argument android:name="@string/navigation_view_gone" android:defaultValue="true" app:argType="boolean" />
+        <action android:id="@id/action_id_about_calibration_to_id_log_bg_confirmation" app:destination="@id/id_log_bg_confirmation" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" />
+        <argument android:name="eventData" app:argType="com.dexcom.phoenix.ui.screens.events.addevent.BloodGlucoseEventData" />
+    </fragment>
+    <fragment android:label="" android:name="com.dexcom.phoenix.ui.screens.DexcomWebViewFragment" android:id="@id/dexcom_webview_fragment">
+        <argument android:name="web_url_title" android:defaultValue="&quot;&quot;" app:argType="string" app:nullable="true" />
+        <argument android:name="web_url_key" app:argType="string" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+    </fragment>
+    <fragment android:name="com.dexcom.phoenix.ui.screens.events.addevent.insulin.LogInsulinFragment" android:id="@id/id_log_insulin_fragment">
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <argument android:name="@string/navigation_view_gone" android:defaultValue="true" app:argType="boolean" />
+        <action android:id="@id/action_id_log_insulin_fragment_to_insulinInfoFragment" app:destination="@id/insulinInfoFragment" />
+        <action android:id="@id/action_id_log_insulin_fragment_to_logInsulinConfirmationFragment" app:destination="@id/id_log_insulin_confirmation_fragment" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right">
+            <argument android:name="eventData" app:argType="com.dexcom.phoenix.ui.screens.events.addevent.InsulinEventData" />
+        </action>
+    </fragment>
+    <fragment android:name="com.dexcom.phoenix.ui.screens.events.addevent.insulin.InsulinInfoFragment" android:id="@id/insulinInfoFragment">
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <argument android:name="@string/navigation_view_gone" android:defaultValue="true" app:argType="boolean" />
+    </fragment>
+    <fragment android:name="com.dexcom.phoenix.ui.screens.events.addevent.insulin.LogInsulinConfirmationFragment" android:id="@id/id_log_insulin_confirmation_fragment">
+        <argument android:name="eventData" app:argType="com.dexcom.phoenix.ui.screens.events.addevent.InsulinEventData" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <argument android:name="@string/navigation_view_gone" android:defaultValue="true" app:argType="boolean" />
+        <action android:id="@id/action_id_log_insulin_confirmation_to_events_screen" app:destination="@id/id_tab_events" app:popUpTo="@id/id_log_insulin_fragment" app:popUpToInclusive="true">
+            <argument android:name="snackbarMessage" app:argType="string" />
+            <argument android:name="insulinType" app:argType="com.dexcom.coresdk.cgmkit.persistence.model.InsulinType" />
+        </action>
+        <action android:id="@id/action_id_log_insulin_confirmation_to_glucose_screen" app:destination="@id/id_tab_glucose" app:popUpTo="@id/id_log_insulin_fragment" app:popUpToInclusive="true">
+            <argument android:name="snackbarMessage" app:argType="string" />
+            <argument android:name="insulinType" app:argType="com.dexcom.coresdk.cgmkit.persistence.model.InsulinType" />
+        </action>
+    </fragment>
+    <fragment android:name="com.dexcom.phoenix.ui.screens.events.addevent.exercise.LogExerciseFragment" android:id="@id/id_log_activity_fragment">
+        <argument android:name="eventID" android:defaultValue="0L" app:argType="long" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <argument android:name="@string/navigation_view_gone" android:defaultValue="true" app:argType="boolean" />
+        <action android:id="@id/action_id_log_activity_to_id_log_activity_confirmation" app:destination="@id/id_log_activity_confirmation" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right">
+            <argument android:name="eventID" android:defaultValue="0L" app:argType="long" />
+            <argument android:name="eventData" app:argType="com.dexcom.phoenix.ui.screens.events.addevent.ExerciseEventData" />
+        </action>
+    </fragment>
+    <fragment android:name="com.dexcom.phoenix.ui.screens.events.addevent.exercise.LogExerciseConfirmationFragment" android:id="@id/id_log_activity_confirmation">
+        <argument android:name="eventID" android:defaultValue="0L" app:argType="long" />
+        <argument android:name="eventData" app:argType="com.dexcom.phoenix.ui.screens.events.addevent.ExerciseEventData" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <argument android:name="@string/navigation_view_gone" android:defaultValue="true" app:argType="boolean" />
+        <action android:id="@id/action_id_log_activity_confirmation_to_events_screen" app:destination="@id/id_tab_events" app:popUpTo="@id/id_tab_glucose" app:popUpToInclusive="false">
+            <argument android:name="snackbarMessage" app:argType="string" />
+        </action>
+        <action android:id="@id/action_id_log_activity_confirmation_to_glucose_screen" app:destination="@id/id_tab_glucose" app:popUpTo="@id/id_tab_glucose" app:popUpToInclusive="false">
+            <argument android:name="snackbarMessage" app:argType="string" />
+        </action>
+    </fragment>
+    <fragment android:name="com.dexcom.phoenix.ui.screens.events.addevent.lognote.LogNoteFragment" android:id="@id/id_log_note_fragment">
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <argument android:name="@string/navigation_view_gone" android:defaultValue="true" app:argType="boolean" />
+        <argument android:name="eventID" android:defaultValue="" app:argType="string" />
+        <action android:id="@id/action_id_log_note_fragment_to_noteInfoFragment" app:destination="@id/id_log_note_info" />
+        <action android:id="@id/action_id_log_note_fragment_to_log_note_confirmation" app:destination="@id/id_log_note_confirmation_fragment">
+            <argument android:name="isUpdating" app:argType="boolean" />
+            <argument android:name="noteContent" app:argType="string" />
+            <argument android:name="dateTime" app:argType="long" />
+            <argument android:name="snackbarMessage" app:argType="string" />
+            <argument android:name="uuidSeed" app:argType="long" />
+        </action>
+    </fragment>
+    <fragment android:name="com.dexcom.phoenix.ui.screens.events.addevent.lognote.LogNoteInfoFragment" android:id="@id/id_log_note_info">
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <argument android:name="@string/navigation_view_gone" android:defaultValue="true" app:argType="boolean" />
+        <action android:id="@id/action_id_log_note_info_fragment_to_dexcom_webview_fragment" app:destination="@id/dexcom_webview_fragment" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment android:name="com.dexcom.phoenix.ui.screens.events.addevent.lognote.LogNoteConfirmationFragment" android:id="@id/id_log_note_confirmation_fragment">
+        <argument android:name="isUpdating" android:defaultValue="false" app:argType="boolean" />
+        <argument android:name="eventID" android:defaultValue="" app:argType="string" />
+        <argument android:name="noteContent" android:defaultValue="" app:argType="string" />
+        <argument android:name="dateTime" android:defaultValue="0L" app:argType="long" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <argument android:name="@string/navigation_view_gone" android:defaultValue="true" app:argType="boolean" />
+        <argument android:name="uuidSeed" android:defaultValue="0L" app:argType="long" />
+        <action android:id="@id/action_id_log_note_confirmation_to_events_screen" app:destination="@id/id_tab_events">
+            <argument android:name="snackbarMessage" app:argType="string" />
+        </action>
+        <action android:id="@id/action_id_log_note_confirmation_to_glucose_tab" app:destination="@id/id_tab_glucose" app:popUpTo="@id/id_log_note_fragment" app:popUpToInclusive="false">
+            <argument android:name="snackbarMessage" app:argType="string" />
+        </action>
+    </fragment>
+</navigation>

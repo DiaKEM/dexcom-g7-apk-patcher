@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@id/id_main" app:navGraph="@navigation/navigation_main" app:startDestination="@id/id_tab_glucose"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <fragment android:label="" android:name="com.dexcom.phoenix.ui.screens.glucose.GlucoseScreenFragment" android:id="@id/id_tab_glucose">
+        <argument android:name="snackbarMessage" android:defaultValue="@null" app:argType="string" app:nullable="true" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <action android:id="@id/action_id_tab_glucose_to_id_add_event_dialog" app:destination="@id/id_add_event" />
+        <action android:id="@id/action_id_glucose_tab_to_id_pairing_complete_new" app:destination="@id/id_onboarding_pairing_complete" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" />
+        <action android:id="@id/action_id_tab_glucose_to_id_brief_sensor_issue_help_dialog" app:destination="@id/id_brief_sensor_issue_help_dialog" />
+        <action android:id="@id/action_id_tab_glucose_to_id_location_disabled_help_dialog" app:destination="@id/id_location_disabled_help_dialog" />
+        <action android:id="@id/action_id_tab_glucose_to_id_pairing_unsuccessful_help" app:destination="@id/pairing_unsuccessful_help" />
+        <action android:id="@id/action_id_state_card_to_id_transmitter_pairing_help" app:destination="@id/pairing_wearable_help" />
+        <action android:id="@id/action_id_tab_glucose_to_id_signal_loss" app:destination="@id/id_signal_loss" />
+        <action android:id="@id/action_id_tab_glucose_to_id_warmup" app:destination="@id/id_warmup" />
+        <action android:id="@id/action_id_tab_glucose_to_id_coarse_location_off_help_dialog" app:destination="@id/id_coarse_location_off_help_dialog" />
+        <action android:id="@id/action_id_tab_glucose_to_id_bluetooth_permissions_off_help_dialog" app:destination="@id/id_bluetooth_permissions_off_help_dialog" />
+        <action android:id="@id/action_id_tab_glucose_to_id_bluetooth_off_help_dialog" app:destination="@id/id_phone_bluetooth_off_help_dialog" />
+        <action android:id="@id/action_id_tab_glucose_to_id_data_consent_modal" app:destination="@id/id_data_consent_dialog" />
+        <action android:id="@id/action_id_tab_glucose_to_id_alert_settings_threshold" app:destination="@id/id_alert_settings_threshold" />
+        <action android:id="@id/action_id_tab_glucose_to_in_app_alert_sensor_expiration" app:destination="@id/id_in_app_alert_sensor_expiration" />
+        <action android:id="@id/action_id_tab_glucose_to_sensor_paired" app:destination="@id/id_in_app_sensor_paired_alert" />
+        <action android:id="@id/action_id_tab_glucose_to_disk_critical_app_alert" app:destination="@id/id_disk_space_critical_alert" />
+        <action android:id="@id/action_id_tab_glucose_to_tab_settings" app:destination="@id/id_tab_settings" />
+        <action android:id="@id/action_id_tab_glucose_to_id_quiet_modes_silence_timer" app:destination="@id/id_quiet_modes_silence_timer" />
+        <action android:id="@id/action_id_tab_glucose_to_id_insert_new_sensor" app:destination="@id/id_insert_new_sensor" app:enterAnim="@anim/nav_default_enter_anim" app:exitAnim="@anim/nav_default_exit_anim" app:popEnterAnim="@anim/nav_default_pop_enter_anim" app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action android:id="@id/action_id_tab_glucose_to_id_phone_conflict_summary_dialog" app:destination="@id/id_phone_conflict_summary_dialog" />
+        <action android:id="@id/action_id_tab_glucose_to_id_phone_conflict_modal" app:destination="@id/id_phone_conflict_modal" />
+        <action android:id="@id/action_id_tab_glucose_to_id_phone_conflict_stop_modal" app:destination="@id/id_phone_conflict_stop" />
+        <action android:id="@id/action_id_tab_glucose_to_id_time_loss" app:destination="@id/id_time_loss" />
+        <action android:id="@id/action_id_tab_glucose_to_id_language_conflict_post_onboarding" app:destination="@id/id_language_conflict_post_onboarding" />
+        <action android:id="@id/action_id_tab_glucose_to_id_transmitter_pairing_help" app:destination="@id/pairing_wearable_help" />
+        <action android:id="@id/action_id_tab_clarity_to_id_clarity_info" app:destination="@id/id_clarity_info" />
+        <action android:id="@id/action_id_from_trend_graph_landscape_to_landscape_tooltip_dialog" app:destination="@id/id_trend_graph_landscape_tooltip_fragment" />
+    </fragment>
+    <include app:graph="@navigation/events" />
+    <include app:graph="@navigation/add_event" />
+    <include app:graph="@navigation/connections" />
+    <include app:graph="@navigation/settings" />
+    <include app:graph="@navigation/on_boarding" />
+    <include app:graph="@navigation/sensor_removal" />
+    <include app:graph="@navigation/sensor_pairing" />
+    <include app:graph="@navigation/navigation_phone_conflict_summary" />
+    <include app:graph="@navigation/navigation_phone_conflict_modal" />
+    <include app:graph="@navigation/pairing_wearable_help" />
+    <include app:graph="@navigation/pairing_unsuccessful_help" />
+    <include app:graph="@navigation/pairing_unsuccessful_sensor_insertion" />
+    <dialog android:label="" android:name="com.dexcom.phoenix.ui.legal.LegalUpdateDialogFragment" android:id="@id/id_legal_update_dialog" />
+    <dialog android:label="@string/brief_sensor_issue" android:name="com.dexcom.phoenix.ui.screens.glucose.screenstates.BriefSensorIssueHelpDialogFragment" android:id="@id/id_brief_sensor_issue_help_dialog" />
+    <dialog android:label="" android:name="com.dexcom.dexcomone.ui.screens.glucose.screenstates.BluetoothPermissionsOffHelpFragment" android:id="@id/id_bluetooth_permissions_off_help_dialog" />
+    <dialog android:label="" android:name="com.dexcom.dexcomone.ui.screens.glucose.screenstates.LocationDisabledDialog" android:id="@id/id_location_disabled_help_dialog" />
+    <dialog android:label="" android:name="com.dexcom.dexcomone.ui.screens.glucose.screenstates.CoarseLocationOffHelpFragment" android:id="@id/id_coarse_location_off_help_dialog" />
+    <dialog android:label="" android:name="com.dexcom.dexcomone.ui.screens.glucose.screenstates.PhoneBluetoothOffHelpFragment" android:id="@id/id_phone_bluetooth_off_help_dialog" />
+    <dialog android:name="com.dexcom.dexcomone.ui.screens.glucose.trendgraph.TrendGraphLandscapeTooltipFragment" android:id="@id/id_trend_graph_landscape_tooltip_fragment">
+        <action android:id="@id/action_from__landscape_tooltip_to_glucose_screen" app:popUpTo="@id/id_tab_glucose" />
+    </dialog>
+    <fragment android:name="com.dexcom.dexcomone.ui.screens.glucose.screenstates.UnrecoverableErrorStateFragment" android:id="@id/id_unrecoverable_error">
+        <argument android:name="@string/navigation_view_gone" android:defaultValue="true" app:argType="boolean" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+    </fragment>
+    <dialog android:name="com.dexcom.phoenix.ui.screens.glucose.AlertSettingsThresholdFragment" android:id="@id/id_alert_settings_threshold">
+        <action android:id="@id/action_id_alert_settings_threshold_to_id_quiet_modes_silence_timer" app:destination="@id/id_quiet_modes_silence_timer" />
+        <action android:id="@id/action_id_alert_settings_threshold_to_id_quiet_modes_vibrate_timer" app:destination="@id/id_quiet_modes_vibrate_timer" />
+        <action android:id="@id/action_id_alert_settings_threshold_to_id_quiet_modes_info" app:destination="@id/id_quiet_modes_info" />
+    </dialog>
+    <dialog android:name="com.dexcom.phoenix.ui.screens.glucose.QuietModeInfoFragment" android:id="@id/id_quiet_modes_info" />
+    <dialog android:name="com.dexcom.phoenix.ui.screens.glucose.QuietModeVibrateFragment" android:id="@id/id_quiet_modes_vibrate_timer" />
+    <dialog android:name="com.dexcom.phoenix.ui.screens.glucose.QuietModeSilenceFragment" android:id="@id/id_quiet_modes_silence_timer" />
+    <dialog android:name="com.dexcom.phoenix.ui.screens.glucose.inappalerts.GlucoseInAppAlertDialogFragment" android:id="@id/id_glucose_in_app_alert">
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+    </dialog>
+    <dialog android:name="com.dexcom.phoenix.ui.screens.glucose.inappalerts.InAppAlertDialogFragment" android:id="@id/id_in_app_alert">
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+    </dialog>
+    <dialog android:name="com.dexcom.phoenix.ui.screens.glucose.inappalerts.InAppAlertSensorExpirationDialogFragment" android:id="@id/id_in_app_alert_sensor_expiration">
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <action android:id="@id/action_id_in_app_alert_sensor_expiration_to_id_insert_new_sensor" app:destination="@id/id_insert_new_sensor" />
+    </dialog>
+    <dialog android:name="com.dexcom.phoenix.ui.screenstates.SignalLossDialog" android:id="@id/id_signal_loss">
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+    </dialog>
+    <dialog android:name="com.dexcom.phoenix.ui.screens.glucose.inappalerts.InAppSensorPairedAlertDialogFragment" android:id="@id/id_in_app_sensor_paired_alert">
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+    </dialog>
+    <dialog android:name="com.dexcom.phoenix.ui.screens.glucose.screenstates.TimeLossDialog" android:id="@id/id_time_loss">
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+    </dialog>
+    <fragment android:name="com.dexcom.phoenix.ui.screens.onboarding.startsensor.OnboardingPairingCompleteFragment" android:id="@id/id_onboarding_pairing_complete">
+        <argument android:name="@string/navigation_override_up" android:defaultValue="true" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <argument android:name="@string/navigation_view_gone" android:defaultValue="true" app:argType="boolean" />
+    </fragment>
+    <fragment android:name="com.dexcom.phoenix.ui.screens.glucose.phoneconflicts.PhoneConflictStopFragment" android:id="@id/id_phone_conflict_stop">
+        <argument android:name="@string/navigation_view_gone" android:defaultValue="true" app:argType="boolean" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+    </fragment>
+    <fragment android:name="com.dexcom.phoenix.ui.screens.glucose.languageconflict.LanguageConflictPostOnboardingFragment" android:id="@id/id_language_conflict_post_onboarding">
+        <argument android:name="@string/navigation_view_gone" android:defaultValue="true" app:argType="boolean" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+    </fragment>
+    <dialog android:name="com.dexcom.phoenix.ui.screens.glucose.screenstates.WarmupDialog" android:id="@id/id_warmup">
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+    </dialog>
+    <fragment android:name="com.dexcom.phoenix.ui.screens.glucose.inappalerts.DiskSpaceCriticalAlertFragment" android:id="@id/id_disk_space_critical_alert">
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+    </fragment>
+    <fragment android:name="com.dexcom.phoenix.ui.screens.clarity.ClarityInfoFragment" android:id="@id/id_clarity_info">
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <argument android:name="@string/navigation_view_gone" android:defaultValue="true" app:argType="boolean" />
+    </fragment>
+    <fragment android:label="@string/start_new_sensor" android:name="com.dexcom.phoenix.ui.screens.pairing.InsertNewSensorFragment" android:id="@id/id_insert_new_sensor">
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <argument android:name="@string/navigation_view_gone" android:defaultValue="true" app:argType="boolean" />
+        <action android:id="@id/action_id_insert_new_sensor_to_id_sensor_pairing_flow" app:destination="@id/sensor_pairing" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" app:popUpTo="@id/id_insert_new_sensor" app:popUpToInclusive="true" />
+        <action android:id="@id/action_id_insert_new_sensor_to_id_sensor_insertion_instructions" app:destination="@id/id_on_boarding_sensor_insertion" app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left" app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <include app:graph="@navigation/sensor_insertion" />
+    <fragment android:name="com.dexcom.phoenix.ui.screens.onboarding.startsensor.OnboardingSensorInsertionInstructionsWebviewFragment" android:id="@id/id_web_url_faq">
+        <argument android:name="@string/navigation_override_up" android:defaultValue="true" />
+        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
+        <argument android:name="@string/navigation_view_gone" android:defaultValue="true" app:argType="boolean" />
+    </fragment>
+    <dialog android:label="" android:name="com.dexcom.phoenix.ui.consent.DataConsentDialog" android:id="@id/id_data_consent_dialog" />
+</navigation>
