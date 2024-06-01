@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:tag="layout/item_alert_sound_0" android:layout_width="wrap_content" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <TextView android:textSize="14.0dip" android:textColor="@color/dex_gray_500" android:id="@id/id_sound_alert_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawablePadding="4.0dip" android:fontFamily="@string/roboto_regular" android:layout_marginStart="1.0dip" app:drawableLeftCompat="@drawable/bullet_black" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>

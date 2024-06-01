@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:background="@drawable/bg_rounded_corners" android:padding="21.0dip" android:layout_width="200.0dip" android:layout_height="wrap_content"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ProgressBar android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/id_retry_progress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14.0dip" android:indeterminate="true" android:indeterminateDrawable="@drawable/pairing_progress_bar" android:indeterminateDuration="500" android:indeterminateBehavior="repeat" />
-    <TextView android:textSize="20.0dip" android:textColor="@color/black" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/id_acm_error_retrying_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="19.0dip" android:text="@string/connecting" />
-</LinearLayout>

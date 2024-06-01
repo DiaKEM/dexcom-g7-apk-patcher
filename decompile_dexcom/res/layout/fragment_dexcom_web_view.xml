@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout android:tag="layout/fragment_dexcom_web_view_0" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <androidx.appcompat.widget.Toolbar android:id="@id/id_toolbar" android:tag="binding_1" android:background="@color/dex_gray_150" android:layout_width="fill_parent" android:layout_height="?actionBarSize" android:layout_marginStart="0.0dip" app:contentInsetStartWithNavigation="64.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:navigationIcon="@drawable/ic_back_arrow" app:titleMarginStart="0.0dip" app:titleTextColor="@color/black" />
-    <WebView android:id="@id/web_view" android:layout_width="fill_parent" android:layout_height="0.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toBottomOf="@id/id_toolbar" />
-    <ProgressBar android:id="@id/spinner" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminateDrawable="@drawable/pairing_progress_bar" android:indeterminateDuration="500" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>

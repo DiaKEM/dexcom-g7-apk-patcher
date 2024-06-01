@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:background="@drawable/embedded_feedback_modal_border" android:focusable="false" android:focusableInTouchMode="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageButton android:layout_gravity="end" android:id="@id/close_button" android:background="#ffffffff" android:layout_width="32.0dip" android:layout_height="32.0dip" android:layout_marginTop="16.0dip" android:layout_marginRight="16.0dip" android:src="@drawable/close_16dp" android:contentDescription="@string/qualtrics_close_button" android:paddingEnd="16.0dip" android:layout_marginStart="16.0dip" />
-    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip">
-        <TextView android:textSize="20.0sp" android:id="@id/question_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentStart="true" />
-        <LinearLayout android:orientation="horizontal" android:id="@id/icon_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" />
-    </LinearLayout>
-</LinearLayout>

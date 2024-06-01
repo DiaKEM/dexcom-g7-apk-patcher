@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<navigation app:navGraph="@navigation/language_conflict" app:startDestination="@id/id_fragment_language_conflict_onboarding"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <fragment android:label="" android:name="com.dexcom.phoenix.ui.screens.onboarding.home.appsetup.language.LanguageConflictOnboardingFragment" android:id="@id/id_fragment_language_conflict_onboarding">
-        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
-    </fragment>
-</navigation>

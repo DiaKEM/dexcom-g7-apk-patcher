@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<menu
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:icon="@drawable/ic_glucose_navigation_selector" android:id="@id/id_tab_glucose" android:title="@string/tab_title_glucose" />
-    <item android:icon="@drawable/ic_events_navigation_selector" android:id="@id/id_tab_events" android:title="@string/tab_title_history" />
-    <item android:icon="@drawable/ic_connections_navigation_selector" android:id="@id/id_tab_connections" android:title="@string/tab_title_connections" />
-    <item android:icon="@drawable/ic_profile_navigation_selector" android:id="@id/id_tab_settings" android:title="@string/tab_title_profile" />
-</menu>

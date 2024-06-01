@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<com.dexcom.glucose.ext.compass.GlucoseCompass android:layout_gravity="center_horizontal" android:id="@id/glucose_compass" android:tag="layout/fragment_glucose_compass_0" android:layout_width="fill_parent" android:layout_height="fill_parent" app:circleBackgroundColor="@color/structure0" app:egvText="@string/dashes" app:egvTextColor="@color/structure10" app:unitTextColor="@color/structure5" app:unitTextSize="4.0dip"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" />

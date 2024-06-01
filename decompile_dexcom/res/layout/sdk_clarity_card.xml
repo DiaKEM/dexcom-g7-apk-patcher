@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:paddingTop="16.0dip" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <include layout="@layout/title_line" style="@style/ClarityCardSection" />
-    <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginVertical="16.0dip" layout="@layout/clarity_card_day_count_picker" style="@style/ClarityCardSection" />
-    <include layout="@layout/general_statistics" style="@style/ClarityCardSection" />
-    <include android:id="@id/clarity_card_separator_line" layout="@layout/separator_line" />
-    <include layout="@layout/time_in_range" style="@style/ClarityCardSection" />
-</LinearLayout>

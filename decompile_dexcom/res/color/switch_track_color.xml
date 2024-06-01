@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<selector
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_enabled="false" android:color="@color/dex_gray_200" />
-    <item android:state_checked="true" android:color="@color/dex_green_200" />
-    <item android:color="@color/dex_gray_250" />
-</selector>

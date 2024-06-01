@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<navigation android:id="@id/id_phone_conflict_modal" app:startDestination="@id/id_phone_conflict_modal_start"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <dialog android:name="com.dexcom.phoenix.ui.screens.glucose.phoneconflict.PhoneConflictDialog" android:id="@id/id_phone_conflict_modal_start">
-        <argument android:name="@string/navigation_toolbar_visibility" android:defaultValue="@integer/navigation_toolbar_visibility_gone" />
-        <action android:id="@id/action_id_phone_conflict_modal_to_id_phone_conflict_summary_dialog" app:destination="@id/id_phone_conflict_summary_dialog" app:popUpTo="@id/id_phone_conflict_modal_start" app:popUpToInclusive="true" />
-    </dialog>
-    <include app:graph="@navigation/navigation_phone_conflict_summary" />
-</navigation>
