@@ -14,7 +14,7 @@ index 5ca00fda..3a98d541 100644
  
      iput-object p6, p0, Lcom/dexcom/coresdk/cloudcommonservicecore/models/RuntimeInformation;->deviceOsName:Ljava/lang/String;
  
-+    const-string v1, "11"
++    const-string v1, "12"
      iput-object v1, p0, Lcom/dexcom/coresdk/cloudcommonservicecore/models/RuntimeInformation;->deviceOsVersion:Ljava/lang/String;
  
      return-void
