@@ -5,4 +5,34 @@ dexcom-dev
 *.idsig
 *.apk
 *.apk.cache
-patches/version-indicator.patch  
+patches/version-indicator.patch
+
+# Build artifacts & decompiled APKs
+decompiled/
+dexcom.v1.6.1.decompiled/
+dexcom.patched.apk
+downloads/
+
+# JVM crash logs
+hs_err_*.log
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.hypothesis/
+
+# Research & planning docs (dev platform files)
+BROADCAST_INJECTION_POINT.md
+MODERNIZATION_PLAN.md
+PATCH_ANALYSIS.md
+RESEARCH_REPORT_*.md
+STRUCTURE_COMPARISON_REPORT.md
+
+# Dev scripts
+bin/build-v2.11.2.sh
+
+# Nested codebase roots (keep separate, gitignored)
+1/
+/home/

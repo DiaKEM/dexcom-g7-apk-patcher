@@ -1,0 +1,21 @@
+--- a/smali_classes4/com/dexcom/coresdk/cgmkit/cloudcomms/cloudcore/models/RuntimeInformation.smali
++++ b/smali_classes4/com/dexcom/coresdk/cgmkit/cloudcomms/cloudcore/models/RuntimeInformation.smali
+@@ -614,11 +614,23 @@
+ 
+     iput-object p3, p0, Lcom/dexcom/coresdk/cgmkit/cloudcomms/cloudcore/models/RuntimeInformation;->appVersion:Ljava/lang/String;
+ 
++    # Patched: Spoof device information to Google Pixel 4 running Android 12
++    const-string v5, "Google"
++    const-string v4, "Pixel 4"
++    const-string v3, "Android"
++    const-string v1, "12"
++
+     iput-object v5, p0, Lcom/dexcom/coresdk/cgmkit/cloudcomms/cloudcore/models/RuntimeInformation;->deviceManufacturer:Ljava/lang/String;
+ 
+     iput-object v4, p0, Lcom/dexcom/coresdk/cgmkit/cloudcomms/cloudcore/models/RuntimeInformation;->deviceModel:Ljava/lang/String;
+ 
+     iput-object v3, p0, Lcom/dexcom/coresdk/cgmkit/cloudcomms/cloudcore/models/RuntimeInformation;->deviceOsName:Ljava/lang/String;
+ 
+     iput-object v1, p0, Lcom/dexcom/coresdk/cgmkit/cloudcomms/cloudcore/models/RuntimeInformation;->deviceOsVersion:Ljava/lang/String;
+ 
+     return-void
