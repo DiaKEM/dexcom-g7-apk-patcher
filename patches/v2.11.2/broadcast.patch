@@ -1,0 +1,329 @@
+--- a/smali_classes4/com/dexcom/coresdk/g6txkit/persistence/repositories/TxServiceRoomRepository.smali
++++ b/smali_classes4/com/dexcom/coresdk/g6txkit/persistence/repositories/TxServiceRoomRepository.smali
+@@ -3530,6 +3530,7 @@
+ 
+      move-result-object v0
+ 
++    invoke-virtual {p0, v3}, Lcom/dexcom/coresdk/g6txkit/persistence/repositories/TxServiceRoomRepository;->broadcastToAAPS(Ljava/util/List;)V
+      invoke-interface {v3, v0}, Ljava/util/Collection;->add(Ljava/lang/Object;)Z
+ 
+      goto/16 :goto_43
+@@ -3655,6 +3656,358 @@
+      return-object v0
+  .end method
+
++
++# broadcastToAAPS()
++#
++# Broadcast sensor readings to AndroidAPS
++#
++# @author Selcuk Kekec <khskekec@gmail.com>
++# @org DiaKEM
++# @url https://github.com/DiaKEM/dexcom-g7-apk-patcher
++# @date 2024-01-15
++.method public broadcastToAAPS(Ljava/util/List;)V
++    .locals 12
++
++    const-string v0, "DIAKEM"
++
++    :try_start_0
++    if-eqz p1, :cond_0
++
++    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
++
++    move-result-object v1
++
++    :goto_0
++    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
++
++    move-result v2
++
++    if-eqz v2, :cond_2
++
++    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
++
++    move-result-object v3
++
++    check-cast v3, Lcom/dexcom/coresdk/g6txkit/txservice/models/G6SensorReading;
++
++    new-instance v4, Ljava/lang/StringBuilder;
++
++    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
++
++    const-string v5, "Timestamp: "
++
++    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
++
++    move-result-object v4
++
++    invoke-virtual {v3}, Lcom/dexcom/coresdk/g6txkit/txservice/models/G6SensorReading;->getSensorReadingTimestamp()Lcom/dexcom/cgmfoundation/timeprovider/CalculatedTime;
++
++    move-result-object v5
++
++    invoke-virtual {v5}, Lcom/dexcom/cgmfoundation/timeprovider/CalculatedTime;->getEpochTime()J
++
++    move-result-wide v5
++
++    invoke-virtual {v4, v5, v6}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
++
++    move-result-object v4
++
++    const-string v5, " | Glucose value: "
++
++    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
++
++    move-result-object v4
++
++    invoke-virtual {v3}, Lcom/dexcom/coresdk/g6txkit/txservice/models/G6SensorReading;->getEgvInfo()Lcom/dexcom/cgmfoundation/systemstate/txsessionstate/EgvInfo;
++
++    move-result-object v5
++
++    invoke-virtual {v5}, Lcom/dexcom/cgmfoundation/systemstate/txsessionstate/EgvInfo;->getRawEgvValue()Lcom/dexcom/cgmfoundation/unitofmeasure/Mgdl;
++
++    move-result-object v5
++
++    invoke-virtual {v5}, Lcom/dexcom/cgmfoundation/unitofmeasure/Mgdl;->getValueInMgdl-pVg5ArA()I
++
++    move-result v5
++
++    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
++
++    move-result-object v4
++
++    const-string v5, " | TrendArrow: "
++
++    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
++
++    move-result-object v4
++
++    invoke-virtual {v3}, Lcom/dexcom/coresdk/g6txkit/txservice/models/G6SensorReading;->getEgvInfo()Lcom/dexcom/cgmfoundation/systemstate/txsessionstate/EgvInfo;
++
++    move-result-object v5
++
++    invoke-virtual {v5}, Lcom/dexcom/cgmfoundation/systemstate/txsessionstate/EgvInfo;->getRawTrendArrow()Lcom/dexcom/cgmfoundation/systemstate/txsessionstate/TrendArrow;
++
++    move-result-object v5
++
++    invoke-virtual {v5}, Lcom/dexcom/cgmfoundation/systemstate/txsessionstate/TrendArrow;->name()Ljava/lang/String;
++
++    move-result-object v5
++
++    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
++
++    move-result-object v4
++
++    const-string v5, " | Is backfilled?: "
++
++    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
++
++    move-result-object v4
++
++    invoke-virtual {v3}, Lcom/dexcom/coresdk/g6txkit/txservice/models/G6SensorReading;->getEgvInfo()Lcom/dexcom/cgmfoundation/systemstate/txsessionstate/EgvInfo;
++
++    move-result-object v5
++
++    invoke-virtual {v5}, Lcom/dexcom/cgmfoundation/systemstate/txsessionstate/EgvInfo;->isBackfilled()Z
++
++    move-result v5
++
++    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
++
++    move-result-object v4
++
++    const-string v5, " | Rate: "
++
++    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
++
++    move-result-object v4
++
++    invoke-virtual {v3}, Lcom/dexcom/coresdk/g6txkit/txservice/models/G6SensorReading;->getEgvInfo()Lcom/dexcom/cgmfoundation/systemstate/txsessionstate/EgvInfo;
++
++    move-result-object v5
++
++    invoke-virtual {v5}, Lcom/dexcom/cgmfoundation/systemstate/txsessionstate/EgvInfo;->getRawRate()I
++
++    move-result v5
++
++    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
++
++    move-result-object v4
++
++    const-string v5, " | SensorId: "
++
++    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
++
++    move-result-object v4
++
++    invoke-virtual {v3}, Lcom/dexcom/coresdk/g6txkit/txservice/models/G6SensorReading;->getTxId()Ljava/lang/String;
++
++    move-result-object v5
++
++    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
++
++    move-result-object v4
++
++    const-string v5, " | Algorithm state: "
++
++    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
++
++    move-result-object v4
++
++    invoke-virtual {v3}, Lcom/dexcom/coresdk/g6txkit/txservice/models/G6SensorReading;->getG6AlgorithmState()Lcom/dexcom/coresdk/transmitter/G6AlgorithmState;
++
++    move-result-object v5
++
++    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
++
++    move-result-object v4
++
++    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
++
++    move-result-object v4
++
++    invoke-static {v0, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
++
++    invoke-virtual {v3}, Lcom/dexcom/coresdk/g6txkit/txservice/models/G6SensorReading;->getEgvInfo()Lcom/dexcom/cgmfoundation/systemstate/txsessionstate/EgvInfo;
++
++    move-result-object v4
++
++    invoke-virtual {v4}, Lcom/dexcom/cgmfoundation/systemstate/txsessionstate/EgvInfo;->getRawEgvValue()Lcom/dexcom/cgmfoundation/unitofmeasure/Mgdl;
++
++    move-result-object v4
++
++    invoke-virtual {v4}, Lcom/dexcom/cgmfoundation/unitofmeasure/Mgdl;->getValueInMgdl-pVg5ArA()I
++
++    move-result v4
++
++    const/16 v5, 0x190
++
++    if-le v4, v5, :cond_1
++
++    const-string v4, "Glucose value exceeds 400 - SKIP"
++
++    invoke-static {v0, v4}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
++
++    goto :goto_0
++
++    :cond_0
++    const-string v1, "Sensor readings list is null - EXIT"
++
++    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
++
++    return-void
++
++    :cond_1
++    new-instance v5, Landroid/content/Intent;
++
++    invoke-direct {v5}, Landroid/content/Intent;-><init>()V
++
++    const-string v6, "info.nightscout.androidaps"
++
++    invoke-virtual {v5, v6}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
++
++    const-string v6, "com.dexcom.g7.EXTERNAL_BROADCAST"
++
++    invoke-virtual {v5, v6}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
++
++    new-instance v6, Landroid/os/Bundle;
++
++    invoke-direct {v6}, Landroid/os/Bundle;-><init>()V
++
++    const-string v7, "glucoseValue"
++
++    invoke-virtual {v3}, Lcom/dexcom/coresdk/g6txkit/txservice/models/G6SensorReading;->getEgvInfo()Lcom/dexcom/cgmfoundation/systemstate/txsessionstate/EgvInfo;
++
++    move-result-object v8
++
++    invoke-virtual {v8}, Lcom/dexcom/cgmfoundation/systemstate/txsessionstate/EgvInfo;->getRawEgvValue()Lcom/dexcom/cgmfoundation/unitofmeasure/Mgdl;
++
++    move-result-object v8
++
++    invoke-virtual {v8}, Lcom/dexcom/cgmfoundation/unitofmeasure/Mgdl;->getValueInMgdl-pVg5ArA()I
++
++    move-result v8
++
++    invoke-virtual {v6, v7, v8}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
++
++    const-string v7, "timestamp"
++
++    invoke-virtual {v3}, Lcom/dexcom/coresdk/g6txkit/txservice/models/G6SensorReading;->getSensorReadingTimestamp()Lcom/dexcom/cgmfoundation/timeprovider/CalculatedTime;
++
++    move-result-object v8
++
++    invoke-virtual {v8}, Lcom/dexcom/cgmfoundation/timeprovider/CalculatedTime;->getEpochTime()J
++
++    move-result-wide v8
++
++    const-wide/16 v10, 0x3e8
++
++    div-long/2addr v8, v10
++
++    invoke-virtual {v6, v7, v8, v9}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
++
++    const-string v7, "trendArrow"
++
++    invoke-virtual {v3}, Lcom/dexcom/coresdk/g6txkit/txservice/models/G6SensorReading;->getEgvInfo()Lcom/dexcom/cgmfoundation/systemstate/txsessionstate/EgvInfo;
++
++    move-result-object v3
++
++    invoke-virtual {v3}, Lcom/dexcom/cgmfoundation/systemstate/txsessionstate/EgvInfo;->getRawTrendArrow()Lcom/dexcom/cgmfoundation/systemstate/txsessionstate/TrendArrow;
++
++    move-result-object v3
++
++    invoke-virtual {v3}, Lcom/dexcom/cgmfoundation/systemstate/txsessionstate/TrendArrow;->name()Ljava/lang/String;
++
++    move-result-object v3
++
++    invoke-virtual {v6, v7, v3}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
++
++    invoke-static {v2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
++
++    move-result-object v3
++
++    const/4 v7, 0x0
++
++    invoke-virtual {v6, v3, v7}, Landroid/os/Bundle;->putBundle(Ljava/lang/String;Landroid/os/Bundle;)V
++
++    const-string v3, "glucoseValues"
++
++    invoke-virtual {v5, v3, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/Intent;
++
++    # Get Application context via PersistenceEventMonitor listener chain
++    iget-object v3, p0, Lcom/dexcom/coresdk/cgmkit/persistence/eventmonitor/PersistenceEventPublisher;->listener:Lcom/dexcom/coresdk/cgmkit/persistence/eventmonitor/PersistenceEventListener;
++
++    check-cast v3, Lcom/dexcom/coresdk/cgmkit/persistence/eventmonitor/PersistenceEventMonitor;
++
++    iget-object v3, v3, Lcom/dexcom/coresdk/cgmkit/persistence/eventmonitor/PersistenceEventMonitor;->listener:Lcom/dexcom/coresdk/cgmkit/persistence/eventmonitor/PersistenceEventMonitor$PersistenceEventMonitorListener;
++
++    check-cast v3, Lcom/dexcom/coresdk/g6txkit/persistence/repositories/TxServiceRoomRepository$Companion;
++
++    iget-object v3, v3, Lcom/dexcom/coresdk/g6txkit/persistence/repositories/TxServiceRoomRepository$Companion;->᫂:Lkotlinx/coroutines/CoroutineScope;
++
++    check-cast v3, Lcom/dexcom/phoenix/PhoenixApplication;
++
++    invoke-virtual {v3, v5}, Lcom/dexcom/phoenix/PhoenixApplication;->sendBroadcast(Landroid/content/Intent;)V
++    :try_end_0
++
++    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
++
++    goto :goto_1
++
++    :catch_0
++    move-exception p1
++
++    invoke-virtual {p1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
++
++    move-result-object p1
++
++    invoke-static {v0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
++
++    :goto_1
++    return-void
++
++    :cond_2
++    const-string v1, "No sensor readings to broadcast"
++
++    invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
++
++    return-void
++.end method

@@ -1,0 +1,61 @@
+# Dexcom G7 v2.11.2 - Version Indicator Patch (Compose UI)
+#
+# OLD TARGET (v1.6.1): XML layout fragment_settings_about.xml
+# NEW TARGET (v2.11.2): AboutSettingsViewModel / Compose UI strings
+#
+# STATUS: COMPOSE UI - LIMITED TARGET
+#
+# The About screen in v2.11.2 uses Jetpack Compose instead of XML layouts.
+# The actual Composable functions are in obfuscated anonymous tw/ classes.
+# Direct Compose patching is complex; this patch adds DiaKEM strings and
+# documents the approach for future enhancement.
+#
+# Finding: AboutSettingsFragment.smali + AboutSettingsViewModel.smali
+# String resources: about_software_number_title, software_version, etc.
+
+--- a/smali_classes5/com/dexcom/phoenix/ui/screens/settings/about/AboutSettingsViewModel.smali
++++ b/smali_classes5/com/dexcom/phoenix/ui/screens/settings/about/AboutSettingsViewModel.smali
+@@ -469,6 +469,10 @@
+
+     iput-object v4, p0, Lcom/dexcom/phoenix/ui/screens/settings/about/AboutSettingsViewModel;->dom:Ljava/lang/String;
+
++    # DiaKEM Patch: Add version/build info to About screen
++    # The About screen in v2.11.2 uses Compose UI (see AboutSettingsFragment)
++    # For full Compose UI modification, the anonymous tw/ composable classes
++    # (like ࡬ࡥࡨ) would need to be patched - complex due to obfuscation
+
+     const-string v4, "W9bPeW}.5O"
+
+     const/16 v3, 0x3c0b
+
+================================================================================
+--- a/res/values/strings.xml
++++ b/res/values/strings.xml
+@@ -85,6 +85,10 @@
+     <string name="about_software_revision_title">Software Revision</string>
+     <string name="about_supported_systems_title">Supported Systems</string>
+     <string name="about_terms_of_use_title">Terms of Use</string>
++    <!-- DiaKEM Custom Strings -->
++    <string name="diakem_version">DiaKEM Version</string>
++    <string name="diakem_build_time">DiaKEM Build Time</string>
++    <string name="diakem_patched">Patched by DiaKEM</string>
+     <string name="about_uk_address">"MDSS-UK RP LIMITED
+
+================================================================================
+# Alternative Approach (ViewModel Field Injection):
+#
+# In AboutSettingsViewModel constructor, the dom (date of manufacture) field
+# is set from appEnvironmentConfig.getBuildTime(). For a working patch,
+# you could:
+#
+# 1. Find the method that exposes version info (getAppEnvironmentConfig)
+# 2. The appEnvironmentConfig.getBuildTime() returns a Long timestamp
+# 3. Add patch to display this in a new cell
+#
+# However, adding new UI cells to Compose requires modifying the actual
+# Composable function body, which is in obfuscated anonymous classes.
+#
+# RECOMMENDATION: This patch is marked as LOW PRIORITY for v2.11.2
+# The About screen is non-critical for functionality. Focus on:
+# - broadcast.patch (critical for AAPS)
+# - compatibility.patch (already complete)

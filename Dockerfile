@@ -1,4 +1,4 @@
-FROM openjdk:11.0-jre-buster
+FROM openjdk:11-jre-slim
 LABEL org.opencontainers.image.authors="rICTx-T1D"
 
 # Dependencies

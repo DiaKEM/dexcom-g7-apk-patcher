@@ -1,0 +1,27 @@
+diff --git a/smali/androidx/appcompat/app/AlertController.smali b/smali/androidx/appcompat/app/AlertController.smali
+index 6778b7c5..6ebe84ca 100644
+--- a/smali/androidx/appcompat/app/AlertController.smali
++++ b/smali/androidx/appcompat/app/AlertController.smali
+@@ -1148,10 +1148,6 @@
+    :cond_1
+    iget-object v1, p0, Landroidx/appcompat/app/AlertController;->mWindow:Landroid/view/Window;
+-   const/high16 v0, 0x20000
+-
+-   invoke-virtual {v1, v0, v0}, Landroid/view/Window;->setFlags(II)V
+-
+    :cond_2
+    if-eqz v2, :cond_5
+
+diff --git a/smali/androidx/appcompat/app/AlertController.smali b/smali/androidx/appcompat/app/AlertController.smali
+index 6778b7c5..6ebe84ca 100644
+--- a/smali/androidx/appcompat/app/AlertController.smali
++++ b/smali/androidx/appcompat/app/AlertController.smali
+@@ -1451,10 +1451,6 @@
+    :cond_1
+    iget-object v1, p0, Landroidx/appcompat/app/AlertController;->mWindow:Landroid/view/Window;
+-   const/high16 v0, 0x20000
+-
+-   invoke-virtual {v1, v0, v0}, Landroid/view/Window;->setFlags(II)V
+-
+    :cond_2
+    if-eqz v2, :cond_b
